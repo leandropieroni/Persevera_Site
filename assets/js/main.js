@@ -1,9 +1,101 @@
 /**
  * PERSEVERA HEAVY METAL BAND - MAIN JAVASCRIPT
- * Handles custom audio player, video switcher, photo lightbox, responsive navbar, and floating player.
+ * Handles internationalization (EN/PT/ES), audio player, video switcher, photo lightbox, responsive navbar, and floating player.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  // ==========================================
+  // 0. INTERNATIONALIZATION (i18n)
+  // Supported: en (default), pt, es
+  // ==========================================
+  let currentLang = localStorage.getItem('persevera_lang') || 'en';
+
+  const videoCards = document.querySelectorAll('.video-card');
+  const videoCurrentTitle = document.getElementById('video-current-title');
+  const videoCurrentDesc = document.getElementById('video-current-desc');
+
+  function setLanguage(lang) {
+    if (typeof translations === 'undefined' || !translations[lang]) return;
+    currentLang = lang;
+    localStorage.setItem('persevera_lang', lang);
+
+    document.documentElement.lang = (lang === 'pt' ? 'pt-BR' : (lang === 'es' ? 'es' : 'en'));
+
+    // Update text elements with data-i18n
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (translations[lang] && translations[lang][key]) {
+        el.innerHTML = translations[lang][key];
+      }
+    });
+
+    // Update placeholders
+    const placeholderEls = document.querySelectorAll('[data-i18n-placeholder]');
+    placeholderEls.forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (translations[lang] && translations[lang][key]) {
+        el.placeholder = translations[lang][key];
+      }
+    });
+
+    // Update titles
+    const titleEls = document.querySelectorAll('[data-i18n-title]');
+    titleEls.forEach(el => {
+      const key = el.getAttribute('data-i18n-title');
+      if (translations[lang] && translations[lang][key]) {
+        el.title = translations[lang][key];
+      }
+    });
+
+    // Update active button state
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      if (btn.getAttribute('data-lang') === lang) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    // Update active video card text if video elements exist
+    const activeVideoCard = document.querySelector('.video-card.active');
+    if (activeVideoCard && videoCards.length > 0) {
+      const activeIdx = Array.from(videoCards).indexOf(activeVideoCard);
+      const descKey = `v${activeIdx + 1}_desc`;
+      const titleKey = `v${activeIdx + 1}_title`;
+      if (translations[lang][descKey] && videoCurrentDesc) {
+        videoCurrentDesc.textContent = translations[lang][descKey];
+      }
+      if (translations[lang][titleKey] && videoCurrentTitle) {
+        videoCurrentTitle.textContent = translations[lang][titleKey];
+      }
+    }
+  }
+
+  // Language button click events
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetLang = btn.getAttribute('data-lang');
+      if (targetLang) {
+        setLanguage(targetLang);
+      }
+    });
+  });
+
+  // Contact form submission listener with localized message
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const msg = (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang].form_alert_success)
+        ? translations[currentLang].form_alert_success
+        : 'Message sent successfully! Persevera production will be in touch soon. 🤘';
+      alert(msg);
+      contactForm.reset();
+    });
+  }
 
   // ==========================================
   // 1. NAVBAR & MOBILE MENU
@@ -159,11 +251,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (equalizer) equalizer.classList.add('active');
       if (miniPlayer) miniPlayer.classList.add('visible');
 
-      // Update active track icon in playlist
-      const activeItem = document.querySelector('.playlist-item.active .track-status i');
-      if (activeItem) activeItem.className = 'fa-solid fa-wave-square';
+      const activeItem = playlistItems[currentTrackIndex];
+      if (activeItem) {
+        const icon = activeItem.querySelector('.track-status i');
+        if (icon) icon.className = 'fa-solid fa-wave-square';
+      }
     }).catch(err => {
-      console.warn('Playback prevented:', err);
+      console.log('Autoplay or file load prevented:', err);
     });
   }
 
@@ -174,8 +268,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (vinylWrapper) vinylWrapper.classList.remove('spinning');
     if (equalizer) equalizer.classList.remove('active');
 
-    const activeItem = document.querySelector('.playlist-item.active .track-status i');
-    if (activeItem) activeItem.className = 'fa-solid fa-pause';
+    const activeItem = playlistItems[currentTrackIndex];
+    if (activeItem) {
+      const icon = activeItem.querySelector('.track-status i');
+      if (icon) icon.className = 'fa-solid fa-play';
+    }
   }
 
   function updatePlayIcons(playing) {
@@ -194,31 +291,27 @@ document.addEventListener('DOMContentLoaded', () => {
     return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
   }
 
-  // Audio Events
-  if (audio) {
-    audio.addEventListener('timeupdate', () => {
-      const current = audio.currentTime;
-      const total = audio.duration;
-      if (!isNaN(total) && total > 0) {
-        const percent = (current / total) * 100;
-        if (progressBarFill) progressBarFill.style.width = `${percent}%`;
-        if (miniProgressFill) miniProgressFill.style.width = `${percent}%`;
-        if (timeCurrent) timeCurrent.textContent = formatTime(current);
-      }
-    });
-
-    audio.addEventListener('loadedmetadata', () => {
+  // Audio Event Listeners
+  audio.addEventListener('timeupdate', () => {
+    if (audio.duration) {
+      const percent = (audio.currentTime / audio.duration) * 100;
+      if (progressBarFill) progressBarFill.style.width = `${percent}%`;
+      if (miniProgressFill) miniProgressFill.style.width = `${percent}%`;
+      if (timeCurrent) timeCurrent.textContent = formatTime(audio.currentTime);
       if (timeTotal) timeTotal.textContent = formatTime(audio.duration);
-    });
+    }
+  });
 
-    audio.addEventListener('ended', () => {
-      // Auto play next track
-      loadTrack(currentTrackIndex + 1);
-      playTrack();
-    });
-  }
+  audio.addEventListener('loadedmetadata', () => {
+    if (timeTotal) timeTotal.textContent = formatTime(audio.duration);
+  });
 
-  // Click on progress bar to seek
+  audio.addEventListener('ended', () => {
+    loadTrack(currentTrackIndex + 1);
+    playTrack();
+  });
+
+  // Progress Bar Seek
   if (progressBarBg) {
     progressBarBg.addEventListener('click', (e) => {
       const rect = progressBarBg.getBoundingClientRect();
@@ -230,36 +323,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Play/Pause button clicks
+  // Controls
   if (btnPlayPause) btnPlayPause.addEventListener('click', togglePlay);
-  if (miniPlay) miniPlay.addEventListener('click', togglePlay);
-
-  // Prev / Next button clicks
   if (btnPrev) btnPrev.addEventListener('click', () => {
     loadTrack(currentTrackIndex - 1);
-    playTrack();
+    if (isPlaying) playTrack();
   });
-  if (miniPrev) miniPrev.addEventListener('click', () => {
-    loadTrack(currentTrackIndex - 1);
-    playTrack();
-  });
-
   if (btnNext) btnNext.addEventListener('click', () => {
     loadTrack(currentTrackIndex + 1);
-    playTrack();
+    if (isPlaying) playTrack();
+  });
+
+  // Mini Player Controls
+  if (miniPlay) miniPlay.addEventListener('click', togglePlay);
+  if (miniPrev) miniPrev.addEventListener('click', () => {
+    loadTrack(currentTrackIndex - 1);
+    if (isPlaying) playTrack();
   });
   if (miniNext) miniNext.addEventListener('click', () => {
     loadTrack(currentTrackIndex + 1);
-    playTrack();
-  });
-
-  // Playlist items click
-  playlistItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const idx = parseInt(item.getAttribute('data-index'), 10);
-      loadTrack(idx);
-      playTrack();
-    });
+    if (isPlaying) playTrack();
   });
 
   // Volume Slider
@@ -267,44 +350,59 @@ document.addEventListener('DOMContentLoaded', () => {
     volumeSlider.addEventListener('input', (e) => {
       const val = parseFloat(e.target.value);
       audio.volume = val;
-      if (val === 0) {
-        volumeIcon.className = 'fa-solid fa-volume-xmark';
-      } else if (val < 0.5) {
-        volumeIcon.className = 'fa-solid fa-volume-low';
-      } else {
-        volumeIcon.className = 'fa-solid fa-volume-high';
+      if (volumeIcon) {
+        if (val === 0) {
+          volumeIcon.className = 'fa-solid fa-volume-xmark';
+        } else if (val < 0.5) {
+          volumeIcon.className = 'fa-solid fa-volume-low';
+        } else {
+          volumeIcon.className = 'fa-solid fa-volume-high';
+        }
       }
     });
   }
 
-  // Initialize first track without autoplay
-  loadTrack(0);
+  // Playlist Items Click
+  playlistItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      if (currentTrackIndex === index && isPlaying) {
+        pauseTrack();
+      } else {
+        loadTrack(index);
+        playTrack();
+      }
+    });
+  });
 
-  // Check mini player visibility when scrolling
-  const musicSection = document.getElementById('musicas');
+  // Show/Hide Floating Mini Player on Scroll
   function checkMiniPlayerVisibility() {
+    const musicSection = document.getElementById('musicas');
     if (!musicSection || !miniPlayer) return;
-    const musicBottom = musicSection.offsetTop + musicSection.offsetHeight;
-    if (window.scrollY > musicBottom || isPlaying) {
-      miniPlayer.classList.add('visible');
+    const rect = musicSection.getBoundingClientRect();
+    if (rect.bottom < 0 || rect.top > window.innerHeight) {
+      if (isPlaying) {
+        miniPlayer.classList.add('visible');
+      }
     } else {
-      miniPlayer.classList.remove('visible');
+      if (!isPlaying) {
+        miniPlayer.classList.remove('visible');
+      }
     }
   }
 
-  // ==========================================
-  // 3. VIDEO THEATER (YOUTUBE SWITCHER)
-  // ==========================================
-  const videoCards = document.querySelectorAll('.video-card');
-  const mainVideoIframe = document.getElementById('main-video-iframe');
-  const videoCurrentTitle = document.getElementById('video-current-title');
-  const videoCurrentDesc = document.getElementById('video-current-desc');
+  // Load first track by default
+  loadTrack(0);
 
-  videoCards.forEach(card => {
+  // ==========================================
+  // 3. VIDEOS & CINEMATICS THEATER
+  // ==========================================
+  const mainVideoIframe = document.getElementById('main-video-iframe');
+
+  videoCards.forEach((card, idx) => {
     card.addEventListener('click', () => {
       const videoId = card.getAttribute('data-videoid');
-      const title = card.getAttribute('data-title');
-      const desc = card.getAttribute('data-desc');
+      const titleEl = card.querySelector('h4');
+      const descKey = `v${idx + 1}_desc`;
 
       // Update iframe source
       if (mainVideoIframe) {
@@ -312,8 +410,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Update text
-      if (videoCurrentTitle) videoCurrentTitle.textContent = title;
-      if (videoCurrentDesc) videoCurrentDesc.textContent = desc;
+      if (videoCurrentTitle && titleEl) {
+        videoCurrentTitle.textContent = titleEl.textContent;
+      }
+      if (videoCurrentDesc) {
+        if (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang][descKey]) {
+          videoCurrentDesc.textContent = translations[currentLang][descKey];
+        } else {
+          videoCurrentDesc.textContent = card.getAttribute('data-desc') || '';
+        }
+      }
 
       // Update active class
       videoCards.forEach(c => c.classList.remove('active'));
@@ -337,13 +443,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxClose = document.getElementById('lightbox-close');
   const lightboxBackdrop = document.getElementById('lightbox-backdrop');
 
-  galleryItems.forEach(item => {
+  galleryItems.forEach((item, idx) => {
     item.addEventListener('click', () => {
       const src = item.getAttribute('data-src');
-      const caption = item.getAttribute('data-caption');
+      const capKey = `gallery_cap${idx + 1}`;
+      let captionText = item.getAttribute('data-caption') || '';
+      if (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang][capKey]) {
+        captionText = translations[currentLang][capKey];
+      }
 
       if (lightboxImg) lightboxImg.src = src;
-      if (lightboxCaption) lightboxCaption.textContent = caption || '';
+      if (lightboxCaption) lightboxCaption.textContent = captionText;
       if (lightboxModal) lightboxModal.classList.add('active');
       document.body.style.overflow = 'hidden';
     });
@@ -363,5 +473,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  console.log('Persevera Band Website initialized successfully. 🤘');
+  // Execute initial language setup (English by default, or saved choice)
+  setLanguage(currentLang);
+
+  console.log('Persevera Band Website initialized successfully with i18n support. 🤘');
 });
