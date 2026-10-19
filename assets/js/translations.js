@@ -42,6 +42,7 @@ const translations = {
     "track1_sub": "Devastating opening track from the Genesis album",
     "track2_sub": "Heavy riffs and dynamic vocal performance",
     "track3_sub": "Tribute to Black Sabbath, the band's pioneering influence",
+    "track4_sub": "Heavy, down-tuned homage to Metallica's legendary groove anthem",
     "hub_title": "PERSEVERA ON STREAMING",
     "platforms_title": "ALSO AVAILABLE ON:",
     "album_badge": "DEBUT STUDIO ALBUM",
@@ -53,7 +54,8 @@ const translations = {
     "album2_single_tag": "[NEW SINGLE]",
     "album2_clip_tag": "[OFFICIAL VIDEO]",
     "album2_tribute_tag": "[BLACK SABBATH TRIBUTE]",
-    "album2_tba_tracks": "+ 5 New Tracks in Studio",
+    "album2_metallica_tag": "[METALLICA TRIBUTE]",
+    "album2_tba_tracks": "+ 4 New Tracks in Studio",
 
     // Videos
     "videos_subtitle": "AUDIOVISUAL PRODUCTIONS",
@@ -297,6 +299,7 @@ const translations = {
     "track1_sub": "Abertura devastadora do álbum Genesis",
     "track2_sub": "Riffs pesados e dinâmica vocal marcante",
     "track3_sub": "Homenagem à lendária influência da banda",
+    "track4_sub": "Homenagem pesada e em afinação baixa ao clássico do Metallica",
     "hub_title": "PERSEVERA NO STREAMING",
     "platforms_title": "DISPONÍVEL TAMBÉM EM:",
     "album_badge": "ÁLBUM DE ESTREIA",
@@ -308,7 +311,8 @@ const translations = {
     "album2_single_tag": "[NOVO SINGLE]",
     "album2_clip_tag": "[CLIPE OFICIAL]",
     "album2_tribute_tag": "[TRIBUTO BLACK SABBATH]",
-    "album2_tba_tracks": "+ 5 Novas Faixas em Estúdio",
+    "album2_metallica_tag": "[TRIBUTO AO METALLICA]",
+    "album2_tba_tracks": "+ 4 Novas Faixas em Estúdio",
 
     // Videos
     "videos_subtitle": "PRODUÇÃO AUDIOVISUAL",
@@ -552,6 +556,7 @@ const translations = {
     "track1_sub": "Apertura demoledora del álbum Genesis",
     "track2_sub": "Riffs pesados y dinámica vocal visceral",
     "track3_sub": "Tributo a Black Sabbath, influencia pionera de la banda",
+    "track4_sub": "Homenaje pesado y con afinación baja al clásico himno de Metallica",
     "hub_title": "PERSEVERA EN STREAMING",
     "platforms_title": "DISPONIBLE TAMBIÉN EN:",
     "album_badge": "ÁLBUM DEBUT",
@@ -563,7 +568,8 @@ const translations = {
     "album2_single_tag": "[NUEVO SENCILLO]",
     "album2_clip_tag": "[VIDEOCLIP OFICIAL]",
     "album2_tribute_tag": "[TRIBUTO A BLACK SABBATH]",
-    "album2_tba_tracks": "+ 5 Nuevos Temas en Estudio",
+    "album2_metallica_tag": "[TRIBUTO A METALLICA]",
+    "album2_tba_tracks": "+ 4 Nuevos Temas en Estudio",
 
     // Videos
     "videos_subtitle": "PRODUCCIONES AUDIOVISUALES",

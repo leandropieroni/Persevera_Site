@@ -209,6 +209,11 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Selling My Soul',
       album: 'Black Sabbath Tribute',
       src: 'assets/audio/selling-my-soul.mp3'
+    },
+    {
+      title: 'Sad But True',
+      album: 'Metallica Tribute',
+      src: 'assets/audio/sad-but-true.mp3'
     }
   ];
 
