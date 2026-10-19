@@ -3674,3 +3674,272 @@ img {
     font-size: 1.1rem;
   }
 }
+
+
+/* ==========================================================================
+   VIDEO ANIMATIONS IN GEOMIND CARDS & OFFICIAL LYRICS MODAL
+   ========================================================================== */
+
+/* Video Canvas & Native Video in Cards */
+.geomind-card-art.has-video {
+  position: relative;
+  overflow: hidden;
+}
+
+.geomind-art-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.geomind-video-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.geomind-video-iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 160%;
+  height: 160%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  border: none;
+  pointer-events: none;
+}
+
+.geomind-art-img.poster-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.geomind-card:hover .geomind-art-video {
+  transform: scale(1.05);
+}
+
+.geomind-badge.video-badge {
+  background: rgba(229, 9, 20, 0.88);
+  border-color: rgba(255, 60, 60, 0.8);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(229, 9, 20, 0.6);
+  letter-spacing: 1px;
+}
+
+/* Card Meta Row & Lyrics Button */
+.geomind-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.btn-lyrics-modal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.35);
+  color: var(--primary-blue);
+  border-radius: 6px;
+  padding: 0.28rem 0.65rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-lyrics-modal:hover {
+  background: var(--primary-blue);
+  color: #07080a;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Official Track Lyrics Modal */
+.lyrics-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.lyrics-modal.active {
+  display: flex;
+  animation: fadeInLyrics 0.3s ease forwards;
+}
+
+@keyframes fadeInLyrics {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.lyrics-modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+.lyrics-modal-dialog {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(135deg, #101218 0%, #090a0e 100%);
+  border: 1px solid rgba(0, 212, 255, 0.35);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 212, 255, 0.2);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 650px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.lyrics-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.lyrics-badge-box {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.lyrics-badge {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  color: var(--primary-blue);
+  background: rgba(0, 212, 255, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.lyrics-track-number {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.lyrics-modal-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0.2rem;
+  line-height: 1;
+}
+
+.lyrics-modal-close:hover {
+  color: var(--accent-red);
+  transform: rotate(90deg);
+}
+
+.lyrics-modal-info {
+  padding: 1.2rem 1.6rem 0.6rem;
+}
+
+.lyrics-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 0.3rem;
+}
+
+.lyrics-composer {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.lyrics-modal-body {
+  padding: 1rem 1.6rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.lyrics-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: #d1d5db;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 1.2rem;
+  border-radius: 8px;
+  border-left: 3px solid var(--primary-blue);
+}
+
+.lyrics-modal-footer {
+  padding: 1rem 1.6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-lyrics-close-footer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-lyrics-close-footer:hover {
+  background: var(--primary-blue);
+  color: #07080a;
+  border-color: var(--primary-blue);
+}

@@ -285,6 +285,13 @@ const translations = {
     "merch_sizes_3": "One Size Fits All",
     "merch_sizes_4": "Collector Pack",
     "form_alert_success": "Message sent successfully! Persevera production will be in touch soon. 🤘"
+      "btn_lyrics": 'Lyrics',
+    "lyrics_badge_genesis": 'GENESIS (2023) • OFFICIAL LYRICS',
+    "lyrics_composer_info": 'Music & Lyrics by Persevera • Recorded at Estúdio Radioativo',
+    "lyrics_close_btn": 'Close Lyrics',
+    "badge_animated_video": 'ANIMATED VIDEO',
+    "badge_animated_canvas": 'ANIMATED CANVAS',
+    "btn_watch_clip": 'Watch Video',
   },
 
   pt: {
@@ -568,6 +575,13 @@ const translations = {
     "merch_sizes_3": "Tamanho Único",
     "merch_sizes_4": "Kit Colecionador",
     "form_alert_success": "Mensagem enviada com sucesso! A produção da Persevera entrará em contato em breve. 🤘"
+      "btn_lyrics": 'Letra',
+    "lyrics_badge_genesis": 'GÊNESIS (2023) • LETRA OFICIAL',
+    "lyrics_composer_info": 'Música e Letra por Persevera • Gravado no Estúdio Radioativo',
+    "lyrics_close_btn": 'Fechar Letra',
+    "badge_animated_video": 'VÍDEO ANIMADO',
+    "badge_animated_canvas": 'CANVAS ANIMADO',
+    "btn_watch_clip": 'Assistir Vídeo',
   },
 
   es: {
@@ -851,5 +865,12 @@ const translations = {
     "merch_sizes_3": "Talla Única",
     "merch_sizes_4": "Pack Coleccionista",
     "form_alert_success": "¡Mensaje enviado con éxito! La producción de Persevera se pondrá en contacto pronto. 🤘"
+    "btn_lyrics": 'Letra',
+    "lyrics_badge_genesis": 'GÉNESIS (2023) • LETRA OFICIAL',
+    "lyrics_composer_info": 'Música y Letra por Persevera • Grabado en Estúdio Radioativo',
+    "lyrics_close_btn": 'Cerrar Letra',
+    "badge_animated_video": 'VIDEO ANIMADO',
+    "badge_animated_canvas": 'CANVAS ANIMADO',
+    "btn_watch_clip": 'Ver Video',
   }
 };

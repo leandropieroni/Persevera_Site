@@ -197,10 +197,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let isPlaying = false;
 
   const tracks = [
-    { title: 'Iced Hell', album: 'Genesis (2023)', src: 'assets/audio/iced-hell.mp3', cover: 'assets/images/logo-psvrn-square.jpg' },
-    { title: 'Oh Lord!', album: 'Genesis (2023)', src: 'assets/audio/oh-lord.mp3', cover: 'assets/images/logo-centered.jpg' },
-    { title: 'Sad But True', album: 'Tributo Oficial', src: 'assets/audio/sad-but-true.mp3', cover: 'assets/images/logo-grunge.jpg' },
-    { title: 'Selling My Soul', album: 'Tributo Oficial', src: 'assets/audio/selling-my-soul.mp3', cover: 'assets/images/logo-centered.jpg' }
+    { title: 'Iced Hell', album: 'Genesis (2023)', src: 'assets/audio/iced-hell.mp3', cover: 'assets/images/tracks/genesis-cover.jpg' },
+    { title: 'Oh Lord!', album: 'Genesis (2023)', src: 'assets/audio/oh-lord.mp3', cover: 'assets/images/tracks/genesis-cover.jpg' },
+    { title: 'Sad But True', album: 'Tributo Oficial', src: 'assets/audio/sad-but-true.mp3', cover: 'assets/images/tracks/sad-but-true.jpg' },
+    { title: 'Selling My Soul', album: 'Tributo Oficial', src: 'assets/audio/selling-my-soul.mp3', cover: 'assets/images/tracks/selling-my-soul.jpg' }
   ];
 
   function loadTrack(index) {
@@ -657,7 +657,56 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+
+  // ==========================================
+  // 5. OFFICIAL TRACK LYRICS MODAL
+  // ==========================================
+  const lyricsModal = document.getElementById('lyrics-modal');
+  const lyricsModalTitle = document.getElementById('lyrics-modal-title');
+  const lyricsModalText = document.getElementById('lyrics-modal-text');
+  const lyricsTrackNumber = document.getElementById('lyrics-track-number');
+  const lyricsClose = document.getElementById('lyrics-close');
+  const lyricsCloseFooter = document.getElementById('btn-lyrics-close-footer');
+  const lyricsBackdrop = document.getElementById('lyrics-backdrop');
+
+  document.querySelectorAll('.btn-lyrics-modal').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const trackIdx = parseInt(btn.getAttribute('data-track-index'), 10);
+      
+      if (typeof genesisLyrics !== 'undefined' && genesisLyrics[trackIdx]) {
+        const item = genesisLyrics[trackIdx];
+        if (lyricsModalTitle) lyricsModalTitle.textContent = item.title;
+        if (lyricsModalText) lyricsModalText.textContent = item.lyrics;
+        if (lyricsTrackNumber) {
+          const num = trackIdx + 1;
+          lyricsTrackNumber.textContent = 'TRACK ' + (num < 10 ? '0' : '') + num;
+        }
+        if (lyricsModal) {
+          lyricsModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+    });
+  });
+
+  function closeLyricsModal() {
+    if (lyricsModal) lyricsModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  if (lyricsClose) lyricsClose.addEventListener('click', closeLyricsModal);
+  if (lyricsCloseFooter) lyricsCloseFooter.addEventListener('click', closeLyricsModal);
+  if (lyricsBackdrop) lyricsBackdrop.addEventListener('click', closeLyricsModal);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lyricsModal && lyricsModal.classList.contains('active')) {
+      closeLyricsModal();
+    }
+  });
+
   // Execute initial language setup (English by default, or saved choice)
+
   setLanguage(currentLang);
 
   console.log('Persevera Band Website initialized successfully with i18n support. 🤘');
