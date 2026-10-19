@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=4.0">
 </head>
 <body>
 
@@ -172,420 +172,612 @@
           <p class="section-desc" data-i18n="music_desc">Listen to exclusive tracks directly in our official player or stream on your favorite digital platform.</p>
         </div>
 
-        <!-- TWO INTERACTIVE CAROUSELS: GENESIS (LEFT) & SINGLES/TRIBUTES (RIGHT) -->
-        <div class="music-carousels-grid">
-          
-          <!-- QUADRO ESQUERDO: Carrossel Álbum Genesis (13 Músicas) -->
-          <div class="carousel-card genesis-carousel-card">
-            <div class="carousel-card-header">
-              <div class="album-badge"><i class="fa-solid fa-compact-disc"></i> <span data-i18n="carousel_genesis_badge">13 TRACKS • DEBUT ALBUM (2023)</span></div>
-              <span class="carousel-counter-badge" id="genesis-counter">01 / 13</span>
-            </div>
-            
-            <div class="carousel-title-row">
-              <h3 class="carousel-main-title" data-i18n="carousel_genesis_title">GENESIS — 13 TRACKS</h3>
-              <div class="carousel-nav-arrows">
-                <button class="carousel-arrow-btn" id="btn-prev-genesis" aria-label="Previous Track"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="carousel-arrow-btn" id="btn-next-genesis" aria-label="Next Track"><i class="fa-solid fa-chevron-right"></i></button>
+        <!-- CATEGORY TABS: GENESIS (13 TRACKS) & SINGLES/TRIBUTES (8 TRACKS) -->
+        <div class="carousel-category-tabs">
+          <button class="cat-tab-btn active" id="tab-btn-genesis" data-carousel="genesis">
+            <i class="fa-solid fa-compact-disc"></i>
+            <span data-i18n="carousel_genesis_title">GENESIS — 13 TRACKS</span>
+            <span class="tab-badge">2023</span>
+          </button>
+          <button class="cat-tab-btn" id="tab-btn-singles" data-carousel="singles">
+            <i class="fa-solid fa-fire"></i>
+            <span data-i18n="carousel_singles_title">SINGLES & TRIBUTES</span>
+            <span class="tab-badge red-badge">2026+</span>
+          </button>
+        </div>
+
+        <!-- GEOMIND-STYLE CAROUSEL 1: GENESIS (13 TRACKS) -->
+        <div class="geomind-carousel-wrapper active" id="carousel-genesis-wrapper">
+          <button class="geomind-arrow prev" id="arrow-prev-genesis" aria-label="Previous Tracks">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="geomind-viewport" id="viewport-genesis">
+            <div class="geomind-track" id="track-genesis">
+          <div class="geomind-card" data-card-index="0" data-src="assets/audio/iced-hell.mp3" data-title="Iced Hell" data-album="Genesis (2023)">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/logo-psvrn-square.jpg" alt="Iced Hell Artwork" class="geomind-art-img" data-art-slot="genesis-01">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">FAIXA 01</span>
+                <span class="geomind-track-num">01</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">Iced Hell</h3>
               </div>
             </div>
 
-            <!-- Carousel Viewport -->
-            <div class="carousel-viewport" id="genesis-viewport">
-              <div class="carousel-slides-track" id="genesis-slides-track">
-              <div class="carousel-slide active" data-index="0" data-src="assets/audio/iced-hell.mp3" data-title="Iced Hell" data-album="Genesis (2023)">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="Iced Hell Artwork" class="slide-art-img" data-art-slot="genesis-01">
-                  <div class="slide-art-overlay">
-                    <button class="slide-play-btn" data-audio-src="assets/audio/iced-hell.mp3" data-track-title="Iced Hell" data-track-album="Genesis (2023)" title="Play Iced Hell"><i class="fa-solid fa-play"></i></button>
-                  </div>
-                  <span class="slide-tag-badge">FAIXA 01</span>
-                  <div class="slide-num-pill">01</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">Iced Hell</h4>
-                    <span class="slide-track-album">Genesis (2023)</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="g_track1_desc">Description</p>
-                </div>
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Genesis (2023)</span></div>
+              <p class="geomind-desc" data-i18n="g_track1_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <button class="geomind-card-btn btn-play-track" data-audio-src="assets/audio/iced-hell.mp3" data-title="Iced Hell" data-album="Genesis (2023)">
+                <i class="fa-solid fa-play"></i> <span>Ouvir Faixa</span>
+              </button>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="1" data-src="assets/audio/oh-lord.mp3" data-title="Oh Lord!" data-album="Genesis (2023)">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/logo-centered.jpg" alt="Oh Lord! Artwork" class="geomind-art-img" data-art-slot="genesis-02">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">FAIXA 02</span>
+                <span class="geomind-track-num">02</span>
               </div>
-              <div class="carousel-slide" data-index="1" data-src="assets/audio/oh-lord.mp3" data-title="Oh Lord!" data-album="Genesis (2023)">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="Oh Lord! Artwork" class="slide-art-img" data-art-slot="genesis-02">
-                  <div class="slide-art-overlay">
-                    <button class="slide-play-btn" data-audio-src="assets/audio/oh-lord.mp3" data-track-title="Oh Lord!" data-track-album="Genesis (2023)" title="Play Oh Lord!"><i class="fa-solid fa-play"></i></button>
-                  </div>
-                  <span class="slide-tag-badge">FAIXA 02</span>
-                  <div class="slide-num-pill">02</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">Oh Lord!</h4>
-                    <span class="slide-track-album">Genesis (2023)</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="g_track2_desc">Description</p>
-                </div>
-              </div>
-              <div class="carousel-slide" data-index="2" data-src="" data-title="A Waste of Time" data-album="Genesis (2023)">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="A Waste of Time Artwork" class="slide-art-img" data-art-slot="genesis-03">
-                  <div class="slide-art-overlay">
-                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
-                  </div>
-                  <span class="slide-tag-badge">FAIXA 03</span>
-                  <div class="slide-num-pill">03</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">A Waste of Time</h4>
-                    <span class="slide-track-album">Genesis (2023)</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="g_track3_desc">Description</p>
-                </div>
-              </div>
-              <div class="carousel-slide" data-index="3" data-src="" data-title="My Curse" data-album="Genesis (2023)">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="My Curse Artwork" class="slide-art-img" data-art-slot="genesis-04">
-                  <div class="slide-art-overlay">
-                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
-                  </div>
-                  <span class="slide-tag-badge">FAIXA 04</span>
-                  <div class="slide-num-pill">04</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">My Curse</h4>
-                    <span class="slide-track-album">Genesis (2023)</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="g_track4_desc">Description</p>
-                </div>
-              </div>
-              <div class="carousel-slide" data-index="4" data-src="" data-title="King of Kings" data-album="Genesis (2023)">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="King of Kings Artwork" class="slide-art-img" data-art-slot="genesis-05">
-                  <div class="slide-art-overlay">
-                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
-                  </div>
-                  <span class="slide-tag-badge">FAIXA 05</span>
-                  <div class="slide-num-pill">05</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">King of Kings</h4>
-                    <span class="slide-track-album">Genesis (2023)</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="g_track5_desc">Description</p>
-                </div>
-              </div>
-              <div class="carousel-slide" data-index="5" data-src="" data-title="The Flail of God" data-album="Genesis (2023)">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="The Flail of God Artwork" class="slide-art-img" data-art-slot="genesis-06">
-                  <div class="slide-art-overlay">
-                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
-                  </div>
-                  <span class="slide-tag-badge">FAIXA 06</span>
-                  <div class="slide-num-pill">06</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">The Flail of God</h4>
-                    <span class="slide-track-album">Genesis (2023)</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="g_track6_desc">Description</p>
-                </div>
-              </div>
-              <div class="carousel-slide" data-index="6" data-src="" data-title="Down from the Sky" data-album="Genesis (2023)">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="Down from the Sky Artwork" class="slide-art-img" data-art-slot="genesis-07">
-                  <div class="slide-art-overlay">
-                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
-                  </div>
-                  <span class="slide-tag-badge">FAIXA 07</span>
-                  <div class="slide-num-pill">07</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">Down from the Sky</h4>
-                    <span class="slide-track-album">Genesis (2023)</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="g_track7_desc">Description</p>
-                </div>
-              </div>
-              <div class="carousel-slide" data-index="7" data-src="" data-title="The Countdown" data-album="Genesis (2023)">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="The Countdown Artwork" class="slide-art-img" data-art-slot="genesis-08">
-                  <div class="slide-art-overlay">
-                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
-                  </div>
-                  <span class="slide-tag-badge">FAIXA 08</span>
-                  <div class="slide-num-pill">08</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">The Countdown</h4>
-                    <span class="slide-track-album">Genesis (2023)</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="g_track8_desc">Description</p>
-                </div>
-              </div>
-              <div class="carousel-slide" data-index="8" data-src="" data-title="The White Rider" data-album="Genesis (2023)">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="The White Rider Artwork" class="slide-art-img" data-art-slot="genesis-09">
-                  <div class="slide-art-overlay">
-                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
-                  </div>
-                  <span class="slide-tag-badge">1º CAVALEIRO</span>
-                  <div class="slide-num-pill">09</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">The White Rider</h4>
-                    <span class="slide-track-album">Genesis (2023)</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="g_track9_desc">Description</p>
-                </div>
-              </div>
-              <div class="carousel-slide" data-index="9" data-src="" data-title="The Red Horse" data-album="Genesis (2023)">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="The Red Horse Artwork" class="slide-art-img" data-art-slot="genesis-10">
-                  <div class="slide-art-overlay">
-                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
-                  </div>
-                  <span class="slide-tag-badge">2º CAVALEIRO</span>
-                  <div class="slide-num-pill">10</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">The Red Horse</h4>
-                    <span class="slide-track-album">Genesis (2023)</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="g_track10_desc">Description</p>
-                </div>
-              </div>
-              <div class="carousel-slide" data-index="10" data-src="" data-title="Famine" data-album="Genesis (2023)">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="Famine Artwork" class="slide-art-img" data-art-slot="genesis-11">
-                  <div class="slide-art-overlay">
-                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
-                  </div>
-                  <span class="slide-tag-badge">3º CAVALEIRO</span>
-                  <div class="slide-num-pill">11</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">Famine</h4>
-                    <span class="slide-track-album">Genesis (2023)</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="g_track11_desc">Description</p>
-                </div>
-              </div>
-              <div class="carousel-slide" data-index="11" data-src="" data-title="Death" data-album="Genesis (2023)">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="Death Artwork" class="slide-art-img" data-art-slot="genesis-12">
-                  <div class="slide-art-overlay">
-                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
-                  </div>
-                  <span class="slide-tag-badge">4º CAVALEIRO</span>
-                  <div class="slide-num-pill">12</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">Death</h4>
-                    <span class="slide-track-album">Genesis (2023)</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="g_track12_desc">Description</p>
-                </div>
-              </div>
-              <div class="carousel-slide" data-index="12" data-src="" data-title="The Last Horseman" data-album="Genesis (2023)">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="The Last Horseman Artwork" class="slide-art-img" data-art-slot="genesis-13">
-                  <div class="slide-art-overlay">
-                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
-                  </div>
-                  <span class="slide-tag-badge">O DESFECHO</span>
-                  <div class="slide-num-pill">13</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">The Last Horseman</h4>
-                    <span class="slide-track-album">Genesis (2023)</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="g_track13_desc">Description</p>
-                </div>
-              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">Oh Lord!</h3>
               </div>
             </div>
 
-            <!-- Dots Pagination -->
-            <div class="carousel-dots-wrapper" id="genesis-dots">
-              <button class="carousel-dot active" data-dot-index="0" aria-label="Faixa 1"></button><button class="carousel-dot" data-dot-index="1" aria-label="Faixa 2"></button><button class="carousel-dot" data-dot-index="2" aria-label="Faixa 3"></button><button class="carousel-dot" data-dot-index="3" aria-label="Faixa 4"></button><button class="carousel-dot" data-dot-index="4" aria-label="Faixa 5"></button><button class="carousel-dot" data-dot-index="5" aria-label="Faixa 6"></button><button class="carousel-dot" data-dot-index="6" aria-label="Faixa 7"></button><button class="carousel-dot" data-dot-index="7" aria-label="Faixa 8"></button><button class="carousel-dot" data-dot-index="8" aria-label="Faixa 9"></button><button class="carousel-dot" data-dot-index="9" aria-label="Faixa 10"></button><button class="carousel-dot" data-dot-index="10" aria-label="Faixa 11"></button><button class="carousel-dot" data-dot-index="11" aria-label="Faixa 12"></button><button class="carousel-dot" data-dot-index="12" aria-label="Faixa 13"></button>
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Genesis (2023)</span></div>
+              <p class="geomind-desc" data-i18n="g_track2_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <button class="geomind-card-btn btn-play-track" data-audio-src="assets/audio/oh-lord.mp3" data-title="Oh Lord!" data-album="Genesis (2023)">
+                <i class="fa-solid fa-play"></i> <span>Ouvir Faixa</span>
+              </button>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="2" data-src="" data-title="A Waste of Time" data-album="Genesis (2023)">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/guitar-banner.jpg" alt="A Waste of Time Artwork" class="geomind-art-img" data-art-slot="genesis-03">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">FAIXA 03</span>
+                <span class="geomind-track-num">03</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">A Waste of Time</h3>
+              </div>
+            </div>
+
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Genesis (2023)</span></div>
+              <p class="geomind-desc" data-i18n="g_track3_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="geomind-card-btn btn-spotify-track">
+                <i class="fa-brands fa-spotify"></i> <span>Ouvir no Spotify</span>
+              </a>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="3" data-src="" data-title="My Curse" data-album="Genesis (2023)">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/logo-grunge.jpg" alt="My Curse Artwork" class="geomind-art-img" data-art-slot="genesis-04">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">FAIXA 04</span>
+                <span class="geomind-track-num">04</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">My Curse</h3>
+              </div>
+            </div>
+
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Genesis (2023)</span></div>
+              <p class="geomind-desc" data-i18n="g_track4_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="geomind-card-btn btn-spotify-track">
+                <i class="fa-brands fa-spotify"></i> <span>Ouvir no Spotify</span>
+              </a>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="4" data-src="" data-title="King of Kings" data-album="Genesis (2023)">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/logo-psvrn-wide.jpg" alt="King of Kings Artwork" class="geomind-art-img" data-art-slot="genesis-05">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">FAIXA 05</span>
+                <span class="geomind-track-num">05</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">King of Kings</h3>
+              </div>
+            </div>
+
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Genesis (2023)</span></div>
+              <p class="geomind-desc" data-i18n="g_track5_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="geomind-card-btn btn-spotify-track">
+                <i class="fa-brands fa-spotify"></i> <span>Ouvir no Spotify</span>
+              </a>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="5" data-src="" data-title="The Flail of God" data-album="Genesis (2023)">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/logo-wide.jpg" alt="The Flail of God Artwork" class="geomind-art-img" data-art-slot="genesis-06">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">FAIXA 06</span>
+                <span class="geomind-track-num">06</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">The Flail of God</h3>
+              </div>
+            </div>
+
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Genesis (2023)</span></div>
+              <p class="geomind-desc" data-i18n="g_track6_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="geomind-card-btn btn-spotify-track">
+                <i class="fa-brands fa-spotify"></i> <span>Ouvir no Spotify</span>
+              </a>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="6" data-src="" data-title="Down from the Sky" data-album="Genesis (2023)">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/chat_media/IMG-20260710-WA0058.jpg" alt="Down from the Sky Artwork" class="geomind-art-img" data-art-slot="genesis-07">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">FAIXA 07</span>
+                <span class="geomind-track-num">07</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">Down from the Sky</h3>
+              </div>
+            </div>
+
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Genesis (2023)</span></div>
+              <p class="geomind-desc" data-i18n="g_track7_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="geomind-card-btn btn-spotify-track">
+                <i class="fa-brands fa-spotify"></i> <span>Ouvir no Spotify</span>
+              </a>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="7" data-src="" data-title="The Countdown" data-album="Genesis (2023)">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/chat_media/IMG-20260710-WA0059.jpg" alt="The Countdown Artwork" class="geomind-art-img" data-art-slot="genesis-08">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">FAIXA 08</span>
+                <span class="geomind-track-num">08</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">The Countdown</h3>
+              </div>
+            </div>
+
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Genesis (2023)</span></div>
+              <p class="geomind-desc" data-i18n="g_track8_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="geomind-card-btn btn-spotify-track">
+                <i class="fa-brands fa-spotify"></i> <span>Ouvir no Spotify</span>
+              </a>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="8" data-src="" data-title="The White Rider" data-album="Genesis (2023)">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/chat_media/IMG-20260710-WA0060.jpg" alt="The White Rider Artwork" class="geomind-art-img" data-art-slot="genesis-09">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">1º CAVALEIRO</span>
+                <span class="geomind-track-num">09</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">The White Rider</h3>
+              </div>
+            </div>
+
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Genesis (2023)</span></div>
+              <p class="geomind-desc" data-i18n="g_track9_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="geomind-card-btn btn-spotify-track">
+                <i class="fa-brands fa-spotify"></i> <span>Ouvir no Spotify</span>
+              </a>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="9" data-src="" data-title="The Red Horse" data-album="Genesis (2023)">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/chat_media/IMG-20260719-WA0014.jpg" alt="The Red Horse Artwork" class="geomind-art-img" data-art-slot="genesis-10">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">2º CAVALEIRO</span>
+                <span class="geomind-track-num">10</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">The Red Horse</h3>
+              </div>
+            </div>
+
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Genesis (2023)</span></div>
+              <p class="geomind-desc" data-i18n="g_track10_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="geomind-card-btn btn-spotify-track">
+                <i class="fa-brands fa-spotify"></i> <span>Ouvir no Spotify</span>
+              </a>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="10" data-src="" data-title="Famine" data-album="Genesis (2023)">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/chat_media/IMG-20260719-WA0015.jpg" alt="Famine Artwork" class="geomind-art-img" data-art-slot="genesis-11">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">3º CAVALEIRO</span>
+                <span class="geomind-track-num">11</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">Famine</h3>
+              </div>
+            </div>
+
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Genesis (2023)</span></div>
+              <p class="geomind-desc" data-i18n="g_track11_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="geomind-card-btn btn-spotify-track">
+                <i class="fa-brands fa-spotify"></i> <span>Ouvir no Spotify</span>
+              </a>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="11" data-src="" data-title="Death" data-album="Genesis (2023)">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/chat_media/IMG-20260728-WA0156.jpg" alt="Death Artwork" class="geomind-art-img" data-art-slot="genesis-12">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">4º CAVALEIRO</span>
+                <span class="geomind-track-num">12</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">Death</h3>
+              </div>
+            </div>
+
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Genesis (2023)</span></div>
+              <p class="geomind-desc" data-i18n="g_track12_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="geomind-card-btn btn-spotify-track">
+                <i class="fa-brands fa-spotify"></i> <span>Ouvir no Spotify</span>
+              </a>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="12" data-src="" data-title="The Last Horseman" data-album="Genesis (2023)">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/band-hero.jpg" alt="The Last Horseman Artwork" class="geomind-art-img" data-art-slot="genesis-13">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">O DESFECHO</span>
+                <span class="geomind-track-num">13</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">The Last Horseman</h3>
+              </div>
+            </div>
+
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Genesis (2023)</span></div>
+              <p class="geomind-desc" data-i18n="g_track13_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="geomind-card-btn btn-spotify-track">
+                <i class="fa-brands fa-spotify"></i> <span>Ouvir no Spotify</span>
+              </a>
+            </div>
+          </div>
             </div>
           </div>
 
-          <!-- QUADRO DIREITO: Carrossel Singles & Tributos -->
-          <div class="carousel-card singles-carousel-card">
-            <div class="carousel-card-header">
-              <div class="album-badge singles-badge"><i class="fa-solid fa-fire"></i> <span data-i18n="carousel_singles_badge">STUDIO RECORDINGS & TRIBUTES</span></div>
-              <span class="carousel-counter-badge singles-counter" id="singles-counter">01 / 08</span>
-            </div>
+          <button class="geomind-arrow next" id="arrow-next-genesis" aria-label="Next Tracks">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
 
-            <div class="carousel-title-row">
-              <h3 class="carousel-main-title" data-i18n="carousel_singles_title">SINGLES & TRIBUTES</h3>
-              <div class="carousel-nav-arrows">
-                <button class="carousel-arrow-btn" id="btn-prev-singles" aria-label="Previous Single"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="carousel-arrow-btn" id="btn-next-singles" aria-label="Next Single"><i class="fa-solid fa-chevron-right"></i></button>
-              </div>
+          <!-- Bottom Indicator Bar -->
+          <div class="geomind-indicator-wrap">
+            <div class="geomind-indicator-track">
+              <div class="geomind-indicator-pill" id="indicator-genesis"></div>
             </div>
+            <span class="geomind-counter-label" id="counter-genesis">01 / 13</span>
+          </div>
+        </div>
 
-            <!-- Carousel Viewport -->
-            <div class="carousel-viewport" id="singles-viewport">
-              <div class="carousel-slides-track" id="singles-slides-track">
-              <div class="carousel-slide active" data-index="0" data-src="" data-title="War is Hell" data-album="2º Álbum • 2026+">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="War is Hell Artwork" class="slide-art-img" data-art-slot="singles-01">
-                  <div class="slide-art-overlay">
-                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
-                  </div>
-                  <span class="slide-tag-badge">NOVO SINGLE</span>
-                  <div class="slide-num-pill">01</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">War is Hell</h4>
-                    <span class="slide-track-album">2º Álbum • 2026+</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="s_track1_desc">Description</p>
-                </div>
+        <!-- GEOMIND-STYLE CAROUSEL 2: SINGLES & TRIBUTES (8 TRACKS) -->
+        <div class="geomind-carousel-wrapper" id="carousel-singles-wrapper">
+          <button class="geomind-arrow prev singles-arrow" id="arrow-prev-singles" aria-label="Previous Singles">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="geomind-viewport" id="viewport-singles">
+            <div class="geomind-track singles-track" id="track-singles">
+          <div class="geomind-card" data-card-index="0" data-src="" data-title="War is Hell" data-album="2º Álbum • 2026+">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/hero-band-epic.jpg" alt="War is Hell Artwork" class="geomind-art-img" data-art-slot="singles-01">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">NOVO SINGLE</span>
+                <span class="geomind-track-num">01</span>
               </div>
-              <div class="carousel-slide" data-index="1" data-src="assets/audio/sad-but-true.mp3" data-title="Sad But True" data-album="Tributo Oficial">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="Sad But True Artwork" class="slide-art-img" data-art-slot="singles-02">
-                  <div class="slide-art-overlay">
-                    <button class="slide-play-btn" data-audio-src="assets/audio/sad-but-true.mp3" data-track-title="Sad But True" data-track-album="Tributo Oficial" title="Play Sad But True"><i class="fa-solid fa-play"></i></button>
-                  </div>
-                  <span class="slide-tag-badge">COVER METALLICA</span>
-                  <div class="slide-num-pill">02</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">Sad But True</h4>
-                    <span class="slide-track-album">Tributo Oficial</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="s_track2_desc">Description</p>
-                </div>
-              </div>
-              <div class="carousel-slide" data-index="2" data-src="assets/audio/selling-my-soul.mp3" data-title="Selling My Soul" data-album="Tributo Oficial">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="Selling My Soul Artwork" class="slide-art-img" data-art-slot="singles-03">
-                  <div class="slide-art-overlay">
-                    <button class="slide-play-btn" data-audio-src="assets/audio/selling-my-soul.mp3" data-track-title="Selling My Soul" data-track-album="Tributo Oficial" title="Play Selling My Soul"><i class="fa-solid fa-play"></i></button>
-                  </div>
-                  <span class="slide-tag-badge">COVER SABBATH</span>
-                  <div class="slide-num-pill">03</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">Selling My Soul</h4>
-                    <span class="slide-track-album">Tributo Oficial</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="s_track3_desc">Description</p>
-                </div>
-              </div>
-              <div class="carousel-slide" data-index="3" data-src="" data-title="Broken World" data-album="2º Álbum • 2026+">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="Broken World Artwork" class="slide-art-img" data-art-slot="singles-04">
-                  <div class="slide-art-overlay">
-                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
-                  </div>
-                  <span class="slide-tag-badge">CLIPE OFICIAL</span>
-                  <div class="slide-num-pill">04</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">Broken World</h4>
-                    <span class="slide-track-album">2º Álbum • 2026+</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="s_track4_desc">Description</p>
-                </div>
-              </div>
-              <div class="carousel-slide" data-index="4" data-src="" data-title="To the Unknown" data-album="2º Álbum • 2026+">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="To the Unknown Artwork" class="slide-art-img" data-art-slot="singles-05">
-                  <div class="slide-art-overlay">
-                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
-                  </div>
-                  <span class="slide-tag-badge">CLIPE OFICIAL</span>
-                  <div class="slide-num-pill">05</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">To the Unknown</h4>
-                    <span class="slide-track-album">2º Álbum • 2026+</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="s_track5_desc">Description</p>
-                </div>
-              </div>
-              <div class="carousel-slide" data-index="5" data-src="" data-title="The Chosen Son" data-album="2º Álbum • 2026+">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="The Chosen Son Artwork" class="slide-art-img" data-art-slot="singles-06">
-                  <div class="slide-art-overlay">
-                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
-                  </div>
-                  <span class="slide-tag-badge">EM ESTÚDIO</span>
-                  <div class="slide-num-pill">06</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">The Chosen Son</h4>
-                    <span class="slide-track-album">2º Álbum • 2026+</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="s_track6_desc">Description</p>
-                </div>
-              </div>
-              <div class="carousel-slide" data-index="6" data-src="" data-title="Master" data-album="2º Álbum • 2026+">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="Master Artwork" class="slide-art-img" data-art-slot="singles-07">
-                  <div class="slide-art-overlay">
-                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
-                  </div>
-                  <span class="slide-tag-badge">EM ESTÚDIO</span>
-                  <div class="slide-num-pill">07</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">Master</h4>
-                    <span class="slide-track-album">2º Álbum • 2026+</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="s_track7_desc">Description</p>
-                </div>
-              </div>
-              <div class="carousel-slide" data-index="7" data-src="" data-title="In Ancient Times" data-album="2º Álbum • 2026+">
-                <div class="slide-artwork-box">
-                  <img src="assets/images/logo-psvrn-square.jpg" alt="In Ancient Times Artwork" class="slide-art-img" data-art-slot="singles-08">
-                  <div class="slide-art-overlay">
-                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
-                  </div>
-                  <span class="slide-tag-badge">EM ESTÚDIO</span>
-                  <div class="slide-num-pill">08</div>
-                </div>
-                <div class="slide-track-info">
-                  <div class="slide-info-header">
-                    <h4 class="slide-track-name">In Ancient Times</h4>
-                    <span class="slide-track-album">2º Álbum • 2026+</span>
-                  </div>
-                  <p class="slide-track-desc" data-i18n="s_track8_desc">Description</p>
-                </div>
-              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">War is Hell</h3>
               </div>
             </div>
 
-            <!-- Dots Pagination -->
-            <div class="carousel-dots-wrapper" id="singles-dots">
-              <button class="carousel-dot active" data-dot-index="0" aria-label="Single 1"></button><button class="carousel-dot" data-dot-index="1" aria-label="Single 2"></button><button class="carousel-dot" data-dot-index="2" aria-label="Single 3"></button><button class="carousel-dot" data-dot-index="3" aria-label="Single 4"></button><button class="carousel-dot" data-dot-index="4" aria-label="Single 5"></button><button class="carousel-dot" data-dot-index="5" aria-label="Single 6"></button><button class="carousel-dot" data-dot-index="6" aria-label="Single 7"></button><button class="carousel-dot" data-dot-index="7" aria-label="Single 8"></button>
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>2º Álbum • 2026+</span></div>
+              <p class="geomind-desc" data-i18n="s_track1_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="geomind-card-btn btn-spotify-track">
+                <i class="fa-brands fa-spotify"></i> <span>Ouvir no Spotify</span>
+              </a>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="1" data-src="assets/audio/sad-but-true.mp3" data-title="Sad But True" data-album="Tributo Oficial">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/logo-grunge.jpg" alt="Sad But True Artwork" class="geomind-art-img" data-art-slot="singles-02">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">COVER METALLICA</span>
+                <span class="geomind-track-num">02</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">Sad But True</h3>
+              </div>
+            </div>
+
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Tributo Oficial</span></div>
+              <p class="geomind-desc" data-i18n="s_track2_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <button class="geomind-card-btn btn-play-track" data-audio-src="assets/audio/sad-but-true.mp3" data-title="Sad But True" data-album="Tributo Oficial">
+                <i class="fa-solid fa-play"></i> <span>Ouvir Faixa</span>
+              </button>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="2" data-src="assets/audio/selling-my-soul.mp3" data-title="Selling My Soul" data-album="Tributo Oficial">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/logo-centered.jpg" alt="Selling My Soul Artwork" class="geomind-art-img" data-art-slot="singles-03">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">COVER SABBATH</span>
+                <span class="geomind-track-num">03</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">Selling My Soul</h3>
+              </div>
+            </div>
+
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Tributo Oficial</span></div>
+              <p class="geomind-desc" data-i18n="s_track3_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <button class="geomind-card-btn btn-play-track" data-audio-src="assets/audio/selling-my-soul.mp3" data-title="Selling My Soul" data-album="Tributo Oficial">
+                <i class="fa-solid fa-play"></i> <span>Ouvir Faixa</span>
+              </button>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="3" data-src="" data-title="Broken World" data-album="2º Álbum • 2026+">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/chat_media/IMG-20260908-WA0014.jpg" alt="Broken World Artwork" class="geomind-art-img" data-art-slot="singles-04">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">CLIPE OFICIAL</span>
+                <span class="geomind-track-num">04</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">Broken World</h3>
+              </div>
+            </div>
+
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>2º Álbum • 2026+</span></div>
+              <p class="geomind-desc" data-i18n="s_track4_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="geomind-card-btn btn-spotify-track">
+                <i class="fa-brands fa-spotify"></i> <span>Ouvir no Spotify</span>
+              </a>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="4" data-src="" data-title="To the Unknown" data-album="2º Álbum • 2026+">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/chat_media/IMG-20260731-WA0126.jpg" alt="To the Unknown Artwork" class="geomind-art-img" data-art-slot="singles-05">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">CLIPE OFICIAL</span>
+                <span class="geomind-track-num">05</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">To the Unknown</h3>
+              </div>
+            </div>
+
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>2º Álbum • 2026+</span></div>
+              <p class="geomind-desc" data-i18n="s_track5_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="geomind-card-btn btn-spotify-track">
+                <i class="fa-brands fa-spotify"></i> <span>Ouvir no Spotify</span>
+              </a>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="5" data-src="" data-title="The Chosen Son" data-album="2º Álbum • 2026+">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/chat_media/IMG-20260731-WA0127.jpg" alt="The Chosen Son Artwork" class="geomind-art-img" data-art-slot="singles-06">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">EM ESTÚDIO</span>
+                <span class="geomind-track-num">06</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">The Chosen Son</h3>
+              </div>
+            </div>
+
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>2º Álbum • 2026+</span></div>
+              <p class="geomind-desc" data-i18n="s_track6_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="geomind-card-btn btn-spotify-track">
+                <i class="fa-brands fa-spotify"></i> <span>Ouvir no Spotify</span>
+              </a>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="6" data-src="" data-title="Master" data-album="2º Álbum • 2026+">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/chat_media/IMG-20260802-WA0020.jpg" alt="Master Artwork" class="geomind-art-img" data-art-slot="singles-07">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">EM ESTÚDIO</span>
+                <span class="geomind-track-num">07</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">Master</h3>
+              </div>
+            </div>
+
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>2º Álbum • 2026+</span></div>
+              <p class="geomind-desc" data-i18n="s_track7_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="geomind-card-btn btn-spotify-track">
+                <i class="fa-brands fa-spotify"></i> <span>Ouvir no Spotify</span>
+              </a>
+            </div>
+          </div>
+          <div class="geomind-card" data-card-index="7" data-src="" data-title="In Ancient Times" data-album="2º Álbum • 2026+">
+            <!-- Artwork (Top Half) -->
+            <div class="geomind-card-art">
+              <img src="assets/images/chat_media/IMG-20261001-WA0044.jpg" alt="In Ancient Times Artwork" class="geomind-art-img" data-art-slot="singles-08">
+              <div class="geomind-art-overlay">
+                <span class="geomind-badge">EM ESTÚDIO</span>
+                <span class="geomind-track-num">08</span>
+              </div>
+              <div class="geomind-art-title-bar">
+                <h3 class="geomind-title-on-art">In Ancient Times</h3>
+              </div>
+            </div>
+
+            <!-- Body (Middle) -->
+            <div class="geomind-card-body">
+              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>2º Álbum • 2026+</span></div>
+              <p class="geomind-desc" data-i18n="s_track8_desc">Description</p>
+            </div>
+
+            <!-- Action Button (Bottom) -->
+            <div class="geomind-card-action">
+              <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="geomind-card-btn btn-spotify-track">
+                <i class="fa-brands fa-spotify"></i> <span>Ouvir no Spotify</span>
+              </a>
+            </div>
+          </div>
             </div>
           </div>
 
+          <button class="geomind-arrow next singles-arrow" id="arrow-next-singles" aria-label="Next Singles">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <!-- Bottom Indicator Bar -->
+          <div class="geomind-indicator-wrap">
+            <div class="geomind-indicator-track">
+              <div class="geomind-indicator-pill red-pill" id="indicator-singles"></div>
+            </div>
+            <span class="geomind-counter-label red-counter" id="counter-singles">01 / 08</span>
+          </div>
         </div>
 
         <!-- UNIFIED MASTER AUDIO PLAYER BAR -->
@@ -1551,7 +1743,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/translations.js?v=3.0"></script>
-  <script src="assets/js/main.js?v=3.0"></script>
+  <script src="assets/js/translations.js?v=4.0"></script>
+  <script src="assets/js/main.js?v=4.0"></script>
 </body>
 </html>

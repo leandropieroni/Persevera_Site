@@ -178,10 +178,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const volumeSlider = document.getElementById('volume-slider');
   const volumeIcon = document.getElementById('volume-icon');
   const vinylWrapper = document.getElementById('vinyl-wrapper');
+  const playerCover = document.getElementById('player-cover');
   const equalizer = document.getElementById('equalizer');
   const currentTrackTitle = document.getElementById('current-track-title');
   const currentTrackArtist = document.getElementById('current-track-artist');
-  const playlistItems = document.querySelectorAll('.playlist-item');
 
   // Mini Player elements
   const miniPlayer = document.getElementById('mini-player');
@@ -196,19 +196,12 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentTrackIndex = 0;
   let isPlaying = false;
 
-  // Build tracks dynamically from the DOM playlist items so it is always 100% in sync
-  const tracks = (playlistItems && playlistItems.length > 0)
-    ? Array.from(playlistItems).map((item, idx) => ({
-        title: item.getAttribute('data-title') || item.querySelector('.track-name')?.textContent?.trim() || `Track ${idx + 1}`,
-        album: item.getAttribute('data-album') || 'Persevera',
-        src: item.getAttribute('data-src') || ''
-      }))
-    : [
-        { title: 'Iced Hell', album: 'Genesis (2023)', src: 'assets/audio/iced-hell.mp3' },
-        { title: 'Oh Lord!', album: 'Genesis (2023)', src: 'assets/audio/oh-lord.mp3' },
-        { title: 'Selling My Soul', album: 'Black Sabbath Tribute', src: 'assets/audio/selling-my-soul.mp3' },
-        { title: 'Sad But True', album: 'Metallica Tribute', src: 'assets/audio/sad-but-true.mp3' }
-      ];
+  const tracks = [
+    { title: 'Iced Hell', album: 'Genesis (2023)', src: 'assets/audio/iced-hell.mp3', cover: 'assets/images/logo-psvrn-square.jpg' },
+    { title: 'Oh Lord!', album: 'Genesis (2023)', src: 'assets/audio/oh-lord.mp3', cover: 'assets/images/logo-centered.jpg' },
+    { title: 'Sad But True', album: 'Tributo Oficial', src: 'assets/audio/sad-but-true.mp3', cover: 'assets/images/logo-grunge.jpg' },
+    { title: 'Selling My Soul', album: 'Tributo Oficial', src: 'assets/audio/selling-my-soul.mp3', cover: 'assets/images/logo-centered.jpg' }
+  ];
 
   function loadTrack(index) {
     if (!tracks.length) return;
@@ -221,21 +214,11 @@ document.addEventListener('DOMContentLoaded', () => {
       audio.src = track.src;
     }
     if (currentTrackTitle) currentTrackTitle.textContent = track.title;
-    if (currentTrackArtist) currentTrackArtist.textContent = `Persevera • ${track.album}`;
+    if (currentTrackArtist) currentTrackArtist.textContent = 'Persevera • ' + track.album;
+    if (playerCover && track.cover) playerCover.src = track.cover;
     if (miniTitle) miniTitle.textContent = track.title;
-    if (miniSub) miniSub.textContent = `Persevera • ${track.album}`;
-
-    // Update Playlist UI
-    playlistItems.forEach((item, idx) => {
-      item.classList.remove('active');
-      const statusIcon = item.querySelector('.track-status i');
-      if (idx === currentTrackIndex) {
-        item.classList.add('active');
-        if (statusIcon) statusIcon.className = isPlaying ? 'fa-solid fa-wave-square' : 'fa-solid fa-play';
-      } else {
-        if (statusIcon) statusIcon.className = 'fa-solid fa-play';
-      }
-    });
+    if (miniSub) miniSub.textContent = 'Persevera • ' + track.album;
+    updateCardPlayButtons();
   }
 
   function togglePlay() {
@@ -253,12 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (vinylWrapper) vinylWrapper.classList.add('spinning');
       if (equalizer) equalizer.classList.add('active');
       if (miniPlayer) miniPlayer.classList.add('visible');
-
-      const activeItem = playlistItems[currentTrackIndex];
-      if (activeItem) {
-        const icon = activeItem.querySelector('.track-status i');
-        if (icon) icon.className = 'fa-solid fa-wave-square';
-      }
+      updateCardPlayButtons();
     }).catch(err => {
       console.log('Autoplay or file load prevented:', err);
     });
@@ -270,36 +248,45 @@ document.addEventListener('DOMContentLoaded', () => {
     updatePlayIcons(false);
     if (vinylWrapper) vinylWrapper.classList.remove('spinning');
     if (equalizer) equalizer.classList.remove('active');
-
-    const activeItem = playlistItems[currentTrackIndex];
-    if (activeItem) {
-      const icon = activeItem.querySelector('.track-status i');
-      if (icon) icon.className = 'fa-solid fa-play';
-    }
+    updateCardPlayButtons();
   }
 
   function updatePlayIcons(playing) {
-    if (playIcon) {
-      playIcon.className = playing ? 'fa-solid fa-pause' : 'fa-solid fa-play';
-    }
-    if (miniPlayIcon) {
-      miniPlayIcon.className = playing ? 'fa-solid fa-pause' : 'fa-solid fa-play';
-    }
+    if (playIcon) playIcon.className = playing ? 'fa-solid fa-pause' : 'fa-solid fa-play';
+    if (miniPlayIcon) miniPlayIcon.className = playing ? 'fa-solid fa-pause' : 'fa-solid fa-play';
+  }
+
+  function updateCardPlayButtons() {
+    const activeTrack = tracks[currentTrackIndex];
+    document.querySelectorAll('.btn-play-track').forEach(btn => {
+      const btnTitle = btn.getAttribute('data-title');
+      const icon = btn.querySelector('i');
+      const label = btn.querySelector('span');
+      if (activeTrack && btnTitle && btnTitle.toLowerCase() === activeTrack.title.toLowerCase()) {
+        if (icon) icon.className = isPlaying ? 'fa-solid fa-pause' : 'fa-solid fa-play';
+        if (label) label.textContent = isPlaying ? 'Pausar' : 'Ouvir Faixa';
+        btn.closest('.geomind-card')?.classList.toggle('playing', isPlaying);
+      } else {
+        if (icon) icon.className = 'fa-solid fa-play';
+        if (label) label.textContent = 'Ouvir Faixa';
+        btn.closest('.geomind-card')?.classList.remove('playing');
+      }
+    });
   }
 
   function formatTime(seconds) {
     if (isNaN(seconds)) return '0:00';
     const mins = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
-    return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+    return mins + ':' + (secs < 10 ? '0' : '') + secs;
   }
 
   // Audio Event Listeners
   audio.addEventListener('timeupdate', () => {
     if (audio.duration) {
       const percent = (audio.currentTime / audio.duration) * 100;
-      if (progressBarFill) progressBarFill.style.width = `${percent}%`;
-      if (miniProgressFill) miniProgressFill.style.width = `${percent}%`;
+      if (progressBarFill) progressBarFill.style.width = percent + '%';
+      if (miniProgressFill) miniProgressFill.style.width = percent + '%';
       if (timeCurrent) timeCurrent.textContent = formatTime(audio.currentTime);
       if (timeTotal) timeTotal.textContent = formatTime(audio.duration);
     }
@@ -365,19 +352,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Playlist Items Click
-  playlistItems.forEach((item, index) => {
-    item.addEventListener('click', () => {
-      const targetIndex = item.hasAttribute('data-index') ? parseInt(item.getAttribute('data-index'), 10) : index;
-      if (currentTrackIndex === targetIndex && isPlaying) {
-        pauseTrack();
-      } else {
-        loadTrack(targetIndex);
-        playTrack();
-      }
-    });
-  });
-
   // Show/Hide Floating Mini Player on Scroll
   function checkMiniPlayerVisibility() {
     const musicSection = document.getElementById('musicas');
@@ -397,164 +371,206 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load first track by default
   loadTrack(0);
 
-
   // ==========================================
-  // CAROUSEL LOGIC: GENESIS (LEFT) & SINGLES/TRIBUTES (RIGHT)
+  // GEOMIND MULTI-CARD CAROUSEL ENGINE
   // ==========================================
-  function setupTrackCarousel(config) {
+  function setupGeomindCarousel(config) {
+    const wrapper = document.getElementById(config.wrapperId);
+    const viewport = document.getElementById(config.viewportId);
     const track = document.getElementById(config.trackId);
     const prevBtn = document.getElementById(config.prevBtnId);
     const nextBtn = document.getElementById(config.nextBtnId);
-    const dotsContainer = document.getElementById(config.dotsId);
+    const indicator = document.getElementById(config.indicatorId);
     const counter = document.getElementById(config.counterId);
-    const viewport = document.getElementById(config.viewportId);
 
-    if (!track) return;
+    if (!track || !viewport) return null;
 
-    const slides = track.querySelectorAll('.carousel-slide');
-    const dots = dotsContainer ? dotsContainer.querySelectorAll('.carousel-dot') : [];
-    const total = slides.length;
+    const cards = track.querySelectorAll('.geomind-card');
+    const totalCards = cards.length;
     let currentIndex = 0;
 
-    function goToSlide(index) {
-      if (index < 0) index = total - 1;
-      if (index >= total) index = 0;
+    function getVisibleCards() {
+      if (window.innerWidth <= 640) return 1;
+      if (window.innerWidth <= 992) return 2;
+      return 3;
+    }
+
+    function getMaxIndex() {
+      return Math.max(0, totalCards - getVisibleCards());
+    }
+
+    function goToCard(index) {
+      const maxIndex = getMaxIndex();
+      if (index < 0) index = maxIndex;
+      if (index > maxIndex) index = 0;
       currentIndex = index;
 
-      // Smooth transform shift
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-      // Update slides active state
-      slides.forEach((s, idx) => {
-        if (idx === currentIndex) {
-          s.classList.add('active');
-        } else {
-          s.classList.remove('active');
-        }
-      });
-
-      // Update dots
-      if (dots.length) {
-        dots.forEach((d, idx) => {
-          if (idx === currentIndex) {
-            d.classList.add('active');
-          } else {
-            d.classList.remove('active');
-          }
-        });
+      const targetCard = cards[currentIndex];
+      if (targetCard) {
+        const shiftX = targetCard.offsetLeft;
+        track.style.transform = 'translateX(-' + shiftX + 'px)';
       }
 
-      // Update counter pill (e.g. 01 / 13)
+      // Update Pill Indicator
+      if (indicator) {
+        const visibleCards = getVisibleCards();
+        const pillWidthPercent = Math.min(100, Math.max(15, (visibleCards / totalCards) * 100));
+        indicator.style.width = pillWidthPercent + '%';
+        const maxShiftPercent = 100 - pillWidthPercent;
+        const leftPercent = maxIndex > 0 ? (currentIndex / maxIndex) * maxShiftPercent : 0;
+        indicator.style.left = leftPercent + '%';
+      }
+
+      // Update Counter Pill (e.g. 01 / 13)
       if (counter) {
         const curStr = (currentIndex + 1 < 10 ? '0' : '') + (currentIndex + 1);
-        const totStr = (total < 10 ? '0' : '') + total;
-        counter.textContent = `${curStr} / ${totStr}`;
+        const totStr = (totalCards < 10 ? '0' : '') + totalCards;
+        counter.textContent = curStr + ' / ' + totStr;
       }
     }
 
     if (prevBtn) {
-      prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
-    }
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        goToCard(currentIndex - 1);
+      });
     }
 
-    if (dots.length) {
-      dots.forEach((dot, idx) => {
-        dot.addEventListener('click', () => goToSlide(idx));
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        goToCard(currentIndex + 1);
       });
     }
 
     // Touch Swipe Gestures
-    if (viewport) {
-      let touchStartX = 0;
-      let touchEndX = 0;
+    let touchStartX = 0;
+    let touchEndX = 0;
 
-      viewport.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-      }, { passive: true });
+    viewport.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
 
-      viewport.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-      }, { passive: true });
-
-      function handleSwipe() {
-        const swipeDiff = touchStartX - touchEndX;
-        if (Math.abs(swipeDiff) > 40) {
-          if (swipeDiff > 0) {
-            goToSlide(currentIndex + 1); // Swipe Left -> Next
-          } else {
-            goToSlide(currentIndex - 1); // Swipe Right -> Prev
-          }
+    viewport.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const swipeDiff = touchStartX - touchEndX;
+      if (Math.abs(swipeDiff) > 40) {
+        if (swipeDiff > 0) {
+          goToCard(currentIndex + 1); // Swipe Left -> Next
+        } else {
+          goToCard(currentIndex - 1); // Swipe Right -> Prev
         }
       }
-    }
+    }, { passive: true });
 
-    // Keyboard navigation when hovering/focused on carousel
-    if (viewport) {
-      viewport.setAttribute('tabindex', '0');
-      viewport.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') {
-          e.preventDefault();
-          goToSlide(currentIndex - 1);
-        } else if (e.key === 'ArrowRight') {
-          e.preventDefault();
-          goToSlide(currentIndex + 1);
-        }
-      });
-    }
+    // Keyboard navigation when hovering/focused
+    viewport.setAttribute('tabindex', '0');
+    viewport.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        goToCard(currentIndex - 1);
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        goToCard(currentIndex + 1);
+      }
+    });
 
-    // Initialize first slide
-    goToSlide(0);
+    // Window resize handler
+    window.addEventListener('resize', () => {
+      if (wrapper && wrapper.classList.contains('active')) {
+        goToCard(currentIndex);
+      }
+    });
+
+    // Initialize first position
+    goToCard(0);
+
+    return {
+      goToCard: goToCard,
+      update: () => goToCard(currentIndex)
+    };
   }
 
   // Initialize both carousels
-  setupTrackCarousel({
-    trackId: 'genesis-slides-track',
-    prevBtnId: 'btn-prev-genesis',
-    nextBtnId: 'btn-next-genesis',
-    dotsId: 'genesis-dots',
-    counterId: 'genesis-counter',
-    viewportId: 'genesis-viewport'
+  const carouselGenesis = setupGeomindCarousel({
+    wrapperId: 'carousel-genesis-wrapper',
+    viewportId: 'viewport-genesis',
+    trackId: 'track-genesis',
+    prevBtnId: 'arrow-prev-genesis',
+    nextBtnId: 'arrow-next-genesis',
+    indicatorId: 'indicator-genesis',
+    counterId: 'counter-genesis'
   });
 
-  setupTrackCarousel({
-    trackId: 'singles-slides-track',
-    prevBtnId: 'btn-prev-singles',
-    nextBtnId: 'btn-next-singles',
-    dotsId: 'singles-dots',
-    counterId: 'singles-counter',
-    viewportId: 'singles-viewport'
+  const carouselSingles = setupGeomindCarousel({
+    wrapperId: 'carousel-singles-wrapper',
+    viewportId: 'viewport-singles',
+    trackId: 'track-singles',
+    prevBtnId: 'arrow-prev-singles',
+    nextBtnId: 'arrow-next-singles',
+    indicatorId: 'indicator-singles',
+    counterId: 'counter-singles'
   });
 
-  // Slide Play Buttons listener (connects to main player)
-  const slidePlayButtons = document.querySelectorAll('.slide-play-btn');
-  slidePlayButtons.forEach(btn => {
+  // ==========================================
+  // CATEGORY TABS: SWITCH BETWEEN GENESIS & SINGLES
+  // ==========================================
+  const tabBtnGenesis = document.getElementById('tab-btn-genesis');
+  const tabBtnSingles = document.getElementById('tab-btn-singles');
+  const wrapperGenesis = document.getElementById('carousel-genesis-wrapper');
+  const wrapperSingles = document.getElementById('carousel-singles-wrapper');
+
+  if (tabBtnGenesis && tabBtnSingles && wrapperGenesis && wrapperSingles) {
+    tabBtnGenesis.addEventListener('click', () => {
+      tabBtnGenesis.classList.add('active');
+      tabBtnSingles.classList.remove('active');
+      wrapperGenesis.classList.add('active');
+      wrapperSingles.classList.remove('active');
+      setTimeout(() => {
+        if (carouselGenesis) carouselGenesis.update();
+      }, 50);
+    });
+
+    tabBtnSingles.addEventListener('click', () => {
+      tabBtnSingles.classList.add('active');
+      tabBtnGenesis.classList.remove('active');
+      wrapperSingles.classList.add('active');
+      wrapperGenesis.classList.remove('active');
+      setTimeout(() => {
+        if (carouselSingles) carouselSingles.update();
+      }, 50);
+    });
+  }
+
+  // Card Play Buttons listener (connects cards to master player)
+  document.querySelectorAll('.btn-play-track').forEach(btn => {
     btn.addEventListener('click', (e) => {
+      e.preventDefault();
       const src = btn.getAttribute('data-audio-src');
-      const title = btn.getAttribute('data-track-title');
-      const album = btn.getAttribute('data-track-album');
+      const title = btn.getAttribute('data-title');
+      const album = btn.getAttribute('data-album') || 'Persevera';
+      const card = btn.closest('.geomind-card');
+      const cover = card ? card.querySelector('.geomind-art-img')?.src : null;
 
-      if (!src) {
-        // External link or Spotify handled naturally
+      if (!src) return;
+
+      const activeTrack = tracks[currentTrackIndex];
+      if (activeTrack && activeTrack.title.toLowerCase() === (title || '').toLowerCase()) {
+        togglePlay();
         return;
       }
 
-      e.preventDefault();
-
-      // Find in tracks array or play custom src
-      const foundIdx = tracks.findIndex(t => t.src === src || t.title.toLowerCase() === title.toLowerCase());
+      const foundIdx = tracks.findIndex(t => t.src === src || t.title.toLowerCase() === (title || '').toLowerCase());
       if (foundIdx !== -1) {
         loadTrack(foundIdx);
         playTrack();
       } else {
-        // Direct playback
         audio.src = src;
         if (currentTrackTitle) currentTrackTitle.textContent = title;
-        if (currentTrackArtist) currentTrackArtist.textContent = `Persevera • ${album}`;
+        if (currentTrackArtist) currentTrackArtist.textContent = 'Persevera • ' + album;
         if (miniTitle) miniTitle.textContent = title;
-        if (miniSub) miniSub.textContent = `Persevera • ${album}`;
+        if (miniSub) miniSub.textContent = 'Persevera • ' + album;
+        if (playerCover && cover) playerCover.src = cover;
         playTrack();
       }
     });
