@@ -158,7 +158,7 @@ const translations = {
     "btn_notify_me": "Notify Me",
     "booking_banner_title": "Want Persevera at your event or festival?",
     "booking_banner_desc": "High-impact live performance with professional stage sound across Brazil.",
-    "booking_banner_btn": "Contact Production",
+    "booking_banner_btn": "Email Production",
 
     // Gallery
     "gallery_subtitle": "VISUAL ARCHIVES",
@@ -207,7 +207,7 @@ const translations = {
     "form_ph_name": "E.g.: John Doe or Promoter Name",
     "form_label_email": "Email",
     "form_ph_email": "youremail@example.com",
-    "form_label_phone": "Phone / WhatsApp",
+    "form_label_phone": "Phone",
     "form_ph_phone": "+55 (19) 99999-9999",
     "form_label_subject": "Subject",
     "form_opt_shows": "Festival / Concert Booking",
@@ -408,7 +408,7 @@ const translations = {
     "btn_notify_me": "Notificar-me",
     "booking_banner_title": "Quer a Persevera no seu evento ou festival?",
     "booking_banner_desc": "Levamos som de alto impacto com estrutura profissional para palcos de todo o Brasil.",
-    "booking_banner_btn": "Falar com Produção",
+    "booking_banner_btn": "Enviar E-mail para a Produção",
 
     // Gallery
     "gallery_subtitle": "REGISTROS VISUAIS",
@@ -457,7 +457,7 @@ const translations = {
     "form_ph_name": "Ex: Carlos Silva ou Produtora X",
     "form_label_email": "E-mail",
     "form_ph_email": "seuemail@exemplo.com",
-    "form_label_phone": "Telefone / WhatsApp",
+    "form_label_phone": "Telefone de Contato",
     "form_ph_phone": "(19) 99999-9999",
     "form_label_subject": "Assunto",
     "form_opt_shows": "Contratação para Shows / Festivais",
@@ -658,7 +658,7 @@ const translations = {
     "btn_notify_me": "Notificarme",
     "booking_banner_title": "¿Quieres a Persevera en tu festival o evento?",
     "booking_banner_desc": "Show de alto impacto con equipamiento profesional para escenarios de todo Brasil.",
-    "booking_banner_btn": "Contactar Producción",
+    "booking_banner_btn": "Enviar Email a Producción",
 
     // Gallery
     "gallery_subtitle": "ARCHIVOS VISUALES",
@@ -707,7 +707,7 @@ const translations = {
     "form_ph_name": "Ej: Juan Pérez o Nombre de la Promotora",
     "form_label_email": "Email",
     "form_ph_email": "tuemail@ejemplo.com",
-    "form_label_phone": "Teléfono / WhatsApp",
+    "form_label_phone": "Teléfono de Contacto",
     "form_ph_phone": "+55 (19) 99999-9999",
     "form_label_subject": "Asunto",
     "form_opt_shows": "Contratación para Conciertos / Festivales",
