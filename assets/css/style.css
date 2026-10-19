@@ -440,9 +440,9 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   text-align: center;
-  padding: 6.5rem 1.5rem 3.5rem;
+  padding: 5.2rem 1.5rem 3.5rem;
   background: #07080a url('../images/band-hero.jpg') center top / cover no-repeat;
   overflow: hidden;
 }
@@ -451,7 +451,7 @@ img {
   position: absolute;
   inset: 0;
   background: 
-    linear-gradient(180deg, rgba(7, 8, 10, 0.7) 0%, rgba(7, 8, 10, 0.15) 20%, transparent 40%),
+    linear-gradient(180deg, rgba(7, 8, 10, 0.75) 0%, rgba(7, 8, 10, 0.15) 18%, transparent 35%),
     linear-gradient(180deg, transparent 35%, rgba(7, 8, 10, 0.6) 60%, rgba(7, 8, 10, 0.95) 85%, var(--bg-dark) 100%),
     radial-gradient(ellipse at 50% 30%, transparent 45%, rgba(7, 8, 10, 0.5) 80%, rgba(7, 8, 10, 0.95) 100%);
   z-index: 1;
@@ -470,30 +470,29 @@ img {
   pointer-events: none;
 }
 
-.hero-content {
+/* Positioned high in the upper smoke area clear of all faces */
+.hero-top-badge-wrapper {
   position: relative;
   z-index: 3;
-  max-width: 960px;
-  margin: 0 auto;
-  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: auto;
 }
 
 .hero-tagline-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(7, 8, 10, 0.75);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(7, 8, 10, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--border-glow);
   color: var(--primary-blue);
-  padding: 0.45rem 1.4rem;
+  padding: 0.4rem 1.35rem;
   border-radius: 50px;
   font-family: var(--font-sub);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 1.5rem;
+  letter-spacing: 2.5px;
   box-shadow: 0 0 25px rgba(0, 212, 255, 0.25);
   animation: pulseBadge 3s infinite;
 }
@@ -502,10 +501,18 @@ img {
   color: var(--accent-red);
 }
 
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .hero-brand-space {
-  height: 26vh;
-  min-height: 140px;
-  max-height: 300px;
+  height: 22vh;
+  min-height: 120px;
+  max-height: 260px;
   pointer-events: none;
 }
 
@@ -2685,8 +2692,8 @@ img {
   .hero-tagline-badge {
     font-size: 0.78rem;
     padding: 0.35rem 1rem;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 0;
   }
 
   .hero-description {

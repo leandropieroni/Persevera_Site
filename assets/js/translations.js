@@ -17,7 +17,7 @@ const translations = {
     "nav_contact": "Contact",
 
     // Hero
-    "hero_tagline": "HEAVY METAL • THREE GUITARS • SUMARÉ / SP • BRAZIL",
+    "hero_tagline": "HEAVY METAL - BRAZIL",
     "hero_title": "THE RAW POWER AND INTENSITY OF THREE GUITARS",
     "hero_desc": "Crushing riffs, razor-sharp solos and towering vocals. Forged in the noble tradition of classic Heavy Metal and contemporary Groove.",
     "hero_btn_music": "Listen to Genesis",
@@ -257,7 +257,7 @@ const translations = {
     "nav_contact": "Contato",
 
     // Hero
-    "hero_tagline": "HEAVY METAL • TRÊS GUITARRAS • SUMARÉ / SP • BRASIL",
+    "hero_tagline": "HEAVY METAL - BRASIL",
     "hero_title": "O PESO E A INTENSIDADE DE TRÊS GUITARRAS",
     "hero_desc": "Composições densas, solos cortantes e vocais vigorosos. Inspirada na tradição do Heavy Metal clássico e no impacto do Groove contemporâneo.",
     "hero_btn_music": "Ouvir Álbum Genesis",
@@ -497,7 +497,7 @@ const translations = {
     "nav_contact": "Contacto",
 
     // Hero
-    "hero_tagline": "HEAVY METAL • TRES GUITARRAS • SUMARÉ / SP • BRASIL",
+    "hero_tagline": "HEAVY METAL - BRASIL",
     "hero_title": "EL PESO Y LA INTENSIDAD DE TRES GUITARRAS",
     "hero_desc": "Composiciones densas, solos afilados y voces viscerales. Inspirada en la tradición del Heavy Metal clásico y el impacto del Groove contemporáneo.",
     "hero_btn_music": "Escuchar Genesis",
