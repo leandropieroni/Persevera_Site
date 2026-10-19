@@ -1052,22 +1052,10 @@ img {
   color: var(--spotify-green);
 }
 
-.platform-btn.apple:hover {
-  background: rgba(252, 60, 68, 0.15);
-  border-color: #fc3c44;
-  color: #fc3c44;
-}
-
-.platform-btn.ytmusic:hover {
+.platform-btn.youtube:hover {
   background: rgba(255, 0, 0, 0.15);
   border-color: #ff0000;
   color: #ff0000;
-}
-
-.platform-btn.deezer:hover {
-  background: rgba(255, 170, 0, 0.15);
-  border-color: #ffaa00;
-  color: #ffaa00;
 }
 
 /* Album Full Showcase */
@@ -3537,16 +3525,16 @@ img {
 }
 
 .platforms-grid-dedicated {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 .platform-btn-box {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 1rem 1.2rem;
+  gap: 1.35rem;
+  padding: 1.35rem 1.6rem;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-metal);
   border-radius: var(--radius-sm);
@@ -3557,31 +3545,45 @@ img {
 }
 
 .platform-btn-box i:first-child {
-  font-size: 1.8rem;
+  font-size: 2.3rem;
   flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.platform-btn-box.spotify i:first-child {
+  color: var(--spotify-green);
+}
+
+.platform-btn-box.youtube i:first-child {
+  color: #ff0000;
+}
+
+.platform-btn-box:hover i:first-child {
+  transform: scale(1.08);
 }
 
 .platform-texts {
   display: flex;
   flex-direction: column;
+  gap: 0.25rem;
   flex: 1;
 }
 
 .platform-texts strong {
   font-family: var(--font-metal);
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   letter-spacing: 0.5px;
   color: #fff;
 }
 
 .platform-texts span {
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   color: var(--text-dim);
   font-family: var(--font-sub);
 }
 
 .platform-btn-box .arrow-icon {
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   color: var(--text-dim);
   transition: transform var(--transition-fast), color var(--transition-fast);
 }
@@ -3594,25 +3596,15 @@ img {
 .platform-btn-box.spotify:hover {
   border-color: var(--spotify-green);
   background: rgba(29, 185, 84, 0.08);
-  box-shadow: 0 0 15px rgba(29, 185, 84, 0.2);
+  box-shadow: 0 0 20px rgba(29, 185, 84, 0.25);
+  transform: translateY(-2px);
 }
 
-.platform-btn-box.apple:hover {
-  border-color: #fc3c44;
-  background: rgba(252, 60, 68, 0.08);
-  box-shadow: 0 0 15px rgba(252, 60, 68, 0.2);
-}
-
-.platform-btn-box.ytmusic:hover {
+.platform-btn-box.youtube:hover {
   border-color: #ff0000;
   background: rgba(255, 0, 0, 0.08);
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
-}
-
-.platform-btn-box.deezer:hover {
-  border-color: #a238ff;
-  background: rgba(162, 56, 255, 0.08);
-  box-shadow: 0 0 15px rgba(162, 56, 255, 0.2);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.25);
+  transform: translateY(-2px);
 }
 
 /* Responsive Media Queries */
@@ -3664,9 +3656,6 @@ img {
     height: 280px;
   }
 
-  .platforms-grid-dedicated {
-    grid-template-columns: 1fr;
-  }
 
   .geomind-arrow {
     width: 42px;
