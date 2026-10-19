@@ -292,6 +292,10 @@ const translations = {
     "badge_animated_video": 'ANIMATED VIDEO',
     "badge_animated_canvas": 'ANIMATED CANVAS',
     "btn_watch_clip": 'Watch Video',
+      "btn_play_track": "Play Track",
+    "btn_pause_track": "Pause",
+    "btn_play_video_track": "Play Track (Video)",
+    "btn_coming_soon": "Coming Soon (Studio)",
   },
 
   pt: {
@@ -582,6 +586,10 @@ const translations = {
     "badge_animated_video": 'VÍDEO ANIMADO',
     "badge_animated_canvas": 'CANVAS ANIMADO',
     "btn_watch_clip": 'Assistir Vídeo',
+      "btn_play_track": "Ouvir Faixa",
+    "btn_pause_track": "Pausar",
+    "btn_play_video_track": "Ouvir Faixa (Clipe)",
+    "btn_coming_soon": "Em Breve (Estúdio)",
   },
 
   es: {
@@ -873,4 +881,8 @@ const translations = {
     "badge_animated_canvas": 'CANVAS ANIMADO',
     "btn_watch_clip": 'Ver Video',
   }
-};
+    "btn_play_track": "Escuchar Pista",
+    "btn_pause_track": "Pausar",
+    "btn_play_video_track": "Escuchar Pista (Video)",
+    "btn_coming_soon": "Próximamente (Estudio)",
+  };

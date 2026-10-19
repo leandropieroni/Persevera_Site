@@ -3943,3 +3943,33 @@ img {
   color: #07080a;
   border-color: var(--primary-blue);
 }
+
+
+/* Enhanced Geomind Card Buttons */
+.geomind-card-btn.btn-watch-theater {
+  background: rgba(229, 9, 20, 0.12);
+  border: 1px solid rgba(229, 9, 20, 0.4);
+  color: #ff4d52;
+}
+
+.geomind-card-btn.btn-watch-theater:hover {
+  background: #e50914;
+  color: #fff;
+  border-color: #e50914;
+  box-shadow: 0 0 16px rgba(229, 9, 20, 0.6);
+  transform: translateY(-2px);
+}
+
+.geomind-card-btn.btn-coming-soon {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.geomind-card-btn.btn-coming-soon:hover {
+  transform: none;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.04);
+}
