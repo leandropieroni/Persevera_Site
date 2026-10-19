@@ -1484,6 +1484,226 @@ img {
 }
 
 /* ==========================================================================
+   BAND HISTORY, TIMELINE & PRESS QUOTES
+   ========================================================================== */
+.band-history-section {
+  margin-top: 5rem;
+  padding-top: 4rem;
+  border-top: 1px solid var(--border-metal);
+}
+
+.band-quote-box {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.06), rgba(15, 18, 24, 0.95));
+  border: 1px solid var(--border-glow);
+  border-left: 4px solid var(--primary-blue);
+  border-radius: var(--radius-md);
+  padding: 2.2rem 2.5rem;
+  margin-bottom: 4rem;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.quote-icon {
+  font-size: 2rem;
+  color: var(--primary-blue);
+  opacity: 0.6;
+  margin-bottom: 0.8rem;
+}
+
+.band-quote-box blockquote {
+  font-family: var(--font-sub);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.band-quote-box blockquote strong {
+  color: var(--primary-blue);
+}
+
+.band-quote-box cite {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: normal;
+  display: block;
+}
+
+.band-quote-box cite strong {
+  color: #fff;
+}
+
+/* Timeline */
+.history-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.history-timeline::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 95px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--primary-blue), rgba(0, 212, 255, 0.1));
+}
+
+.timeline-step {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+  position: relative;
+}
+
+.timeline-marker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.marker-year {
+  font-family: var(--font-metal);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  letter-spacing: 1px;
+}
+
+.marker-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #0f131a;
+  border: 2px solid var(--primary-blue);
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  box-shadow: 0 0 15px var(--primary-blue-glow);
+  z-index: 2;
+}
+
+.timeline-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-metal);
+  border-radius: var(--radius-md);
+  padding: 1.8rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all var(--transition-medium);
+}
+
+.timeline-card:hover {
+  border-color: var(--border-glow);
+  transform: translateX(6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.timeline-card h4 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: #fff;
+  letter-spacing: 0.8px;
+  margin-bottom: 0.8rem;
+}
+
+.timeline-card p {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.timeline-card strong {
+  color: #fff;
+}
+
+.timeline-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid var(--border-glow);
+  color: var(--primary-blue);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-family: var(--font-sub);
+  font-weight: 600;
+}
+
+/* Press Quotes */
+.press-quotes-wrapper {
+  background: #0a0d12;
+  border: 1px solid var(--border-metal);
+  border-radius: var(--radius-md);
+  padding: 2.5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.press-title {
+  font-family: var(--font-metal);
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.press-title i {
+  color: var(--primary-blue);
+}
+
+.press-quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.press-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-fast);
+}
+
+.press-card:hover {
+  background: rgba(0, 212, 255, 0.04);
+  border-color: var(--border-glow);
+  transform: translateY(-3px);
+}
+
+.press-source {
+  font-family: var(--font-metal);
+  font-size: 0.95rem;
+  color: var(--primary-blue);
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.press-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* ==========================================================================
    SHOWS & TOUR DATES SECTION
    ========================================================================== */
 .tour-table-card {
@@ -2413,5 +2633,42 @@ img {
   
   .mini-progress-box {
     display: none;
+  }
+
+  .history-timeline::before {
+    left: 20px;
+  }
+
+  .timeline-step {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding-left: 50px;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .marker-year {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .marker-dot {
+    width: 30px;
+    height: 30px;
+    font-size: 0.75rem;
+  }
+
+  .band-quote-box {
+    padding: 1.5rem;
+  }
+
+  .band-quote-box blockquote {
+    font-size: 1.05rem;
   }
 }
