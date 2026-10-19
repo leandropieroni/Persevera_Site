@@ -435,37 +435,37 @@ img {
    ========================================================================== */
 .hero-section {
   position: relative;
-  min-height: 94vh;
+  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   text-align: center;
-  padding: 6rem 1.5rem 4rem;
-  background: url('../images/guitar-banner.jpg') center/cover no-repeat;
+  padding: 6.5rem 1.5rem 3.5rem;
+  background: #07080a url('../images/band-hero.jpg') center top / cover no-repeat;
   overflow: hidden;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(7, 8, 10, 0.75) 0%,
-    rgba(7, 8, 10, 0.85) 50%,
-    var(--bg-dark) 100%
-  );
+  background: 
+    linear-gradient(180deg, rgba(7, 8, 10, 0.7) 0%, rgba(7, 8, 10, 0.15) 20%, transparent 40%),
+    linear-gradient(180deg, transparent 35%, rgba(7, 8, 10, 0.6) 60%, rgba(7, 8, 10, 0.95) 85%, var(--bg-dark) 100%),
+    radial-gradient(ellipse at 50% 30%, transparent 45%, rgba(7, 8, 10, 0.5) 80%, rgba(7, 8, 10, 0.95) 100%);
   z-index: 1;
 }
 
 .hero-bg-glow {
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(0, 212, 255, 0.18) 0%, transparent 70%);
-  filter: blur(80px);
+  width: 850px;
+  height: 450px;
+  background: radial-gradient(ellipse, rgba(0, 212, 255, 0.14) 0%, rgba(0, 119, 255, 0.04) 60%, transparent 75%);
+  filter: blur(70px);
   z-index: 2;
   pointer-events: none;
 }
@@ -473,67 +473,63 @@ img {
 .hero-content {
   position: relative;
   z-index: 3;
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .hero-tagline-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(0, 212, 255, 0.08);
+  background: rgba(7, 8, 10, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--border-glow);
   color: var(--primary-blue);
-  padding: 0.4rem 1.2rem;
+  padding: 0.45rem 1.4rem;
   border-radius: 50px;
   font-family: var(--font-sub);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 700;
   letter-spacing: 2px;
-  margin-bottom: 2rem;
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.15);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.25);
+  animation: pulseBadge 3s infinite;
 }
 
 .hero-tagline-badge .icon-flame {
   color: var(--accent-red);
 }
 
-.hero-logo-wrapper {
-  margin-bottom: 2rem;
-}
-
-.hero-logo-img {
-  max-width: 520px;
-  width: 90%;
-  margin: 0 auto;
-  filter: drop-shadow(0 0 25px rgba(0, 212, 255, 0.4)) drop-shadow(0 15px 30px rgba(0,0,0,0.8));
-  animation: logoFloat 4s ease-in-out infinite alternate;
-}
-
-@keyframes logoFloat {
-  0% { transform: translateY(0); filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.35)); }
-  100% { transform: translateY(-8px); filter: drop-shadow(0 0 35px rgba(0, 212, 255, 0.55)); }
+.hero-brand-space {
+  height: 26vh;
+  min-height: 140px;
+  max-height: 300px;
+  pointer-events: none;
 }
 
 .hero-title {
   font-family: var(--font-metal);
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   letter-spacing: 3px;
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.95), 0 0 35px rgba(0, 212, 255, 0.35);
+  line-height: 1.15;
 }
 
 .hero-description {
-  font-size: 1.15rem;
-  color: var(--text-muted);
-  max-width: 720px;
+  font-size: 1.18rem;
+  color: #cbd5e1;
+  max-width: 760px;
   margin: 0 auto 2.5rem;
   font-family: var(--font-sub);
   letter-spacing: 0.5px;
   line-height: 1.7;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
 }
 
 .hero-cta-group {
@@ -2671,8 +2667,31 @@ img {
     display: none;
   }
   
+  .hero-section {
+    padding: 5.5rem 1rem 3rem;
+    background-position: center 8%;
+  }
+
+  .hero-brand-space {
+    height: 18vh;
+    min-height: 100px;
+  }
+
   .hero-title {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
+    letter-spacing: 1.5px;
+  }
+
+  .hero-tagline-badge {
+    font-size: 0.78rem;
+    padding: 0.35rem 1rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
   }
   
   .hero-cta-group {
