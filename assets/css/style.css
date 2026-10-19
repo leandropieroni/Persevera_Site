@@ -90,7 +90,7 @@ img {
 .top-announcement {
   background: linear-gradient(90deg, #07080a, #0d1522, #07080a);
   border-bottom: 1px solid var(--border-subtle);
-  padding: 0.4rem 1.5rem;
+  padding: 0.45rem 2.5rem;
   font-size: 0.82rem;
   font-family: var(--font-sub);
   position: relative;
@@ -130,15 +130,15 @@ img {
   color: var(--border-metal);
 }
 
-/* Language Switcher Styling */
+/* Language Switcher Styling (Top Bar Only) */
 .lang-switch-top {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.45);
   border: 1px solid var(--border-subtle);
   border-radius: 20px;
-  padding: 0.15rem 0.4rem;
+  padding: 0.15rem 0.45rem;
 }
 
 .lang-switch-top .lang-label {
@@ -150,16 +150,6 @@ img {
   margin-right: 0.15rem;
   font-family: var(--font-sub);
   letter-spacing: 0.4px;
-}
-
-.lang-switch-nav {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  background: rgba(14, 18, 27, 0.85);
-  border: 1px solid var(--border-subtle);
-  border-radius: 20px;
-  padding: 0.15rem 0.35rem;
 }
 
 .lang-btn {
@@ -226,21 +216,29 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 1.5rem;
-  max-width: 1300px;
+  padding: 0.65rem 2.5rem;
+  max-width: 1560px;
   margin: 0 auto;
+  width: 100%;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  padding-right: 1.5rem;
 }
 
 .nav-brand .brand-logo {
-  height: 38px;
+  height: 52px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.25));
-  transition: transform var(--transition-fast);
+  filter: drop-shadow(0 0 12px rgba(0, 212, 255, 0.35)) drop-shadow(0 3px 8px rgba(0, 0, 0, 0.8));
+  transition: transform var(--transition-fast), filter var(--transition-fast);
 }
 
 .nav-brand:hover .brand-logo {
-  transform: scale(1.04);
+  transform: scale(1.06);
+  filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.65));
 }
 
 .nav-list {
@@ -442,7 +440,7 @@ img {
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  padding: 5.2rem 1.5rem 3.5rem;
+  padding: 1rem 1.5rem 3.5rem;
   background: #07080a url('../images/band-hero.jpg') center top / cover no-repeat;
   overflow: hidden;
 }
@@ -2675,8 +2673,16 @@ img {
   }
   
   .hero-section {
-    padding: 5.5rem 1rem 3rem;
+    padding: 0.8rem 1rem 3rem;
     background-position: center 8%;
+  }
+
+  .nav-container {
+    padding: 0.6rem 1.2rem;
+  }
+
+  .nav-brand .brand-logo {
+    height: 42px;
   }
 
   .hero-brand-space {
@@ -2789,11 +2795,8 @@ img {
   .lang-switch-top .lang-label {
     display: none;
   }
-  .lang-switch-nav .lang-code {
-    display: none;
-  }
-  .lang-switch-nav .lang-btn {
-    padding: 0.22rem 0.35rem;
+  .lang-switch-top .lang-btn {
+    padding: 0.18rem 0.35rem;
   }
 }
 
