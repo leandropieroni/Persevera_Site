@@ -1,0 +1,11 @@
+# Ignorar arquivos pesados, backups e dumps temporários
+*.zip
+*.bin
+*.html.dump
+folder_dump.html
+WhatsApp Image*
+*.log
+
+# Diretórios temporários
+scratch/
+.system_generated/
