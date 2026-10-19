@@ -172,41 +172,449 @@
           <p class="section-desc" data-i18n="music_desc">Listen to exclusive tracks directly in our official player or stream on your favorite digital platform.</p>
         </div>
 
-        <!-- Grid: Custom Player + Spotify Embed -->
-        <div class="music-grid">
+        <!-- TWO INTERACTIVE CAROUSELS: GENESIS (LEFT) & SINGLES/TRIBUTES (RIGHT) -->
+        <div class="music-carousels-grid">
           
-          <!-- Custom HTML5 Audio Player -->
-          <div class="custom-player-card">
-            <div class="player-header">
-              <div class="player-badge"><i class="fa-solid fa-volume-high"></i> <span data-i18n="player_badge">OFFICIAL PLAYER</span></div>
-              <span class="player-album-tag" data-i18n="player_album_tag">Album: Genesis & Specials</span>
+          <!-- QUADRO ESQUERDO: Carrossel Álbum Genesis (13 Músicas) -->
+          <div class="carousel-card genesis-carousel-card">
+            <div class="carousel-card-header">
+              <div class="album-badge"><i class="fa-solid fa-compact-disc"></i> <span data-i18n="carousel_genesis_badge">13 TRACKS • DEBUT ALBUM (2023)</span></div>
+              <span class="carousel-counter-badge" id="genesis-counter">01 / 13</span>
+            </div>
+            
+            <div class="carousel-title-row">
+              <h3 class="carousel-main-title" data-i18n="carousel_genesis_title">GENESIS — 13 TRACKS</h3>
+              <div class="carousel-nav-arrows">
+                <button class="carousel-arrow-btn" id="btn-prev-genesis" aria-label="Previous Track"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-arrow-btn" id="btn-next-genesis" aria-label="Next Track"><i class="fa-solid fa-chevron-right"></i></button>
+              </div>
             </div>
 
-            <div class="player-now-playing">
-              <div class="disc-vinyl-wrapper" id="vinyl-wrapper">
-                <img src="assets/images/logo-psvrn-square.jpg" alt="Cover" class="disc-vinyl-img" id="player-cover">
-                <div class="vinyl-center-hole"></div>
-              </div>
-              <div class="track-meta">
-                <span class="now-playing-label" data-i18n="player_now_playing">NOW PLAYING:</span>
-                <h3 class="track-title" id="current-track-title">Iced Hell</h3>
-                <span class="track-artist" id="current-track-artist">Persevera • Genesis (2023)</span>
-                
-                <!-- Animated Equalizer -->
-                <div class="equalizer" id="equalizer">
-                  <span class="bar"></span>
-                  <span class="bar"></span>
-                  <span class="bar"></span>
-                  <span class="bar"></span>
-                  <span class="bar"></span>
-                  <span class="bar"></span>
-                  <span class="bar"></span>
-                  <span class="bar"></span>
+            <!-- Carousel Viewport -->
+            <div class="carousel-viewport" id="genesis-viewport">
+              <div class="carousel-slides-track" id="genesis-slides-track">
+              <div class="carousel-slide active" data-index="0" data-src="assets/audio/iced-hell.mp3" data-title="Iced Hell" data-album="Genesis (2023)">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="Iced Hell Artwork" class="slide-art-img" data-art-slot="genesis-01">
+                  <div class="slide-art-overlay">
+                    <button class="slide-play-btn" data-audio-src="assets/audio/iced-hell.mp3" data-track-title="Iced Hell" data-track-album="Genesis (2023)" title="Play Iced Hell"><i class="fa-solid fa-play"></i></button>
+                  </div>
+                  <span class="slide-tag-badge">FAIXA 01</span>
+                  <div class="slide-num-pill">01</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">Iced Hell</h4>
+                    <span class="slide-track-album">Genesis (2023)</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="g_track1_desc">Description</p>
                 </div>
               </div>
+              <div class="carousel-slide" data-index="1" data-src="assets/audio/oh-lord.mp3" data-title="Oh Lord!" data-album="Genesis (2023)">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="Oh Lord! Artwork" class="slide-art-img" data-art-slot="genesis-02">
+                  <div class="slide-art-overlay">
+                    <button class="slide-play-btn" data-audio-src="assets/audio/oh-lord.mp3" data-track-title="Oh Lord!" data-track-album="Genesis (2023)" title="Play Oh Lord!"><i class="fa-solid fa-play"></i></button>
+                  </div>
+                  <span class="slide-tag-badge">FAIXA 02</span>
+                  <div class="slide-num-pill">02</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">Oh Lord!</h4>
+                    <span class="slide-track-album">Genesis (2023)</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="g_track2_desc">Description</p>
+                </div>
+              </div>
+              <div class="carousel-slide" data-index="2" data-src="" data-title="A Waste of Time" data-album="Genesis (2023)">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="A Waste of Time Artwork" class="slide-art-img" data-art-slot="genesis-03">
+                  <div class="slide-art-overlay">
+                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
+                  </div>
+                  <span class="slide-tag-badge">FAIXA 03</span>
+                  <div class="slide-num-pill">03</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">A Waste of Time</h4>
+                    <span class="slide-track-album">Genesis (2023)</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="g_track3_desc">Description</p>
+                </div>
+              </div>
+              <div class="carousel-slide" data-index="3" data-src="" data-title="My Curse" data-album="Genesis (2023)">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="My Curse Artwork" class="slide-art-img" data-art-slot="genesis-04">
+                  <div class="slide-art-overlay">
+                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
+                  </div>
+                  <span class="slide-tag-badge">FAIXA 04</span>
+                  <div class="slide-num-pill">04</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">My Curse</h4>
+                    <span class="slide-track-album">Genesis (2023)</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="g_track4_desc">Description</p>
+                </div>
+              </div>
+              <div class="carousel-slide" data-index="4" data-src="" data-title="King of Kings" data-album="Genesis (2023)">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="King of Kings Artwork" class="slide-art-img" data-art-slot="genesis-05">
+                  <div class="slide-art-overlay">
+                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
+                  </div>
+                  <span class="slide-tag-badge">FAIXA 05</span>
+                  <div class="slide-num-pill">05</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">King of Kings</h4>
+                    <span class="slide-track-album">Genesis (2023)</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="g_track5_desc">Description</p>
+                </div>
+              </div>
+              <div class="carousel-slide" data-index="5" data-src="" data-title="The Flail of God" data-album="Genesis (2023)">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="The Flail of God Artwork" class="slide-art-img" data-art-slot="genesis-06">
+                  <div class="slide-art-overlay">
+                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
+                  </div>
+                  <span class="slide-tag-badge">FAIXA 06</span>
+                  <div class="slide-num-pill">06</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">The Flail of God</h4>
+                    <span class="slide-track-album">Genesis (2023)</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="g_track6_desc">Description</p>
+                </div>
+              </div>
+              <div class="carousel-slide" data-index="6" data-src="" data-title="Down from the Sky" data-album="Genesis (2023)">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="Down from the Sky Artwork" class="slide-art-img" data-art-slot="genesis-07">
+                  <div class="slide-art-overlay">
+                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
+                  </div>
+                  <span class="slide-tag-badge">FAIXA 07</span>
+                  <div class="slide-num-pill">07</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">Down from the Sky</h4>
+                    <span class="slide-track-album">Genesis (2023)</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="g_track7_desc">Description</p>
+                </div>
+              </div>
+              <div class="carousel-slide" data-index="7" data-src="" data-title="The Countdown" data-album="Genesis (2023)">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="The Countdown Artwork" class="slide-art-img" data-art-slot="genesis-08">
+                  <div class="slide-art-overlay">
+                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
+                  </div>
+                  <span class="slide-tag-badge">FAIXA 08</span>
+                  <div class="slide-num-pill">08</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">The Countdown</h4>
+                    <span class="slide-track-album">Genesis (2023)</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="g_track8_desc">Description</p>
+                </div>
+              </div>
+              <div class="carousel-slide" data-index="8" data-src="" data-title="The White Rider" data-album="Genesis (2023)">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="The White Rider Artwork" class="slide-art-img" data-art-slot="genesis-09">
+                  <div class="slide-art-overlay">
+                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
+                  </div>
+                  <span class="slide-tag-badge">1º CAVALEIRO</span>
+                  <div class="slide-num-pill">09</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">The White Rider</h4>
+                    <span class="slide-track-album">Genesis (2023)</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="g_track9_desc">Description</p>
+                </div>
+              </div>
+              <div class="carousel-slide" data-index="9" data-src="" data-title="The Red Horse" data-album="Genesis (2023)">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="The Red Horse Artwork" class="slide-art-img" data-art-slot="genesis-10">
+                  <div class="slide-art-overlay">
+                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
+                  </div>
+                  <span class="slide-tag-badge">2º CAVALEIRO</span>
+                  <div class="slide-num-pill">10</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">The Red Horse</h4>
+                    <span class="slide-track-album">Genesis (2023)</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="g_track10_desc">Description</p>
+                </div>
+              </div>
+              <div class="carousel-slide" data-index="10" data-src="" data-title="Famine" data-album="Genesis (2023)">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="Famine Artwork" class="slide-art-img" data-art-slot="genesis-11">
+                  <div class="slide-art-overlay">
+                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
+                  </div>
+                  <span class="slide-tag-badge">3º CAVALEIRO</span>
+                  <div class="slide-num-pill">11</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">Famine</h4>
+                    <span class="slide-track-album">Genesis (2023)</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="g_track11_desc">Description</p>
+                </div>
+              </div>
+              <div class="carousel-slide" data-index="11" data-src="" data-title="Death" data-album="Genesis (2023)">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="Death Artwork" class="slide-art-img" data-art-slot="genesis-12">
+                  <div class="slide-art-overlay">
+                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
+                  </div>
+                  <span class="slide-tag-badge">4º CAVALEIRO</span>
+                  <div class="slide-num-pill">12</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">Death</h4>
+                    <span class="slide-track-album">Genesis (2023)</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="g_track12_desc">Description</p>
+                </div>
+              </div>
+              <div class="carousel-slide" data-index="12" data-src="" data-title="The Last Horseman" data-album="Genesis (2023)">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="The Last Horseman Artwork" class="slide-art-img" data-art-slot="genesis-13">
+                  <div class="slide-art-overlay">
+                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
+                  </div>
+                  <span class="slide-tag-badge">O DESFECHO</span>
+                  <div class="slide-num-pill">13</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">The Last Horseman</h4>
+                    <span class="slide-track-album">Genesis (2023)</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="g_track13_desc">Description</p>
+                </div>
+              </div>
+              </div>
             </div>
 
-            <!-- Audio Progress Bar -->
+            <!-- Dots Pagination -->
+            <div class="carousel-dots-wrapper" id="genesis-dots">
+              <button class="carousel-dot active" data-dot-index="0" aria-label="Faixa 1"></button><button class="carousel-dot" data-dot-index="1" aria-label="Faixa 2"></button><button class="carousel-dot" data-dot-index="2" aria-label="Faixa 3"></button><button class="carousel-dot" data-dot-index="3" aria-label="Faixa 4"></button><button class="carousel-dot" data-dot-index="4" aria-label="Faixa 5"></button><button class="carousel-dot" data-dot-index="5" aria-label="Faixa 6"></button><button class="carousel-dot" data-dot-index="6" aria-label="Faixa 7"></button><button class="carousel-dot" data-dot-index="7" aria-label="Faixa 8"></button><button class="carousel-dot" data-dot-index="8" aria-label="Faixa 9"></button><button class="carousel-dot" data-dot-index="9" aria-label="Faixa 10"></button><button class="carousel-dot" data-dot-index="10" aria-label="Faixa 11"></button><button class="carousel-dot" data-dot-index="11" aria-label="Faixa 12"></button><button class="carousel-dot" data-dot-index="12" aria-label="Faixa 13"></button>
+            </div>
+          </div>
+
+          <!-- QUADRO DIREITO: Carrossel Singles & Tributos -->
+          <div class="carousel-card singles-carousel-card">
+            <div class="carousel-card-header">
+              <div class="album-badge singles-badge"><i class="fa-solid fa-fire"></i> <span data-i18n="carousel_singles_badge">STUDIO RECORDINGS & TRIBUTES</span></div>
+              <span class="carousel-counter-badge singles-counter" id="singles-counter">01 / 08</span>
+            </div>
+
+            <div class="carousel-title-row">
+              <h3 class="carousel-main-title" data-i18n="carousel_singles_title">SINGLES & TRIBUTES</h3>
+              <div class="carousel-nav-arrows">
+                <button class="carousel-arrow-btn" id="btn-prev-singles" aria-label="Previous Single"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-arrow-btn" id="btn-next-singles" aria-label="Next Single"><i class="fa-solid fa-chevron-right"></i></button>
+              </div>
+            </div>
+
+            <!-- Carousel Viewport -->
+            <div class="carousel-viewport" id="singles-viewport">
+              <div class="carousel-slides-track" id="singles-slides-track">
+              <div class="carousel-slide active" data-index="0" data-src="" data-title="War is Hell" data-album="2º Álbum • 2026+">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="War is Hell Artwork" class="slide-art-img" data-art-slot="singles-01">
+                  <div class="slide-art-overlay">
+                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
+                  </div>
+                  <span class="slide-tag-badge">NOVO SINGLE</span>
+                  <div class="slide-num-pill">01</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">War is Hell</h4>
+                    <span class="slide-track-album">2º Álbum • 2026+</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="s_track1_desc">Description</p>
+                </div>
+              </div>
+              <div class="carousel-slide" data-index="1" data-src="assets/audio/sad-but-true.mp3" data-title="Sad But True" data-album="Tributo Oficial">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="Sad But True Artwork" class="slide-art-img" data-art-slot="singles-02">
+                  <div class="slide-art-overlay">
+                    <button class="slide-play-btn" data-audio-src="assets/audio/sad-but-true.mp3" data-track-title="Sad But True" data-track-album="Tributo Oficial" title="Play Sad But True"><i class="fa-solid fa-play"></i></button>
+                  </div>
+                  <span class="slide-tag-badge">COVER METALLICA</span>
+                  <div class="slide-num-pill">02</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">Sad But True</h4>
+                    <span class="slide-track-album">Tributo Oficial</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="s_track2_desc">Description</p>
+                </div>
+              </div>
+              <div class="carousel-slide" data-index="2" data-src="assets/audio/selling-my-soul.mp3" data-title="Selling My Soul" data-album="Tributo Oficial">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="Selling My Soul Artwork" class="slide-art-img" data-art-slot="singles-03">
+                  <div class="slide-art-overlay">
+                    <button class="slide-play-btn" data-audio-src="assets/audio/selling-my-soul.mp3" data-track-title="Selling My Soul" data-track-album="Tributo Oficial" title="Play Selling My Soul"><i class="fa-solid fa-play"></i></button>
+                  </div>
+                  <span class="slide-tag-badge">COVER SABBATH</span>
+                  <div class="slide-num-pill">03</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">Selling My Soul</h4>
+                    <span class="slide-track-album">Tributo Oficial</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="s_track3_desc">Description</p>
+                </div>
+              </div>
+              <div class="carousel-slide" data-index="3" data-src="" data-title="Broken World" data-album="2º Álbum • 2026+">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="Broken World Artwork" class="slide-art-img" data-art-slot="singles-04">
+                  <div class="slide-art-overlay">
+                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
+                  </div>
+                  <span class="slide-tag-badge">CLIPE OFICIAL</span>
+                  <div class="slide-num-pill">04</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">Broken World</h4>
+                    <span class="slide-track-album">2º Álbum • 2026+</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="s_track4_desc">Description</p>
+                </div>
+              </div>
+              <div class="carousel-slide" data-index="4" data-src="" data-title="To the Unknown" data-album="2º Álbum • 2026+">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="To the Unknown Artwork" class="slide-art-img" data-art-slot="singles-05">
+                  <div class="slide-art-overlay">
+                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
+                  </div>
+                  <span class="slide-tag-badge">CLIPE OFICIAL</span>
+                  <div class="slide-num-pill">05</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">To the Unknown</h4>
+                    <span class="slide-track-album">2º Álbum • 2026+</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="s_track5_desc">Description</p>
+                </div>
+              </div>
+              <div class="carousel-slide" data-index="5" data-src="" data-title="The Chosen Son" data-album="2º Álbum • 2026+">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="The Chosen Son Artwork" class="slide-art-img" data-art-slot="singles-06">
+                  <div class="slide-art-overlay">
+                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
+                  </div>
+                  <span class="slide-tag-badge">EM ESTÚDIO</span>
+                  <div class="slide-num-pill">06</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">The Chosen Son</h4>
+                    <span class="slide-track-album">2º Álbum • 2026+</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="s_track6_desc">Description</p>
+                </div>
+              </div>
+              <div class="carousel-slide" data-index="6" data-src="" data-title="Master" data-album="2º Álbum • 2026+">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="Master Artwork" class="slide-art-img" data-art-slot="singles-07">
+                  <div class="slide-art-overlay">
+                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
+                  </div>
+                  <span class="slide-tag-badge">EM ESTÚDIO</span>
+                  <div class="slide-num-pill">07</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">Master</h4>
+                    <span class="slide-track-album">2º Álbum • 2026+</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="s_track7_desc">Description</p>
+                </div>
+              </div>
+              <div class="carousel-slide" data-index="7" data-src="" data-title="In Ancient Times" data-album="2º Álbum • 2026+">
+                <div class="slide-artwork-box">
+                  <img src="assets/images/logo-psvrn-square.jpg" alt="In Ancient Times Artwork" class="slide-art-img" data-art-slot="singles-08">
+                  <div class="slide-art-overlay">
+                    <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="slide-play-btn spotify-btn" title="Listen on Spotify"><i class="fa-brands fa-spotify"></i></a>
+                  </div>
+                  <span class="slide-tag-badge">EM ESTÚDIO</span>
+                  <div class="slide-num-pill">08</div>
+                </div>
+                <div class="slide-track-info">
+                  <div class="slide-info-header">
+                    <h4 class="slide-track-name">In Ancient Times</h4>
+                    <span class="slide-track-album">2º Álbum • 2026+</span>
+                  </div>
+                  <p class="slide-track-desc" data-i18n="s_track8_desc">Description</p>
+                </div>
+              </div>
+              </div>
+            </div>
+
+            <!-- Dots Pagination -->
+            <div class="carousel-dots-wrapper" id="singles-dots">
+              <button class="carousel-dot active" data-dot-index="0" aria-label="Single 1"></button><button class="carousel-dot" data-dot-index="1" aria-label="Single 2"></button><button class="carousel-dot" data-dot-index="2" aria-label="Single 3"></button><button class="carousel-dot" data-dot-index="3" aria-label="Single 4"></button><button class="carousel-dot" data-dot-index="4" aria-label="Single 5"></button><button class="carousel-dot" data-dot-index="5" aria-label="Single 6"></button><button class="carousel-dot" data-dot-index="6" aria-label="Single 7"></button><button class="carousel-dot" data-dot-index="7" aria-label="Single 8"></button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- UNIFIED MASTER AUDIO PLAYER BAR -->
+        <div class="unified-audio-player-card">
+          <div class="player-bar-left">
+            <div class="disc-vinyl-wrapper" id="vinyl-wrapper">
+              <img src="assets/images/logo-psvrn-square.jpg" alt="Cover" class="disc-vinyl-img" id="player-cover">
+              <div class="vinyl-center-hole"></div>
+            </div>
+            <div class="player-bar-meta">
+              <span class="now-playing-label" data-i18n="player_now_playing">NOW PLAYING:</span>
+              <h4 class="player-bar-title" id="current-track-title">Iced Hell</h4>
+              <span class="player-bar-artist" id="current-track-artist">Persevera • Genesis (2023)</span>
+            </div>
+            <div class="equalizer" id="equalizer">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+
+          <div class="player-bar-center">
+            <div class="player-bar-controls">
+              <button class="ctrl-btn" id="btn-prev" title="Previous Track"><i class="fa-solid fa-backward-step"></i></button>
+              <button class="ctrl-btn btn-play-large" id="btn-play-pause" title="Play / Pause"><i class="fa-solid fa-play" id="play-icon"></i></button>
+              <button class="ctrl-btn" id="btn-next" title="Next Track"><i class="fa-solid fa-forward-step"></i></button>
+            </div>
             <div class="progress-container">
               <span class="time-display" id="time-current">0:00</span>
               <div class="progress-bar-bg" id="progress-bar-bg">
@@ -214,77 +622,28 @@
               </div>
               <span class="time-display" id="time-total">0:00</span>
             </div>
-
-            <!-- Player Controls -->
-            <div class="player-controls">
-              <button class="ctrl-btn" id="btn-prev" title="Previous Track">
-                <i class="fa-solid fa-backward-step"></i>
-              </button>
-              <button class="ctrl-btn btn-play-large" id="btn-play-pause" title="Play / Pause">
-                <i class="fa-solid fa-play" id="play-icon"></i>
-              </button>
-              <button class="ctrl-btn" id="btn-next" title="Next Track">
-                <i class="fa-solid fa-forward-step"></i>
-              </button>
-              <div class="volume-control">
-                <i class="fa-solid fa-volume-high" id="volume-icon"></i>
-                <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.85" aria-label="Volume">
-              </div>
-            </div>
-
-            <!-- Player Playlist -->
-            <div class="playlist-wrapper">
-              <h4 class="playlist-heading"><i class="fa-solid fa-list-ul"></i> <span data-i18n="playlist_heading">PLAYER TRACKLIST:</span></h4>
-              <ul class="playlist-list" id="playlist-list">
-                <li class="playlist-item active" data-index="0" data-src="assets/audio/iced-hell.mp3" data-title="Iced Hell" data-album="Genesis (2023)" data-duration="4:31">
-                  <div class="track-num">01</div>
-                  <div class="track-info">
-                    <span class="track-name">Iced Hell</span>
-                    <span class="track-sub" data-i18n="track1_sub">Devastating opening track from the Genesis album</span>
-                  </div>
-                  <div class="track-status"><i class="fa-solid fa-wave-square"></i></div>
-                </li>
-
-                <li class="playlist-item" data-index="1" data-src="assets/audio/oh-lord.mp3" data-title="Oh Lord!" data-album="Genesis (2023)" data-duration="4:06">
-                  <div class="track-num">02</div>
-                  <div class="track-info">
-                    <span class="track-name">Oh Lord!</span>
-                    <span class="track-sub" data-i18n="track2_sub">Heavy riffs and dynamic vocal performance</span>
-                  </div>
-                  <div class="track-status"><i class="fa-solid fa-play"></i></div>
-                </li>
-
-                <li class="playlist-item" data-index="2" data-src="assets/audio/selling-my-soul.mp3" data-title="Selling My Soul" data-album="Tributo Black Sabbath" data-duration="3:10">
-                  <div class="track-num">03</div>
-                  <div class="track-info">
-                    <span class="track-name">Selling My Soul (Black Sabbath Tribute)</span>
-                    <span class="track-sub" data-i18n="track3_sub">Tribute to Black Sabbath, the band's pioneering influence</span>
-                  </div>
-                  <div class="track-status"><i class="fa-solid fa-play"></i></div>
-                </li>
-
-                <li class="playlist-item" data-index="3" data-src="assets/audio/sad-but-true.mp3" data-title="Sad But True" data-album="Tributo Metallica" data-duration="5:33">
-                  <div class="track-num">04</div>
-                  <div class="track-info">
-                    <span class="track-name">Sad But True (Metallica Cover)</span>
-                    <span class="track-sub" data-i18n="track4_sub">Heavy, down-tuned homage to Metallica's legendary groove anthem</span>
-                  </div>
-                  <div class="track-status"><i class="fa-solid fa-play"></i></div>
-                </li>
-              </ul>
-            </div>
-            
-            <audio id="audio-player" preload="metadata"></audio>
           </div>
 
-          <!-- Official Spotify & Streaming Hub -->
-          <div class="streaming-hub-card">
-            <div class="hub-header">
-              <div class="spotify-badge"><i class="fa-brands fa-spotify"></i> SPOTIFY OFICIAL</div>
-              <h3 data-i18n="hub_title">PERSEVERA ON STREAMING</h3>
+          <div class="player-bar-right">
+            <div class="volume-control">
+              <i class="fa-solid fa-volume-high" id="volume-icon"></i>
+              <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.85" aria-label="Volume">
             </div>
-            
-            <!-- Official Spotify Embed -->
+          </div>
+
+          <audio id="audio-player" preload="metadata"></audio>
+        </div>
+
+        <!-- DEDICATED STREAMING HUB (QUADRO DO LADO DIREITO REPOSICIONADO PARA BAIXO) -->
+        <div class="streaming-hub-dedicated" id="streaming-hub">
+          <div class="hub-header">
+            <div class="spotify-badge"><i class="fa-brands fa-spotify"></i> SPOTIFY OFICIAL</div>
+            <h3 data-i18n="hub_title">PERSEVERA ON STREAMING</h3>
+            <p class="hub-subtitle" data-i18n="hub_subtitle">Stream the full discography, add songs to your favorites and follow Persevera on major digital platforms.</p>
+          </div>
+
+          <div class="hub-split-grid">
+            <!-- Spotify Embed -->
             <div class="spotify-embed-container">
               <iframe 
                 src="https://open.spotify.com/embed/artist/5O1VDTAGCRudWZFqfqj5bB?utm_source=generator&theme=0" 
@@ -299,29 +658,44 @@
             </div>
 
             <!-- Digital Streaming Platforms -->
-            <div class="platforms-list">
+            <div class="platforms-list-dedicated">
               <span class="platforms-title" data-i18n="platforms_title">ALSO AVAILABLE ON:</span>
-              <div class="platforms-grid">
-                <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="platform-btn spotify">
+              <div class="platforms-grid-dedicated">
+                <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="platform-btn-box spotify">
                   <i class="fa-brands fa-spotify"></i>
-                  <span>Spotify</span>
+                  <div class="platform-texts">
+                    <strong>Spotify</strong>
+                    <span>Official Artist Profile</span>
+                  </div>
+                  <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
                 </a>
-                <a href="https://music.apple.com/br/artist/persevera/1551694205" target="_blank" rel="noopener" class="platform-btn apple">
+                <a href="https://music.apple.com/br/artist/persevera/1551694205" target="_blank" rel="noopener" class="platform-btn-box apple">
                   <i class="fa-brands fa-apple"></i>
-                  <span>Apple Music</span>
+                  <div class="platform-texts">
+                    <strong>Apple Music</strong>
+                    <span>Lossless & Spatial Audio</span>
+                  </div>
+                  <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
                 </a>
-                <a href="https://music.youtube.com/channel/UC0fryRauxpTbBuoGOmBchYg" target="_blank" rel="noopener" class="platform-btn ytmusic">
+                <a href="https://music.youtube.com/channel/UC0fryRauxpTbBuoGOmBchYg" target="_blank" rel="noopener" class="platform-btn-box ytmusic">
                   <i class="fa-brands fa-youtube"></i>
-                  <span>YouTube Music</span>
+                  <div class="platform-texts">
+                    <strong>YouTube Music</strong>
+                    <span>Stream & Music Videos</span>
+                  </div>
+                  <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
                 </a>
-                <a href="https://www.deezer.com/br/artist/122119962" target="_blank" rel="noopener" class="platform-btn deezer">
+                <a href="https://www.deezer.com/br/artist/122119962" target="_blank" rel="noopener" class="platform-btn-box deezer">
                   <i class="fa-brands fa-deezer"></i>
-                  <span>Deezer</span>
+                  <div class="platform-texts">
+                    <strong>Deezer</strong>
+                    <span>Hi-Fi Streaming</span>
+                  </div>
+                  <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
                 </a>
               </div>
             </div>
           </div>
-
         </div>
 
         <!-- Full Genesis Album Showcase -->
@@ -1177,7 +1551,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/translations.js?v=2.1"></script>
-  <script src="assets/js/main.js?v=2.1"></script>
+  <script src="assets/js/translations.js?v=3.0"></script>
+  <script src="assets/js/main.js?v=3.0"></script>
 </body>
 </html>

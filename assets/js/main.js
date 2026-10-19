@@ -397,6 +397,170 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load first track by default
   loadTrack(0);
 
+
+  // ==========================================
+  // CAROUSEL LOGIC: GENESIS (LEFT) & SINGLES/TRIBUTES (RIGHT)
+  // ==========================================
+  function setupTrackCarousel(config) {
+    const track = document.getElementById(config.trackId);
+    const prevBtn = document.getElementById(config.prevBtnId);
+    const nextBtn = document.getElementById(config.nextBtnId);
+    const dotsContainer = document.getElementById(config.dotsId);
+    const counter = document.getElementById(config.counterId);
+    const viewport = document.getElementById(config.viewportId);
+
+    if (!track) return;
+
+    const slides = track.querySelectorAll('.carousel-slide');
+    const dots = dotsContainer ? dotsContainer.querySelectorAll('.carousel-dot') : [];
+    const total = slides.length;
+    let currentIndex = 0;
+
+    function goToSlide(index) {
+      if (index < 0) index = total - 1;
+      if (index >= total) index = 0;
+      currentIndex = index;
+
+      // Smooth transform shift
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+      // Update slides active state
+      slides.forEach((s, idx) => {
+        if (idx === currentIndex) {
+          s.classList.add('active');
+        } else {
+          s.classList.remove('active');
+        }
+      });
+
+      // Update dots
+      if (dots.length) {
+        dots.forEach((d, idx) => {
+          if (idx === currentIndex) {
+            d.classList.add('active');
+          } else {
+            d.classList.remove('active');
+          }
+        });
+      }
+
+      // Update counter pill (e.g. 01 / 13)
+      if (counter) {
+        const curStr = (currentIndex + 1 < 10 ? '0' : '') + (currentIndex + 1);
+        const totStr = (total < 10 ? '0' : '') + total;
+        counter.textContent = `${curStr} / ${totStr}`;
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+    }
+
+    if (dots.length) {
+      dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => goToSlide(idx));
+      });
+    }
+
+    // Touch Swipe Gestures
+    if (viewport) {
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      viewport.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      viewport.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      }, { passive: true });
+
+      function handleSwipe() {
+        const swipeDiff = touchStartX - touchEndX;
+        if (Math.abs(swipeDiff) > 40) {
+          if (swipeDiff > 0) {
+            goToSlide(currentIndex + 1); // Swipe Left -> Next
+          } else {
+            goToSlide(currentIndex - 1); // Swipe Right -> Prev
+          }
+        }
+      }
+    }
+
+    // Keyboard navigation when hovering/focused on carousel
+    if (viewport) {
+      viewport.setAttribute('tabindex', '0');
+      viewport.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          goToSlide(currentIndex - 1);
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          goToSlide(currentIndex + 1);
+        }
+      });
+    }
+
+    // Initialize first slide
+    goToSlide(0);
+  }
+
+  // Initialize both carousels
+  setupTrackCarousel({
+    trackId: 'genesis-slides-track',
+    prevBtnId: 'btn-prev-genesis',
+    nextBtnId: 'btn-next-genesis',
+    dotsId: 'genesis-dots',
+    counterId: 'genesis-counter',
+    viewportId: 'genesis-viewport'
+  });
+
+  setupTrackCarousel({
+    trackId: 'singles-slides-track',
+    prevBtnId: 'btn-prev-singles',
+    nextBtnId: 'btn-next-singles',
+    dotsId: 'singles-dots',
+    counterId: 'singles-counter',
+    viewportId: 'singles-viewport'
+  });
+
+  // Slide Play Buttons listener (connects to main player)
+  const slidePlayButtons = document.querySelectorAll('.slide-play-btn');
+  slidePlayButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const src = btn.getAttribute('data-audio-src');
+      const title = btn.getAttribute('data-track-title');
+      const album = btn.getAttribute('data-track-album');
+
+      if (!src) {
+        // External link or Spotify handled naturally
+        return;
+      }
+
+      e.preventDefault();
+
+      // Find in tracks array or play custom src
+      const foundIdx = tracks.findIndex(t => t.src === src || t.title.toLowerCase() === title.toLowerCase());
+      if (foundIdx !== -1) {
+        loadTrack(foundIdx);
+        playTrack();
+      } else {
+        // Direct playback
+        audio.src = src;
+        if (currentTrackTitle) currentTrackTitle.textContent = title;
+        if (currentTrackArtist) currentTrackArtist.textContent = `Persevera • ${album}`;
+        if (miniTitle) miniTitle.textContent = title;
+        if (miniSub) miniSub.textContent = `Persevera • ${album}`;
+        playTrack();
+      }
+    });
+  });
+
+
   // ==========================================
   // 3. VIDEOS & CINEMATICS THEATER
   // ==========================================
