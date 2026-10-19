@@ -180,11 +180,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const vinylWrapper = document.getElementById('vinyl-wrapper');
   const equalizer = document.getElementById('equalizer');
   const currentTrackTitle = document.getElementById('current-track-title');
+  const currentTrackArtist = document.getElementById('current-track-artist');
   const playlistItems = document.querySelectorAll('.playlist-item');
 
   // Mini Player elements
   const miniPlayer = document.getElementById('mini-player');
   const miniTitle = document.getElementById('mini-title');
+  const miniSub = document.getElementById('mini-sub');
   const miniPlay = document.getElementById('mini-play');
   const miniPlayIcon = document.getElementById('mini-play-icon');
   const miniPrev = document.getElementById('mini-prev');
@@ -194,38 +196,34 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentTrackIndex = 0;
   let isPlaying = false;
 
-  const tracks = [
-    {
-      title: 'Iced Hell',
-      album: 'Genesis (2023)',
-      src: 'assets/audio/iced-hell.mp3'
-    },
-    {
-      title: 'Oh Lord!',
-      album: 'Genesis (2023)',
-      src: 'assets/audio/oh-lord.mp3'
-    },
-    {
-      title: 'Selling My Soul',
-      album: 'Black Sabbath Tribute',
-      src: 'assets/audio/selling-my-soul.mp3'
-    },
-    {
-      title: 'Sad But True',
-      album: 'Metallica Tribute',
-      src: 'assets/audio/sad-but-true.mp3'
-    }
-  ];
+  // Build tracks dynamically from the DOM playlist items so it is always 100% in sync
+  const tracks = (playlistItems && playlistItems.length > 0)
+    ? Array.from(playlistItems).map((item, idx) => ({
+        title: item.getAttribute('data-title') || item.querySelector('.track-name')?.textContent?.trim() || `Track ${idx + 1}`,
+        album: item.getAttribute('data-album') || 'Persevera',
+        src: item.getAttribute('data-src') || ''
+      }))
+    : [
+        { title: 'Iced Hell', album: 'Genesis (2023)', src: 'assets/audio/iced-hell.mp3' },
+        { title: 'Oh Lord!', album: 'Genesis (2023)', src: 'assets/audio/oh-lord.mp3' },
+        { title: 'Selling My Soul', album: 'Black Sabbath Tribute', src: 'assets/audio/selling-my-soul.mp3' },
+        { title: 'Sad But True', album: 'Metallica Tribute', src: 'assets/audio/sad-but-true.mp3' }
+      ];
 
   function loadTrack(index) {
+    if (!tracks.length) return;
     if (index < 0) index = tracks.length - 1;
     if (index >= tracks.length) index = 0;
     currentTrackIndex = index;
 
     const track = tracks[currentTrackIndex];
-    audio.src = track.src;
-    currentTrackTitle.textContent = track.title;
+    if (track && track.src) {
+      audio.src = track.src;
+    }
+    if (currentTrackTitle) currentTrackTitle.textContent = track.title;
+    if (currentTrackArtist) currentTrackArtist.textContent = `Persevera • ${track.album}`;
     if (miniTitle) miniTitle.textContent = track.title;
+    if (miniSub) miniSub.textContent = `Persevera • ${track.album}`;
 
     // Update Playlist UI
     playlistItems.forEach((item, idx) => {
@@ -370,10 +368,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Playlist Items Click
   playlistItems.forEach((item, index) => {
     item.addEventListener('click', () => {
-      if (currentTrackIndex === index && isPlaying) {
+      const targetIndex = item.hasAttribute('data-index') ? parseInt(item.getAttribute('data-index'), 10) : index;
+      if (currentTrackIndex === targetIndex && isPlaying) {
         pauseTrack();
       } else {
-        loadTrack(index);
+        loadTrack(targetIndex);
         playTrack();
       }
     });
