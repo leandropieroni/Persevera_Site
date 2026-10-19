@@ -1756,13 +1756,16 @@ img {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  cursor: pointer;
   transition: all var(--transition-fast);
 }
 
 .press-card:hover {
-  background: rgba(0, 212, 255, 0.04);
+  background: rgba(0, 212, 255, 0.05);
   border-color: var(--border-glow);
-  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.15);
+  transform: translateY(-4px);
 }
 
 .press-source {
@@ -1772,6 +1775,21 @@ img {
   letter-spacing: 1px;
   font-weight: 700;
   margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.press-link-icon {
+  font-size: 0.8rem;
+  color: var(--primary-blue);
+  opacity: 0.6;
+  transition: all 0.2s ease;
+}
+
+.press-card:hover .press-link-icon {
+  opacity: 1;
+  transform: translate(2px, -2px);
 }
 
 .press-card p {
