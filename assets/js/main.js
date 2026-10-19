@@ -84,6 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Apply initial language immediately
+  setLanguage(currentLang);
+
   // Contact form submission listener with localized message
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
@@ -198,22 +201,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const tracks = [
     // Genesis Album (13 Tracks)
-    { title: 'Iced Hell', album: 'Genesis (2023)', src: 'assets/audio/01-iced-hell.mp3', cover: 'assets/images/tracks/01-iced-hell.png' },
-    { title: 'Oh Lord!', album: 'Genesis (2023)', src: 'assets/audio/02-oh-lord.mp3', cover: 'assets/images/tracks/02-oh-lord.jpg' },
-    { title: 'A Waste of Time', album: 'Genesis (2023)', src: 'assets/audio/03-a-waste-of-time.mp3', cover: 'assets/images/tracks/03-a-waste-of-time.jpg' },
-    { title: 'My Curse', album: 'Genesis (2023)', src: 'assets/audio/04-my-curse.mp3', cover: 'assets/images/tracks/04-my-curse.jpg' },
-    { title: 'King of Kings', album: 'Genesis (2023)', src: 'assets/audio/05-king-of-kings.mp3', cover: 'assets/images/tracks/05-king-of-kings.jpg' },
-    { title: 'The Flail of God', album: 'Genesis (2023)', src: 'assets/audio/06-the-flail-of-god.mp3', cover: 'assets/images/tracks/06-the-flail-of-god.jpg' },
-    { title: 'Down from the Sky', album: 'Genesis (2023)', src: 'assets/audio/07-down-from-the-sky.mp3', cover: 'assets/images/tracks/07-down-from-the-sky.png' },
-    { title: 'The Countdown', album: 'Genesis (2023)', src: 'assets/audio/08-the-countdown.mp3', cover: 'assets/images/tracks/08-the-countdown.jpg' },
-    { title: 'The White Rider', album: 'Genesis (2023)', src: 'assets/audio/09-the-white-rider.mp3', cover: 'assets/images/tracks/09-the-white-rider.jpeg' },
-    { title: 'The Red Horse', album: 'Genesis (2023)', src: 'assets/audio/10-the-red-horse.mp3', cover: 'assets/images/tracks/10-the-red-horse.png' },
-    { title: 'Famine', album: 'Genesis (2023)', src: 'assets/audio/11-famine.mp3', cover: 'assets/images/tracks/11-famine.jpg' },
-    { title: 'Death', album: 'Genesis (2023)', src: 'assets/audio/12-death.mp3', cover: 'assets/images/tracks/12-death.png' },
-    { title: 'The Last Horseman', album: 'Genesis (2023)', src: 'assets/audio/13-the-last-horseman.mp3', cover: 'assets/images/tracks/13-the-last-horseman.jpg' },
+    { title: 'Iced Hell', album: 'Genesis (2023)', src: 'assets/audio/01-iced-hell.mp3?v=4.4', cover: 'assets/images/tracks/01-iced-hell.png' },
+    { title: 'Oh Lord!', album: 'Genesis (2023)', src: 'assets/audio/02-oh-lord.mp3?v=4.4', cover: 'assets/images/tracks/02-oh-lord.jpg' },
+    { title: 'A Waste of Time', album: 'Genesis (2023)', src: 'assets/audio/03-a-waste-of-time.mp3?v=4.4', cover: 'assets/images/tracks/03-a-waste-of-time.jpg' },
+    { title: 'My Curse', album: 'Genesis (2023)', src: 'assets/audio/04-my-curse.mp3?v=4.4', cover: 'assets/images/tracks/04-my-curse.jpg' },
+    { title: 'King of Kings', album: 'Genesis (2023)', src: 'assets/audio/05-king-of-kings.mp3?v=4.4', cover: 'assets/images/tracks/05-king-of-kings.jpg' },
+    { title: 'The Flail of God', album: 'Genesis (2023)', src: 'assets/audio/06-the-flail-of-god.mp3?v=4.4', cover: 'assets/images/tracks/06-the-flail-of-god.jpg' },
+    { title: 'Down from the Sky', album: 'Genesis (2023)', src: 'assets/audio/07-down-from-the-sky.mp3?v=4.4', cover: 'assets/images/tracks/07-down-from-the-sky.png' },
+    { title: 'The Countdown', album: 'Genesis (2023)', src: 'assets/audio/08-the-countdown.mp3?v=4.4', cover: 'assets/images/tracks/08-the-countdown.jpg' },
+    { title: 'The White Rider', album: 'Genesis (2023)', src: 'assets/audio/09-the-white-rider.mp3?v=4.4', cover: 'assets/images/tracks/09-the-white-rider.jpeg' },
+    { title: 'The Red Horse', album: 'Genesis (2023)', src: 'assets/audio/10-the-red-horse.mp3?v=4.4', cover: 'assets/images/tracks/10-the-red-horse.png' },
+    { title: 'Famine', album: 'Genesis (2023)', src: 'assets/audio/11-famine.mp3?v=4.4', cover: 'assets/images/tracks/11-famine.jpg' },
+    { title: 'Death', album: 'Genesis (2023)', src: 'assets/audio/12-death.mp3?v=4.4', cover: 'assets/images/tracks/12-death.png' },
+    { title: 'The Last Horseman', album: 'Genesis (2023)', src: 'assets/audio/13-the-last-horseman.mp3?v=4.4', cover: 'assets/images/tracks/13-the-last-horseman.jpg' },
     // Official Covers & Tributes
-    { title: 'Sad But True', album: 'Tributo Oficial', src: 'assets/audio/sad-but-true.mp3', cover: 'assets/images/tracks/sad-but-true.jpg' },
-    { title: 'Selling My Soul', album: 'Tributo Oficial', src: 'assets/audio/selling-my-soul.mp3', cover: 'assets/images/tracks/selling-my-soul.jpg' }
+    { title: 'Sad But True', album: 'Tributo Oficial', src: 'assets/audio/sad-but-true.mp3?v=4.4', cover: 'assets/images/tracks/sad-but-true.jpg' },
+    { title: 'Selling My Soul', album: 'Tributo Oficial', src: 'assets/audio/selling-my-soul.mp3?v=4.4', cover: 'assets/images/tracks/selling-my-soul.jpg' }
   ];
 
   function loadTrack(index) {
@@ -573,7 +576,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      const foundIdx = tracks.findIndex(t => t.src === src || t.title.toLowerCase() === (title || '').toLowerCase());
+      const cleanSrc = (src || '').split('?')[0];
+      const foundIdx = tracks.findIndex(t => (t.src || '').split('?')[0] === cleanSrc || (t.title || '').toLowerCase() === (title || '').toLowerCase());
       if (foundIdx !== -1) {
         loadTrack(foundIdx);
         playTrack();
