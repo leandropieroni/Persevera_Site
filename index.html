@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=5.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=5.1">
 </head>
 <body>
 
@@ -1019,8 +1019,14 @@
             </button>
           </div>
 
-          <!-- Video Selector Grid (3 Animated Clips + 4 Official Clips/Tributes + 13 Genesis Tracks = 20 Videos) -->
-          <div class="video-selector-grid">
+          <!-- Video Selector Single-Row Carousel (with Navigation Arrows) -->
+          <div class="video-carousel-wrapper">
+            <button class="video-carousel-arrow prev" id="vcarousel-prev" aria-label="Vídeos anteriores" title="Anterior">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="video-carousel-viewport" id="vcarousel-viewport">
+              <div class="video-carousel-track" id="vcarousel-track">
             <!-- 1. Official Live-Action Clips -->
             <div class="video-card" data-category="clips" data-videoid="UD6TgeVOR3w" data-title="Broken World" data-desc-key="v_c1_desc" data-title-key="v_c1_title" data-desc="Anthemic single with cinematic music video recorded with the reunited lineup.">
               <div class="v-thumb">
@@ -1248,6 +1254,12 @@
                 <span data-i18n="v_g13_sub">Lyric Video • Genesis 13</span>
               </div>
             </div>
+              </div>
+            </div>
+
+            <button class="video-carousel-arrow next" id="vcarousel-next" aria-label="Próximos vídeos" title="Próximo">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
           </div>
         </div>
 
@@ -1975,8 +1987,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/translations.js?v=5.0"></script>
-  <script src="assets/js/lyrics-data.js?v=5.0"></script>
-  <script src="assets/js/main.js?v=5.0"></script>
+  <script src="assets/js/translations.js?v=5.1"></script>
+  <script src="assets/js/lyrics-data.js?v=5.1"></script>
+  <script src="assets/js/main.js?v=5.1"></script>
 </body>
 </html>

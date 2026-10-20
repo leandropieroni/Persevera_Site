@@ -600,6 +600,66 @@ document.addEventListener('DOMContentLoaded', () => {
   const videoCards = document.querySelectorAll('.video-card');
   const videoTabBtns = document.querySelectorAll('.video-tab-btn');
 
+  // Video Carousel Navigation Arrows & Drag/Scroll Engine
+  const vViewport = document.getElementById('vcarousel-viewport');
+  const vPrevBtn = document.getElementById('vcarousel-prev');
+  const vNextBtn = document.getElementById('vcarousel-next');
+
+  function updateVideoArrows() {
+    if (!vViewport || !vPrevBtn || !vNextBtn) return;
+    const maxScroll = vViewport.scrollWidth - vViewport.clientWidth - 2;
+    vPrevBtn.disabled = vViewport.scrollLeft <= 5;
+    vNextBtn.disabled = vViewport.scrollLeft >= maxScroll;
+  }
+
+  if (vViewport && vPrevBtn && vNextBtn) {
+    vPrevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const scrollAmt = Math.max(220, vViewport.clientWidth * 0.75);
+      vViewport.scrollBy({ left: -scrollAmt, behavior: 'smooth' });
+    });
+
+    vNextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const scrollAmt = Math.max(220, vViewport.clientWidth * 0.75);
+      vViewport.scrollBy({ left: scrollAmt, behavior: 'smooth' });
+    });
+
+    vViewport.addEventListener('scroll', updateVideoArrows, { passive: true });
+    window.addEventListener('resize', updateVideoArrows);
+    setTimeout(updateVideoArrows, 200);
+
+    // Mouse drag-to-scroll support for desktop
+    let isDown = false;
+    let startX = 0;
+    let scrollStart = 0;
+
+    vViewport.addEventListener('mousedown', (e) => {
+      isDown = true;
+      vViewport.classList.add('is-dragging');
+      startX = e.pageX - vViewport.offsetLeft;
+      scrollStart = vViewport.scrollLeft;
+    });
+
+    vViewport.addEventListener('mouseleave', () => {
+      isDown = false;
+      vViewport.classList.remove('is-dragging');
+    });
+
+    vViewport.addEventListener('mouseup', () => {
+      isDown = false;
+      setTimeout(() => vViewport.classList.remove('is-dragging'), 50);
+    });
+
+    vViewport.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - vViewport.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      vViewport.scrollLeft = scrollStart - walk;
+    });
+  }
+
   // Category Filter Tabs
   videoTabBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -617,6 +677,12 @@ document.addEventListener('DOMContentLoaded', () => {
           card.classList.add('hidden');
         }
       });
+
+      // Reset carousel scroll position to beginning and update arrows
+      if (vViewport) {
+        vViewport.scrollTo({ left: 0, behavior: 'smooth' });
+        setTimeout(updateVideoArrows, 250);
+      }
     });
   });
 
@@ -654,6 +720,9 @@ document.addEventListener('DOMContentLoaded', () => {
       // Update active class
       document.querySelectorAll('.video-card').forEach(c => c.classList.remove('active'));
       card.classList.add('active');
+
+      // Ensure clicked card is comfortably visible in the single row
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
 
       // Scroll smoothly to video theater if on small screens
       if (window.innerWidth < 768) {
