@@ -4021,6 +4021,12 @@ img {
   border: 1px solid rgba(229, 9, 20, 0.35);
 }
 
+.video-tab-btn .tab-badge.purple-badge {
+  background: rgba(168, 85, 247, 0.2);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.45);
+}
+
 .video-tab-btn:hover {
   background: rgba(255, 255, 255, 0.08);
   color: #fff;
@@ -4049,6 +4055,13 @@ img {
   box-shadow: 0 0 25px rgba(229, 9, 20, 0.4);
 }
 
+.video-tab-btn.active[data-filter="animated"] {
+  background: rgba(168, 85, 247, 0.2);
+  border-color: #a855f7;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.45);
+}
+
 .video-card.hidden {
   display: none !important;
 }
@@ -4074,4 +4087,17 @@ img {
 .v-thumb .v-track-badge.clip-badge {
   color: #ff4d4d;
   border-color: rgba(229, 9, 20, 0.5);
+}
+
+.v-thumb .v-track-badge.anim-badge {
+  color: #d8b4fe;
+  background: rgba(24, 10, 42, 0.92);
+  border-color: rgba(168, 85, 247, 0.6);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.35);
+}
+
+.v-thumb .v-track-badge.anim-badge i {
+  color: #c084fc;
+  margin-right: 3px;
+  font-size: 0.65rem;
 }

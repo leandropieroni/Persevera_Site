@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=4.8">
+  <link rel="stylesheet" href="assets/css/style.css?v=4.9">
 </head>
 <body>
 
@@ -995,29 +995,116 @@
           <div class="video-now-info">
             <div class="v-details">
               <span class="v-badge"><i class="fa-solid fa-play"></i> <span data-i18n="video_playing_badge">NOW PLAYING</span></span>
-              <h3 id="video-current-title" data-i18n="v_g13_title">The Last Horseman</h3>
-              <p id="video-current-desc" data-i18n="v_g13_desc">Apocalypse Conclusion: The definitive triumph over adversity.</p>
+              <h3 id="video-current-title" data-i18n="v_anim_lasthorseman_title">The Last Horseman</h3>
+              <p id="video-current-desc" data-i18n="v_anim_lasthorseman_desc">Clipe animado oficial da grande conclusão do Apocalipse: o triunfo definitivo sobre as trevas.</p>
             </div>
             <a href="https://www.youtube.com/@perseverametalband?sub_confirmation=1" target="_blank" rel="noopener" class="btn-yt-sub">
               <i class="fa-brands fa-youtube"></i> <span data-i18n="yt_subscribe_btn">Subscribe to Channel</span>
             </a>
           </div>
 
-                    <!-- Video Category Filter Tabs -->
+          <!-- Video Category Filter Tabs -->
           <div class="video-filter-tabs">
             <button class="video-tab-btn active" data-filter="all">
-              <i class="fa-solid fa-layer-group"></i> <span data-i18n="vtab_all">ALL VIDEOS</span> <span class="tab-badge">17</span>
+              <i class="fa-solid fa-layer-group"></i> <span data-i18n="vtab_all">ALL VIDEOS</span> <span class="tab-badge">20</span>
+            </button>
+            <button class="video-tab-btn" data-filter="animated">
+              <i class="fa-solid fa-wand-magic-sparkles"></i> <span data-i18n="vtab_animated">ANIMATED CLIPS (3)</span> <span class="tab-badge purple-badge">3</span>
+            </button>
+            <button class="video-tab-btn" data-filter="clips">
+              <i class="fa-solid fa-film"></i> <span data-i18n="vtab_clips">OFFICIAL CLIPS & TRIBUTES (4)</span> <span class="tab-badge red-badge">4</span>
             </button>
             <button class="video-tab-btn" data-filter="genesis">
               <i class="fa-solid fa-compact-disc"></i> <span data-i18n="vtab_genesis">GENESIS (13 TRACKS)</span> <span class="tab-badge blue-badge">13</span>
             </button>
-            <button class="video-tab-btn" data-filter="clips">
-              <i class="fa-solid fa-film"></i> <span data-i18n="vtab_clips">CLIPS & TRIBUTES</span> <span class="tab-badge red-badge">4</span>
-            </button>
           </div>
 
-          <!-- Video Selector Grid (All 13 Genesis Songs + 4 Official Clips) -->
+          <!-- Video Selector Grid (3 Animated Clips + 4 Official Clips/Tributes + 13 Genesis Tracks = 20 Videos) -->
           <div class="video-selector-grid">
+            <!-- 1. Official Live-Action Clips -->
+            <div class="video-card" data-category="clips" data-videoid="UD6TgeVOR3w" data-title="Broken World" data-desc-key="v_c1_desc" data-title-key="v_c1_title" data-desc="Anthemic single with cinematic music video recorded with the reunited lineup.">
+              <div class="v-thumb">
+                <img src="https://img.youtube.com/vi/UD6TgeVOR3w/hqdefault.jpg" alt="Broken World" loading="lazy">
+                <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
+                <span class="v-track-badge clip-badge" data-i18n="badge_official_clip">CLIPE OFICIAL</span>
+              </div>
+              <div class="v-card-info">
+                <h4 data-i18n="v_c1_title">Broken World</h4>
+                <span data-i18n="v_c1_sub">Official Music Video</span>
+              </div>
+            </div>
+            <div class="video-card" data-category="clips" data-videoid="b5MK3x0G4Hg" data-title="To the Unknown" data-desc-key="v_c2_desc" data-title-key="v_c2_title" data-desc="Cinematic official music video featuring dramatic melodic hooks.">
+              <div class="v-thumb">
+                <img src="https://img.youtube.com/vi/b5MK3x0G4Hg/hqdefault.jpg" alt="To the Unknown" loading="lazy">
+                <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
+                <span class="v-track-badge clip-badge" data-i18n="badge_official_clip">CLIPE OFICIAL</span>
+              </div>
+              <div class="v-card-info">
+                <h4 data-i18n="v_c2_title">To the Unknown</h4>
+                <span data-i18n="v_c2_sub">Official Music Video</span>
+              </div>
+            </div>
+
+            <!-- 2. Official Animated Music Videos (Apocalypse Trilogy) -->
+            <div class="video-card" data-category="animated" data-videoid="SIWQMzIZ6NA" data-title="The White Rider" data-desc-key="v_anim_whiterider_desc" data-title-key="v_anim_whiterider_title" data-desc="Apocalypse Part I: Epic animated music video of the White Horseman riding to conquer.">
+              <div class="v-thumb">
+                <img src="https://img.youtube.com/vi/SIWQMzIZ6NA/hqdefault.jpg" alt="The White Rider (Animated Video)" loading="lazy">
+                <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
+                <span class="v-track-badge anim-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> <span data-i18n="badge_anim_clip">CLIPE ANIMADO</span></span>
+              </div>
+              <div class="v-card-info">
+                <h4 data-i18n="v_anim_whiterider_title">The White Rider</h4>
+                <span data-i18n="v_anim_whiterider_sub">Clipe Animado Oficial • Apocalipse I</span>
+              </div>
+            </div>
+            <div class="video-card" data-category="animated" data-videoid="dClYqjaPed0" data-title="Death" data-desc-key="v_anim_death_desc" data-title-key="v_anim_death_title" data-desc="Apocalypse Part IV: Visceral animated music video depicting the final reckoning.">
+              <div class="v-thumb">
+                <img src="https://img.youtube.com/vi/dClYqjaPed0/hqdefault.jpg" alt="Death (Animated Video)" loading="lazy">
+                <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
+                <span class="v-track-badge anim-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> <span data-i18n="badge_anim_clip">CLIPE ANIMADO</span></span>
+              </div>
+              <div class="v-card-info">
+                <h4 data-i18n="v_anim_death_title">Death</h4>
+                <span data-i18n="v_anim_death_sub">Clipe Animado Oficial • Apocalipse IV</span>
+              </div>
+            </div>
+            <div class="video-card active" data-category="animated" data-videoid="ywsbJXh0L8A" data-title="The Last Horseman" data-desc-key="v_anim_lasthorseman_desc" data-title-key="v_anim_lasthorseman_title" data-desc="Apocalypse Conclusion: The grand animated finale triumphing over ultimate darkness.">
+              <div class="v-thumb">
+                <img src="https://img.youtube.com/vi/ywsbJXh0L8A/hqdefault.jpg" alt="The Last Horseman (Animated Video)" loading="lazy">
+                <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
+                <span class="v-track-badge anim-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> <span data-i18n="badge_anim_clip">CLIPE ANIMADO</span></span>
+              </div>
+              <div class="v-card-info">
+                <h4 data-i18n="v_anim_lasthorseman_title">The Last Horseman</h4>
+                <span data-i18n="v_anim_lasthorseman_sub">Clipe Animado Oficial • Conclusão</span>
+              </div>
+            </div>
+
+            <!-- 3. Tributes & Covers -->
+            <div class="video-card" data-category="clips" data-videoid="zD4jKv-rL4s" data-title="Selling My Soul" data-desc-key="v_c3_desc" data-title-key="v_c3_title" data-desc="Heartfelt tribute honoring the founding fathers of Heavy Metal.">
+              <div class="v-thumb">
+                <img src="https://img.youtube.com/vi/zD4jKv-rL4s/hqdefault.jpg" alt="Selling My Soul" loading="lazy">
+                <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
+                <span class="v-track-badge clip-badge" data-i18n="badge_sabbath_cover">SABBATH COVER</span>
+              </div>
+              <div class="v-card-info">
+                <h4 data-i18n="v_c3_title">Selling My Soul</h4>
+                <span data-i18n="v_c3_sub">Black Sabbath Tribute</span>
+              </div>
+            </div>
+            <div class="video-card" data-category="clips" data-videoid="YYqyAp2kpcQ" data-title="Sad But True" data-desc-key="v_c4_desc" data-title-key="v_c4_title" data-desc="Heavy down-tuned homage to Metallica's groove metal masterpiece.">
+              <div class="v-thumb">
+                <img src="https://img.youtube.com/vi/YYqyAp2kpcQ/hqdefault.jpg" alt="Sad But True" loading="lazy">
+                <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
+                <span class="v-track-badge clip-badge" data-i18n="badge_metallica_cover">METALLICA COVER</span>
+              </div>
+              <div class="v-card-info">
+                <h4 data-i18n="v_c4_title">Sad But True</h4>
+                <span data-i18n="v_c4_sub">Metallica Tribute</span>
+              </div>
+            </div>
+
+            <!-- 4. Genesis Album Tracks (Full 13 Songs) -->
             <div class="video-card" data-category="genesis" data-videoid="d8YMwwzDMDs" data-title="Iced Hell" data-desc-key="v_g1_desc" data-title-key="v_g1_title" data-desc="Devastating album opener with relentless rhythm and soaring melodies.">
               <div class="v-thumb">
                 <img src="https://img.youtube.com/vi/d8YMwwzDMDs/hqdefault.jpg" alt="Iced Hell" loading="lazy">
@@ -1150,7 +1237,7 @@
                 <span data-i18n="v_g12_sub">Lyric Video • Genesis 12</span>
               </div>
             </div>
-            <div class="video-card active" data-category="genesis" data-videoid="ywsbJXh0L8A" data-title="The Last Horseman" data-desc-key="v_g13_desc" data-title-key="v_g13_title" data-desc="Apocalypse Conclusion: The definitive triumph over adversity.">
+            <div class="video-card" data-category="genesis" data-videoid="ywsbJXh0L8A" data-title="The Last Horseman" data-desc-key="v_g13_desc" data-title-key="v_g13_title" data-desc="Apocalypse Conclusion: The definitive triumph over adversity.">
               <div class="v-thumb">
                 <img src="https://img.youtube.com/vi/ywsbJXh0L8A/hqdefault.jpg" alt="The Last Horseman" loading="lazy">
                 <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
@@ -1159,50 +1246,6 @@
               <div class="v-card-info">
                 <h4 data-i18n="v_g13_title">The Last Horseman</h4>
                 <span data-i18n="v_g13_sub">Lyric Video • Genesis 13</span>
-              </div>
-            </div>
-            <div class="video-card" data-category="clips" data-videoid="UD6TgeVOR3w" data-title="Broken World" data-desc-key="v_c1_desc" data-title-key="v_c1_title" data-desc="Anthemic single with cinematic music video recorded with the reunited lineup.">
-              <div class="v-thumb">
-                <img src="https://img.youtube.com/vi/UD6TgeVOR3w/hqdefault.jpg" alt="Broken World" loading="lazy">
-                <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
-                <span class="v-track-badge clip-badge">CLIPE OFICIAL</span>
-              </div>
-              <div class="v-card-info">
-                <h4 data-i18n="v_c1_title">Broken World</h4>
-                <span data-i18n="v_c1_sub">Official Music Video</span>
-              </div>
-            </div>
-            <div class="video-card" data-category="clips" data-videoid="b5MK3x0G4Hg" data-title="To the Unknown" data-desc-key="v_c2_desc" data-title-key="v_c2_title" data-desc="Cinematic official music video featuring dramatic melodic hooks.">
-              <div class="v-thumb">
-                <img src="https://img.youtube.com/vi/b5MK3x0G4Hg/hqdefault.jpg" alt="To the Unknown" loading="lazy">
-                <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
-                <span class="v-track-badge clip-badge">CLIPE OFICIAL</span>
-              </div>
-              <div class="v-card-info">
-                <h4 data-i18n="v_c2_title">To the Unknown</h4>
-                <span data-i18n="v_c2_sub">Official Music Video</span>
-              </div>
-            </div>
-            <div class="video-card" data-category="clips" data-videoid="zD4jKv-rL4s" data-title="Selling My Soul" data-desc-key="v_c3_desc" data-title-key="v_c3_title" data-desc="Heartfelt tribute honoring the founding fathers of Heavy Metal.">
-              <div class="v-thumb">
-                <img src="https://img.youtube.com/vi/zD4jKv-rL4s/hqdefault.jpg" alt="Selling My Soul" loading="lazy">
-                <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
-                <span class="v-track-badge clip-badge">SABBATH COVER</span>
-              </div>
-              <div class="v-card-info">
-                <h4 data-i18n="v_c3_title">Selling My Soul</h4>
-                <span data-i18n="v_c3_sub">Black Sabbath Tribute</span>
-              </div>
-            </div>
-            <div class="video-card" data-category="clips" data-videoid="YYqyAp2kpcQ" data-title="Sad But True" data-desc-key="v_c4_desc" data-title-key="v_c4_title" data-desc="Heavy down-tuned homage to Metallica's groove metal masterpiece.">
-              <div class="v-thumb">
-                <img src="https://img.youtube.com/vi/YYqyAp2kpcQ/hqdefault.jpg" alt="Sad But True" loading="lazy">
-                <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
-                <span class="v-track-badge clip-badge">METALLICA COVER</span>
-              </div>
-              <div class="v-card-info">
-                <h4 data-i18n="v_c4_title">Sad But True</h4>
-                <span data-i18n="v_c4_sub">Metallica Tribute</span>
               </div>
             </div>
           </div>
@@ -1847,8 +1890,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/translations.js?v=4.8"></script>
-  <script src="assets/js/lyrics-data.js?v=4.8"></script>
-  <script src="assets/js/main.js?v=4.8"></script>
+  <script src="assets/js/translations.js?v=4.9"></script>
+  <script src="assets/js/lyrics-data.js?v=4.9"></script>
+  <script src="assets/js/main.js?v=4.9"></script>
 </body>
 </html>

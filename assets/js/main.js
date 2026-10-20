@@ -609,8 +609,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const filter = btn.getAttribute('data-filter');
 
       document.querySelectorAll('.video-card').forEach(card => {
-        const cat = card.getAttribute('data-category');
-        if (filter === 'all' || cat === filter) {
+        const cat = card.getAttribute('data-category') || '';
+        const cats = cat.split(/\s+/);
+        if (filter === 'all' || cats.includes(filter)) {
           card.classList.remove('hidden');
         } else {
           card.classList.add('hidden');
