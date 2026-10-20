@@ -27,33 +27,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=5.4">
+  <link rel="stylesheet" href="assets/css/style.css?v=5.5">
 </head>
 <body>
 
-  <!-- Top Announcement Bar / Ticker with Language Switcher -->
+  <!-- Top Announcement Bar / Ticker -->
   <div class="top-announcement">
     <div class="announcement-content">
       <span class="badge-live"><i class="fa-solid fa-circle-dot"></i> <span data-i18n="badge_official">OFFICIAL</span></span>
       <span data-i18n="top_announcement">Official domain: <strong>perseverametalband.com.br</strong> | Listen to <strong>GENESIS</strong> on all streaming platforms | New single <strong>WAR IS HELL</strong> in production 🤘</span>
     </div>
-
-    <!-- Language Selector Flags (Top Bar) -->
-    <div class="lang-switch-top">
-      <span class="lang-label"><i class="fa-solid fa-globe"></i> <span data-i18n="lang_label">Language:</span></span>
-      <button class="lang-btn active" data-lang="en" title="English" aria-label="English">
-        <span class="flag">🇺🇸</span> <span class="lang-code">EN</span>
-      </button>
-      <button class="lang-btn" data-lang="pt" title="Português" aria-label="Português">
-        <span class="flag">🇧🇷</span> <span class="lang-code">PT</span>
-      </button>
-      <button class="lang-btn" data-lang="es" title="Español" aria-label="Español">
-        <span class="flag">🇪🇸</span> <span class="lang-code">ES</span>
-      </button>
-    </div>
   </div>
 
-  <!-- Sticky Glassmorphism Navbar -->
+  <!-- Sticky Glassmorphism Navbar (Fixed on Scroll) -->
   <header class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#home" class="nav-brand" aria-label="Persevera Home">
@@ -74,6 +60,20 @@
 
       <!-- Action Buttons -->
       <div class="nav-actions">
+        <!-- Language Selector Flags (Fixed on Screen with Navbar) -->
+        <div class="lang-switch-top" id="lang-switcher-fixed">
+          <span class="lang-label"><i class="fa-solid fa-globe"></i> <span data-i18n="lang_label">Language:</span></span>
+          <button class="lang-btn active" data-lang="en" title="English" aria-label="English">
+            <span class="flag">🇺🇸</span> <span class="lang-code">EN</span>
+          </button>
+          <button class="lang-btn" data-lang="pt" title="Português" aria-label="Português">
+            <span class="flag">🇧🇷</span> <span class="lang-code">PT</span>
+          </button>
+          <button class="lang-btn" data-lang="es" title="Español" aria-label="Español">
+            <span class="flag">🇪🇸</span> <span class="lang-code">ES</span>
+          </button>
+        </div>
+
         <a href="https://open.spotify.com/intl-pt/artist/5O1VDTAGCRudWZFqfqj5bB" target="_blank" rel="noopener" class="btn-spotify" title="Listen on Spotify">
           <i class="fa-brands fa-spotify"></i>
           <span>Spotify</span>
@@ -2000,8 +2000,8 @@
   </button>
 
   <!-- Scripts -->
-  <script src="assets/js/translations.js?v=5.4"></script>
-  <script src="assets/js/lyrics-data.js?v=5.4"></script>
-  <script src="assets/js/main.js?v=5.4"></script>
+  <script src="assets/js/translations.js?v=5.5"></script>
+  <script src="assets/js/lyrics-data.js?v=5.5"></script>
+  <script src="assets/js/main.js?v=5.5"></script>
 </body>
 </html>
