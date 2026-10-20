@@ -1787,6 +1787,28 @@ img {
   transform: translate(2px, -2px);
 }
 
+.press-source .yt-icon {
+  color: #ff4444;
+  opacity: 0.85;
+}
+
+.press-card:hover .press-source .yt-icon {
+  color: #ff0000;
+  opacity: 1;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.press-source .intl-icon {
+  color: #00d4ff;
+  opacity: 0.85;
+}
+
+.press-card:hover .press-source .intl-icon {
+  color: #38bdf8;
+  opacity: 1;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
 .press-card p {
   color: var(--text-muted);
   font-size: 0.9rem;

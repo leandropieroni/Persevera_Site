@@ -244,6 +244,15 @@ const translations = {
     "press_quote2": "\"The entry of guitarists Zilds and Jésus places Persevera in the elite tier of bands with a 3-guitar onslaught, adding immense firepower.\"",
     "press_quote3": "\"Genesis brings direct impact, killer riffs and pristine organic production. Utmost respect for physical media and metal fans.\"",
     "press_quote4": "\"Structural maturity in the songwriting and an enthralling blend of classic heritage and modern grit.\"",
+    "press_quote5": "\"Brazilian underground metal endures with passion and truth. Genesis is the fruit of that non-negotiable resilience.\"",
+    "press_quote6": "\"To us, the underground is the purest essence of music: complete freedom to create without commercial constraints.\"",
+    "press_quote7": "\"A genuine new colossus of Brazilian metal: razor-sharp riffs, three ferocious guitars and a devastating rhythm section.\"",
+    "press_quote8": "\"Total immersion in Heavy Metal. Persevera proves perpetual persistence in Brazilian metal yields spectacular fruit.\"",
+    "press_quote9": "\"Independent craftsmanship built to standards of excellence. Persevera revives traditional heavy metal with compelling dynamics.\"",
+    "press_quote10": "\"Strategic partnerships expand horizons and solidify the band in the national scene while keeping authenticity intact.\"",
+    "press_quote11": "\"Authentic, combative metal merging crushing weight with thoughtful lyrics confronting the dilemmas of our times.\"",
+    "press_quote12": "\"Exclusive video podcast interview with Danilo Bredda unpacking Genesis behind the scenes, 3 guitars and the future.\"",
+    "press_quote13": "\"Acclaimed British metal press celebrating Persevera's classic heavy metal craft and global underground reach.\"",
 
     // Shows
     "tour_subtitle": "LIVE ON STAGE",
@@ -608,6 +617,15 @@ const translations = {
     "press_quote2": "\"A entrada dos novos guitarristas Zilds e Jésus coloca a Persevera no seleto grupo de bandas com ataque de três guitarras, trazendo ainda mais potência ao metal do interior paulista.\"",
     "press_quote3": "\"Genesis traz uma pegada direta, riffs marcantes e uma produção orgânica primorosa. O respeito ao formato físico e ao ouvinte de metal mostra a seriedade da banda.\"",
     "press_quote4": "\"A maturidade estrutural das músicas e a mistura de influências clássicas com agressividade moderna mostram que a Persevera sabe exatamente onde quer chegar.\"",
+    "press_quote5": "\"O metal underground brasileiro resiste com paixão e verdade. O álbum Genesis é o fruto maduro dessa resiliência inegociável.\"",
+    "press_quote6": "\"Para nós o underground é a essência mais pura da música pesada: liberdade criativa absoluta sem concessões comerciais.\"",
+    "press_quote7": "\"Um verdadeiro novo colosso do metal nacional: riffs cortantes, três guitarras ferozes e uma cozinha rítmica devastadora.\"",
+    "press_quote8": "\"Uma imersão profunda no Heavy Metal. A Persevera demonstra na prática que a persistência perpétua gera resultados espetaculares.\"",
+    "press_quote9": "\"Produção independente com padrão de excelência. O som da Persevera resgata a força do metal tradicional com dinâmica envolvente.\"",
+    "press_quote10": "\"A parceria estratégica expande horizontes e consolida a banda no cenário nacional, mantendo a autenticidade intacta.\"",
+    "press_quote11": "\"Metal autêntico e combativo, aliando peso avassalador a letras reflexivas que encaram de frente os dilemas do nosso tempo.\"",
+    "press_quote12": "\"Bate-papo exclusivo em vídeo com Danilo Bredda dissecando os bastidores do Genesis, as 3 guitarras e o futuro da banda.\"",
+    "press_quote13": "\"Destaque na respeitada imprensa britânica celebrando a sonoridade clássica da Persevera e sua projeção underground global.\"",
 
     // Shows
     "tour_subtitle": "AO VIVO NOS PALCOS",
@@ -972,6 +990,15 @@ const translations = {
     "press_quote2": "\"La entrada de los guitarristas Zilds y Jésus coloca a Persevera en el selecto grupo de bandas con ataque de tres guitarras, añadiendo tremenda potencia.\"",
     "press_quote3": "\"Genesis ofrece impacto directo, riffs memorables y producción orgánica impecable. Máximo respeto al formato físico y a los fans del metal.\"",
     "press_quote4": "\"Madurez estructural en las canciones y una irresistible combinación entre tradición clásica y fuerza moderna.\"",
+    "press_quote5": "\"El metal underground brasileño resiste con pasión y verdad. El álbum Genesis es el fruto maduro de esa resiliencia innegociable.\"",
+    "press_quote6": "\"Para nosotros el underground es la esencia más pura de la música pesada: absoluta libertad creativa sin compromisos comerciales.\"",
+    "press_quote7": "\"Un verdadero nuevo coloso del metal brasileño: riffs afilados, tres guitarras feroces y una base rítmica demoledora.\"",
+    "press_quote8": "\"Una profunda inmersión en el Heavy Metal. Persevera demuestra en la práctica que la persistencia perpetua genera resultados espectaculares.\"",
+    "press_quote9": "\"Producción independiente con estándar de excelencia. El sonido de Persevera rescata la fuerza del metal tradicional con gran dinamismo.\"",
+    "press_quote10": "\"Las alianzas estratégicas expanden horizontes y consolidan a la banda en la escena nacional manteniendo su autenticidad intacta.\"",
+    "press_quote11": "\"Metal auténtico y combativo, fusionando peso demoledor con letras reflexivas que enfrentan los dilemas de nuestro tiempo.\"",
+    "press_quote12": "\"Entrevista exclusiva en videopodcast con Danilo Bredda analizando el detrás de escena de Genesis, las 3 guitarras y el futuro.\"",
+    "press_quote13": "\"Destacado en la respetada prensa británica celebrando la sonoridad clásica de Persevera y su proyección underground global.\"",
 
     // Shows
     "tour_subtitle": "EN VIVO EN ESCENARIOS",
