@@ -165,7 +165,7 @@ const translations = {
     "v6_desc": "Persevera's homage to the founding fathers of Heavy Metal.",
 
     // The Band
-    "band_photo_badge": "OFFICIAL LINEUP",
+    "band_photo_badge": "OFFICIAL EMBLEM",
     "manifesto_tag": "MANIFESTO & HISTORY",
     "manifesto_title": "THE MIGHT OF PURPOSE-DRIVEN METAL",
     "manifesto_p1": "Formed in <strong>Sumaré, state of São Paulo, Brazil</strong>, <strong>PERSEVERA</strong> was born with the mission to revive the raw grit and melodic nobility of classic Heavy Metal, fusing the timeless drive of the '80s and '90s with modern Groove Metal aggression.",
@@ -515,7 +515,7 @@ const translations = {
     "v6_desc": "Homenagem da Persevera aos mestres pioneiros do Heavy Metal.",
 
     // The Band
-    "band_photo_badge": "LINE-UP OFICIAL",
+    "band_photo_badge": "EMBLEMA OFICIAL",
     "manifesto_tag": "MANIFESTO & HISTÓRIA",
     "manifesto_title": "A FORÇA DO METAL FEITO COM PROPÓSITO",
     "manifesto_p1": "Formada em <strong>Sumaré, interior de São Paulo</strong>, a <strong>PERSEVERA</strong> nasceu com o objetivo de resgatar o peso cru e a nobreza melódica do Heavy Metal, fundindo a pegada clássica dos anos 80 e 90 com a agressividade moderna do Groove Metal.",
@@ -865,7 +865,7 @@ const translations = {
     "v6_desc": "Homenaje de Persevera a los padres fundadores del Heavy Metal.",
 
     // The Band
-    "band_photo_badge": "ALINEACIÓN OFICIAL",
+    "band_photo_badge": "EMBLEMA OFICIAL",
     "manifesto_tag": "MANIFIESTO E HISTORIA",
     "manifesto_title": "EL PODER DEL METAL HECHO CON PROPÓSITO",
     "manifesto_p1": "Formada en <strong>Sumaré, estado de São Paulo, Brasil</strong>, <strong>PERSEVERA</strong> nació con la misión de rescatar la fuerza cruda y la nobleza melódica del Heavy Metal clásico, fusionando la esencia de los años 80 y 90 con la agresividad del Groove Metal moderno.",
