@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   let currentLang = localStorage.getItem('persevera_lang') || 'en';
 
-  const videoCards = document.querySelectorAll('.video-card');
   const videoCurrentTitle = document.getElementById('video-current-title');
   const videoCurrentDesc = document.getElementById('video-current-desc');
 
@@ -109,10 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Scroll effect on navbar
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
+    if (navbar) {
+      if (window.scrollY > 40) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
     }
     updateActiveNav();
     checkMiniPlayerVisibility();
@@ -225,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentTrackIndex = index;
 
     const track = tracks[currentTrackIndex];
-    if (track && track.src) {
+    if (audio && track && track.src) {
       audio.src = track.src;
     }
     if (currentTrackTitle) currentTrackTitle.textContent = track.title;
@@ -245,6 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function playTrack() {
+    if (!audio) return;
     audio.play().then(() => {
       isPlaying = true;
       updatePlayIcons(true);
@@ -258,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function pauseTrack() {
-    audio.pause();
+    if (audio) audio.pause();
     isPlaying = false;
     updatePlayIcons(false);
     if (vinylWrapper) vinylWrapper.classList.remove('spinning');
@@ -297,24 +299,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Audio Event Listeners
-  audio.addEventListener('timeupdate', () => {
-    if (audio.duration) {
-      const percent = (audio.currentTime / audio.duration) * 100;
-      if (progressBarFill) progressBarFill.style.width = percent + '%';
-      if (miniProgressFill) miniProgressFill.style.width = percent + '%';
-      if (timeCurrent) timeCurrent.textContent = formatTime(audio.currentTime);
+  if (audio) {
+    audio.addEventListener('timeupdate', () => {
+      if (audio.duration) {
+        const percent = (audio.currentTime / audio.duration) * 100;
+        if (progressBarFill) progressBarFill.style.width = percent + '%';
+        if (miniProgressFill) miniProgressFill.style.width = percent + '%';
+        if (timeCurrent) timeCurrent.textContent = formatTime(audio.currentTime);
+        if (timeTotal) timeTotal.textContent = formatTime(audio.duration);
+      }
+    });
+
+    audio.addEventListener('loadedmetadata', () => {
       if (timeTotal) timeTotal.textContent = formatTime(audio.duration);
-    }
-  });
+    });
 
-  audio.addEventListener('loadedmetadata', () => {
-    if (timeTotal) timeTotal.textContent = formatTime(audio.duration);
-  });
-
-  audio.addEventListener('ended', () => {
-    loadTrack(currentTrackIndex + 1);
-    playTrack();
-  });
+    audio.addEventListener('ended', () => {
+      loadTrack(currentTrackIndex + 1);
+      playTrack();
+    });
+  }
 
   // Progress Bar Seek
   if (progressBarBg) {
@@ -354,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (volumeSlider) {
     volumeSlider.addEventListener('input', (e) => {
       const val = parseFloat(e.target.value);
-      audio.volume = val;
+      if (audio) audio.volume = val;
       if (volumeIcon) {
         if (val === 0) {
           volumeIcon.className = 'fa-solid fa-volume-xmark';
