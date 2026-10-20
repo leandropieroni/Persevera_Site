@@ -180,6 +180,9 @@ const translations = {
     "v6_desc": "Persevera's homage to the founding fathers of Heavy Metal.",
 
     // The Band
+    "band_subtitle": "LINEUP & HISTORY",
+    "band_title": "THE BAND PERSEVERA",
+    "band_desc": "Meet the musicians, the journey and the authentic Heavy Metal identity of Persevera.",
     "band_photo_badge": "OFFICIAL EMBLEM",
     "manifesto_tag": "MANIFESTO & HISTORY",
     "manifesto_title": "THE MIGHT OF PURPOSE-DRIVEN METAL",
@@ -559,6 +562,9 @@ const translations = {
     "v6_desc": "Homenagem da Persevera aos mestres pioneiros do Heavy Metal.",
 
     // The Band
+    "band_subtitle": "FORMAÇÃO & HISTÓRIA",
+    "band_title": "A BANDA PERSEVERA",
+    "band_desc": "Conheça os músicos, a trajetória e a proposta autêntica de Heavy Metal da Persevera.",
     "band_photo_badge": "EMBLEMA OFICIAL",
     "manifesto_tag": "MANIFESTO & HISTÓRIA",
     "manifesto_title": "A FORÇA DO METAL FEITO COM PROPÓSITO",
@@ -938,6 +944,9 @@ const translations = {
     "v6_desc": "Homenaje de Persevera a los padres fundadores del Heavy Metal.",
 
     // The Band
+    "band_subtitle": "FORMACIÓN E HISTORIA",
+    "band_title": "LA BANDA PERSEVERA",
+    "band_desc": "Conoce a los músicos, la trayectoria y la propuesta auténtica de Heavy Metal de Persevera.",
     "band_photo_badge": "EMBLEMA OFICIAL",
     "manifesto_tag": "MANIFIESTO E HISTORIA",
     "manifesto_title": "EL PODER DEL METAL HECHO CON PROPÓSITO",
