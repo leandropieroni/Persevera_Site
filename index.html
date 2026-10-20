@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=5.7">
+  <link rel="stylesheet" href="assets/css/style.css?v=5.8">
 </head>
 <body>
 
@@ -171,17 +171,22 @@
           <p class="section-desc" data-i18n="music_desc">Listen to exclusive tracks directly in our official player or stream on your favorite digital platform.</p>
         </div>
 
-        <!-- CATEGORY TABS: GENESIS (13 TRACKS) & SINGLES/TRIBUTES (8 TRACKS) -->
+        <!-- CATEGORY TABS: 1. ÁLBUM GENESIS (13 FAIXAS), 2. SINGLES (2º ÁLBUM), 3. TRIBUTOS (COVERS) -->
         <div class="carousel-category-tabs">
           <button class="cat-tab-btn active" id="tab-btn-genesis" data-carousel="genesis">
             <i class="fa-solid fa-compact-disc"></i>
-            <span data-i18n="carousel_genesis_title">GENESIS — 13 TRACKS</span>
+            <span data-i18n="carousel_genesis_title">ÁLBUM GENESIS — 13 FAIXAS</span>
             <span class="tab-badge">2023</span>
           </button>
           <button class="cat-tab-btn" id="tab-btn-singles" data-carousel="singles">
             <i class="fa-solid fa-fire"></i>
-            <span data-i18n="carousel_singles_title">SINGLES & TRIBUTES</span>
+            <span data-i18n="carousel_singles_title">SINGLES (SEGUNDO ÁLBUM)</span>
             <span class="tab-badge red-badge">2026+</span>
+          </button>
+          <button class="cat-tab-btn" id="tab-btn-tributes" data-carousel="tributes">
+            <i class="fa-solid fa-record-vinyl"></i>
+            <span data-i18n="carousel_tributes_title">TRIBUTOS (COVERS)</span>
+            <span class="tab-badge purple-badge">COVERS</span>
           </button>
         </div>
 
@@ -560,7 +565,7 @@
           </div>
         </div>
 
-        <!-- GEOMIND-STYLE CAROUSEL 2: SINGLES & TRIBUTES (8 TRACKS) -->
+        <!-- GEOMIND-STYLE CAROUSEL 2: SINGLES (SEGUNDO ÁLBUM - 6 TRACKS) -->
         <div class="geomind-carousel-wrapper" id="carousel-singles-wrapper">
           <button class="geomind-arrow prev singles-arrow" id="arrow-prev-singles" aria-label="Previous Singles">
             <i class="fa-solid fa-chevron-left"></i>
@@ -568,198 +573,150 @@
 
           <div class="geomind-viewport" id="viewport-singles">
             <div class="geomind-track singles-track" id="track-singles">
-          <div class="geomind-card" data-card-index="0" data-src="" data-title="War is Hell" data-album="2º Álbum • 2026+">
-            <!-- Artwork (Top Half) -->
-            <div class="geomind-card-art">
-              <img src="assets/images/tracks/foto-banda.jpg" alt="War is Hell Artwork" class="geomind-art-img" data-art-slot="singles-01">
-              <div class="geomind-art-overlay">
-                <span class="geomind-badge">NOVO SINGLE</span>
-                <span class="geomind-track-num">01</span>
+              <div class="geomind-card" data-card-index="0" data-src="" data-title="War is Hell" data-album="2º Álbum • 2026+">
+                <!-- Artwork (Top Half) -->
+                <div class="geomind-card-art">
+                  <img src="assets/images/tracks/foto-banda.jpg" alt="War is Hell Artwork" class="geomind-art-img" data-art-slot="singles-01">
+                  <div class="geomind-art-overlay">
+                    <span class="geomind-badge">NOVO SINGLE</span>
+                    <span class="geomind-track-num">01</span>
+                  </div>
+                  <div class="geomind-art-title-bar">
+                    <h3 class="geomind-title-on-art">War is Hell</h3>
+                  </div>
+                </div>
+                <!-- Body (Middle) -->
+                <div class="geomind-card-body">
+                  <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>2º Álbum • 2026+</span></div>
+                  <p class="geomind-desc" data-i18n="s_track1_desc">Blistering lead single from the upcoming second album, pure 3-guitar onslaught.</p>
+                </div>
+                <!-- Action Button (Bottom) -->
+                <div class="geomind-card-action">
+                  <button class="geomind-card-btn btn-coming-soon" title="Faixa em gravação no estúdio" disabled>
+                    <i class="fa-solid fa-clock"></i> <span data-i18n="btn_coming_soon">Em Breve (Estúdio)</span>
+                  </button>
+                </div>
               </div>
-              <div class="geomind-art-title-bar">
-                <h3 class="geomind-title-on-art">War is Hell</h3>
+              <div class="geomind-card" data-card-index="1" data-src="" data-title="Broken World" data-album="2º Álbum • 2026+">
+                <!-- Artwork (Top Half) -->
+                <div class="geomind-card-art">
+                  <img src="assets/images/chat_media/IMG-20260908-WA0014.jpg" alt="Broken World Artwork" class="geomind-art-img" data-art-slot="singles-02">
+                  <div class="geomind-art-overlay">
+                    <span class="geomind-badge">EM ESTÚDIO</span>
+                    <span class="geomind-track-num">02</span>
+                  </div>
+                  <div class="geomind-art-title-bar">
+                    <h3 class="geomind-title-on-art">Broken World</h3>
+                  </div>
+                </div>
+                <!-- Body (Middle) -->
+                <div class="geomind-card-body">
+                  <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>2º Álbum • 2026+</span></div>
+                  <p class="geomind-desc" data-i18n="s_track4_desc">Anthemic track from the upcoming second album recorded with the reunited lineup.</p>
+                </div>
+                <!-- Action Button (Bottom) -->
+                <div class="geomind-card-action">
+                  <button class="geomind-card-btn btn-coming-soon" title="Faixa em gravação no estúdio" disabled>
+                    <i class="fa-solid fa-clock"></i> <span data-i18n="btn_coming_soon">Em Breve (Estúdio)</span>
+                  </button>
+                </div>
               </div>
-            </div>
-            <!-- Body (Middle) -->
-            <div class="geomind-card-body">
-              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>2º Álbum • 2026+</span></div>
-              <p class="geomind-desc" data-i18n="s_track1_desc">Blistering lead single from the upcoming second album, pure 3-guitar onslaught.</p>
-            </div>
-            <!-- Action Button (Bottom) -->
-            <div class="geomind-card-action">
-              <button class="geomind-card-btn btn-coming-soon" title="Faixa em gravação no estúdio" disabled>
-                <i class="fa-solid fa-clock"></i> <span data-i18n="btn_coming_soon">Em Breve (Estúdio)</span>
-              </button>
-            </div>
-          </div>
-          <div class="geomind-card" data-card-index="1" data-src="assets/audio/sad-but-true.mp3?v=4.4" data-title="Sad But True" data-album="Tributo Oficial">
-            <!-- Artwork (Top Half) -->
-            <div class="geomind-card-art">
-              <img src="assets/images/tracks/sad-but-true.jpg" alt="Sad But True Artwork" class="geomind-art-img" data-art-slot="singles-02">
-              <div class="geomind-art-overlay">
-                <span class="geomind-badge">COVER METALLICA</span>
-                <span class="geomind-track-num">02</span>
+              <div class="geomind-card" data-card-index="2" data-src="" data-title="To the Unknown" data-album="2º Álbum • 2026+">
+                <!-- Artwork (Top Half) -->
+                <div class="geomind-card-art">
+                  <img src="assets/images/chat_media/IMG-20260731-WA0126.jpg" alt="To the Unknown Artwork" class="geomind-art-img" data-art-slot="singles-03">
+                  <div class="geomind-art-overlay">
+                    <span class="geomind-badge">EM ESTÚDIO</span>
+                    <span class="geomind-track-num">03</span>
+                  </div>
+                  <div class="geomind-art-title-bar">
+                    <h3 class="geomind-title-on-art">To the Unknown</h3>
+                  </div>
+                </div>
+                <!-- Body (Middle) -->
+                <div class="geomind-card-body">
+                  <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>2º Álbum • 2026+</span></div>
+                  <p class="geomind-desc" data-i18n="s_track5_desc">Dark journey through unknown realms featuring dramatic melodic hooks.</p>
+                </div>
+                <!-- Action Button (Bottom) -->
+                <div class="geomind-card-action">
+                  <button class="geomind-card-btn btn-coming-soon" title="Faixa em gravação no estúdio" disabled>
+                    <i class="fa-solid fa-clock"></i> <span data-i18n="btn_coming_soon">Em Breve (Estúdio)</span>
+                  </button>
+                </div>
               </div>
-              <div class="geomind-art-title-bar">
-                <h3 class="geomind-title-on-art">Sad But True</h3>
+              <div class="geomind-card" data-card-index="3" data-src="" data-title="The Chosen Son" data-album="2º Álbum • 2026+">
+                <!-- Artwork (Top Half) -->
+                <div class="geomind-card-art">
+                  <img src="assets/images/chat_media/IMG-20260731-WA0127.jpg" alt="The Chosen Son Artwork" class="geomind-art-img" data-art-slot="singles-04">
+                  <div class="geomind-art-overlay">
+                    <span class="geomind-badge">EM ESTÚDIO</span>
+                    <span class="geomind-track-num">04</span>
+                  </div>
+                  <div class="geomind-art-title-bar">
+                    <h3 class="geomind-title-on-art">The Chosen Son</h3>
+                  </div>
+                </div>
+                <!-- Body (Middle) -->
+                <div class="geomind-card-body">
+                  <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>2º Álbum • 2026+</span></div>
+                  <p class="geomind-desc" data-i18n="s_track6_desc">Studio track featuring powerful vocals and interlocking guitar harmonies.</p>
+                </div>
+                <!-- Action Button (Bottom) -->
+                <div class="geomind-card-action">
+                  <button class="geomind-card-btn btn-coming-soon" title="Faixa em gravação no estúdio" disabled>
+                    <i class="fa-solid fa-clock"></i> <span data-i18n="btn_coming_soon">Em Breve (Estúdio)</span>
+                  </button>
+                </div>
               </div>
-            </div>
-            <!-- Body (Middle) -->
-            <div class="geomind-card-body">
-              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Tributo Oficial</span></div>
-              <p class="geomind-desc" data-i18n="s_track2_desc">Heavy down-tuned homage to Metallica's groove metal masterpiece.</p>
-            </div>
-            <!-- Action Button (Bottom) -->
-            <div class="geomind-card-action">
-              <button class="geomind-card-btn btn-play-track" data-audio-src="assets/audio/sad-but-true.mp3?v=4.4" data-title="Sad But True" data-album="Tributo Oficial">
-                <i class="fa-solid fa-play"></i> <span data-i18n="btn_play_track">Ouvir Faixa</span>
-              </button>
-            </div>
-          </div>
-          <div class="geomind-card" data-card-index="2" data-src="assets/audio/selling-my-soul.mp3?v=4.4" data-title="Selling My Soul" data-album="Tributo Oficial">
-            <!-- Artwork (Top Half) -->
-            <div class="geomind-card-art">
-              <img src="assets/images/tracks/selling-my-soul.jpg" alt="Selling My Soul Artwork" class="geomind-art-img" data-art-slot="singles-03">
-              <div class="geomind-art-overlay">
-                <span class="geomind-badge">COVER BLACK SABBATH</span>
-                <span class="geomind-track-num">03</span>
+              <div class="geomind-card" data-card-index="4" data-src="" data-title="Master" data-album="2º Álbum • 2026+">
+                <!-- Artwork (Top Half) -->
+                <div class="geomind-card-art">
+                  <img src="assets/images/chat_media/IMG-20260802-WA0020.jpg" alt="Master Artwork" class="geomind-art-img" data-art-slot="singles-05">
+                  <div class="geomind-art-overlay">
+                    <span class="geomind-badge">EM ESTÚDIO</span>
+                    <span class="geomind-track-num">05</span>
+                  </div>
+                  <div class="geomind-art-title-bar">
+                    <h3 class="geomind-title-on-art">Master</h3>
+                  </div>
+                </div>
+                <!-- Body (Middle) -->
+                <div class="geomind-card-body">
+                  <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>2º Álbum • 2026+</span></div>
+                  <p class="geomind-desc" data-i18n="s_track7_desc">Heavy rhythmic drive with commanding riffs and searing guitar solos.</p>
+                </div>
+                <!-- Action Button (Bottom) -->
+                <div class="geomind-card-action">
+                  <button class="geomind-card-btn btn-coming-soon" title="Faixa em gravação no estúdio" disabled>
+                    <i class="fa-solid fa-clock"></i> <span data-i18n="btn_coming_soon">Em Breve (Estúdio)</span>
+                  </button>
+                </div>
               </div>
-              <div class="geomind-art-title-bar">
-                <h3 class="geomind-title-on-art">Selling My Soul</h3>
+              <div class="geomind-card" data-card-index="5" data-src="" data-title="In Ancient Times" data-album="2º Álbum • 2026+">
+                <!-- Artwork (Top Half) -->
+                <div class="geomind-card-art">
+                  <img src="assets/images/chat_media/IMG-20261001-WA0044.jpg" alt="In Ancient Times Artwork" class="geomind-art-img" data-art-slot="singles-06">
+                  <div class="geomind-art-overlay">
+                    <span class="geomind-badge">EM ESTÚDIO</span>
+                    <span class="geomind-track-num">06</span>
+                  </div>
+                  <div class="geomind-art-title-bar">
+                    <h3 class="geomind-title-on-art">In Ancient Times</h3>
+                  </div>
+                </div>
+                <!-- Body (Middle) -->
+                <div class="geomind-card-body">
+                  <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>2º Álbum • 2026+</span></div>
+                  <p class="geomind-desc" data-i18n="s_track8_desc">Epic, mystical journey rooted in ancient heavy metal heritage.</p>
+                </div>
+                <!-- Action Button (Bottom) -->
+                <div class="geomind-card-action">
+                  <button class="geomind-card-btn btn-coming-soon" title="Faixa em gravação no estúdio" disabled>
+                    <i class="fa-solid fa-clock"></i> <span data-i18n="btn_coming_soon">Em Breve (Estúdio)</span>
+                  </button>
+                </div>
               </div>
-            </div>
-            <!-- Body (Middle) -->
-            <div class="geomind-card-body">
-              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Tributo Oficial</span></div>
-              <p class="geomind-desc" data-i18n="s_track3_desc">Heartfelt tribute honoring the founding fathers of Heavy Metal.</p>
-            </div>
-            <!-- Action Button (Bottom) -->
-            <div class="geomind-card-action">
-              <button class="geomind-card-btn btn-play-track" data-audio-src="assets/audio/selling-my-soul.mp3?v=4.4" data-title="Selling My Soul" data-album="Tributo Oficial">
-                <i class="fa-solid fa-play"></i> <span data-i18n="btn_play_track">Ouvir Faixa</span>
-              </button>
-            </div>
-          </div>
-          <div class="geomind-card" data-card-index="3" data-src="" data-title="Broken World" data-album="2º Álbum • 2026+">
-            <!-- Artwork (Top Half) -->
-            <div class="geomind-card-art">
-              <img src="assets/images/chat_media/IMG-20260908-WA0014.jpg" alt="Broken World Artwork" class="geomind-art-img" data-art-slot="singles-04">
-              <div class="geomind-art-overlay">
-                <span class="geomind-badge">EM ESTÚDIO</span>
-                <span class="geomind-track-num">04</span>
-              </div>
-              <div class="geomind-art-title-bar">
-                <h3 class="geomind-title-on-art">Broken World</h3>
-              </div>
-            </div>
-            <!-- Body (Middle) -->
-            <div class="geomind-card-body">
-              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>2º Álbum • 2026+</span></div>
-              <p class="geomind-desc" data-i18n="s_track4_desc">Anthemic track from the upcoming second album recorded with the reunited lineup.</p>
-            </div>
-            <!-- Action Button (Bottom) -->
-            <div class="geomind-card-action">
-              <button class="geomind-card-btn btn-coming-soon" title="Faixa em gravação no estúdio" disabled>
-                <i class="fa-solid fa-clock"></i> <span data-i18n="btn_coming_soon">Em Breve (Estúdio)</span>
-              </button>
-            </div>
-          </div>
-          <div class="geomind-card" data-card-index="4" data-src="" data-title="To the Unknown" data-album="2º Álbum • 2026+">
-            <!-- Artwork (Top Half) -->
-            <div class="geomind-card-art">
-              <img src="assets/images/chat_media/IMG-20260731-WA0126.jpg" alt="To the Unknown Artwork" class="geomind-art-img" data-art-slot="singles-05">
-              <div class="geomind-art-overlay">
-                <span class="geomind-badge">EM ESTÚDIO</span>
-                <span class="geomind-track-num">05</span>
-              </div>
-              <div class="geomind-art-title-bar">
-                <h3 class="geomind-title-on-art">To the Unknown</h3>
-              </div>
-            </div>
-            <!-- Body (Middle) -->
-            <div class="geomind-card-body">
-              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>2º Álbum • 2026+</span></div>
-              <p class="geomind-desc" data-i18n="s_track5_desc">Dark journey through unknown realms featuring dramatic melodic hooks.</p>
-            </div>
-            <!-- Action Button (Bottom) -->
-            <div class="geomind-card-action">
-              <button class="geomind-card-btn btn-coming-soon" title="Faixa em gravação no estúdio" disabled>
-                <i class="fa-solid fa-clock"></i> <span data-i18n="btn_coming_soon">Em Breve (Estúdio)</span>
-              </button>
-            </div>
-          </div>
-          <div class="geomind-card" data-card-index="5" data-src="" data-title="The Chosen Son" data-album="2º Álbum • 2026+">
-            <!-- Artwork (Top Half) -->
-            <div class="geomind-card-art">
-              <img src="assets/images/chat_media/IMG-20260731-WA0127.jpg" alt="The Chosen Son Artwork" class="geomind-art-img" data-art-slot="singles-06">
-              <div class="geomind-art-overlay">
-                <span class="geomind-badge">EM ESTÚDIO</span>
-                <span class="geomind-track-num">06</span>
-              </div>
-              <div class="geomind-art-title-bar">
-                <h3 class="geomind-title-on-art">The Chosen Son</h3>
-              </div>
-            </div>
-            <!-- Body (Middle) -->
-            <div class="geomind-card-body">
-              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>2º Álbum • 2026+</span></div>
-              <p class="geomind-desc" data-i18n="s_track6_desc">Studio track featuring powerful vocals and interlocking guitar harmonies.</p>
-            </div>
-            <!-- Action Button (Bottom) -->
-            <div class="geomind-card-action">
-              <button class="geomind-card-btn btn-coming-soon" title="Faixa em gravação no estúdio" disabled>
-                <i class="fa-solid fa-clock"></i> <span data-i18n="btn_coming_soon">Em Breve (Estúdio)</span>
-              </button>
-            </div>
-          </div>
-          <div class="geomind-card" data-card-index="6" data-src="" data-title="Master" data-album="2º Álbum • 2026+">
-            <!-- Artwork (Top Half) -->
-            <div class="geomind-card-art">
-              <img src="assets/images/chat_media/IMG-20260802-WA0020.jpg" alt="Master Artwork" class="geomind-art-img" data-art-slot="singles-07">
-              <div class="geomind-art-overlay">
-                <span class="geomind-badge">EM ESTÚDIO</span>
-                <span class="geomind-track-num">07</span>
-              </div>
-              <div class="geomind-art-title-bar">
-                <h3 class="geomind-title-on-art">Master</h3>
-              </div>
-            </div>
-            <!-- Body (Middle) -->
-            <div class="geomind-card-body">
-              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>2º Álbum • 2026+</span></div>
-              <p class="geomind-desc" data-i18n="s_track7_desc">Heavy rhythmic drive with commanding riffs and searing guitar solos.</p>
-            </div>
-            <!-- Action Button (Bottom) -->
-            <div class="geomind-card-action">
-              <button class="geomind-card-btn btn-coming-soon" title="Faixa em gravação no estúdio" disabled>
-                <i class="fa-solid fa-clock"></i> <span data-i18n="btn_coming_soon">Em Breve (Estúdio)</span>
-              </button>
-            </div>
-          </div>
-          <div class="geomind-card" data-card-index="7" data-src="" data-title="In Ancient Times" data-album="2º Álbum • 2026+">
-            <!-- Artwork (Top Half) -->
-            <div class="geomind-card-art">
-              <img src="assets/images/chat_media/IMG-20261001-WA0044.jpg" alt="In Ancient Times Artwork" class="geomind-art-img" data-art-slot="singles-08">
-              <div class="geomind-art-overlay">
-                <span class="geomind-badge">EM ESTÚDIO</span>
-                <span class="geomind-track-num">08</span>
-              </div>
-              <div class="geomind-art-title-bar">
-                <h3 class="geomind-title-on-art">In Ancient Times</h3>
-              </div>
-            </div>
-            <!-- Body (Middle) -->
-            <div class="geomind-card-body">
-              <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>2º Álbum • 2026+</span></div>
-              <p class="geomind-desc" data-i18n="s_track8_desc">Epic, mystical journey rooted in ancient heavy metal heritage.</p>
-            </div>
-            <!-- Action Button (Bottom) -->
-            <div class="geomind-card-action">
-              <button class="geomind-card-btn btn-coming-soon" title="Faixa em gravação no estúdio" disabled>
-                <i class="fa-solid fa-clock"></i> <span data-i18n="btn_coming_soon">Em Breve (Estúdio)</span>
-              </button>
-            </div>
-          </div>
             </div>
           </div>
 
@@ -772,7 +729,79 @@
             <div class="geomind-indicator-track">
               <div class="geomind-indicator-pill red-pill" id="indicator-singles"></div>
             </div>
-            <span class="geomind-counter-label red-counter" id="counter-singles">01 / 08</span>
+            <span class="geomind-counter-label red-counter" id="counter-singles">01 / 06</span>
+          </div>
+        </div>
+
+        <!-- GEOMIND-STYLE CAROUSEL 3: TRIBUTOS (COVERS - 2 TRACKS) -->
+        <div class="geomind-carousel-wrapper" id="carousel-tributes-wrapper">
+          <button class="geomind-arrow prev tributes-arrow" id="arrow-prev-tributes" aria-label="Previous Tributes">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="geomind-viewport" id="viewport-tributes">
+            <div class="geomind-track tributes-track" id="track-tributes">
+              <div class="geomind-card" data-card-index="0" data-src="assets/audio/sad-but-true.mp3?v=4.4" data-title="Sad But True" data-album="Tributo Oficial">
+                <!-- Artwork (Top Half) -->
+                <div class="geomind-card-art">
+                  <img src="assets/images/tracks/sad-but-true.jpg" alt="Sad But True Artwork" class="geomind-art-img" data-art-slot="tributes-01">
+                  <div class="geomind-art-overlay">
+                    <span class="geomind-badge">COVER METALLICA</span>
+                    <span class="geomind-track-num">01</span>
+                  </div>
+                  <div class="geomind-art-title-bar">
+                    <h3 class="geomind-title-on-art">Sad But True</h3>
+                  </div>
+                </div>
+                <!-- Body (Middle) -->
+                <div class="geomind-card-body">
+                  <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Tributo Oficial</span></div>
+                  <p class="geomind-desc" data-i18n="s_track2_desc">Heavy down-tuned homage to Metallica's groove metal masterpiece.</p>
+                </div>
+                <!-- Action Button (Bottom) -->
+                <div class="geomind-card-action">
+                  <button class="geomind-card-btn btn-play-track" data-audio-src="assets/audio/sad-but-true.mp3?v=4.4" data-title="Sad But True" data-album="Tributo Oficial">
+                    <i class="fa-solid fa-play"></i> <span data-i18n="btn_play_track">Ouvir Faixa</span>
+                  </button>
+                </div>
+              </div>
+              <div class="geomind-card" data-card-index="1" data-src="assets/audio/selling-my-soul.mp3?v=4.4" data-title="Selling My Soul" data-album="Tributo Oficial">
+                <!-- Artwork (Top Half) -->
+                <div class="geomind-card-art">
+                  <img src="assets/images/tracks/selling-my-soul.jpg" alt="Selling My Soul Artwork" class="geomind-art-img" data-art-slot="tributes-02">
+                  <div class="geomind-art-overlay">
+                    <span class="geomind-badge">COVER BLACK SABBATH</span>
+                    <span class="geomind-track-num">02</span>
+                  </div>
+                  <div class="geomind-art-title-bar">
+                    <h3 class="geomind-title-on-art">Selling My Soul</h3>
+                  </div>
+                </div>
+                <!-- Body (Middle) -->
+                <div class="geomind-card-body">
+                  <div class="geomind-meta-tag"><i class="fa-solid fa-compact-disc"></i> <span>Tributo Oficial</span></div>
+                  <p class="geomind-desc" data-i18n="s_track3_desc">Heartfelt tribute honoring the founding fathers of Heavy Metal.</p>
+                </div>
+                <!-- Action Button (Bottom) -->
+                <div class="geomind-card-action">
+                  <button class="geomind-card-btn btn-play-track" data-audio-src="assets/audio/selling-my-soul.mp3?v=4.4" data-title="Selling My Soul" data-album="Tributo Oficial">
+                    <i class="fa-solid fa-play"></i> <span data-i18n="btn_play_track">Ouvir Faixa</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="geomind-arrow next tributes-arrow" id="arrow-next-tributes" aria-label="Next Tributes">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <!-- Bottom Indicator Bar -->
+          <div class="geomind-indicator-wrap">
+            <div class="geomind-indicator-track">
+              <div class="geomind-indicator-pill purple-pill" id="indicator-tributes"></div>
+            </div>
+            <span class="geomind-counter-label purple-counter" id="counter-tributes">01 / 02</span>
           </div>
         </div>
 
@@ -1982,8 +2011,8 @@
   </button>
 
   <!-- Scripts -->
-  <script src="assets/js/translations.js?v=5.7"></script>
-  <script src="assets/js/lyrics-data.js?v=5.7"></script>
-  <script src="assets/js/main.js?v=5.7"></script>
+  <script src="assets/js/translations.js?v=5.8"></script>
+  <script src="assets/js/lyrics-data.js?v=5.8"></script>
+  <script src="assets/js/main.js?v=5.8"></script>
 </body>
 </html>

@@ -510,7 +510,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 
-  // Initialize both carousels
+  // Initialize all three carousels
   const carouselGenesis = setupGeomindCarousel({
     wrapperId: 'carousel-genesis-wrapper',
     viewportId: 'viewport-genesis',
@@ -531,35 +531,52 @@ document.addEventListener('DOMContentLoaded', () => {
     counterId: 'counter-singles'
   });
 
-  // ==========================================
-  // CATEGORY TABS: SWITCH BETWEEN GENESIS & SINGLES
-  // ==========================================
-  const tabBtnGenesis = document.getElementById('tab-btn-genesis');
-  const tabBtnSingles = document.getElementById('tab-btn-singles');
-  const wrapperGenesis = document.getElementById('carousel-genesis-wrapper');
-  const wrapperSingles = document.getElementById('carousel-singles-wrapper');
+  const carouselTributes = setupGeomindCarousel({
+    wrapperId: 'carousel-tributes-wrapper',
+    viewportId: 'viewport-tributes',
+    trackId: 'track-tributes',
+    prevBtnId: 'arrow-prev-tributes',
+    nextBtnId: 'arrow-next-tributes',
+    indicatorId: 'indicator-tributes',
+    counterId: 'counter-tributes'
+  });
 
-  if (tabBtnGenesis && tabBtnSingles && wrapperGenesis && wrapperSingles) {
-    tabBtnGenesis.addEventListener('click', () => {
-      tabBtnGenesis.classList.add('active');
-      tabBtnSingles.classList.remove('active');
-      wrapperGenesis.classList.add('active');
-      wrapperSingles.classList.remove('active');
+  // ==========================================
+  // CATEGORY TABS: SWITCH BETWEEN GENESIS, SINGLES & TRIBUTES
+  // ==========================================
+  const tabBtns = document.querySelectorAll('.cat-tab-btn');
+  const wrappers = {
+    genesis: document.getElementById('carousel-genesis-wrapper'),
+    singles: document.getElementById('carousel-singles-wrapper'),
+    tributes: document.getElementById('carousel-tributes-wrapper')
+  };
+  const carousels = {
+    genesis: carouselGenesis,
+    singles: carouselSingles,
+    tributes: carouselTributes
+  };
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-carousel');
+      tabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      Object.keys(wrappers).forEach(k => {
+        if (wrappers[k]) {
+          if (k === target) {
+            wrappers[k].classList.add('active');
+          } else {
+            wrappers[k].classList.remove('active');
+          }
+        }
+      });
+
       setTimeout(() => {
-        if (carouselGenesis) carouselGenesis.update();
+        if (carousels[target]) carousels[target].update();
       }, 50);
     });
-
-    tabBtnSingles.addEventListener('click', () => {
-      tabBtnSingles.classList.add('active');
-      tabBtnGenesis.classList.remove('active');
-      wrapperSingles.classList.add('active');
-      wrapperGenesis.classList.remove('active');
-      setTimeout(() => {
-        if (carouselSingles) carouselSingles.update();
-      }, 50);
-    });
-  }
+  });
 
   // Card Play Buttons listener (connects cards to master player)
   document.querySelectorAll('.btn-play-track').forEach(btn => {

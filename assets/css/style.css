@@ -3220,6 +3220,12 @@ img {
   border-color: rgba(229, 9, 20, 0.35);
 }
 
+.cat-tab-btn .tab-badge.purple-badge {
+  background: rgba(168, 85, 247, 0.12);
+  color: #c084fc;
+  border-color: rgba(168, 85, 247, 0.35);
+}
+
 .cat-tab-btn:hover {
   background: rgba(255, 255, 255, 0.08);
   color: #fff;
@@ -3238,6 +3244,13 @@ img {
   border-color: #e50914;
   color: #fff;
   box-shadow: 0 0 25px rgba(229, 9, 20, 0.35);
+}
+
+.cat-tab-btn.active[data-carousel="tributes"] {
+  background: rgba(168, 85, 247, 0.14);
+  border-color: #a855f7;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.35);
 }
 
 /* Carousel Outer Wrapper */
@@ -3303,6 +3316,17 @@ img {
   box-shadow: 0 0 25px rgba(229, 9, 20, 0.8);
 }
 
+.geomind-arrow.tributes-arrow {
+  border-color: rgba(168, 85, 247, 0.5);
+  color: #c084fc;
+}
+
+.geomind-arrow.tributes-arrow:hover {
+  background: #a855f7;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.8);
+}
+
 .geomind-arrow:disabled {
   opacity: 0.3;
   cursor: not-allowed;
@@ -3348,6 +3372,17 @@ img {
 .singles-track .geomind-card:hover {
   border-color: rgba(229, 9, 20, 0.55);
   box-shadow: 0 18px 40px rgba(229, 9, 20, 0.22);
+}
+
+.tributes-track .geomind-card:hover {
+  border-color: rgba(168, 85, 247, 0.55);
+  box-shadow: 0 18px 40px rgba(168, 85, 247, 0.22);
+}
+
+@media (min-width: 993px) {
+  .tributes-track {
+    justify-content: center;
+  }
 }
 
 /* Artwork - Prominent High-Impact Box */
@@ -3562,6 +3597,11 @@ img {
   box-shadow: 0 0 10px rgba(229, 9, 20, 0.7);
 }
 
+.geomind-indicator-pill.purple-pill {
+  background: #a855f7;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.7);
+}
+
 .geomind-counter-label {
   font-family: var(--font-metal);
   font-size: 0.9rem;
@@ -3571,6 +3611,10 @@ img {
 
 .geomind-counter-label.red-counter {
   color: #ff4d4d;
+}
+
+.geomind-counter-label.purple-counter {
+  color: #c084fc;
 }
 
 /* ==========================================================================
