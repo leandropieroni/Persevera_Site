@@ -3962,3 +3962,109 @@ img {
   box-shadow: none;
   background: rgba(255, 255, 255, 0.04);
 }
+
+/* Video Filter Tabs */
+.video-filter-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.2rem 0 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.video-tab-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-metal);
+  color: #94a3b8;
+  padding: 0.75rem 1.6rem;
+  border-radius: 30px;
+  font-family: var(--font-metal);
+  font-size: 0.88rem;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  transition: all var(--transition-fast);
+}
+
+.video-tab-btn i {
+  font-size: 0.95rem;
+}
+
+.video-tab-btn .tab-badge {
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.video-tab-btn .tab-badge.blue-badge {
+  background: rgba(0, 212, 255, 0.15);
+  color: var(--primary-blue);
+  border: 1px solid rgba(0, 212, 255, 0.35);
+}
+
+.video-tab-btn .tab-badge.red-badge {
+  background: rgba(229, 9, 20, 0.15);
+  color: #ff4d4d;
+  border: 1px solid rgba(229, 9, 20, 0.35);
+}
+
+.video-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.video-tab-btn.active[data-filter="all"] {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.video-tab-btn.active[data-filter="genesis"] {
+  background: rgba(0, 212, 255, 0.15);
+  border-color: var(--primary-blue);
+  color: #fff;
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.35);
+}
+
+.video-tab-btn.active[data-filter="clips"] {
+  background: rgba(229, 9, 20, 0.15);
+  border-color: #e50914;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(229, 9, 20, 0.4);
+}
+
+.video-card.hidden {
+  display: none !important;
+}
+
+/* Badge on video thumbnail */
+.v-thumb .v-track-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(10, 12, 16, 0.88);
+  color: #00d4ff;
+  border: 1px solid rgba(0, 212, 255, 0.45);
+  font-family: var(--font-metal);
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  z-index: 2;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
+.v-thumb .v-track-badge.clip-badge {
+  color: #ff4d4d;
+  border-color: rgba(229, 9, 20, 0.5);
+}

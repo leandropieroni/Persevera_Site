@@ -60,15 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update active video card text if video elements exist
     const activeVideoCard = document.querySelector('.video-card.active');
-    if (activeVideoCard && videoCards.length > 0) {
-      const activeIdx = Array.from(videoCards).indexOf(activeVideoCard);
-      const descKey = `v${activeIdx + 1}_desc`;
-      const titleKey = `v${activeIdx + 1}_title`;
-      if (translations[lang][descKey] && videoCurrentDesc) {
-        videoCurrentDesc.textContent = translations[lang][descKey];
-      }
-      if (translations[lang][titleKey] && videoCurrentTitle) {
+    if (activeVideoCard) {
+      const titleKey = activeVideoCard.getAttribute('data-title-key');
+      const descKey = activeVideoCard.getAttribute('data-desc-key');
+      if (titleKey && translations[lang] && translations[lang][titleKey] && videoCurrentTitle) {
         videoCurrentTitle.textContent = translations[lang][titleKey];
+      }
+      if (descKey && translations[lang] && translations[lang][descKey] && videoCurrentDesc) {
+        videoCurrentDesc.textContent = translations[lang][descKey];
       }
     }
   }
@@ -595,35 +594,64 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ==========================================
-  // 3. VIDEOS & CINEMATICS THEATER
+  // 3. VIDEOS & CINEMATICS THEATER (17 TRACKS & CLIPS)
   // ==========================================
   const mainVideoIframe = document.getElementById('main-video-iframe');
+  const videoCards = document.querySelectorAll('.video-card');
+  const videoTabBtns = document.querySelectorAll('.video-tab-btn');
 
-  videoCards.forEach((card, idx) => {
+  // Category Filter Tabs
+  videoTabBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      videoTabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+
+      document.querySelectorAll('.video-card').forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (filter === 'all' || cat === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // Video card click listener
+  videoCards.forEach((card) => {
     card.addEventListener('click', () => {
       const videoId = card.getAttribute('data-videoid');
-      const titleEl = card.querySelector('h4');
-      const descKey = `v${idx + 1}_desc`;
+      const title = card.getAttribute('data-title') || card.querySelector('h4')?.textContent;
+      const descKey = card.getAttribute('data-desc-key');
+      const titleKey = card.getAttribute('data-title-key');
+      const desc = card.getAttribute('data-desc');
 
       // Update iframe source
-      if (mainVideoIframe) {
+      if (mainVideoIframe && videoId) {
         mainVideoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1`;
       }
 
       // Update text
-      if (videoCurrentTitle && titleEl) {
-        videoCurrentTitle.textContent = titleEl.textContent;
+      if (videoCurrentTitle) {
+        if (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang][titleKey]) {
+          videoCurrentTitle.textContent = translations[currentLang][titleKey];
+        } else {
+          videoCurrentTitle.textContent = title;
+        }
       }
+
       if (videoCurrentDesc) {
         if (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang][descKey]) {
           videoCurrentDesc.textContent = translations[currentLang][descKey];
         } else {
-          videoCurrentDesc.textContent = card.getAttribute('data-desc') || '';
+          videoCurrentDesc.textContent = desc || '';
         }
       }
 
       // Update active class
-      videoCards.forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.video-card').forEach(c => c.classList.remove('active'));
       card.classList.add('active');
 
       // Scroll smoothly to video theater if on small screens
@@ -692,15 +720,37 @@ document.addEventListener('DOMContentLoaded', () => {
       if (videoTitle && title) {
         videoTitle.textContent = title + ' (Official Music Video)';
       }
-      // Activate matching card in theater
+
+      // Reset filter tabs so the matching video is visible
+      const allFilterBtn = document.querySelector('.video-tab-btn[data-filter="all"]');
+      if (allFilterBtn) {
+        document.querySelectorAll('.video-tab-btn').forEach(b => b.classList.remove('active'));
+        allFilterBtn.classList.add('active');
+        document.querySelectorAll('.video-card').forEach(c => c.classList.remove('hidden'));
+      }
+
+      // Activate matching card in theater and update description
       document.querySelectorAll('.video-card').forEach(card => {
         if (card.getAttribute('data-videoid') === videoId) {
           card.classList.add('active');
+          const titleKey = card.getAttribute('data-title-key');
+          const descKey = card.getAttribute('data-desc-key');
+          if (videoCurrentTitle && titleKey && typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang][titleKey]) {
+            videoCurrentTitle.textContent = translations[currentLang][titleKey];
+          }
+          if (videoCurrentDesc) {
+            if (descKey && typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang][descKey]) {
+              videoCurrentDesc.textContent = translations[currentLang][descKey];
+            } else {
+              videoCurrentDesc.textContent = card.getAttribute('data-desc') || '';
+            }
+          }
         } else {
           card.classList.remove('active');
         }
       });
-      // Scroll to video theater
+
+      // Scroll smoothly to video theater
       if (videoSection) {
         videoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
