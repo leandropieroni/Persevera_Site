@@ -1435,7 +1435,13 @@ img {
   font-family: var(--font-sub);
 }
 
-/* Members Grid */
+/* Members Section & Grid */
+.members-section {
+  margin-top: 5rem;
+  padding-top: 4rem;
+  border-top: 1px solid var(--border-metal);
+}
+
 .members-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
