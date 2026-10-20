@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=5.2">
+  <link rel="stylesheet" href="assets/css/style.css?v=5.3">
 </head>
 <body>
 
@@ -1954,9 +1954,54 @@
     </div>
   </footer>
 
+  <!-- FIXED ROCK & HEAVY METAL NEWS TICKER BANNER -->
+  <aside class="metal-news-ticker" id="metal-news-ticker" role="region" aria-label="Notícias de Rock e Metal">
+    <div class="ticker-inner">
+      <!-- Live Badge -->
+      <div class="ticker-badge">
+        <span class="ticker-pulse"></span>
+        <i class="fa-solid fa-bolt"></i>
+        <span class="ticker-badge-text" data-i18n="ticker_live_badge">METAL NEWS</span>
+      </div>
+
+      <!-- Rotating Headline Content -->
+      <div class="ticker-content" id="ticker-content">
+        <span class="ticker-source-tag" id="ticker-source-tag">ROADIE CREW</span>
+        <a href="https://roadiecrew.com" target="_blank" rel="noopener" class="ticker-headline" id="ticker-headline" data-i18n="ticker_loading">
+          Carregando as notícias mais recentes do rock e heavy metal...
+        </a>
+        <i class="fa-solid fa-arrow-up-right-from-square ticker-ext-icon"></i>
+      </div>
+
+      <!-- Controls & Actions -->
+      <div class="ticker-controls">
+        <span class="ticker-counter" id="ticker-counter">1/24</span>
+        <button class="ticker-ctrl-btn" id="ticker-prev" aria-label="Notícia anterior" title="Notícia anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="ticker-ctrl-btn" id="ticker-toggle-play" aria-label="Pausar / Reproduzir" title="Pausar alternância">
+          <i class="fa-solid fa-pause"></i>
+        </button>
+        <button class="ticker-ctrl-btn" id="ticker-next" aria-label="Próxima notícia" title="Próxima notícia">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <button class="ticker-ctrl-btn ticker-minimize-btn" id="ticker-minimize" aria-label="Minimizar barra" title="Minimizar">
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Collapsed Mini Trigger Pill (when user minimizes the ticker) -->
+  <button class="ticker-collapsed-pill hidden" id="ticker-collapsed-pill" aria-label="Abrir barra de notícias" title="Ver Notícias de Metal">
+    <span class="ticker-pulse mini"></span>
+    <i class="fa-solid fa-newspaper"></i>
+    <span data-i18n="ticker_pill_label">Notícias de Metal</span>
+  </button>
+
   <!-- Scripts -->
-  <script src="assets/js/translations.js?v=5.2"></script>
-  <script src="assets/js/lyrics-data.js?v=5.2"></script>
-  <script src="assets/js/main.js?v=5.2"></script>
+  <script src="assets/js/translations.js?v=5.3"></script>
+  <script src="assets/js/lyrics-data.js?v=5.3"></script>
+  <script src="assets/js/main.js?v=5.3"></script>
 </body>
 </html>

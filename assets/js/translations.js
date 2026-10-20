@@ -254,6 +254,11 @@ const translations = {
     "press_quote12": "\"Exclusive video podcast interview with Danilo Bredda unpacking Genesis behind the scenes, 3 guitars and the future.\"",
     "press_quote13": "\"Acclaimed British metal press celebrating Persevera's classic heavy metal craft and global underground reach.\"",
 
+    // Metal News Ticker
+    "ticker_live_badge": "METAL NEWS",
+    "ticker_pill_label": "Metal News",
+    "ticker_loading": "Loading latest rock & heavy metal news...",
+
     // Shows
     "tour_subtitle": "LIVE ON STAGE",
     "tour_title": "TOUR DATES & SHOWS",
@@ -627,6 +632,11 @@ const translations = {
     "press_quote12": "\"Bate-papo exclusivo em vídeo com Danilo Bredda dissecando os bastidores do Genesis, as 3 guitarras e o futuro da banda.\"",
     "press_quote13": "\"Destaque na respeitada imprensa britânica celebrando a sonoridade clássica da Persevera e sua projeção underground global.\"",
 
+    // Metal News Ticker
+    "ticker_live_badge": "NOTÍCIAS DE METAL",
+    "ticker_pill_label": "Notícias de Metal",
+    "ticker_loading": "Carregando as notícias mais recentes do rock e heavy metal...",
+
     // Shows
     "tour_subtitle": "AO VIVO NOS PALCOS",
     "tour_title": "AGENDA & SHOWS",
@@ -999,6 +1009,11 @@ const translations = {
     "press_quote11": "\"Metal auténtico y combativo, fusionando peso demoledor con letras reflexivas que enfrentan los dilemas de nuestro tiempo.\"",
     "press_quote12": "\"Entrevista exclusiva en videopodcast con Danilo Bredda analizando el detrás de escena de Genesis, las 3 guitarras y el futuro.\"",
     "press_quote13": "\"Destacado en la respetada prensa británica celebrando la sonoridad clásica de Persevera y su proyección underground global.\"",
+
+    // Metal News Ticker
+    "ticker_live_badge": "NOTICIAS DE METAL",
+    "ticker_pill_label": "Noticias de Metal",
+    "ticker_loading": "Cargando las noticias más recientes del rock y heavy metal...",
 
     // Shows
     "tour_subtitle": "EN VIVO EN ESCENARIOS",

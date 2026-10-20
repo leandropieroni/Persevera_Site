@@ -879,4 +879,204 @@ document.addEventListener('DOMContentLoaded', () => {
   setLanguage(currentLang);
 
   console.log('Persevera Band Website initialized successfully with i18n support. 🤘');
+
+  // ==========================================
+  // 6. ROCK & HEAVY METAL LIVE NEWS TICKER
+  // ==========================================
+  const tickerEl = document.getElementById('metal-news-ticker');
+  const tickerSourceTag = document.getElementById('ticker-source-tag');
+  const tickerHeadline = document.getElementById('ticker-headline');
+  const tickerCounter = document.getElementById('ticker-counter');
+  const tickerPrevBtn = document.getElementById('ticker-prev');
+  const tickerNextBtn = document.getElementById('ticker-next');
+  const tickerToggleBtn = document.getElementById('ticker-toggle-play');
+  const tickerMinBtn = document.getElementById('ticker-minimize');
+  const tickerPill = document.getElementById('ticker-collapsed-pill');
+  const tickerContent = document.getElementById('ticker-content');
+
+  if (tickerEl && tickerHeadline) {
+    let metalNewsList = [];
+    let currentNewsIndex = 0;
+    let tickerInterval = null;
+    let isTickerPaused = false;
+    const TICKER_DELAY = 5500; // 5.5 seconds per headline
+
+    // Fallback news in case fetch fails
+    const fallbackNews = [
+      {
+        source: "Roadie Crew",
+        color: "#e50914",
+        title: "DELAIN anuncia nova fase com a saída da vocalista Diana Leah e participações de Marko Hietala e Sharon den Adel",
+        link: "https://roadiecrew.com"
+      },
+      {
+        source: "Wikimetal",
+        color: "#00d4ff",
+        title: "Floor Jansen diz que saída do Nightwish marca novo começo em sua trajetória no metal",
+        link: "https://www.wikimetal.com.br"
+      },
+      {
+        source: "Blabbermouth",
+        color: "#a855f7",
+        title: "Iron Maiden, Korn and Bad Omens to Headline Major Rock Festivals Across the Globe",
+        link: "https://blabbermouth.net"
+      },
+      {
+        source: "Loudwire",
+        color: "#10b981",
+        title: "Heavy Metal Evolution: How modern bands are keeping authentic guitar-driven music alive",
+        link: "https://loudwire.com"
+      },
+      {
+        source: "Road to Metal",
+        color: "#f59e0b",
+        title: "Especial: A resiliência e maturidade estrutural do Heavy Metal autêntico brasileiro",
+        link: "https://www.roadtometal.com.br"
+      }
+    ];
+
+    function renderNewsItem(index) {
+      if (!metalNewsList.length) return;
+      const item = metalNewsList[index];
+
+      // Smooth transition
+      if (tickerContent) {
+        tickerContent.style.opacity = '0';
+        tickerContent.style.transform = 'translateY(4px)';
+        tickerContent.style.transition = 'all 0.22s ease';
+      }
+
+      setTimeout(() => {
+        if (tickerSourceTag) {
+          tickerSourceTag.textContent = item.source || 'METAL';
+          if (item.color) {
+            tickerSourceTag.style.borderColor = item.color;
+            tickerSourceTag.style.color = item.color;
+            tickerSourceTag.style.backgroundColor = `${item.color}1a`; // 10% opacity
+          }
+        }
+
+        if (tickerHeadline) {
+          tickerHeadline.textContent = item.title;
+          tickerHeadline.href = item.link;
+          tickerHeadline.title = `${item.source}: ${item.title}`;
+        }
+
+        if (tickerCounter) {
+          tickerCounter.textContent = `${index + 1}/${metalNewsList.length}`;
+        }
+
+        if (tickerContent) {
+          tickerContent.style.opacity = '1';
+          tickerContent.style.transform = 'translateY(0)';
+        }
+      }, 220);
+    }
+
+    function nextNews() {
+      if (!metalNewsList.length) return;
+      currentNewsIndex = (currentNewsIndex + 1) % metalNewsList.length;
+      renderNewsItem(currentNewsIndex);
+    }
+
+    function prevNews() {
+      if (!metalNewsList.length) return;
+      currentNewsIndex = (currentNewsIndex - 1 + metalNewsList.length) % metalNewsList.length;
+      renderNewsItem(currentNewsIndex);
+    }
+
+    function startTickerTimer() {
+      stopTickerTimer();
+      if (!isTickerPaused) {
+        tickerInterval = setInterval(nextNews, TICKER_DELAY);
+      }
+    }
+
+    function stopTickerTimer() {
+      if (tickerInterval) {
+        clearInterval(tickerInterval);
+        tickerInterval = null;
+      }
+    }
+
+    // Controls
+    if (tickerNextBtn) tickerNextBtn.addEventListener('click', (e) => { e.preventDefault(); nextNews(); startTickerTimer(); });
+    if (tickerPrevBtn) tickerPrevBtn.addEventListener('click', (e) => { e.preventDefault(); prevNews(); startTickerTimer(); });
+
+    if (tickerToggleBtn) {
+      tickerToggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        isTickerPaused = !isTickerPaused;
+        const icon = tickerToggleBtn.querySelector('i');
+        if (icon) icon.className = isTickerPaused ? 'fa-solid fa-play' : 'fa-solid fa-pause';
+        tickerToggleBtn.title = isTickerPaused ? 'Retomar alternância' : 'Pausar alternância';
+        if (isTickerPaused) {
+          stopTickerTimer();
+        } else {
+          startTickerTimer();
+        }
+      });
+    }
+
+    // Pause on hover
+    if (tickerEl) {
+      tickerEl.addEventListener('mouseenter', stopTickerTimer);
+      tickerEl.addEventListener('mouseleave', () => { if (!isTickerPaused) startTickerTimer(); });
+    }
+
+    // Minimize & Restore
+    function setTickerMinimized(minimized) {
+      if (minimized) {
+        tickerEl.classList.add('is-minimized');
+        if (tickerPill) tickerPill.classList.remove('hidden');
+        localStorage.setItem('persevera_ticker_minimized', 'true');
+      } else {
+        tickerEl.classList.remove('is-minimized');
+        if (tickerPill) tickerPill.classList.add('hidden');
+        localStorage.setItem('persevera_ticker_minimized', 'false');
+      }
+    }
+
+    if (tickerMinBtn) {
+      tickerMinBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        setTickerMinimized(true);
+      });
+    }
+
+    if (tickerPill) {
+      tickerPill.addEventListener('click', (e) => {
+        e.preventDefault();
+        setTickerMinimized(false);
+      });
+    }
+
+    // Check user preference
+    const savedMinState = localStorage.getItem('persevera_ticker_minimized');
+    if (savedMinState === 'true') {
+      setTickerMinimized(true);
+    }
+
+    // Fetch live news JSON
+    fetch('assets/data/metal-news.json')
+      .then(resp => {
+        if (!resp.ok) throw new Error('Network response not ok');
+        return resp.json();
+      })
+      .then(data => {
+        if (data && data.news && data.news.length > 0) {
+          metalNewsList = data.news;
+        } else {
+          metalNewsList = fallbackNews;
+        }
+        renderNewsItem(0);
+        startTickerTimer();
+      })
+      .catch(err => {
+        console.warn('Could not load live metal news, using curated fallback:', err);
+        metalNewsList = fallbackNews;
+        renderNewsItem(0);
+        startTickerTimer();
+      });
+  }
 });
