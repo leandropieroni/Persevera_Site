@@ -700,8 +700,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const desc = card.getAttribute('data-desc');
 
       // Update iframe source
-      if (mainVideoIframe && videoId) {
-        mainVideoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1`;
+      if (mainVideoIframe) {
+        const embedUrl = card.getAttribute('data-embed-url');
+        if (embedUrl) {
+          mainVideoIframe.src = embedUrl;
+        } else if (videoId) {
+          mainVideoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1`;
+        }
       }
 
       // Update text
@@ -782,14 +787,19 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.btn-watch-theater').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      const embedUrl = btn.getAttribute('data-embed-url');
       const videoId = btn.getAttribute('data-videoid');
       const title = btn.getAttribute('data-title');
       const mainIframe = document.getElementById('main-video-iframe');
       const videoTitle = document.getElementById('video-current-title');
       const videoSection = document.getElementById('videos');
       
-      if (mainIframe && videoId) {
-        mainIframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&enablejsapi=1';
+      if (mainIframe) {
+        if (embedUrl) {
+          mainIframe.src = embedUrl;
+        } else if (videoId) {
+          mainIframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&enablejsapi=1';
+        }
       }
       if (videoTitle && title) {
         videoTitle.textContent = title + ' (Official Music Video)';
