@@ -1579,8 +1579,51 @@ img {
 
 .members-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
+}
+
+/* Center the 5th and 6th cards on the bottom row on desktop */
+@media (min-width: 1025px) {
+  .members-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .members-grid > .member-card:nth-child(5) {
+    grid-column: 2;
+  }
+  .members-grid > .member-card:nth-child(6) {
+    grid-column: 3;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .members-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .members-grid > .member-card:nth-child(5),
+  .members-grid > .member-card:nth-child(6) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 521px) {
+  .members-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .members-grid > .member-card:nth-child(5),
+  .members-grid > .member-card:nth-child(6) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .members-grid {
+    grid-template-columns: 1fr;
+  }
+  .members-grid > .member-card:nth-child(5),
+  .members-grid > .member-card:nth-child(6) {
+    grid-column: auto;
+  }
 }
 
 .member-card {

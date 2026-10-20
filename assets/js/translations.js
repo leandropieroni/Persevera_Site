@@ -79,7 +79,7 @@ const translations = {
     "album_full_desc": "13 tracks forged with sheer power, apocalyptic lyricism and meticulous production.",
     "album2_badge": "IN PRODUCTION • 2026+",
     "album2_title": "SECOND STUDIO ALBUM (UPCOMING)",
-    "album2_desc": "Fronted by new lead vocalist <strong>Luis Carlos</strong> with Persevera's triple-guitar onslaught. 12 tracks currently in studio tracking and production.",
+    "album2_desc": "Fronted by new lead vocalist <strong>Luiz Carlos</strong> with Persevera's triple-guitar onslaught. 12 tracks currently in studio tracking and production.",
     "album2_single_tag": "[NEW SINGLE]",
     "album2_clip_tag": "[OFFICIAL VIDEO]",
     "album2_tribute_tag": "[BLACK SABBATH TRIBUTE]",
@@ -240,8 +240,8 @@ const translations = {
 
     "tl_step5_year": "2026+",
     "tl_step5_title": "New Frontman, Sophomore Album & Stage Onslaught",
-    "tl_step5_desc": "In September 2026, Persevera inaugurated a fierce new chapter with the arrival of powerful lead vocalist <strong>Luis Carlos</strong>, taking over the helm following Paulo Carrara's memorable tenure on the <em>Genesis</em> debut. The band is currently tracking their 12-song sophomore album in studio — featuring blistering tracks like <em>War is Hell</em>, <em>Master</em>, <em>The Chosen Son</em>, <em>Broken World</em> and <em>To the Unknown</em> —, preparing an unstoppable live tour fueled by their three-guitar attack.",
-    "tl_step5_pill": "New Frontman Luis Carlos • Sophomore Album in Studio",
+    "tl_step5_desc": "In September 2026, Persevera inaugurated a fierce new chapter with the arrival of powerful lead vocalist <strong>Luiz Carlos</strong>, taking over the helm following Paulo Carrara's memorable tenure on the <em>Genesis</em> debut. The band is currently tracking their 12-song sophomore album in studio — featuring blistering tracks like <em>War is Hell</em>, <em>Master</em>, <em>The Chosen Son</em>, <em>Broken World</em> and <em>To the Unknown</em> —, preparing an unstoppable live tour fueled by their three-guitar attack.",
+    "tl_step5_pill": "New Frontman Luiz Carlos • Sophomore Album in Studio",
 
     "press_heading": "PERSEVERA IN SPECIALIZED PRESS",
     "press_quote1": "\"Authentic Heavy Metal rooted in the '90s, NWOBHM, thrash and power vibes. Honest, compelling and devoid of formulas.\"",
@@ -461,7 +461,7 @@ const translations = {
     "album_full_desc": "13 faixas forjadas com peso, conceito lírico apocalíptico e produção meticulosa.",
     "album2_badge": "EM GRAVAÇÃO • 2026+",
     "album2_title": "SEGUNDO ÁLBUM DE ESTÚDIO (EM PRODUÇÃO)",
-    "album2_desc": "Com o novo vocalista <strong>Luis Carlos</strong> na linha de frente e o ataque de três guitarras da Persevera. 12 faixas em processo de captação e produção em estúdio.",
+    "album2_desc": "Com o novo vocalista <strong>Luiz Carlos</strong> na linha de frente e o ataque de três guitarras da Persevera. 12 faixas em processo de captação e produção em estúdio.",
     "album2_single_tag": "[NOVO SINGLE]",
     "album2_clip_tag": "[CLIPE OFICIAL]",
     "album2_tribute_tag": "[TRIBUTO BLACK SABBATH]",
@@ -622,8 +622,8 @@ const translations = {
 
     "tl_step5_year": "2026+",
     "tl_step5_title": "Novo Vocalista, Segundo Álbum & A Estrada",
-    "tl_step5_desc": "Em setembro de 2026, a Persevera inaugurou uma nova fase decisiva com a chegada do vocalista <strong>Luis Carlos</strong> nos microfones, assumindo a linha de frente após o ciclo marcante de Paulo Carrara no álbum de estreia <em>Genesis</em>. A banda está em estúdio finalizando as 12 faixas do aguardado segundo álbum — incluindo pedradas como <em>War is Hell</em>, <em>Master</em>, <em>The Chosen Son</em>, <em>Broken World</em> e <em>To the Unknown</em> —, preparando uma turnê incendiária impulsionada pelo poder de suas três guitarras.",
-    "tl_step5_pill": "Novo Vocalista Luis Carlos • Segundo Álbum em Gravação",
+    "tl_step5_desc": "Em setembro de 2026, a Persevera inaugurou uma nova fase decisiva com a chegada do vocalista <strong>Luiz Carlos</strong> nos microfones, assumindo a linha de frente após o ciclo marcante de Paulo Carrara no álbum de estreia <em>Genesis</em>. A banda está em estúdio finalizando as 12 faixas do aguardado segundo álbum — incluindo pedradas como <em>War is Hell</em>, <em>Master</em>, <em>The Chosen Son</em>, <em>Broken World</em> e <em>To the Unknown</em> —, preparando uma turnê incendiária impulsionada pelo poder de suas três guitarras.",
+    "tl_step5_pill": "Novo Vocalista Luiz Carlos • Segundo Álbum em Gravação",
 
     "press_heading": "A PERSEVERA NA IMPRENSA ESPECIALIZADA",
     "press_quote1": "\"Um Heavy Metal com raízes bem fincadas nos anos 90, NWOBHM e pitadas de Thrash e Power. O resultado é autêntico, sem fórmulas prontas e repleto de energia e honestidade.\"",
@@ -843,7 +843,7 @@ const translations = {
     "album_full_desc": "13 canciones forjadas con peso demoledor, lírica apocalíptica y producción meticulosa.",
     "album2_badge": "EN PRODUCCIÓN • 2026+",
     "album2_title": "SEGUNDO ÁLBUM DE ESTUDIO (EN PRODUCCIÓN)",
-    "album2_desc": "Con el nuevo vocalista <strong>Luis Carlos</strong> al frente y el poder de las tres guitarras de Persevera. 12 canciones en proceso de grabación y producción en estudio.",
+    "album2_desc": "Con el nuevo vocalista <strong>Luiz Carlos</strong> al frente y el poder de las tres guitarras de Persevera. 12 canciones en proceso de grabación y producción en estudio.",
     "album2_single_tag": "[NUEVO SENCILLO]",
     "album2_clip_tag": "[VIDEOCLIP OFICIAL]",
     "album2_tribute_tag": "[TRIBUTO A BLACK SABBATH]",
@@ -1004,8 +1004,8 @@ const translations = {
 
     "tl_step5_year": "2026+",
     "tl_step5_title": "Nuevo Vocalista, Segundo Álbum y los Escenarios",
-    "tl_step5_desc": "En septiembre de 2026, Persevera inauguró un nuevo capítulo decisivo con la incorporación del vocalista <strong>Luis Carlos</strong>, tomando las riendas del micrófono tras la recordada etapa de Paulo Carrara en el debut <em>Genesis</em>. La banda afina en el estudio las 12 canciones de su segundo álbum —con temas implacables como <em>War is Hell</em>, <em>Master</em>, <em>The Chosen Son</em>, <em>Broken World</em> y <em>To the Unknown</em>—, lista para desatar el poder de sus tres guitarras en los escenarios.",
-    "tl_step5_pill": "Nuevo Vocalista Luis Carlos • Segundo Álbum en Estudio",
+    "tl_step5_desc": "En septiembre de 2026, Persevera inauguró un nuevo capítulo decisivo con la incorporación del vocalista <strong>Luiz Carlos</strong>, tomando las riendas del micrófono tras la recordada etapa de Paulo Carrara en el debut <em>Genesis</em>. La banda afina en el estudio las 12 canciones de su segundo álbum —con temas implacables como <em>War is Hell</em>, <em>Master</em>, <em>The Chosen Son</em>, <em>Broken World</em> y <em>To the Unknown</em>—, lista para desatar el poder de sus tres guitarras en los escenarios.",
+    "tl_step5_pill": "Nuevo Vocalista Luiz Carlos • Segundo Álbum en Estudio",
 
     "press_heading": "PERSEVERA EN LA PRENSA ESPECIALIZADA",
     "press_quote1": "\"Heavy Metal auténtico con raíces en los años 90, NWOBHM y toques de Thrash y Power. Genuino, contundente y sin fórmulas comerciales.\"",
