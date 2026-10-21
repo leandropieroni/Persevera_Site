@@ -274,7 +274,7 @@ const translations = {
     "press_quote21": "\"Splendid physical edition of the 'Genesis' debut. Dynamic, engaging songwriting that commands listener attention from first note to last.\"",
     "press_quote22": "\"Spanish metal press: 'Heavy, vigorous musicianship with standout guitars and bass, leaving in its wake a blazing trail of classic metal.'\"",
     "press_quote23": "\"International review: 'Heavy, intense and fueled by sheer passion for metal, evoking the grand epic presence and power of true heavy metal.'\"",
-    "press_quote24": "\"US music review: 'A classic metal album that hits hard — massive sonic presence, edgy riffs and classic aesthetics rolled into a powerful soundscape.'\","
+    "press_quote24": "\"US music review: 'A classic metal album that hits hard — massive sonic presence, edgy riffs and classic aesthetics rolled into a powerful soundscape.'\"",
 
     // Metal News Ticker
     "ticker_live_badge": "METAL NEWS",
@@ -674,7 +674,7 @@ const translations = {
     "press_quote21": "\"Bela edição física do debut 'Genesis'. Músicas dinâmicas e envolventes que prendem a atenção do ouvinte do início ao fim.\"",
     "press_quote22": "\"Imprensa espanhola: 'Instrumental pesado e vigoroso com guitarras e baixo em destaque, deixando uma esteira de puro metal clássico.'\"",
     "press_quote23": "\"Revista internacional: 'Pesado, intenso e movido por pura paixão, trazendo à tona a força épica e imponente do metal tradicional.'\"",
-    "press_quote24": "\"Crítica norte-americana: 'Um álbum clássico que bate pesado — presença sônica massiva, riffs cortantes e estética clássica memorável.'\","
+    "press_quote24": "\"Crítica norte-americana: 'Um álbum clássico que bate pesado — presença sônica massiva, riffs cortantes e estética clássica memorável.'\"",
 
     // Metal News Ticker
     "ticker_live_badge": "NOTÍCIAS DE METAL",
@@ -1074,7 +1074,7 @@ const translations = {
     "press_quote21": "\"Gran edición física del debut 'Genesis'. Temas dinámicos y envolventes que atrapan la atención del oyente de principio a fin.\"",
     "press_quote22": "\"Prensa española: 'Instrumental pesado y vigoroso con guitarras y bajo destacados, dejando a su paso una estela de auténtico metal clásico.'\"",
     "press_quote23": "\"Revista internacional: 'Pesado, intenso e impulsado por pura devoción al metal, evocando la grandeza épica y poderosa del heavy metal auténtico.'\"",
-    "press_quote24": "\"Crítica internacional: 'Un disco de metal clásico que golpea con fuerza: presencia sónica masiva, riffs filosos y estética clásica memorable.'\","
+    "press_quote24": "\"Crítica internacional: 'Un disco de metal clásico que golpea con fuerza: presencia sónica masiva, riffs filosos y estética clásica memorable.'\"",
 
     // Metal News Ticker
     "ticker_live_badge": "NOTICIAS DE METAL",
@@ -1204,3 +1204,10 @@ const translations = {
     "btn_coming_soon": "Próximamente (Estudio)"
   }
 };
+
+if (typeof window !== 'undefined') {
+  window.translations = translations;
+}
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = translations;
+}

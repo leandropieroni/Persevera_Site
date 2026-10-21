@@ -15,9 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const videoCurrentDesc = document.getElementById('video-current-desc');
 
   function setLanguage(lang) {
-    if (typeof translations === 'undefined' || !translations[lang]) return;
+    const tDict = (typeof translations !== 'undefined' ? translations : (typeof window !== 'undefined' ? window.translations : null));
+    if (!tDict || !tDict[lang]) return;
     currentLang = lang;
-    localStorage.setItem('persevera_lang', lang);
+    try {
+      localStorage.setItem('persevera_lang', lang);
+    } catch (e) {}
 
     document.documentElement.lang = (lang === 'pt' ? 'pt-BR' : (lang === 'es' ? 'es' : 'en'));
 
@@ -25,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const elements = document.querySelectorAll('[data-i18n]');
     elements.forEach(el => {
       const key = el.getAttribute('data-i18n');
-      if (translations[lang] && translations[lang][key]) {
-        el.innerHTML = translations[lang][key];
+      if (tDict[lang] && tDict[lang][key] !== undefined) {
+        el.innerHTML = tDict[lang][key];
       }
     });
 
@@ -34,8 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const placeholderEls = document.querySelectorAll('[data-i18n-placeholder]');
     placeholderEls.forEach(el => {
       const key = el.getAttribute('data-i18n-placeholder');
-      if (translations[lang] && translations[lang][key]) {
-        el.placeholder = translations[lang][key];
+      if (tDict[lang] && tDict[lang][key] !== undefined) {
+        el.placeholder = tDict[lang][key];
       }
     });
 
@@ -43,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const titleEls = document.querySelectorAll('[data-i18n-title]');
     titleEls.forEach(el => {
       const key = el.getAttribute('data-i18n-title');
-      if (translations[lang] && translations[lang][key]) {
-        el.title = translations[lang][key];
+      if (tDict[lang] && tDict[lang][key] !== undefined) {
+        el.title = tDict[lang][key];
       }
     });
 
@@ -62,24 +65,28 @@ document.addEventListener('DOMContentLoaded', () => {
     if (activeVideoCard) {
       const titleKey = activeVideoCard.getAttribute('data-title-key');
       const descKey = activeVideoCard.getAttribute('data-desc-key');
-      if (titleKey && translations[lang] && translations[lang][titleKey] && videoCurrentTitle) {
-        videoCurrentTitle.textContent = translations[lang][titleKey];
+      if (titleKey && tDict[lang] && tDict[lang][titleKey] && videoCurrentTitle) {
+        videoCurrentTitle.textContent = tDict[lang][titleKey];
       }
-      if (descKey && translations[lang] && translations[lang][descKey] && videoCurrentDesc) {
-        videoCurrentDesc.textContent = translations[lang][descKey];
+      if (descKey && tDict[lang] && tDict[lang][descKey] && videoCurrentDesc) {
+        videoCurrentDesc.textContent = tDict[lang][descKey];
       }
     }
   }
 
-  // Language button click events
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
+  // Expose globally for convenience
+  window.setLanguage = setLanguage;
+
+  // Language button click events (delegated for 100% reliability on any device/click target)
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.lang-btn');
+    if (btn) {
       e.preventDefault();
       const targetLang = btn.getAttribute('data-lang');
       if (targetLang) {
         setLanguage(targetLang);
       }
-    });
+    }
   });
 
   // Apply initial language immediately
