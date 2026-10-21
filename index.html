@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=6.6">
+  <link rel="stylesheet" href="assets/css/style.css?v=6.7">
 </head>
 <body>
 
@@ -1410,9 +1410,15 @@
               </button>
             </div>
 
-            <div class="press-quotes-grid" id="press-quotes-grid">
-              
-              <!-- 1. Road to Metal (Entrevista) -->
+            <!-- Press Carousel: 2 Rows & Horizontal Slider -->
+            <div class="press-carousel-wrapper">
+              <button type="button" class="press-arrow prev" id="press-arrow-prev" aria-label="Matérias Anteriores" title="Anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+
+              <div class="press-carousel-viewport" id="press-carousel-viewport">
+                <div class="press-carousel-track" id="press-carousel-track">
+                  <!-- 1. Road to Metal (Entrevista) -->
               <a href="https://www.roadtometal.com.br/2025/11/entrevista-persevera-genese-da.html" target="_blank" rel="noopener" class="press-card" data-category="nacional" title="ROAD TO METAL • Entrevista Completa">
                 <div class="press-source">
                   <span class="press-portal-name">ROAD TO METAL</span>
@@ -1699,8 +1705,23 @@
                 </div>
                 <p data-i18n="press_quote24">"US music review: 'A classic metal album that hits hard — massive sonic presence, edgy riffs and classic aesthetics rolled into a powerful soundscape.'"</p>
               </a>
+                </div>
+              </div>
 
+              <button type="button" class="press-arrow next" id="press-arrow-next" aria-label="Próximas Matérias" title="Próximo">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
             </div>
+
+            <!-- Carousel Pagination Controls -->
+            <div class="press-carousel-controls">
+              <div class="press-carousel-dots" id="press-carousel-dots"></div>
+              <div class="press-carousel-counter" id="press-carousel-counter">
+                <span data-i18n="press_page_label">PÁGINA</span> <strong id="press-page-current">1</strong> <span data-i18n="press_page_of">DE</span> <strong id="press-page-total">3</strong>
+              </div>
+            </div>
+          </div>
+
         <div class="members-section">
           <div class="section-header">
             <span class="section-subtitle" data-i18n="members_subtitle">LINEUP</span>
@@ -2191,8 +2212,8 @@
   </button>
 
   <!-- Scripts -->
-  <script src="assets/js/translations.js?v=6.6"></script>
-  <script src="assets/js/lyrics-data.js?v=6.6"></script>
-  <script src="assets/js/main.js?v=6.6"></script>
+  <script src="assets/js/translations.js?v=6.7"></script>
+  <script src="assets/js/lyrics-data.js?v=6.7"></script>
+  <script src="assets/js/main.js?v=6.7"></script>
 </body>
 </html>

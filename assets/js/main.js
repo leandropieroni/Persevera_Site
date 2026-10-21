@@ -1148,28 +1148,243 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 }
   // ==========================================
-  // PRESS CATEGORY FILTER (ALL / NACIONAL / GRINGO)
+  // PRESS CAROUSEL: 2 ROWS & HORIZONTAL SLIDER
   // ==========================================
-  const pressFilterBtns = document.querySelectorAll('.press-filter-btn');
-  const pressCards = document.querySelectorAll('.press-card');
+  function initPressCarousel() {
+    const wrapper = document.querySelector('.press-carousel-wrapper');
+    const viewport = document.getElementById('press-carousel-viewport');
+    const track = document.getElementById('press-carousel-track');
+    const prevBtn = document.getElementById('press-arrow-prev');
+    const nextBtn = document.getElementById('press-arrow-next');
+    const dotsContainer = document.getElementById('press-carousel-dots');
+    const pageCurrentSpan = document.getElementById('press-page-current');
+    const pageTotalSpan = document.getElementById('press-page-total');
+    const filterBtns = document.querySelectorAll('.press-filter-btn');
 
-  if (pressFilterBtns.length > 0 && pressCards.length > 0) {
-    pressFilterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        pressFilterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
+    if (!wrapper || !viewport || !track) return;
 
-        pressCards.forEach(card => {
-          const category = card.dataset.category;
-          if (filter === 'all' || category === filter) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
+    // Collect all original 24 cards
+    const allCards = Array.from(track.querySelectorAll('.press-card'));
+    if (allCards.length === 0) return;
+
+    let currentFilter = 'all';
+    let currentPage = 0;
+    let totalPages = 1;
+    let touchStartX = 0;
+
+    function getCardsPerPage() {
+      if (window.innerWidth <= 640) return 2;   // 1 col x 2 rows = 2 cards
+      if (window.innerWidth <= 1024) return 4;  // 2 cols x 2 rows = 4 cards
+      return 8;                                 // 4 cols x 2 rows = 8 cards
+    }
+
+    function getFilteredCards() {
+      if (currentFilter === 'all') return allCards;
+      return allCards.filter(card => card.dataset.category === currentFilter);
+    }
+
+    function renderCarousel() {
+      const filtered = getFilteredCards();
+      const perPage = getCardsPerPage();
+      totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
+
+      if (currentPage >= totalPages) {
+        currentPage = totalPages - 1;
+      }
+      if (currentPage < 0) currentPage = 0;
+
+      // Handle single-row styling if only 1 row needed
+      if (totalPages === 1 && filtered.length <= (perPage / 2)) {
+        wrapper.classList.add('single-row');
+      } else {
+        wrapper.classList.remove('single-row');
+      }
+
+      // Clear track and build .press-page elements
+      track.innerHTML = '';
+      for (let p = 0; p < totalPages; p++) {
+        const pageDiv = document.createElement('div');
+        pageDiv.className = 'press-page';
+        pageDiv.setAttribute('data-page-index', p);
+
+        const chunk = filtered.slice(p * perPage, (p + 1) * perPage);
+        chunk.forEach(card => {
+          card.style.display = 'flex';
+          pageDiv.appendChild(card);
         });
+
+        track.appendChild(pageDiv);
+      }
+
+      // Move track to current page without animation during render
+      updateSlide(false);
+
+      // Render Dots
+      if (dotsContainer) {
+        dotsContainer.innerHTML = '';
+        if (totalPages > 1) {
+          for (let i = 0; i < totalPages; i++) {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'press-dot' + (i === currentPage ? ' active' : '');
+            dot.setAttribute('aria-label', 'Página ' + (i + 1));
+            dot.addEventListener('click', () => {
+              currentPage = i;
+              updateSlide(true);
+            });
+            dotsContainer.appendChild(dot);
+          }
+          dotsContainer.style.display = 'flex';
+        } else {
+          dotsContainer.style.display = 'none';
+        }
+      }
+
+      // Update Counter
+      if (pageCurrentSpan) pageCurrentSpan.textContent = currentPage + 1;
+      if (pageTotalSpan) pageTotalSpan.textContent = totalPages;
+
+      // Update Arrow states
+      updateArrowStates();
+    }
+
+    function updateSlide(animate = true) {
+      if (!animate) {
+        track.style.transition = 'none';
+      } else {
+        track.style.transition = 'transform 0.45s cubic-bezier(0.25, 1, 0.5, 1)';
+      }
+
+      track.style.transform = `translateX(-${currentPage * 100}%)`;
+
+      if (!animate) {
+        requestAnimationFrame(() => {
+          track.style.transition = 'transform 0.45s cubic-bezier(0.25, 1, 0.5, 1)';
+        });
+      }
+
+      // Update Dots
+      if (dotsContainer) {
+        const dots = dotsContainer.querySelectorAll('.press-dot');
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentPage);
+        });
+      }
+
+      // Update Counter
+      if (pageCurrentSpan) pageCurrentSpan.textContent = currentPage + 1;
+      if (pageTotalSpan) pageTotalSpan.textContent = totalPages;
+
+      updateArrowStates();
+    }
+
+    function updateArrowStates() {
+      if (totalPages <= 1) {
+        if (prevBtn) {
+          prevBtn.disabled = true;
+          prevBtn.style.opacity = '0';
+          prevBtn.style.pointerEvents = 'none';
+        }
+        if (nextBtn) {
+          nextBtn.disabled = true;
+          nextBtn.style.opacity = '0';
+          nextBtn.style.pointerEvents = 'none';
+        }
+      } else {
+        if (prevBtn) {
+          const isStart = (currentPage === 0);
+          prevBtn.disabled = isStart;
+          prevBtn.style.opacity = isStart ? '0.25' : '1';
+          prevBtn.style.pointerEvents = isStart ? 'none' : 'auto';
+        }
+        if (nextBtn) {
+          const isEnd = (currentPage >= totalPages - 1);
+          nextBtn.disabled = isEnd;
+          nextBtn.style.opacity = isEnd ? '0.25' : '1';
+          nextBtn.style.pointerEvents = isEnd ? 'none' : 'auto';
+        }
+      }
+    }
+
+    // Navigation Event Listeners
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        if (currentPage > 0) {
+          currentPage--;
+          updateSlide(true);
+        }
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        if (currentPage < totalPages - 1) {
+          currentPage++;
+          updateSlide(true);
+        }
+      });
+    }
+
+    // Filter Buttons
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.filter || 'all';
+        currentPage = 0;
+        renderCarousel();
       });
     });
+
+    // Touch Swipe for mobile/tablet
+    viewport.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    viewport.addEventListener('touchend', (e) => {
+      const touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0 && currentPage < totalPages - 1) {
+          currentPage++;
+          updateSlide(true);
+        } else if (diff < 0 && currentPage > 0) {
+          currentPage--;
+          updateSlide(true);
+        }
+      }
+    }, { passive: true });
+
+    // Keyboard Arrow Navigation
+    wrapper.setAttribute('tabindex', '0');
+    wrapper.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        if (currentPage > 0) {
+          currentPage--;
+          updateSlide(true);
+        }
+      } else if (e.key === 'ArrowRight') {
+        if (currentPage < totalPages - 1) {
+          currentPage++;
+          updateSlide(true);
+        }
+      }
+    });
+
+    // Handle Window Resize (debounced)
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        renderCarousel();
+      }, 150);
+    });
+
+    // Initial render
+    renderCarousel();
   }
+
+  // Initialize Press Carousel
+  initPressCarousel();
 
 });

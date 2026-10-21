@@ -1968,6 +1968,90 @@ img {
   opacity: 1;
 }
 
+/* ==========================================================================
+   PRESS CAROUSEL: 2 ROWS & HORIZONTAL SLIDER
+   ========================================================================== */
+.press-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 54px;
+  box-sizing: border-box;
+  margin-bottom: 0.5rem;
+}
+
+.press-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(13, 17, 23, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+  transition: all var(--transition-fast);
+}
+
+.press-arrow.prev {
+  left: 0;
+}
+
+.press-arrow.next {
+  right: 0;
+}
+
+.press-arrow:hover:not(:disabled) {
+  background: var(--primary-blue);
+  color: #07080a;
+  box-shadow: 0 0 22px rgba(0, 212, 255, 0.8);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.press-arrow:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
+}
+
+.press-carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+  padding: 8px 2px;
+}
+
+.press-carousel-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+  width: 100%;
+}
+
+/* Each Page contains exactly 2 rows of cards */
+.press-page {
+  flex: 0 0 100%;
+  min-width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1.25rem;
+}
+
+.press-carousel-wrapper.single-row .press-page {
+  grid-template-rows: auto;
+}
+
 .press-quotes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -1975,8 +2059,8 @@ img {
 }
 
 .press-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--border-subtle);
+  background: rgba(13, 17, 23, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-sm);
   padding: 1.5rem;
   display: flex;
@@ -1984,6 +2068,8 @@ img {
   text-decoration: none;
   cursor: pointer;
   transition: all var(--transition-fast);
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .press-card:hover {
@@ -1991,6 +2077,85 @@ img {
   border-color: var(--border-glow);
   box-shadow: 0 10px 30px rgba(0, 212, 255, 0.15);
   transform: translateY(-4px);
+}
+
+/* Pagination Controls (Dots & Counter) */
+.press-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.8rem;
+  flex-wrap: wrap;
+}
+
+.press-carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.press-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  padding: 0;
+  transition: all var(--transition-fast);
+}
+
+.press-dot:hover {
+  background: rgba(0, 212, 255, 0.5);
+  border-color: var(--primary-blue);
+  transform: scale(1.2);
+}
+
+.press-dot.active {
+  width: 26px;
+  border-radius: 10px;
+  background: var(--primary-blue);
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.6);
+}
+
+.press-carousel-counter {
+  font-family: var(--font-metal);
+  font-size: 0.88rem;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.press-carousel-counter strong {
+  color: var(--primary-blue);
+}
+
+@media (max-width: 1024px) {
+  .press-page {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .press-carousel-wrapper {
+    padding: 0 42px;
+  }
+
+  .press-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .press-page {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 0.85rem;
+  }
 }
 
 .press-source {
