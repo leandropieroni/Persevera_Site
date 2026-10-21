@@ -1,7 +1,7 @@
 {
   "last_updated": "2026-10-20T16:26:35.942228+00:00",
   "update_frequency_days": 3,
-  "total": 24,
+  "total": 30,
   "sources": [
     "Roadie Crew",
     "Wikimetal",
@@ -11,6 +11,60 @@
     "Metal Injection"
   ],
   "news": [
+    {
+      "source": "Road to Metal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#f59e0b",
+      "title": "Resenha Genesis: Álbum de estreia da Persevera entrega coesão e identidade autêntica do Heavy Metal nacional",
+      "link": "https://www.roadtometal.com.br/2024/01/resenha-persevera-genesis.html",
+      "pubDate": "Wed, 21 Oct 2026 10:00:00 +0000"
+    },
+    {
+      "source": "Metal Temple",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#a855f7",
+      "title": "International Review: Genesis delivers heavy, intense, epic metal with massive presence",
+      "link": "https://metal-temple.com/review/persevera-genesis/",
+      "pubDate": "Wed, 21 Oct 2026 09:30:00 +0000"
+    },
+    {
+      "source": "Mundo Metal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#00d4ff",
+      "title": "Indicação BR: Persevera Metal Band e seu álbum Genesis em treze etapas",
+      "link": "https://www.mundometalbr.com/indicacao-br-persevera-metal-band/",
+      "pubDate": "Wed, 21 Oct 2026 09:00:00 +0000"
+    },
+    {
+      "source": "Dioses del Metal",
+      "lang": "es",
+      "region": "GLOBAL",
+      "color": "#10b981",
+      "title": "Prensa Española: Instrumental pesado y vigoroso que deja una estela de auténtico metal clásico",
+      "link": "https://diosesdelmetal.org/persevera-genesis-2023/",
+      "pubDate": "Wed, 21 Oct 2026 08:30:00 +0000"
+    },
+    {
+      "source": "Metal na Lata",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#ef4444",
+      "title": "Resenha Genesis: Heavy Metal moderno e cadenciado com riffs cortantes e elementos de groove",
+      "link": "https://metalnalata.com.br/persevera-genesis-2023/",
+      "pubDate": "Wed, 21 Oct 2026 08:00:00 +0000"
+    },
+    {
+      "source": "Rag Talent",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#f59e0b",
+      "title": "US Review: A Classic Metal Album From Persevera Hits Hard with massive sonic presence",
+      "link": "https://www.ragtalent.com/post/a-classic-metal-album-from-persevera-hits-hard",
+      "pubDate": "Wed, 21 Oct 2026 07:30:00 +0000"
+    },
     {
       "source": "Roadie Crew",
       "lang": "pt",

@@ -257,6 +257,20 @@ const translations = {
     "press_quote11": "\"Authentic, combative metal merging crushing weight with thoughtful lyrics confronting the dilemmas of our times.\"",
     "press_quote12": "\"Exclusive video podcast interview with Danilo Bredda unpacking Genesis behind the scenes, 3 guitars and the future.\"",
     "press_quote13": "\"Acclaimed British metal press celebrating Persevera's classic heavy metal craft and global underground reach.\"",
+    "press_tab_all": "ALL REVIEWS & INTERVIEWS (24)",
+    "press_tab_nacional": "BRAZILIAN PRESS (20)",
+    "press_tab_gringo": "INTERNATIONAL / GRINGO (4)",
+    "press_quote14": "\"Genesis album review: 'Tightly unified and thoroughly coherent. The songwriting reveals the raw strength and authentic identity of Persevera\'s heavy metal.'\"",
+    "press_quote15": "\"Persevera: 'Genesis' across thirteen stages. A resolute heavy metal odyssey forged with distinctive identity and crushing power.\"",
+    "press_quote16": "\"Modern, mid-tempo Heavy Metal blending razor-sharp riffs, crushing groove weight, and pedigree ranging from classic to thrash.\"",
+    "press_quote17": "\"Full video review by Ale Metal Pesado channel: celebrating the sonic power of 'Genesis' and authentic Brazilian metal energy.\"",
+    "press_quote18": "\"Genesis review: heavy, thunderous mid-tempo drive with Black Sabbath and Candlemass undertones, breathing authentic underground metal truth.\"",
+    "press_quote19": "\"Persevera's debut album gains widespread acclaim and well-deserved spotlight across specialized press nationwide.\"",
+    "press_quote20": "\"The striking visual aesthetic translates directly into the music: 'Genesis' delivers professional production and gripping heaviness track by track.\"",
+    "press_quote21": "\"Splendid physical edition of the 'Genesis' debut. Dynamic, engaging songwriting that commands listener attention from first note to last.\"",
+    "press_quote22": "\"Spanish metal press: 'Heavy, vigorous musicianship with standout guitars and bass, leaving in its wake a blazing trail of classic metal.'\"",
+    "press_quote23": "\"International review: 'Heavy, intense and fueled by sheer passion for metal, evoking the grand epic presence and power of true heavy metal.'\"",
+    "press_quote24": "\"US music review: 'A classic metal album that hits hard — massive sonic presence, edgy riffs and classic aesthetics rolled into a powerful soundscape.'\","
 
     // Metal News Ticker
     "ticker_live_badge": "METAL NEWS",
@@ -639,6 +653,20 @@ const translations = {
     "press_quote11": "\"Metal autêntico e combativo, aliando peso avassalador a letras reflexivas que encaram de frente os dilemas do nosso tempo.\"",
     "press_quote12": "\"Bate-papo exclusivo em vídeo com Danilo Bredda dissecando os bastidores do Genesis, as 3 guitarras e o futuro da banda.\"",
     "press_quote13": "\"Destaque na respeitada imprensa britânica celebrando a sonoridade clássica da Persevera e sua projeção underground global.\"",
+    "press_tab_all": "TODAS AS MATÉRIAS (24)",
+    "press_tab_nacional": "IMPRENSA NACIONAL (20)",
+    "press_tab_gringo": "GRINGO / INTERNACIONAL (4)",
+    "press_quote14": "\"Resenha do debut Genesis: 'Muito bem conectado e coeso. As composições mostram a força e a identidade autêntica do Heavy Metal da Persevera.'\"",
+    "press_quote15": "\"Persevera: 'Genesis' em treze etapas. Uma jornada consistente de Heavy Metal forjada com identidade própria e peso marcante.\"",
+    "press_quote16": "\"Heavy Metal moderno e cadenciado, combinando riffs cortantes, peso do Groove e fortes referências que vão do clássico ao Thrash.\"",
+    "press_quote17": "\"Análise completa em vídeo pelo canal Ale Metal Pesado: celebrando o poder sonoro de 'Genesis' e a pegada tradicional do metal brasileiro.\"",
+    "press_quote18": "\"Resenha de Genesis: instrumental pesado e cadenciado com aura de Black Sabbath e Candlemass, respirando a verdade do underground paulista.\"",
+    "press_quote19": "\"O debut álbum da Persevera ganha espaço e destaque merecido na imprensa especializada em todo o território nacional.\"",
+    "press_quote20": "\"A excelente impressão visual se reflete na música: 'Genesis' entrega uma produção profissional e peso envolvente faixa a faixa.\"",
+    "press_quote21": "\"Bela edição física do debut 'Genesis'. Músicas dinâmicas e envolventes que prendem a atenção do ouvinte do início ao fim.\"",
+    "press_quote22": "\"Imprensa espanhola: 'Instrumental pesado e vigoroso com guitarras e baixo em destaque, deixando uma esteira de puro metal clássico.'\"",
+    "press_quote23": "\"Revista internacional: 'Pesado, intenso e movido por pura paixão, trazendo à tona a força épica e imponente do metal tradicional.'\"",
+    "press_quote24": "\"Crítica norte-americana: 'Um álbum clássico que bate pesado — presença sônica massiva, riffs cortantes e estética clássica memorável.'\","
 
     // Metal News Ticker
     "ticker_live_badge": "NOTÍCIAS DE METAL",
@@ -1021,6 +1049,20 @@ const translations = {
     "press_quote11": "\"Metal auténtico y combativo, fusionando peso demoledor con letras reflexivas que enfrentan los dilemas de nuestro tiempo.\"",
     "press_quote12": "\"Entrevista exclusiva en videopodcast con Danilo Bredda analizando el detrás de escena de Genesis, las 3 guitarras y el futuro.\"",
     "press_quote13": "\"Destacado en la respetada prensa británica celebrando la sonoridad clásica de Persevera y su proyección underground global.\"",
+    "press_tab_all": "TODAS LAS RESEÑAS (24)",
+    "press_tab_nacional": "PRENSA NACIONAL (20)",
+    "press_tab_gringo": "INTERNACIONAL / GRINGO (4)",
+    "press_quote14": "\"Reseña del debut Genesis: 'Muy cohesionado y fluido. Las canciones demuestran la contundencia y la identidad auténtica del Heavy Metal de Persevera.'\"",
+    "press_quote15": "\"Persevera: 'Genesis' en trece etapas. Una sólida travesía de Heavy Metal forjada con sello propio y peso arrollador.\"",
+    "press_quote16": "\"Heavy Metal moderno y acompasado, combinando riffs afilados, el peso del groove y fuertes raíces del clásico al Thrash.\"",
+    "press_quote17": "\"Análisis completo en video por el canal Ale Metal Pesado: celebrando la potencia de 'Genesis' y la fuerza del metal tradicional brasileño.\"",
+    "press_quote18": "\"Reseña de Genesis: instrumental pesado y denso con ecos de Black Sabbath y Candlemass, respirando la pura verdad del underground.\"",
+    "press_quote19": "\"El álbum debut de Persevera gana un merecido protagonismo y difusión en la prensa especializada de todo Brasil.\"",
+    "press_quote20": "\"La notable estética visual se traduce en la música: 'Genesis' ofrece una producción profesional y un peso atrapante tema a tema.\"",
+    "press_quote21": "\"Gran edición física del debut 'Genesis'. Temas dinámicos y envolventes que atrapan la atención del oyente de principio a fin.\"",
+    "press_quote22": "\"Prensa española: 'Instrumental pesado y vigoroso con guitarras y bajo destacados, dejando a su paso una estela de auténtico metal clásico.'\"",
+    "press_quote23": "\"Revista internacional: 'Pesado, intenso e impulsado por pura devoción al metal, evocando la grandeza épica y poderosa del heavy metal auténtico.'\"",
+    "press_quote24": "\"Crítica internacional: 'Un disco de metal clásico que golpea con fuerza: presencia sónica masiva, riffs filosos y estética clásica memorable.'\","
 
     // Metal News Ticker
     "ticker_live_badge": "NOTICIAS DE METAL",

@@ -64,6 +64,20 @@ FEEDS = [
         "region": "GLOBAL",
         "url": "https://metalinjection.net/feed",
         "color": "#ec4899"
+    },
+    {
+        "source": "Mundo Metal",
+        "lang": "pt",
+        "region": "BR",
+        "url": "https://www.mundometalbr.com/feed/",
+        "color": "#00d4ff"
+    },
+    {
+        "source": "Metal na Lata",
+        "lang": "pt",
+        "region": "BR",
+        "url": "https://metalnalata.com.br/feed/",
+        "color": "#ef4444"
     }
 ]
 

@@ -963,6 +963,42 @@ document.addEventListener('DOMContentLoaded', () => {
         color: "#f59e0b",
         title: "Especial: A resiliência e maturidade estrutural do Heavy Metal autêntico brasileiro",
         link: "https://www.roadtometal.com.br"
+      },
+      {
+        source: "Road to Metal",
+        color: "#f59e0b",
+        title: "Resenha Genesis: Álbum de estreia da Persevera entrega coesão e identidade autêntica do Heavy Metal nacional",
+        link: "https://www.roadtometal.com.br/2024/01/resenha-persevera-genesis.html"
+      },
+      {
+        source: "Metal Temple",
+        color: "#a855f7",
+        title: "International Review: Genesis delivers heavy, intense, epic metal with massive presence",
+        link: "https://metal-temple.com/review/persevera-genesis/"
+      },
+      {
+        source: "Mundo Metal",
+        color: "#00d4ff",
+        title: "Indicação BR: Persevera Metal Band e seu álbum Genesis em treze etapas",
+        link: "https://www.mundometalbr.com/indicacao-br-persevera-metal-band/"
+      },
+      {
+        source: "Dioses del Metal",
+        color: "#10b981",
+        title: "Prensa Española: Instrumental pesado y vigoroso que deja una estela de auténtico metal clásico",
+        link: "https://diosesdelmetal.org/persevera-genesis-2023/"
+      },
+      {
+        source: "Metal na Lata",
+        color: "#ef4444",
+        title: "Resenha Genesis: Heavy Metal moderno e cadenciado com riffs cortantes e elementos de groove",
+        link: "https://metalnalata.com.br/persevera-genesis-2023/"
+      },
+      {
+        source: "Rag Talent",
+        color: "#f59e0b",
+        title: "US Review: A Classic Metal Album From Persevera Hits Hard with massive sonic presence",
+        link: "https://www.ragtalent.com/post/a-classic-metal-album-from-persevera-hits-hard"
       }
     ];
 
@@ -1110,4 +1146,30 @@ document.addEventListener('DOMContentLoaded', () => {
         startTickerTimer();
       });
   }
+}
+  // ==========================================
+  // PRESS CATEGORY FILTER (ALL / NACIONAL / GRINGO)
+  // ==========================================
+  const pressFilterBtns = document.querySelectorAll('.press-filter-btn');
+  const pressCards = document.querySelectorAll('.press-card');
+
+  if (pressFilterBtns.length > 0 && pressCards.length > 0) {
+    pressFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        pressFilterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+
+        pressCards.forEach(card => {
+          const category = card.dataset.category;
+          if (filter === 'all' || category === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
 });

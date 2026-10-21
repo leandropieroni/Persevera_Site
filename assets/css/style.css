@@ -1915,6 +1915,59 @@ img {
   color: var(--primary-blue);
 }
 
+/* Press Category Filter Tabs */
+.press-filter-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.press-filter-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-muted);
+  font-family: var(--font-metal);
+  font-size: 0.88rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.5rem 1.15rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.press-filter-btn i {
+  font-size: 0.85rem;
+  color: var(--primary-blue);
+  opacity: 0.8;
+  transition: all var(--transition-fast);
+}
+
+.press-filter-btn:hover {
+  background: rgba(0, 212, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.4);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.press-filter-btn.active {
+  background: rgba(0, 212, 255, 0.16);
+  border-color: var(--primary-blue);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.35);
+}
+
+.press-filter-btn.active i {
+  color: #fff;
+  opacity: 1;
+}
+
 .press-quotes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -1950,6 +2003,48 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.press-badge-tag {
+  font-family: var(--font-metal);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: 0.6rem;
+}
+
+.badge-resenha {
+  background: rgba(0, 212, 255, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(0, 212, 255, 0.35);
+}
+
+.badge-entrevista {
+  background: rgba(168, 85, 247, 0.12);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+.badge-materia {
+  background: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.badge-video {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.badge-gringo {
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
 }
 
 .press-link-icon {
