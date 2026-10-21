@@ -1994,15 +1994,33 @@ img {
 }
 
 .press-source {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.6rem;
+  min-height: 2.85rem;
+}
+
+.press-portal-name {
   font-family: var(--font-metal);
   font-size: 0.95rem;
   color: var(--primary-blue);
   letter-spacing: 1px;
   font-weight: 700;
-  margin-bottom: 0.8rem;
-  display: flex;
+  line-height: 1.25;
+  flex: 1;
+  min-width: 0;
+  word-break: break-word;
+}
+
+.press-source-actions {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  height: 22px;
+  margin-top: 1px;
 }
 
 .press-badge-tag {
@@ -2010,11 +2028,22 @@ img {
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.8px;
-  padding: 0.15rem 0.45rem;
+  padding: 0 0.5rem;
+  height: 22px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
   border-radius: 3px;
   text-transform: uppercase;
-  margin-left: auto;
-  margin-right: 0.6rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.press-badge-tag i {
+  font-size: 0.72rem;
+  line-height: 1;
 }
 
 .badge-resenha {
@@ -2047,38 +2076,39 @@ img {
   border: 1px solid rgba(16, 185, 129, 0.35);
 }
 
+.press-icon-box {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-blue);
+  font-size: 0.8rem;
+  line-height: 1;
+  opacity: 0.7;
+  transition: all var(--transition-fast);
+}
+
+.press-icon-box i {
+  line-height: 1;
+}
+
+.press-card:hover .press-icon-box {
+  opacity: 1;
+  color: #fff;
+  transform: translate(2px, -2px);
+}
+
 .press-link-icon {
   font-size: 0.8rem;
   color: var(--primary-blue);
-  opacity: 0.6;
+  opacity: 0.7;
   transition: all 0.2s ease;
 }
 
 .press-card:hover .press-link-icon {
   opacity: 1;
   transform: translate(2px, -2px);
-}
-
-.press-source .yt-icon {
-  color: #ff4444;
-  opacity: 0.85;
-}
-
-.press-card:hover .press-source .yt-icon {
-  color: #ff0000;
-  opacity: 1;
-  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-}
-
-.press-source .intl-icon {
-  color: #00d4ff;
-  opacity: 0.85;
-}
-
-.press-card:hover .press-source .intl-icon {
-  color: #38bdf8;
-  opacity: 1;
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
 .press-card p {
