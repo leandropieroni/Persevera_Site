@@ -1146,7 +1146,6 @@ document.addEventListener('DOMContentLoaded', () => {
         startTickerTimer();
       });
   }
-}
   // ==========================================
   // PRESS CAROUSEL: 2 ROWS & HORIZONTAL SLIDER
   // ==========================================

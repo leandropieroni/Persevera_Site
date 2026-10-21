@@ -2176,7 +2176,8 @@ img {
   line-height: 1.25;
   flex: 1;
   min-width: 0;
-  word-break: break-word;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .press-source-actions {
