@@ -1,87 +1,215 @@
 {
-  "last_updated": "2026-10-20T16:26:35.942228+00:00",
+  "last_updated": "2026-10-22T10:43:56.047516+00:00",
   "update_frequency_days": 3,
-  "total": 30,
+  "total": 24,
   "sources": [
     "Roadie Crew",
     "Wikimetal",
     "Road to Metal",
     "Blabbermouth",
     "Loudwire",
-    "Metal Injection"
+    "Metal Injection",
+    "Mundo Metal",
+    "Metal na Lata"
   ],
   "news": [
+    {
+      "source": "Wikimetal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#00d4ff",
+      "title": "Noodles se afasta de shows com The Offspring por problema de saúde",
+      "link": "https://www.wikimetal.com.br/noodles-afasta-shows-the-offspring-problema-saude/",
+      "pubDate": "Wed, 21 Oct 2026 17:28:13 +0000"
+    },
     {
       "source": "Road to Metal",
       "lang": "pt",
       "region": "BR",
       "color": "#f59e0b",
-      "title": "Resenha Genesis: Álbum de estreia da Persevera entrega coesão e identidade autêntica do Heavy Metal nacional",
-      "link": "https://www.roadtometal.com.br/2024/01/resenha-persevera-genesis.html",
-      "pubDate": "Wed, 21 Oct 2026 10:00:00 +0000"
+      "title": "John Coffey: A Força de Gritar Junto Quando o Mundo Pesa",
+      "link": "https://www.roadtometal.com.br/2026/10/john-coffey-forca-de-gritar-junto.html",
+      "pubDate": "Wed, 21 Oct 2026 02:40:16 +0000"
     },
     {
-      "source": "Metal Temple",
+      "source": "Blabbermouth",
       "lang": "en",
       "region": "GLOBAL",
       "color": "#a855f7",
-      "title": "International Review: Genesis delivers heavy, intense, epic metal with massive presence",
-      "link": "https://metal-temple.com/review/persevera-genesis/",
-      "pubDate": "Wed, 21 Oct 2026 09:30:00 +0000"
+      "title": "IRON MAIDEN Manager ROD SMALLWOOD: 'We Keep Our Plans Strictly To Ourselves. We Let The Fans Know When It's Definite.'",
+      "link": "https://blabbermouth.net/news/iron-maiden-manager-rod-smallwood-we-keep-our-plans-strictly-to-ourselves-we-let-the-fans-know-when-its-definite",
+      "pubDate": "Wed, 21 Oct 2026 19:51:06 +0000"
+    },
+    {
+      "source": "Loudwire",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#10b981",
+      "title": "Chris Motionless Interview - 'Our Fans Are So Passionate'",
+      "link": "https://loudwire.com/chris-motionless-in-white-interview/",
+      "pubDate": "Thu, 22 Oct 2026 10:01:29 GMT"
+    },
+    {
+      "source": "Metal Injection",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#ec4899",
+      "title": "Listen: French Hardcore Band Headbussa Drops “Manhunt”",
+      "link": "https://metalinjection.net/new-music/listen-french-hardcore-band-headbussa-drops-manhunt",
+      "pubDate": "Wed, 21 Oct 2026 21:01:51 +0000"
     },
     {
       "source": "Mundo Metal",
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "Indicação BR: Persevera Metal Band e seu álbum Genesis em treze etapas",
-      "link": "https://www.mundometalbr.com/indicacao-br-persevera-metal-band/",
-      "pubDate": "Wed, 21 Oct 2026 09:00:00 +0000"
-    },
-    {
-      "source": "Dioses del Metal",
-      "lang": "es",
-      "region": "GLOBAL",
-      "color": "#10b981",
-      "title": "Prensa Española: Instrumental pesado y vigoroso que deja una estela de auténtico metal clásico",
-      "link": "https://diosesdelmetal.org/persevera-genesis-2023/",
-      "pubDate": "Wed, 21 Oct 2026 08:30:00 +0000"
+      "title": "Morre Saúl Blanch, primeiro vocalista do Rata Blanca e pioneiro do Heavy Metal argentino, aos 75 anos",
+      "link": "https://www.mundometalbr.com/morre-saul-blanch-primeiro-vocalista-do-rata-blanca-e-pioneiro-do-heavy-metal-argentino-aos-75-anos/",
+      "pubDate": "Thu, 22 Oct 2026 03:28:08 +0000"
     },
     {
       "source": "Metal na Lata",
       "lang": "pt",
       "region": "BR",
       "color": "#ef4444",
-      "title": "Resenha Genesis: Heavy Metal moderno e cadenciado com riffs cortantes e elementos de groove",
-      "link": "https://metalnalata.com.br/persevera-genesis-2023/",
-      "pubDate": "Wed, 21 Oct 2026 08:00:00 +0000"
-    },
-    {
-      "source": "Rag Talent",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#f59e0b",
-      "title": "US Review: A Classic Metal Album From Persevera Hits Hard with massive sonic presence",
-      "link": "https://www.ragtalent.com/post/a-classic-metal-album-from-persevera-hits-hard",
-      "pubDate": "Wed, 21 Oct 2026 07:30:00 +0000"
-    },
-    {
-      "source": "Roadie Crew",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#e50914",
-      "title": "DELAIN anuncia nova fase com a saída da vocalista DIANA LEAH e participações de SHARON DEN ADEL, MARKO HIETALA e outros convidados",
-      "link": "https://roadiecrew.com/delain-anuncia-nova-fase-com-a-saida-da-vocalista-diana-leah-e-participacoes-de-sharon-den-adel-marko-hietala-e-outros-convidados/",
-      "pubDate": "Tue, 20 Oct 2026 15:54:05 +0000"
+      "title": "Sussurro – “Tales From The Lost Pages” (2026)",
+      "link": "https://metalnalata.com.br/sussurro-tales-from-the-lost-pages-2026/",
+      "pubDate": "Thu, 22 Oct 2026 03:23:55 +0000"
     },
     {
       "source": "Wikimetal",
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "Loja do Iron Maiden em São Paulo terá programação especial no fim de semana",
-      "link": "https://www.wikimetal.com.br/loja-iron-maiden-sao-paulo-programacao-especial/",
-      "pubDate": "Tue, 20 Oct 2026 15:31:12 +0000"
+      "title": "Nicko McBrain, do Iron Maiden, opina sobre Donald Trump: “Deveria ser preso”",
+      "link": "https://www.wikimetal.com.br/nicko-mcbrain-iron-maiden-donald-trump/",
+      "pubDate": "Wed, 21 Oct 2026 17:08:38 +0000"
+    },
+    {
+      "source": "Road to Metal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#f59e0b",
+      "title": "Cobertura de Show: Glam Slam Party – 17/10/2026 – Jai Club/SP",
+      "link": "https://www.roadtometal.com.br/2026/10/cobertura-de-show-glam-slam-party.html",
+      "pubDate": "Wed, 21 Oct 2026 01:14:39 +0000"
+    },
+    {
+      "source": "Blabbermouth",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#a855f7",
+      "title": "PIERCE THE VEIL Opens 'Hot Topic Live' Music Performance Series",
+      "link": "https://blabbermouth.net/news/pierce-the-veil-opens-hot-topic-live-music-performance-series",
+      "pubDate": "Wed, 21 Oct 2026 19:14:05 +0000"
+    },
+    {
+      "source": "Loudwire",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#10b981",
+      "title": "The Offspring's Noodles Stepping Away to Deal With Health Issue",
+      "link": "https://loudwire.com/offspring-noodles-health-issue-statement/",
+      "pubDate": "Wed, 21 Oct 2026 16:26:30 GMT"
+    },
+    {
+      "source": "Metal Injection",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#ec4899",
+      "title": "Watch: Metallica Releases Pro-Shot Footage of \"Welcome Home\" From The Sphere",
+      "link": "https://metalinjection.net/news/watch-metallica-releases-pro-shot-footage-of-welcome-home-from-the-sphere",
+      "pubDate": "Wed, 21 Oct 2026 19:34:37 +0000"
+    },
+    {
+      "source": "Mundo Metal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#00d4ff",
+      "title": "Nicko McBrain (Iron Maiden) se manifesta sobre Trump: “Ele e seus comparsas deveriam acabar na cadeia”",
+      "link": "https://www.mundometalbr.com/nicko-mcbrain-iron-maiden-se-manifesta-sobre-trump-ele-e-seus-comparsas-deveriam-acabar-na-cadeia/",
+      "pubDate": "Wed, 21 Oct 2026 23:49:44 +0000"
+    },
+    {
+      "source": "Metal na Lata",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#ef4444",
+      "title": "Loudwire lista os 50 artistas de Rock e Metal mais ouvidos no Spotify",
+      "link": "https://metalnalata.com.br/loudwire-lista-os-50-artistas-de-rock-e-metal-mais-ouvidos-no-spotify/",
+      "pubDate": "Thu, 22 Oct 2026 01:18:00 +0000"
+    },
+    {
+      "source": "Wikimetal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#00d4ff",
+      "title": "‘Nevermind’ supera ‘Back in Black’ e vira 6º disco com mais vendas da história",
+      "link": "https://www.wikimetal.com.br/nevermind-supera-acdc-vira-6o-disco-mais-vendas-historia/",
+      "pubDate": "Wed, 21 Oct 2026 15:46:42 +0000"
+    },
+    {
+      "source": "Road to Metal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#f59e0b",
+      "title": "Streetlight: AOR Além das Fronteiras (Also In English)",
+      "link": "https://www.roadtometal.com.br/2026/10/streetlight-aor-alem-das-fronteiras.html",
+      "pubDate": "Tue, 20 Oct 2026 16:27:39 +0000"
+    },
+    {
+      "source": "Blabbermouth",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#a855f7",
+      "title": "BECKY BALDWIN Shares Playthrough Video For 'Stormwatcher' From TONY IOMMI's New Solo Album",
+      "link": "https://blabbermouth.net/news/becky-baldwin-shares-playthrough-video-for-stormwatcher-from-tony-iommis-new-solo-album",
+      "pubDate": "Wed, 21 Oct 2026 18:58:44 +0000"
+    },
+    {
+      "source": "Loudwire",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#10b981",
+      "title": "Nirvana Album Moves Ahead of AC/DC in Top 10 Best-Sellers List",
+      "link": "https://loudwire.com/nirvana-acdc-best-selling-albums-ever/",
+      "pubDate": "Wed, 21 Oct 2026 14:27:27 GMT"
+    },
+    {
+      "source": "Metal Injection",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#ec4899",
+      "title": "Watch: Megan Thee Stallion Freestyles Over Limp Bizkit’s \"Break Stuff\"",
+      "link": "https://metalinjection.net/new-music/watch-megan-thee-stallion-freestyles-over-limp-bizkits-break-stuff",
+      "pubDate": "Wed, 21 Oct 2026 18:42:14 +0000"
+    },
+    {
+      "source": "Mundo Metal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#00d4ff",
+      "title": "Fear Factory prepara álbum diverso e amplia reflexões sobre inteligência artificial, diz Dino Cazares",
+      "link": "https://www.mundometalbr.com/fear-factory-prepara-album-diverso-e-amplia-reflexoes-sobre-inteligencia-artificial-diz-dino-cazares/",
+      "pubDate": "Wed, 21 Oct 2026 19:05:59 +0000"
+    },
+    {
+      "source": "Metal na Lata",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#ef4444",
+      "title": "Alice in Chains anuncia show em 2027 após cancelamentos de 2025",
+      "link": "https://metalnalata.com.br/alice-in-chains-anuncia-show-em-2027-apos-cancelamentos-de-2025/",
+      "pubDate": "Thu, 22 Oct 2026 00:31:40 +0000"
+    },
+    {
+      "source": "Wikimetal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#00d4ff",
+      "title": "Ronnie Wood no Brasil: Confira provável setlist do show único em São Paulo",
+      "link": "https://www.wikimetal.com.br/ronnie-wood-no-brasil-provavel-setlist/",
+      "pubDate": "Wed, 21 Oct 2026 15:33:46 +0000"
     },
     {
       "source": "Road to Metal",
@@ -97,189 +225,9 @@
       "lang": "en",
       "region": "GLOBAL",
       "color": "#a855f7",
-      "title": "THROWN Announces March/April 2027 North American Tour",
-      "link": "https://blabbermouth.net/news/thrown-announces-march-april-2027-north-american-tour",
-      "pubDate": "Tue, 20 Oct 2026 16:05:48 +0000"
-    },
-    {
-      "source": "Loudwire",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#10b981",
-      "title": "Boardwalk Rock Fest 2027 Features Iron Maiden, Korn + Bad Omens",
-      "link": "https://loudwire.com/boardwalk-rock-festival-2027-iron-maiden-korn-bad-omens-more/",
-      "pubDate": "Tue, 20 Oct 2026 14:57:37 GMT"
-    },
-    {
-      "source": "Metal Injection",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#ec4899",
-      "title": "Ten Horror Soundtracks You Need to Add to Your Vinyl Collection",
-      "link": "https://metalinjection.net/exclusive-2/ten-horror-soundtracks-you-need-to-add-to-your-vinyl-collection",
-      "pubDate": "Tue, 20 Oct 2026 14:26:19 +0000"
-    },
-    {
-      "source": "Roadie Crew",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#e50914",
-      "title": "StOp, sToP!: DESAFIANDO LIMITES, DUPLA HARD ROCK EUROPEIA PROMETE ESTREIA EXPLOSIVA NO BRASIL",
-      "link": "https://roadiecrew.com/stop-stop-desafiando-limites-dupla-hard-rock-europeia-promete-estreia-explosiva-no-brasil/",
-      "pubDate": "Tue, 20 Oct 2026 11:35:39 +0000"
-    },
-    {
-      "source": "Wikimetal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#00d4ff",
-      "title": "Floor Jansen lamenta saída do Nightwish, mas foca em “novo começo” na carreira",
-      "link": "https://www.wikimetal.com.br/floor-jansen-saida-nightwish-marca-novo-comeco-carreira/",
-      "pubDate": "Tue, 20 Oct 2026 15:07:14 +0000"
-    },
-    {
-      "source": "Road to Metal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#f59e0b",
-      "title": "Entrevista - Phantom Star: A Ascensão do Heavy Metal Cósmico",
-      "link": "https://www.roadtometal.com.br/2026/10/entrevista-phantom-star-ascensao-do.html",
-      "pubDate": "Sat, 17 Oct 2026 15:10:03 +0000"
-    },
-    {
-      "source": "Blabbermouth",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#a855f7",
-      "title": "FOUR YEAR STRONG Announces 25th-Anniversary Tour, Celebrates 20 Years Of 'Rise Or Die Trying'",
-      "link": "https://blabbermouth.net/news/four-year-strong-announces-25th-anniversary-tour-celebrates-20-years-of-rise-or-die-trying",
-      "pubDate": "Tue, 20 Oct 2026 15:32:55 +0000"
-    },
-    {
-      "source": "Loudwire",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#10b981",
-      "title": "2027 Rock + Metal Festival and Cruise Guide",
-      "link": "https://loudwire.com/2027-rock-metal-festival-cruise-guide/",
-      "pubDate": "Tue, 20 Oct 2026 14:12:21 GMT"
-    },
-    {
-      "source": "Metal Injection",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#ec4899",
-      "title": "Machine Head Returns With Melodic New Singles \"Sutures\"",
-      "link": "https://metalinjection.net/new-music/machine-head-returns-with-melodic-new-singles-sutures",
-      "pubDate": "Tue, 20 Oct 2026 13:14:40 +0000"
-    },
-    {
-      "source": "Roadie Crew",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#e50914",
-      "title": "Entrevista com Raphael Olmos, da banda KAMALA, é o destaque do ROCK’N’BRASIL desta terça",
-      "link": "https://roadiecrew.com/entrevista-com-raphael-olmos-da-banda-kamala-e-o-destaque-do-rocknbrasil-desta-terca/",
-      "pubDate": "Tue, 20 Oct 2026 09:48:38 +0000"
-    },
-    {
-      "source": "Wikimetal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#00d4ff",
-      "title": "Within Temptation atualiza perfis e fãs sugerem Sharon Den Adel no Nightwish",
-      "link": "https://www.wikimetal.com.br/within-temptation-fas-sugerem-sharon-nightwish/",
-      "pubDate": "Tue, 20 Oct 2026 14:20:39 +0000"
-    },
-    {
-      "source": "Road to Metal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#f59e0b",
-      "title": "Interview - Phantom Star: The Rise of the Cosmic Heavy Metal",
-      "link": "https://www.roadtometal.com.br/2026/10/interview-phantom-star-rise-of-cosmic.html",
-      "pubDate": "Sat, 17 Oct 2026 15:09:43 +0000"
-    },
-    {
-      "source": "Blabbermouth",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#a855f7",
-      "title": "DISFEAR, Featuring AT THE GATES Frontman TOMAS LINDBERG, Releases 'Shackled To Our Vice' Single",
-      "link": "https://blabbermouth.net/news/disfear-featuring-at-the-gates-frontman-tomas-lindberg-releases-shackled-to-our-vice-single",
-      "pubDate": "Tue, 20 Oct 2026 14:52:07 +0000"
-    },
-    {
-      "source": "Loudwire",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#10b981",
-      "title": "What Slipknot Told Eloy Casagrande About Playing Like Jordison",
-      "link": "https://loudwire.com/slipknot-eloy-casagrande-playing-like-joey-jordison/",
-      "pubDate": "Mon, 19 Oct 2026 20:37:54 GMT"
-    },
-    {
-      "source": "Metal Injection",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#ec4899",
-      "title": "Ozzy Osbourne Producer Andrew Watt Says Unreleased Songs Made “For a Specific Reason” Still Exist",
-      "link": "https://metalinjection.net/news/ozzy-osbourne-producer-andrew-watt-says-unreleased-songs-made-for-a-specific-reason-still-exist",
-      "pubDate": "Mon, 19 Oct 2026 20:46:28 +0000"
-    },
-    {
-      "source": "Roadie Crew",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#e50914",
-      "title": "RHAPSODY anuncia Brasil na turnê de despedida em 2027",
-      "link": "https://roadiecrew.com/rhapsody-anuncia-brasil-na-turne-de-despedida-em-2027/",
-      "pubDate": "Tue, 20 Oct 2026 09:00:24 +0000"
-    },
-    {
-      "source": "Wikimetal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#00d4ff",
-      "title": "Caveira Velha Metal Fest estreia em São Paulo com Trovão, Creatures e mais",
-      "link": "https://www.wikimetal.com.br/caveira-velha-metal-fest-estreia-sao-paulo-trovao-creatures/",
-      "pubDate": "Tue, 20 Oct 2026 13:56:50 +0000"
-    },
-    {
-      "source": "Road to Metal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#f59e0b",
-      "title": "Cobertura de Show: Saturnus – 06/10/2026 – Burning House/SP",
-      "link": "https://www.roadtometal.com.br/2026/10/cobertura-de-show-saturnus-06102026.html",
-      "pubDate": "Sat, 17 Oct 2026 14:48:24 +0000"
-    },
-    {
-      "source": "Blabbermouth",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#a855f7",
-      "title": "METAL ALLEGIANCE To Be Joined By MASTODON, OVERKILL, ARMORED SAINT, OPETH Members At January 2027 Anaheim Concert",
-      "link": "https://blabbermouth.net/news/metal-allegiance-to-be-joined-by-mastodon-overkill-armored-saint-opeth-members-at-january-2027-anaheim-concert",
-      "pubDate": "Tue, 20 Oct 2026 14:25:40 +0000"
-    },
-    {
-      "source": "Loudwire",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#10b981",
-      "title": "VOTE: Better Drummer - Chad Smith vs. Matt Cameron",
-      "link": "https://loudwire.com/better-drummer-chad-smith-vs-matt-cameron/",
-      "pubDate": "Mon, 19 Oct 2026 20:00:07 GMT"
-    },
-    {
-      "source": "Metal Injection",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#ec4899",
-      "title": "Sonic Temple Reveals Meshuggah, Testament + More to Play 2027 Festival",
-      "link": "https://metalinjection.net/news/sonic-temple-reveals-meshuggah-testament-more-to-play-2027-festival",
-      "pubDate": "Mon, 19 Oct 2026 20:15:49 +0000"
+      "title": "See Official Video Recap Of Star-Studded 'Ozzy & Black Sabbath: Back To The Beginning' Purple-Carpet World Premiere In Los Angeles",
+      "link": "https://blabbermouth.net/news/see-official-video-recap-of-star-studded-ozzy-black-sabbath-back-to-the-beginning-purple-carpet-world-premiere-in-los-angeles",
+      "pubDate": "Wed, 21 Oct 2026 18:44:57 +0000"
     }
   ]
 }
