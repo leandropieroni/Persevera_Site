@@ -225,7 +225,7 @@ const translations = {
 
     "tl_step2_year": "2021",
     "tl_step2_title": "The Gathering & The Band Family",
-    "tl_step2_desc": "To give voice and substance to the songs, Danilo invited his cousin <strong>Paulo Carrara</strong> to take over lead vocals. Paulo embraced the project and introduced two foundational pillars: bassist <strong>Thadeu Castro (\"Tio\")</strong>, an improvisational maestro, and drummer <strong>Claudio Lima (\"Radioativo\")</strong>, whose studio in Sumaré became the band's creative and recording headquarters.",
+    "tl_step2_desc": "To give voice and substance to the songs, Danilo invited his cousin <strong>Paulo Carrara</strong> to take over lead vocals. Paulo embraced the project and introduced two foundational pillars: bassist <strong>Thadeu Castro</strong>, an improvisational maestro, and drummer <strong>Claudio Lima</strong>, whose studio in Sumaré became the band's creative and recording headquarters.",
     "tl_step2_pill": "Private Studio • Organic & Independent Production",
 
     "tl_step3_year": "2023",
@@ -234,8 +234,8 @@ const translations = {
     "tl_step3_pill": "Physical CD Release • MS Metal Agency Partnership",
 
     "tl_step4_year": "2024",
-    "tl_step4_title": "The Triple Guitar Attack: Arrival of Zilds & Jésus",
-    "tl_step4_desc": "To push their sound to new heights of heaviness and melodic complexity, Persevera enlisted two accomplished guitarists and longtime friends: <strong>Leandro Pieroni (\"Zilds\")</strong> and <strong>Luiz Fernando Jésus (\"Gordera\")</strong>. Adopting the rare <strong>three-guitar frontline</strong> (reminiscent of Iron Maiden and Helloween), the music gained three-part harmonies, intertwined leads and a dense sonic wall.",
+    "tl_step4_title": "The Triple Guitar Attack: Arrival of Leandro Pieroni & Luiz Fernando",
+    "tl_step4_desc": "To push their sound to new heights of heaviness and melodic complexity, Persevera enlisted two accomplished guitarists and longtime friends: <strong>Leandro Pieroni</strong> and <strong>Luiz Fernando</strong>. Adopting the rare <strong>three-guitar frontline</strong> (reminiscent of Iron Maiden and Helloween), the music gained three-part harmonies, intertwined leads and a dense sonic wall.",
     "tl_step4_pill": "3-Guitar Lineup • Triple Harmonized Solos",
 
     "tl_step5_year": "2026+",
@@ -245,7 +245,7 @@ const translations = {
 
     "press_heading": "PERSEVERA IN SPECIALIZED PRESS",
     "press_quote1": "\"Authentic Heavy Metal rooted in the '90s, NWOBHM, thrash and power vibes. Honest, compelling and devoid of formulas.\"",
-    "press_quote2": "\"The entry of guitarists Zilds and Jésus places Persevera in the elite tier of bands with a 3-guitar onslaught, adding immense firepower.\"",
+    "press_quote2": "\"The entry of guitarists Leandro Pieroni and Luiz Fernando places Persevera in the elite tier of bands with a 3-guitar onslaught, adding immense firepower.\"",
     "press_quote3": "\"Genesis brings direct impact, killer riffs and pristine organic production. Utmost respect for physical media and metal fans.\"",
     "press_quote4": "\"Structural maturity in the songwriting and an enthralling blend of classic heritage and modern grit.\"",
     "press_quote5": "\"Brazilian underground metal endures with passion and truth. Genesis is the fruit of that non-negotiable resilience.\"",
@@ -625,7 +625,7 @@ const translations = {
 
     "tl_step2_year": "2021",
     "tl_step2_title": "O Chamado e a Formação da Família Persevera",
-    "tl_step2_desc": "Para dar voz e corpo àquele material denso, Danilo convidou seu primo <strong>Paulo Carrara</strong> para assumir os microfones. Paulo abraçou a causa e trouxe consigo duas peças fundamentais da cena: o baixista <strong>Thadeu Castro (\"Tio\")</strong>, um verdadeiro mestre das cordas graves capaz de improvisar linhas pulsantes na hora da gravação, e o baterista <strong>Claudio Lima (\"Radioativo\")</strong>, cujo estúdio próprio em Sumaré tornou-se o quartel-general de gravação, captação e mixagem da banda.",
+    "tl_step2_desc": "Para dar voz e corpo àquele material denso, Danilo convidou seu primo <strong>Paulo Carrara</strong> para assumir os microfones. Paulo abraçou a causa e trouxe consigo duas peças fundamentais da cena: o baixista <strong>Thadeu Castro</strong>, um verdadeiro mestre das cordas graves capaz de improvisar linhas pulsantes na hora da gravação, e o baterista <strong>Claudio Lima</strong>, cujo estúdio próprio em Sumaré tornou-se o quartel-general de gravação, captação e mixagem da banda.",
     "tl_step2_pill": "Estúdio Próprio • Gravação Artesanal e Independente",
 
     "tl_step3_year": "2023",
@@ -634,8 +634,8 @@ const translations = {
     "tl_step3_pill": "Lançamento Físico em CD • Parceria MS Metal Agency",
 
     "tl_step4_year": "2024",
-    "tl_step4_title": "A Tríplice de Guitarras: A Entrada de Zilds e Jésus",
-    "tl_step4_desc": "Para elevar a sonoridade a um novo patamar de peso e complexidade durante a pré-produção do segundo álbum, a Persevera convocou dois grandes guitarristas e amigos de longa data: <strong>Leandro Pieroni (\"Zilds\")</strong> e <strong>Luiz Fernando Jésus (\"Gordera\")</strong>. Com essa adição, a banda passou a adotar a rara e consagrada formação de <strong>três guitarras na linha de frente</strong> — remetendo diretamente a lendas mundiais como Iron Maiden e Helloween. As composições ganharam harmonias ricas em três vozes, solos cortantes entrelaçados e uma densa parede sonora de timbres pesados.",
+    "tl_step4_title": "A Tríplice de Guitarras: A Entrada de Leandro Pieroni e Luiz Fernando",
+    "tl_step4_desc": "Para elevar a sonoridade a um novo patamar de peso e complexidade durante a pré-produção do segundo álbum, a Persevera convocou dois grandes guitarristas e amigos de longa data: <strong>Leandro Pieroni</strong> e <strong>Luiz Fernando</strong>. Com essa adição, a banda passou a adotar a rara e consagrada formação de <strong>três guitarras na linha de frente</strong> — remetendo diretamente a lendas mundiais como Iron Maiden e Helloween. As composições ganharam harmonias ricas em três vozes, solos cortantes entrelaçados e uma densa parede sonora de timbres pesados.",
     "tl_step4_pill": "Formação com 3 Guitarras • Solos e Harmonias em Trio",
 
     "tl_step5_year": "2026+",
@@ -645,7 +645,7 @@ const translations = {
 
     "press_heading": "A PERSEVERA NA IMPRENSA ESPECIALIZADA",
     "press_quote1": "\"Um Heavy Metal com raízes bem fincadas nos anos 90, NWOBHM e pitadas de Thrash e Power. O resultado é autêntico, sem fórmulas prontas e repleto de energia e honestidade.\"",
-    "press_quote2": "\"A entrada dos novos guitarristas Zilds e Jésus coloca a Persevera no seleto grupo de bandas com ataque de três guitarras, trazendo ainda mais potência ao metal do interior paulista.\"",
+    "press_quote2": "\"A entrada dos novos guitarristas Leandro Pieroni e Luiz Fernando coloca a Persevera no seleto grupo de bandas com ataque de três guitarras, trazendo ainda mais potência ao metal do interior paulista.\"",
     "press_quote3": "\"Genesis traz uma pegada direta, riffs marcantes e uma produção orgânica primorosa. O respeito ao formato físico e ao ouvinte de metal mostra a seriedade da banda.\"",
     "press_quote4": "\"A maturidade estrutural das músicas e a mistura de influências clássicas com agressividade moderna mostram que a Persevera sabe exatamente onde quer chegar.\"",
     "press_quote5": "\"O metal underground brasileiro resiste com paixão e verdade. O álbum Genesis é o fruto maduro dessa resiliência inegociável.\"",
@@ -1025,7 +1025,7 @@ const translations = {
 
     "tl_step2_year": "2021",
     "tl_step2_title": "La Convocatoria y la Familia Persevera",
-    "tl_step2_desc": "Para dar voz y vida al material, Danilo invitó a su primo <strong>Paulo Carrara</strong> como vocalista. Paulo asumió el reto y sumó a dos pilares fundamentales: el bajista <strong>Thadeu Castro (\"Tio\")</strong>, un virtuoso de la improvisación, y el baterista <strong>Claudio Lima (\"Radioativo\")</strong>, cuyo estudio en Sumaré se convirtió en el cuartel general de la banda.",
+    "tl_step2_desc": "Para dar voz y vida al material, Danilo invitó a su primo <strong>Paulo Carrara</strong> como vocalista. Paulo asumió el reto y sumó a dos pilares fundamentales: el bajista <strong>Thadeu Castro</strong>, un virtuoso de la improvisación, y el baterista <strong>Claudio Lima</strong>, cuyo estudio en Sumaré se convirtió en el cuartel general de la banda.",
     "tl_step2_pill": "Estudio Propio • Grabación Artesanal e Independiente",
 
     "tl_step3_year": "2023",
@@ -1034,8 +1034,8 @@ const translations = {
     "tl_step3_pill": "Edición Física en CD • Alianza con MS Metal Agency",
 
     "tl_step4_year": "2024",
-    "tl_step4_title": "El Ataque de Tres Guitarras: Llegada de Zilds y Jésus",
-    "tl_step4_desc": "Para alcanzar un nuevo nivel de pesadez y riqueza melódica, Persevera incorporó a dos destacados guitarristas y amigos: <strong>Leandro Pieroni (\"Zilds\")</strong> y <strong>Luiz Fernando Jésus (\"Gordera\")</strong>. Adoptando la legendaria formación de <strong>tres guitarras</strong> (al estilo de Iron Maiden y Helloween), las canciones sumaron armonías a tres voces y potentes muros sónicos.",
+    "tl_step4_title": "El Ataque de Tres Guitarras: Llegada de Leandro Pieroni y Luiz Fernando",
+    "tl_step4_desc": "Para alcanzar un nuevo nivel de pesadez y riqueza melódica, Persevera incorporó a dos destacados guitarristas y amigos: <strong>Leandro Pieroni</strong> y <strong>Luiz Fernando</strong>. Adoptando la legendaria formación de <strong>tres guitarras</strong> (al estilo de Iron Maiden y Helloween), las canciones sumaron armonías a tres voces y potentes muros sónicos.",
     "tl_step4_pill": "Formación con 3 Guitarras • Solos y Armonías en Trío",
 
     "tl_step5_year": "2026+",
@@ -1045,7 +1045,7 @@ const translations = {
 
     "press_heading": "PERSEVERA EN LA PRENSA ESPECIALIZADA",
     "press_quote1": "\"Heavy Metal auténtico con raíces en los años 90, NWOBHM y toques de Thrash y Power. Genuino, contundente y sin fórmulas comerciales.\"",
-    "press_quote2": "\"La entrada de los guitarristas Zilds y Jésus coloca a Persevera en el selecto grupo de bandas con ataque de tres guitarras, añadiendo tremenda potencia.\"",
+    "press_quote2": "\"La entrada de los guitarristas Leandro Pieroni y Luiz Fernando coloca a Persevera en el selecto grupo de bandas con ataque de tres guitarras, añadiendo tremenda potencia.\"",
     "press_quote3": "\"Genesis ofrece impacto directo, riffs memorables y producción orgánica impecable. Máximo respeto al formato físico y a los fans del metal.\"",
     "press_quote4": "\"Madurez estructural en las canciones y una irresistible combinación entre tradición clásica y fuerza moderna.\"",
     "press_quote5": "\"El metal underground brasileño resiste con pasión y verdad. El álbum Genesis es el fruto maduro de esa resiliencia innegociable.\"",
