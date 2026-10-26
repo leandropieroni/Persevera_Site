@@ -240,7 +240,7 @@ const translations = {
 
     "tl_step5_year": "2026+",
     "tl_step5_title": "New Frontman, Sophomore Album & Stage Onslaught",
-    "tl_step5_desc": "In September 2026, Persevera inaugurated a fierce new chapter with the arrival of powerful lead vocalist <strong>Luiz Carlos</strong>, taking over the helm following Paulo Carrara's memorable tenure on the <em>Genesis</em> debut. The band is currently tracking their 12-song sophomore album in studio — featuring blistering tracks like <em>War is Hell</em>, <em>Master</em>, <em>The Chosen Son</em>, <em>Broken World</em> and <em>To the Unknown</em> —, preparing an unstoppable live tour fueled by their three-guitar attack.",
+    "tl_step5_desc": "In September 2026, Persevera inaugurated a fierce new chapter with the arrival of powerful lead vocalist <strong>Luiz Carlos</strong>, taking over the helm following Paulo Carrara's memorable tenure on the <em>Genesis</em> debut. The band is currently tracking their 12-song sophomore album in studio — featuring blistering tracks like <em>Broken World</em>, <em>To the Unknown</em>, <em>For the Ancient One</em>, <em>The Chosen Son</em> and <em>For the Greater Good</em> —, preparing an unstoppable live tour fueled by their three-guitar attack.",
     "tl_step5_pill": "New Frontman Luiz Carlos • Sophomore Album in Studio",
 
     "press_heading": "PERSEVERA IN SPECIALIZED PRESS",
@@ -640,7 +640,7 @@ const translations = {
 
     "tl_step5_year": "2026+",
     "tl_step5_title": "Novo Vocalista, Segundo Álbum & A Estrada",
-    "tl_step5_desc": "Em setembro de 2026, a Persevera inaugurou uma nova fase decisiva com a chegada do vocalista <strong>Luiz Carlos</strong> nos microfones, assumindo a linha de frente após o ciclo marcante de Paulo Carrara no álbum de estreia <em>Genesis</em>. A banda está em estúdio finalizando as 12 faixas do aguardado segundo álbum — incluindo pedradas como <em>War is Hell</em>, <em>Master</em>, <em>The Chosen Son</em>, <em>Broken World</em> e <em>To the Unknown</em> —, preparando uma turnê incendiária impulsionada pelo poder de suas três guitarras.",
+    "tl_step5_desc": "Em setembro de 2026, a Persevera inaugurou uma nova fase decisiva com a chegada do vocalista <strong>Luiz Carlos</strong> nos microfones, assumindo a linha de frente após o ciclo marcante de Paulo Carrara no álbum de estreia <em>Genesis</em>. A banda está em estúdio finalizando as 12 faixas do aguardado segundo álbum — incluindo pedradas como <em>Broken World</em>, <em>To the Unknown</em>, <em>For the Ancient One</em>, <em>The Chosen Son</em> e <em>For the Greater Good</em> —, preparando uma turnê incendiária impulsionada pelo poder de suas três guitarras.",
     "tl_step5_pill": "Novo Vocalista Luiz Carlos • Segundo Álbum em Gravação",
 
     "press_heading": "A PERSEVERA NA IMPRENSA ESPECIALIZADA",
@@ -1040,7 +1040,7 @@ const translations = {
 
     "tl_step5_year": "2026+",
     "tl_step5_title": "Nuevo Vocalista, Segundo Álbum y los Escenarios",
-    "tl_step5_desc": "En septiembre de 2026, Persevera inauguró un nuevo capítulo decisivo con la incorporación del vocalista <strong>Luiz Carlos</strong>, tomando las riendas del micrófono tras la recordada etapa de Paulo Carrara en el debut <em>Genesis</em>. La banda afina en el estudio las 12 canciones de su segundo álbum —con temas implacables como <em>War is Hell</em>, <em>Master</em>, <em>The Chosen Son</em>, <em>Broken World</em> y <em>To the Unknown</em>—, lista para desatar el poder de sus tres guitarras en los escenarios.",
+    "tl_step5_desc": "En septiembre de 2026, Persevera inauguró un nuevo capítulo decisivo con la incorporación del vocalista <strong>Luiz Carlos</strong>, tomando las riendas del micrófono tras la recordada etapa de Paulo Carrara en el debut <em>Genesis</em>. La banda afina en el estudio las 12 canciones de su segundo álbum —con temas implacables como <em>Broken World</em>, <em>To the Unknown</em>, <em>For the Ancient One</em>, <em>The Chosen Son</em> y <em>For the Greater Good</em>—, lista para desatar el poder de sus tres guitarras en los escenarios.",
     "tl_step5_pill": "Nuevo Vocalista Luiz Carlos • Segundo Álbum en Estudio",
 
     "press_heading": "PERSEVERA EN LA PRENSA ESPECIALIZADA",
