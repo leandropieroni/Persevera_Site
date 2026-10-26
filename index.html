@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>PERSEVERA | Official Heavy Metal Band - Three Guitars (Sumaré / SP - Brazil)</title>
   <meta name="description" content="Official website of Persevera. Heavy Metal forged with the crushing power of three frontline guitars from Sumaré/SP, Brazil. Listen to the Genesis album, watch official music videos, and discover the band.">
   <meta name="keywords" content="Persevera, Persevera Metal Band, Heavy Metal, Three Guitars, Sumaré, Brazilian Metal, Genesis, Groove Metal, Iron Maiden, Heavy Metal Band">
@@ -27,7 +28,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=7.2">
+  <link rel="stylesheet" href="assets/css/style.css?v=7.3">
 </head>
 <body>
 
@@ -977,12 +978,20 @@
           <div class="video-player-frame">
             <iframe 
               id="main-video-iframe"
-              src="https://www.youtube.com/embed/UD6TgeVOR3w?enablejsapi=1" 
+              src="https://www.youtube.com/embed/UD6TgeVOR3w?feature=oembed" 
               title="Persevera - Broken World (Official Music Video)" 
               frameborder="0" 
+              referrerpolicy="strict-origin-when-cross-origin"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" 
               allowfullscreen>
             </iframe>
+            <video 
+              id="main-video-native"
+              controls
+              preload="metadata"
+              poster="https://img.youtube.com/vi/UD6TgeVOR3w/hqdefault.jpg"
+              style="display: none;">
+            </video>
           </div>
 
           <div class="video-now-info">
@@ -1021,7 +1030,7 @@
             <div class="video-carousel-viewport" id="vcarousel-viewport">
               <div class="video-carousel-track" id="vcarousel-track">
             <!-- 1. Official Live-Action Clips -->
-            <div class="video-card active" data-category="clips" data-videoid="UD6TgeVOR3w" data-title="Broken World" data-desc-key="v_c1_desc" data-title-key="v_c1_title" data-desc="Anthemic single with cinematic music video recorded with the reunited lineup.">
+            <div class="video-card active" data-category="clips" data-videoid="UD6TgeVOR3w" data-local-video="assets/video/broken-world.mp4" data-title="Broken World" data-desc-key="v_c1_desc" data-title-key="v_c1_title" data-desc="Anthemic single with cinematic music video recorded with the reunited lineup.">
               <div class="v-thumb">
                 <img src="https://img.youtube.com/vi/UD6TgeVOR3w/hqdefault.jpg" alt="Broken World" loading="lazy">
                 <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
@@ -1032,7 +1041,7 @@
                 <span data-i18n="v_c1_sub">Official Music Video</span>
               </div>
             </div>
-            <div class="video-card" data-category="clips" data-videoid="b5MK3x0G4Hg" data-title="To the Unknown" data-desc-key="v_c2_desc" data-title-key="v_c2_title" data-desc="Cinematic official music video featuring dramatic melodic hooks.">
+            <div class="video-card" data-category="clips" data-videoid="b5MK3x0G4Hg" data-local-video="assets/video/to-the-unknown.mp4" data-title="To the Unknown" data-desc-key="v_c2_desc" data-title-key="v_c2_title" data-desc="Cinematic official music video featuring dramatic melodic hooks.">
               <div class="v-thumb">
                 <img src="https://img.youtube.com/vi/b5MK3x0G4Hg/hqdefault.jpg" alt="To the Unknown" loading="lazy">
                 <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
@@ -1104,7 +1113,7 @@
             </div>
 
             <!-- 4. Genesis Album Tracks (Full 13 Songs) -->
-            <div class="video-card" data-category="genesis" data-videoid="d8YMwwzDMDs" data-title="Iced Hell" data-desc-key="v_g1_desc" data-title-key="v_g1_title" data-desc="Devastating album opener with relentless rhythm and soaring melodies.">
+            <div class="video-card" data-category="genesis" data-videoid="d8YMwwzDMDs" data-drive-url="https://drive.google.com/file/d/1csXHnbwR_9kx2n853bBBKywq8t-Ktzq-/preview" data-title="Iced Hell" data-desc-key="v_g1_desc" data-title-key="v_g1_title" data-desc="Devastating album opener with relentless rhythm and soaring melodies.">
               <div class="v-thumb">
                 <img src="https://img.youtube.com/vi/d8YMwwzDMDs/hqdefault.jpg" alt="Iced Hell" loading="lazy">
                 <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
@@ -1115,7 +1124,7 @@
                 <span data-i18n="v_g1_sub">Lyric Video • Genesis 01</span>
               </div>
             </div>
-            <div class="video-card" data-category="genesis" data-videoid="NgsTQBoSSUc" data-title="Oh Lord!" data-desc-key="v_g2_desc" data-title-key="v_g2_title" data-desc="High-energy heavy metal anthem with pounding grooves and dynamic vocals.">
+            <div class="video-card" data-category="genesis" data-videoid="NgsTQBoSSUc" data-drive-url="https://drive.google.com/file/d/1iFZVNfsUlFIG0kASCqGrsfVfmpjcu_5s/preview" data-title="Oh Lord!" data-desc-key="v_g2_desc" data-title-key="v_g2_title" data-desc="High-energy heavy metal anthem with pounding grooves and dynamic vocals.">
               <div class="v-thumb">
                 <img src="https://img.youtube.com/vi/NgsTQBoSSUc/hqdefault.jpg" alt="Oh Lord!" loading="lazy">
                 <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
@@ -1126,7 +1135,7 @@
                 <span data-i18n="v_g2_sub">Lyric Video • Genesis 02</span>
               </div>
             </div>
-            <div class="video-card" data-category="genesis" data-videoid="0wtM89TmDUU" data-title="A Waste of Time" data-desc-key="v_g3_desc" data-title-key="v_g3_title" data-desc="Fast-paced heavy track exploring urgency, resilience and inner focus.">
+            <div class="video-card" data-category="genesis" data-videoid="0wtM89TmDUU" data-drive-url="https://drive.google.com/file/d/1izWfJmp-nZM4tZtfUmynIKNxT23G0Ykb/preview" data-title="A Waste of Time" data-desc-key="v_g3_desc" data-title-key="v_g3_title" data-desc="Fast-paced heavy track exploring urgency, resilience and inner focus.">
               <div class="v-thumb">
                 <img src="https://img.youtube.com/vi/0wtM89TmDUU/hqdefault.jpg" alt="A Waste of Time" loading="lazy">
                 <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
@@ -1137,7 +1146,7 @@
                 <span data-i18n="v_g3_sub">Lyric Video • Genesis 03</span>
               </div>
             </div>
-            <div class="video-card" data-category="genesis" data-videoid="Gdg7D08AgR4" data-title="My Curse" data-desc-key="v_g4_desc" data-title-key="v_g4_title" data-desc="Dark melodic textures, crushing rhythm section and soaring guitar hooks.">
+            <div class="video-card" data-category="genesis" data-videoid="Gdg7D08AgR4" data-drive-url="https://drive.google.com/file/d/1OjBnsnKS-7jYBcODqHBc3WcvzCMW0ICl/preview" data-title="My Curse" data-desc-key="v_g4_desc" data-title-key="v_g4_title" data-desc="Dark melodic textures, crushing rhythm section and soaring guitar hooks.">
               <div class="v-thumb">
                 <img src="https://img.youtube.com/vi/Gdg7D08AgR4/hqdefault.jpg" alt="My Curse" loading="lazy">
                 <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
@@ -1148,7 +1157,7 @@
                 <span data-i18n="v_g4_sub">Lyric Video • Genesis 04</span>
               </div>
             </div>
-            <div class="video-card" data-category="genesis" data-videoid="pZLEqzUZgJI" data-title="King of Kings" data-desc-key="v_g5_desc" data-title-key="v_g5_title" data-desc="Regal heavy metal power, soaring harmonic leads and anthemic chorus.">
+            <div class="video-card" data-category="genesis" data-videoid="pZLEqzUZgJI" data-drive-url="https://drive.google.com/file/d/1qhYD25rpBMDw4KejRCxCxZ8Sg6f8k2le/preview" data-title="King of Kings" data-desc-key="v_g5_desc" data-title-key="v_g5_title" data-desc="Regal heavy metal power, soaring harmonic leads and anthemic chorus.">
               <div class="v-thumb">
                 <img src="https://img.youtube.com/vi/pZLEqzUZgJI/hqdefault.jpg" alt="King of Kings" loading="lazy">
                 <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
@@ -1159,7 +1168,7 @@
                 <span data-i18n="v_g5_sub">Lyric Video • Genesis 05</span>
               </div>
             </div>
-            <div class="video-card" data-category="genesis" data-videoid="YjJyjz-CTm8" data-title="The Flail of God" data-desc-key="v_g6_desc" data-title-key="v_g6_title" data-desc="Aggressive, crushing thrash-infused riffing and unyielding metal intensity.">
+            <div class="video-card" data-category="genesis" data-videoid="YjJyjz-CTm8" data-drive-url="https://drive.google.com/file/d/1ao0vs_yj8Vu95U9ro8UVcmHFn4esjrvM/preview" data-title="The Flail of God" data-desc-key="v_g6_desc" data-title-key="v_g6_title" data-desc="Aggressive, crushing thrash-infused riffing and unyielding metal intensity.">
               <div class="v-thumb">
                 <img src="https://img.youtube.com/vi/YjJyjz-CTm8/hqdefault.jpg" alt="The Flail of God" loading="lazy">
                 <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
@@ -1170,7 +1179,7 @@
                 <span data-i18n="v_g6_sub">Lyric Video • Genesis 06</span>
               </div>
             </div>
-            <div class="video-card" data-category="genesis" data-videoid="UNa6WsxFWQU" data-title="Down from the Sky" data-desc-key="v_g7_desc" data-title-key="v_g7_title" data-desc="Atmospheric build-up erupting into high-voltage melodic heavy metal.">
+            <div class="video-card" data-category="genesis" data-videoid="UNa6WsxFWQU" data-drive-url="https://drive.google.com/file/d/1zJXch6mzn4Q1FaVVQqO1PnTK-TO49lzR/preview" data-title="Down from the Sky" data-desc-key="v_g7_desc" data-title-key="v_g7_title" data-desc="Atmospheric build-up erupting into high-voltage melodic heavy metal.">
               <div class="v-thumb">
                 <img src="https://img.youtube.com/vi/UNa6WsxFWQU/hqdefault.jpg" alt="Down from the Sky" loading="lazy">
                 <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
@@ -1181,7 +1190,7 @@
                 <span data-i18n="v_g7_sub">Lyric Video • Genesis 07</span>
               </div>
             </div>
-            <div class="video-card" data-category="genesis" data-videoid="m5-XacZfMvE" data-title="The Countdown" data-desc-key="v_g8_desc" data-title-key="v_g8_title" data-desc="Ticking clock tension delivering relentless double-bass drive.">
+            <div class="video-card" data-category="genesis" data-videoid="m5-XacZfMvE" data-drive-url="https://drive.google.com/file/d/1_y7kiQRNpoVVaA3g_UqFAGkl9GHcmSd-/preview" data-title="The Countdown" data-desc-key="v_g8_desc" data-title-key="v_g8_title" data-desc="Ticking clock tension delivering relentless double-bass drive.">
               <div class="v-thumb">
                 <img src="https://img.youtube.com/vi/m5-XacZfMvE/hqdefault.jpg" alt="The Countdown" loading="lazy">
                 <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
@@ -1192,7 +1201,7 @@
                 <span data-i18n="v_g8_sub">Lyric Video • Genesis 08</span>
               </div>
             </div>
-            <div class="video-card" data-category="genesis" data-videoid="SIWQMzIZ6NA" data-title="The White Rider" data-desc-key="v_g9_desc" data-title-key="v_g9_title" data-desc="Apocalypse Part I: Conqueror on a white steed, pure epic power.">
+            <div class="video-card" data-category="genesis" data-videoid="SIWQMzIZ6NA" data-drive-url="https://drive.google.com/file/d/1RIn9KaoRvUITn2JFWIbsx4Nq6P1PUrWB/preview" data-title="The White Rider" data-desc-key="v_g9_desc" data-title-key="v_g9_title" data-desc="Apocalypse Part I: Conqueror on a white steed, pure epic power.">
               <div class="v-thumb">
                 <img src="https://img.youtube.com/vi/SIWQMzIZ6NA/hqdefault.jpg" alt="The White Rider" loading="lazy">
                 <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
@@ -1203,7 +1212,7 @@
                 <span data-i18n="v_g9_sub">Lyric Video • Genesis 09</span>
               </div>
             </div>
-            <div class="video-card" data-category="genesis" data-videoid="MShXd8ENUCc" data-title="The Red Horse" data-desc-key="v_g10_desc" data-title-key="v_g10_title" data-desc="Apocalypse Part II: Fiery battle cries, blazing guitars and crimson fury.">
+            <div class="video-card" data-category="genesis" data-videoid="MShXd8ENUCc" data-drive-url="https://drive.google.com/file/d/1vnEAYNFAyhZ77cnwccwsm66bdcaS6Xks/preview" data-title="The Red Horse" data-desc-key="v_g10_desc" data-title-key="v_g10_title" data-desc="Apocalypse Part II: Fiery battle cries, blazing guitars and crimson fury.">
               <div class="v-thumb">
                 <img src="https://img.youtube.com/vi/MShXd8ENUCc/hqdefault.jpg" alt="The Red Horse" loading="lazy">
                 <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
@@ -1214,7 +1223,7 @@
                 <span data-i18n="v_g10_sub">Lyric Video • Genesis 10</span>
               </div>
             </div>
-            <div class="video-card" data-category="genesis" data-videoid="2c9sSk1MDp8" data-title="Famine" data-desc-key="v_g11_desc" data-title-key="v_g11_title" data-desc="Apocalypse Part III: Oppressive heaviness portraying desolation and struggle.">
+            <div class="video-card" data-category="genesis" data-videoid="2c9sSk1MDp8" data-drive-url="https://drive.google.com/file/d/13728HE9jTTmXOxOnRzKv2B8t5qPVBeXe/preview" data-title="Famine" data-desc-key="v_g11_desc" data-title-key="v_g11_title" data-desc="Apocalypse Part III: Oppressive heaviness portraying desolation and struggle.">
               <div class="v-thumb">
                 <img src="https://img.youtube.com/vi/2c9sSk1MDp8/hqdefault.jpg" alt="Famine" loading="lazy">
                 <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
@@ -1225,7 +1234,7 @@
                 <span data-i18n="v_g11_sub">Lyric Video • Genesis 11</span>
               </div>
             </div>
-            <div class="video-card" data-category="genesis" data-videoid="dClYqjaPed0" data-title="Death" data-desc-key="v_g12_desc" data-title-key="v_g12_title" data-desc="Apocalypse Part IV: The ultimate reckoning with visceral climax.">
+            <div class="video-card" data-category="genesis" data-videoid="dClYqjaPed0" data-drive-url="https://drive.google.com/file/d/1uaoCxwkMeENbznbp5BepW6BBQx4arKSQ/preview" data-title="Death" data-desc-key="v_g12_desc" data-title-key="v_g12_title" data-desc="Apocalypse Part IV: The ultimate reckoning with visceral climax.">
               <div class="v-thumb">
                 <img src="https://img.youtube.com/vi/dClYqjaPed0/hqdefault.jpg" alt="Death" loading="lazy">
                 <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
@@ -1236,7 +1245,7 @@
                 <span data-i18n="v_g12_sub">Lyric Video • Genesis 12</span>
               </div>
             </div>
-            <div class="video-card" data-category="genesis" data-videoid="ywsbJXh0L8A" data-title="The Last Horseman" data-desc-key="v_g13_desc" data-title-key="v_g13_title" data-desc="Apocalypse Conclusion: The definitive triumph over adversity.">
+            <div class="video-card" data-category="genesis" data-videoid="ywsbJXh0L8A" data-drive-url="https://drive.google.com/file/d/1g-DRfYKcsqnfQPDYnV_3HXucQfOAY1f7/preview" data-title="The Last Horseman" data-desc-key="v_g13_desc" data-title-key="v_g13_title" data-desc="Apocalypse Conclusion: The definitive triumph over adversity.">
               <div class="v-thumb">
                 <img src="https://img.youtube.com/vi/ywsbJXh0L8A/hqdefault.jpg" alt="The Last Horseman" loading="lazy">
                 <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
@@ -2202,8 +2211,8 @@
   </button>
 
   <!-- Scripts -->
-  <script src="assets/js/translations.js?v=7.2"></script>
-  <script src="assets/js/lyrics-data.js?v=7.2"></script>
-  <script src="assets/js/main.js?v=7.2"></script>
+  <script src="assets/js/translations.js?v=7.3"></script>
+  <script src="assets/js/lyrics-data.js?v=7.3"></script>
+  <script src="assets/js/main.js?v=7.3"></script>
 </body>
 </html>

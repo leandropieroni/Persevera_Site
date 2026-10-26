@@ -714,6 +714,60 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. VIDEOS & CINEMATICS THEATER (17 TRACKS & CLIPS)
   // ==========================================
   const mainVideoIframe = document.getElementById('main-video-iframe');
+  const mainVideoNative = document.getElementById('main-video-native');
+  const isLocalFileProtocol = (window.location.protocol === 'file:');
+
+  function loadVideoInTheater(card, autoplay = false) {
+    if (!card) return;
+    const videoId = card.getAttribute('data-videoid');
+    const embedUrl = card.getAttribute('data-embed-url');
+    const driveUrl = card.getAttribute('data-drive-url');
+    const localVideo = card.getAttribute('data-local-video');
+    const thumbImg = card.querySelector('img')?.getAttribute('src') || '';
+
+    // Always pause native player before switching
+    if (mainVideoNative) {
+      try { mainVideoNative.pause(); } catch (e) {}
+    }
+
+    // 1. If opened locally via file:// and a local MP4 exists for this clip, use native HTML5 video to avoid YouTube Error 153
+    if (isLocalFileProtocol && localVideo && mainVideoNative) {
+      if (mainVideoIframe) {
+        mainVideoIframe.style.display = 'none';
+        mainVideoIframe.src = 'about:blank';
+      }
+      mainVideoNative.style.display = 'block';
+      if (thumbImg) mainVideoNative.poster = thumbImg;
+      mainVideoNative.src = localVideo;
+      if (autoplay) {
+        mainVideoNative.play().catch(() => {});
+      }
+      return;
+    }
+
+    // 2. Otherwise use the iframe player (Google Drive embed or YouTube embed with strict-origin-when-cross-origin)
+    if (mainVideoNative) {
+      mainVideoNative.style.display = 'none';
+      mainVideoNative.removeAttribute('src');
+    }
+    if (mainVideoIframe) {
+      mainVideoIframe.style.display = 'block';
+      if (embedUrl) {
+        mainVideoIframe.src = embedUrl;
+      } else if (isLocalFileProtocol && driveUrl) {
+        mainVideoIframe.src = driveUrl;
+      } else if (videoId) {
+        const autoParam = autoplay ? 'autoplay=1&' : '';
+        mainVideoIframe.src = `https://www.youtube.com/embed/${videoId}?${autoParam}feature=oembed`;
+      }
+    }
+  }
+
+  // Initialize default cover video (Broken World) seamlessly on both file:// and https://
+  const initialActiveVideoCard = document.querySelector('.video-card.active') || document.querySelector('.video-card');
+  if (initialActiveVideoCard && isLocalFileProtocol) {
+    loadVideoInTheater(initialActiveVideoCard, false);
+  }
   const videoCards = document.querySelectorAll('.video-card');
   const videoTabBtns = document.querySelectorAll('.video-tab-btn');
 
@@ -812,15 +866,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const titleKey = card.getAttribute('data-title-key');
       const desc = card.getAttribute('data-desc');
 
-      // Update iframe source
-      if (mainVideoIframe) {
-        const embedUrl = card.getAttribute('data-embed-url');
-        if (embedUrl) {
-          mainVideoIframe.src = embedUrl;
-        } else if (videoId) {
-          mainVideoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1`;
-        }
-      }
+      // Update video theater source (handles both YouTube oEmbed and local/Drive fallback)
+      loadVideoInTheater(card, true);
 
       // Update text
       if (videoCurrentTitle) {
@@ -909,11 +956,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const videoTitle = document.getElementById('video-current-title');
       const videoSection = document.getElementById('videos');
       
-      if (mainIframe) {
+      const targetCard = document.querySelector(`.video-card[data-videoid="${videoId}"]`);
+      if (targetCard) {
+        loadVideoInTheater(targetCard, true);
+      } else if (mainIframe) {
         if (embedUrl) {
           mainIframe.src = embedUrl;
         } else if (videoId) {
-          mainIframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&enablejsapi=1';
+          mainIframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&feature=oembed';
         }
       }
       if (videoTitle && title) {
