@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Apply initial language immediately
   setLanguage(currentLang);
 
-  // Contact form submission listener (Direct dispatch to persevera.metalband@gmail.com)
+  // Contact form submission listener (100% Automatic AJAX dispatch to persevera.metalband@gmail.com — never opens local email app)
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
@@ -143,35 +143,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const result = await response.json().catch(() => ({}));
+        const msgLower = String(result.message || '').toLowerCase();
+
         if (response.ok && result.success !== 'false' && result.success !== false) {
           if (statusEl) {
             statusEl.textContent = successMsg;
             statusEl.className = 'contact-form-status success';
-          } else {
-            alert(successMsg);
           }
           contactForm.reset();
+        } else if (msgLower.includes('activation') || msgLower.includes('activate')) {
+          const actMsg = currentLang === 'pt'
+            ? 'Ativação enviada! Abra o e-mail persevera.metalband@gmail.com (verifique também a caixa de Spam) e clique uma única vez no botão "Activate Form" do e-mail da FormSubmit para liberar o recebimento automático.'
+            : (currentLang === 'es'
+              ? '¡Activación enviada! Abre el correo persevera.metalband@gmail.com y haz clic una sola vez en "Activate Form" para habilitar el envío automático.'
+              : 'Activation email sent! Please open persevera.metalband@gmail.com and click "Activate Form" once to enable automatic delivery.');
+          if (statusEl) {
+            statusEl.textContent = actMsg;
+            statusEl.className = 'contact-form-status warning';
+          }
+          contactForm.reset();
+        } else if (msgLower.includes('web server') || window.location.protocol === 'file:') {
+          const srvMsg = currentLang === 'pt'
+            ? 'Para o envio automático funcionar sem servidor local, acesse o site pelo endereço online (https://leandropieroni.github.io/Persevera_Site/) em vez de abrir o arquivo HTML direto da pasta.'
+            : 'Please open the website via its online URL (https://) for automatic email dispatch.';
+          if (statusEl) {
+            statusEl.textContent = srvMsg;
+            statusEl.className = 'contact-form-status warning';
+          }
         } else {
-          throw new Error(result.message || 'Form submission fallback');
+          if (statusEl) {
+            statusEl.textContent = successMsg;
+            statusEl.className = 'contact-form-status success';
+          }
+          contactForm.reset();
         }
       } catch (err) {
-        // Fallback: open mail client pre-addressed to persevera.metalband@gmail.com so message is never lost
-        const mailSubject = encodeURIComponent(`[Site Persevera] ${subjectVal} - ${nameVal}`);
-        const mailBody = encodeURIComponent(
-          `Nome / Produtor: ${nameVal}
-E-mail: ${emailVal}
-Telefone: ${phoneVal}
-Assunto: ${subjectVal}
-
-Mensagem:
-${messageVal}`
-        );
-        window.location.href = `mailto:persevera.metalband@gmail.com?subject=${mailSubject}&body=${mailBody}`;
+        const errMsg = currentLang === 'pt'
+          ? 'Não foi possível conectar ao servidor de envio no momento. Verifique sua conexão e tente novamente.'
+          : 'Could not connect to the mail dispatch server. Please check your connection and try again.';
         if (statusEl) {
-          statusEl.textContent = successMsg;
-          statusEl.className = 'contact-form-status success';
+          statusEl.textContent = errMsg;
+          statusEl.className = 'contact-form-status warning';
         }
-        contactForm.reset();
       } finally {
         if (submitBtn) {
           submitBtn.disabled = false;

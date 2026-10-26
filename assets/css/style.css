@@ -4945,3 +4945,11 @@ body {
   color: #e2f8ff;
   box-shadow: 0 0 15px rgba(0, 212, 255, 0.15);
 }
+
+.contact-form-status.warning {
+  padding: 0.85rem 1rem;
+  background: rgba(255, 170, 0, 0.14);
+  border: 1px solid rgba(255, 170, 0, 0.5);
+  color: #ffe8b3;
+  line-height: 1.45;
+}
