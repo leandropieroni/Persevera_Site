@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
           contactForm.reset();
         } else if (msgLower.includes('web server') || window.location.protocol === 'file:') {
           const srvMsg = currentLang === 'pt'
-            ? 'Para o envio automático funcionar sem servidor local, acesse o site pelo endereço online (https://leandropieroni.github.io/Persevera_Site/) em vez de abrir o arquivo HTML direto da pasta.'
+            ? 'Para o envio automático funcionar sem servidor local, acesse o site pelo endereço online (https://perseverametalband.com.br) em vez de abrir o arquivo HTML direto da pasta.'
             : 'Please open the website via its online URL (https://) for automatic email dispatch.';
           if (statusEl) {
             statusEl.textContent = srvMsg;
