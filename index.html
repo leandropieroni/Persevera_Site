@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=7.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=7.1">
 </head>
 <body>
 
@@ -977,8 +977,8 @@
           <div class="video-player-frame">
             <iframe 
               id="main-video-iframe"
-              src="https://drive.google.com/file/d/15hzYZt6VDzy-3AyU4ld7lf9u7gPKesgd/preview" 
-              title="Persevera - The Last Horseman (Clipe Animado)" 
+              src="https://www.youtube.com/embed/UD6TgeVOR3w?enablejsapi=1" 
+              title="Persevera - Broken World (Official Music Video)" 
               frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" 
               allowfullscreen>
@@ -988,8 +988,8 @@
           <div class="video-now-info">
             <div class="v-details">
               <span class="v-badge"><i class="fa-solid fa-play"></i> <span data-i18n="video_playing_badge">NOW PLAYING</span></span>
-              <h3 id="video-current-title" data-i18n="v_anim_lasthorseman_title">The Last Horseman</h3>
-              <p id="video-current-desc" data-i18n="v_anim_lasthorseman_desc">Clipe animado oficial da grande conclusão do Apocalipse: o triunfo definitivo sobre as trevas.</p>
+              <h3 id="video-current-title" data-i18n="v_c1_title">Broken World</h3>
+              <p id="video-current-desc" data-i18n="v_c1_desc">Single marcante com videoclipe oficial gravado com a formação reunida.</p>
             </div>
             <a href="https://www.youtube.com/@perseverametalband?sub_confirmation=1" target="_blank" rel="noopener" class="btn-yt-sub">
               <i class="fa-brands fa-youtube"></i> <span data-i18n="yt_subscribe_btn">Subscribe to Channel</span>
@@ -1021,7 +1021,7 @@
             <div class="video-carousel-viewport" id="vcarousel-viewport">
               <div class="video-carousel-track" id="vcarousel-track">
             <!-- 1. Official Live-Action Clips -->
-            <div class="video-card" data-category="clips" data-videoid="UD6TgeVOR3w" data-title="Broken World" data-desc-key="v_c1_desc" data-title-key="v_c1_title" data-desc="Anthemic single with cinematic music video recorded with the reunited lineup.">
+            <div class="video-card active" data-category="clips" data-videoid="UD6TgeVOR3w" data-title="Broken World" data-desc-key="v_c1_desc" data-title-key="v_c1_title" data-desc="Anthemic single with cinematic music video recorded with the reunited lineup.">
               <div class="v-thumb">
                 <img src="https://img.youtube.com/vi/UD6TgeVOR3w/hqdefault.jpg" alt="Broken World" loading="lazy">
                 <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
@@ -1067,7 +1067,7 @@
                 <span data-i18n="v_anim_death_sub">Clipe Animado Oficial • Apocalipse IV</span>
               </div>
             </div>
-            <div class="video-card active" data-category="animated" data-embed-url="https://drive.google.com/file/d/15hzYZt6VDzy-3AyU4ld7lf9u7gPKesgd/preview" data-videoid="15hzYZt6VDzy-3AyU4ld7lf9u7gPKesgd" data-title="The Last Horseman" data-desc-key="v_anim_lasthorseman_desc" data-title-key="v_anim_lasthorseman_title" data-desc="Clipe animado oficial da grande conclusão do Apocalipse: o triunfo definitivo sobre as trevas.">
+            <div class="video-card" data-category="animated" data-embed-url="https://drive.google.com/file/d/15hzYZt6VDzy-3AyU4ld7lf9u7gPKesgd/preview" data-videoid="15hzYZt6VDzy-3AyU4ld7lf9u7gPKesgd" data-title="The Last Horseman" data-desc-key="v_anim_lasthorseman_desc" data-title-key="v_anim_lasthorseman_title" data-desc="Clipe animado oficial da grande conclusão do Apocalipse: o triunfo definitivo sobre as trevas.">
               <div class="v-thumb">
                 <img src="assets/images/videos/anim-last-horseman.jpg" alt="The Last Horseman (Animated Video)" loading="lazy">
                 <div class="v-play-overlay"><i class="fa-solid fa-play"></i></div>
@@ -1985,26 +1985,29 @@
           <!-- Quick Contact Form -->
           <div class="contact-form-card">
             <h3 data-i18n="form_title">SEND A MESSAGE</h3>
-            <form id="contact-form">
+            <form id="contact-form" action="https://formsubmit.co/persevera.metalband@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="[Site Oficial Persevera] Nova Mensagem de Contato">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="false">
               <div class="form-group">
                 <label for="name" data-i18n="form_label_name">Your Name / Promoter</label>
-                <input type="text" id="name" required placeholder="E.g.: John Doe or Promoter Name" data-i18n-placeholder="form_ph_name">
+                <input type="text" id="name" name="name" required placeholder="E.g.: John Doe or Promoter Name" data-i18n-placeholder="form_ph_name">
               </div>
 
               <div class="form-row">
                 <div class="form-group">
                   <label for="email" data-i18n="form_label_email">Email</label>
-                  <input type="email" id="email" required placeholder="youremail@example.com" data-i18n-placeholder="form_ph_email">
+                  <input type="email" id="email" name="email" required placeholder="youremail@example.com" data-i18n-placeholder="form_ph_email">
                 </div>
                 <div class="form-group">
                   <label for="phone" data-i18n="form_label_phone">Phone</label>
-                  <input type="tel" id="phone" required placeholder="+55 (19) 99999-9999" data-i18n-placeholder="form_ph_phone">
+                  <input type="tel" id="phone" name="phone" required placeholder="+55 (19) 99999-9999" data-i18n-placeholder="form_ph_phone">
                 </div>
               </div>
 
               <div class="form-group">
                 <label for="subject" data-i18n="form_label_subject">Subject</label>
-                <select id="subject" required>
+                <select id="subject" name="subject" required>
                   <option value="shows" data-i18n="form_opt_shows">Festival / Concert Booking</option>
                   <option value="imprensa" data-i18n="form_opt_press">Press / Interview / Radio</option>
                   <option value="outro" data-i18n="form_opt_other">Other Inquiries</option>
@@ -2013,12 +2016,13 @@
 
               <div class="form-group">
                 <label for="message" data-i18n="form_label_message">Message / Event Details</label>
-                <textarea id="message" rows="4" required placeholder="Proposed dates, city, venue or message..." data-i18n-placeholder="form_ph_message"></textarea>
+                <textarea id="message" name="message" rows="4" required placeholder="Proposed dates, city, venue or message..." data-i18n-placeholder="form_ph_message"></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary btn-block">
+              <button type="submit" id="contact-submit-btn" class="btn btn-primary btn-block">
                 <i class="fa-solid fa-paper-plane"></i> <span data-i18n="btn_send_message">Send Message</span>
               </button>
+              <div id="contact-form-status" class="contact-form-status" aria-live="polite"></div>
             </form>
           </div>
 
@@ -2198,8 +2202,8 @@
   </button>
 
   <!-- Scripts -->
-  <script src="assets/js/translations.js?v=7.0"></script>
-  <script src="assets/js/lyrics-data.js?v=7.0"></script>
-  <script src="assets/js/main.js?v=7.0"></script>
+  <script src="assets/js/translations.js?v=7.1"></script>
+  <script src="assets/js/lyrics-data.js?v=7.1"></script>
+  <script src="assets/js/main.js?v=7.1"></script>
 </body>
 </html>

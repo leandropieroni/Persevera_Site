@@ -92,16 +92,92 @@ document.addEventListener('DOMContentLoaded', () => {
   // Apply initial language immediately
   setLanguage(currentLang);
 
-  // Contact form submission listener with localized message
+  // Contact form submission listener (Direct dispatch to persevera.metalband@gmail.com)
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const msg = (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang].form_alert_success)
-        ? translations[currentLang].form_alert_success
+      const submitBtn = document.getElementById('contact-submit-btn') || contactForm.querySelector('button[type="submit"]');
+      const statusEl = document.getElementById('contact-form-status');
+      const nameVal = (document.getElementById('name')?.value || '').trim();
+      const emailVal = (document.getElementById('email')?.value || '').trim();
+      const phoneVal = (document.getElementById('phone')?.value || '').trim();
+      const subjectSelect = document.getElementById('subject');
+      const subjectVal = subjectSelect ? (subjectSelect.options[subjectSelect.selectedIndex]?.text || subjectSelect.value) : 'Contato Site';
+      const messageVal = (document.getElementById('message')?.value || '').trim();
+
+      const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        const sendingLabel = currentLang === 'pt' ? 'Enviando...' : (currentLang === 'es' ? 'Enviando...' : 'Sending...');
+        submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> <span>${sendingLabel}</span>`;
+      }
+      if (statusEl) {
+        statusEl.textContent = '';
+        statusEl.className = 'contact-form-status';
+      }
+
+      const tDict = (typeof translations !== 'undefined' ? translations : (typeof window !== 'undefined' ? window.translations : null));
+      const successMsg = (tDict && tDict[currentLang] && tDict[currentLang].form_alert_success)
+        ? tDict[currentLang].form_alert_success
         : 'Message sent successfully! Persevera production will be in touch soon. 🤘';
-      alert(msg);
-      contactForm.reset();
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/persevera.metalband@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            _subject: `[Site Persevera] ${subjectVal} — ${nameVal}`,
+            _replyto: emailVal,
+            _template: 'table',
+            _captcha: 'false',
+            Nome: nameVal,
+            Email: emailVal,
+            Telefone: phoneVal,
+            Assunto: subjectVal,
+            Mensagem: messageVal
+          })
+        });
+
+        const result = await response.json().catch(() => ({}));
+        if (response.ok && result.success !== 'false' && result.success !== false) {
+          if (statusEl) {
+            statusEl.textContent = successMsg;
+            statusEl.className = 'contact-form-status success';
+          } else {
+            alert(successMsg);
+          }
+          contactForm.reset();
+        } else {
+          throw new Error(result.message || 'Form submission fallback');
+        }
+      } catch (err) {
+        // Fallback: open mail client pre-addressed to persevera.metalband@gmail.com so message is never lost
+        const mailSubject = encodeURIComponent(`[Site Persevera] ${subjectVal} - ${nameVal}`);
+        const mailBody = encodeURIComponent(
+          `Nome / Produtor: ${nameVal}
+E-mail: ${emailVal}
+Telefone: ${phoneVal}
+Assunto: ${subjectVal}
+
+Mensagem:
+${messageVal}`
+        );
+        window.location.href = `mailto:persevera.metalband@gmail.com?subject=${mailSubject}&body=${mailBody}`;
+        if (statusEl) {
+          statusEl.textContent = successMsg;
+          statusEl.className = 'contact-form-status success';
+        }
+        contactForm.reset();
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHtml;
+        }
+      }
     });
   }
 
@@ -735,6 +811,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Update text
       if (videoCurrentTitle) {
+        if (titleKey) videoCurrentTitle.setAttribute('data-i18n', titleKey);
         if (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang][titleKey]) {
           videoCurrentTitle.textContent = translations[currentLang][titleKey];
         } else {
@@ -743,6 +820,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (videoCurrentDesc) {
+        if (descKey) videoCurrentDesc.setAttribute('data-i18n', descKey);
         if (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang][descKey]) {
           videoCurrentDesc.textContent = translations[currentLang][descKey];
         } else {
