@@ -18,8 +18,8 @@ const translations = {
 
     // Hero
     "hero_tagline": "HEAVY METAL - BRAZIL",
-    "hero_title": "THE RAW POWER AND INTENSITY OF THREE GUITARS",
-    "hero_desc": "Crushing riffs, razor-sharp solos and towering vocals. Forged in the noble tradition of classic Heavy Metal and contemporary Groove.",
+    "hero_title": "Crushing riffs, razor-sharp solos and towering vocals. Forged in the noble tradition of classic Heavy Metal and contemporary Groove.",
+    "hero_desc": "The raw power and intensity of three guitars.",
     "hero_btn_music": "Listen to Genesis",
     "hero_btn_videos": "Watch Music Videos",
     "hero_btn_contact": "Book the Band",
@@ -418,8 +418,8 @@ const translations = {
 
     // Hero
     "hero_tagline": "HEAVY METAL - BRASIL",
-    "hero_title": "O PESO E A INTENSIDADE DE TRÊS GUITARRAS",
-    "hero_desc": "Composições densas, solos cortantes e vocais vigorosos. Inspirada na tradição do Heavy Metal clássico e no impacto do Groove contemporâneo.",
+    "hero_title": "Composições densas, solos cortantes e vocais vigorosos. Inspirada na tradição do Heavy Metal clássico e no impacto do Groove contemporâneo.",
+    "hero_desc": "O peso e a intensidade de três guitarras.",
     "hero_btn_music": "Ouvir Álbum Genesis",
     "hero_btn_videos": "Assistir Clipes",
     "hero_btn_contact": "Contratar Show",
@@ -818,8 +818,8 @@ const translations = {
 
     // Hero
     "hero_tagline": "HEAVY METAL - BRASIL",
-    "hero_title": "EL PESO Y LA INTENSIDAD DE TRES GUITARRAS",
-    "hero_desc": "Composiciones densas, solos afilados y voces viscerales. Inspirada en la tradición del Heavy Metal clásico y el impacto del Groove contemporáneo.",
+    "hero_title": "Composiciones densas, solos afilados y voces viscerales. Inspirada en la tradición del Heavy Metal clásico y el impacto del Groove contemporáneo.",
+    "hero_desc": "El peso y la intensidad de tres guitarras.",
     "hero_btn_music": "Escuchar Genesis",
     "hero_btn_videos": "Ver Videoclips",
     "hero_btn_contact": "Contratar Show",

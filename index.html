@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=6.9">
+  <link rel="stylesheet" href="assets/css/style.css?v=7.0">
 </head>
 <body>
 
@@ -67,13 +67,81 @@
         <div class="lang-switch-top" id="lang-switcher-fixed">
           <span class="lang-label"><i class="fa-solid fa-globe"></i> <span data-i18n="lang_label">Language:</span></span>
           <button class="lang-btn active" data-lang="en" title="English" aria-label="English">
-            <span class="flag">🇺🇸</span> <span class="lang-code">EN</span>
+            <span class="flag">
+              <svg class="flag-icon" viewBox="0 0 640 480" width="20" height="15" aria-hidden="true">
+                <path fill="#bd3d44" d="M0 0h640v480H0z"/>
+                <path stroke="#fff" stroke-width="37" d="M0 55.5h640M0 129.5h640M0 203.5h640M0 277.5h640M0 351.5h640M0 425.5h640"/>
+                <path fill="#192f5d" d="M0 0h260v259H0z"/>
+                <g fill="#fff">
+                  <g id="us-s6">
+                    <circle cx="26" cy="26" r="7"/>
+                    <circle cx="68" cy="26" r="7"/>
+                    <circle cx="110" cy="26" r="7"/>
+                    <circle cx="152" cy="26" r="7"/>
+                    <circle cx="194" cy="26" r="7"/>
+                    <circle cx="234" cy="26" r="7"/>
+                  </g>
+                  <g id="us-s5">
+                    <circle cx="47" cy="52" r="7"/>
+                    <circle cx="89" cy="52" r="7"/>
+                    <circle cx="131" cy="52" r="7"/>
+                    <circle cx="173" cy="52" r="7"/>
+                    <circle cx="214" cy="52" r="7"/>
+                  </g>
+                  <use href="#us-s6" y="52"/>
+                  <use href="#us-s5" y="52"/>
+                  <use href="#us-s6" y="104"/>
+                  <use href="#us-s5" y="104"/>
+                  <use href="#us-s6" y="156"/>
+                  <use href="#us-s5" y="156"/>
+                  <use href="#us-s6" y="208"/>
+                </g>
+              </svg>
+            </span>
+            <span class="lang-code">EN</span>
           </button>
           <button class="lang-btn" data-lang="pt" title="Português" aria-label="Português">
-            <span class="flag">🇧🇷</span> <span class="lang-code">PT</span>
+            <span class="flag">
+              <svg class="flag-icon" viewBox="0 0 640 480" width="20" height="15" aria-hidden="true">
+                <path fill="#009b3a" d="M0 0h640v480H0z"/>
+                <path fill="#fedf00" d="M320 44L594 240 320 436 46 240z"/>
+                <circle fill="#002776" cx="320" cy="240" r="115"/>
+                <path fill="#fff" d="M206 248c28-44 76-74 132-78 36-2 71 8 98 26-6-2-13-4-20-5-49-7-98 12-128 47-28 32-44 74-45 118-24-30-37-68-37-108z"/>
+                <g fill="#fff">
+                  <circle cx="320" cy="215" r="3.5"/>
+                  <circle cx="305" cy="245" r="3.5"/>
+                  <circle cx="335" cy="245" r="3.5"/>
+                  <circle cx="320" cy="265" r="3.5"/>
+                  <circle cx="328" cy="252" r="2.5"/>
+                  <circle cx="270" cy="250" r="3"/>
+                  <circle cx="370" cy="235" r="3"/>
+                  <circle cx="355" cy="275" r="3"/>
+                </g>
+              </svg>
+            </span>
+            <span class="lang-code">PT</span>
           </button>
           <button class="lang-btn" data-lang="es" title="Español" aria-label="Español">
-            <span class="flag">🇪🇸</span> <span class="lang-code">ES</span>
+            <span class="flag">
+              <svg class="flag-icon" viewBox="0 0 640 480" width="20" height="15" aria-hidden="true">
+                <path fill="#aa151b" d="M0 0h640v480H0z"/>
+                <path fill="#f1bf00" d="M0 120h640v240H0z"/>
+                <g transform="translate(180, 240) scale(0.62)">
+                  <path fill="#aa151b" d="M-36 -72h72l-10 22h-52z"/>
+                  <circle cx="0" cy="-78" r="6" fill="#f1bf00"/>
+                  <circle cx="-32" cy="-74" r="4" fill="#f1bf00"/>
+                  <circle cx="32" cy="-74" r="4" fill="#f1bf00"/>
+                  <path fill="#aa151b" d="M-34 -46h68v50c0 24-34 44-34 44s-34-20-34-44z"/>
+                  <path fill="#f1bf00" d="M-28 -42h28v44h-28zM0 2h28v-44h-28z"/>
+                  <circle cx="0" cy="-18" r="7" fill="#002776"/>
+                  <rect x="-56" y="-55" width="8" height="96" fill="#e2e8f0" rx="2"/>
+                  <rect x="48" y="-55" width="8" height="96" fill="#e2e8f0" rx="2"/>
+                  <path fill="#aa151b" d="M-62 -20h20v14h-20zM42 -20h20v14h-20z"/>
+                  <path fill="#f1bf00" d="M-58 -55h12v-6h-12zM46 -55h12v-6h-12z"/>
+                </g>
+              </svg>
+            </span>
+            <span class="lang-code">ES</span>
           </button>
         </div>
 
@@ -102,9 +170,9 @@
         <!-- Space allowing the imposing band photo & integrated PERSEVERA logo to take center stage -->
         <div class="hero-brand-space" aria-hidden="true"></div>
 
-        <h1 class="hero-title" data-i18n="hero_title">THE RAW POWER AND INTENSITY OF THREE GUITARS</h1>
+        <h1 class="hero-title" data-i18n="hero_title">Crushing riffs, razor-sharp solos and towering vocals. Forged in the noble tradition of classic Heavy Metal and contemporary Groove.</h1>
         <p class="hero-description" data-i18n="hero_desc">
-          Crushing riffs, razor-sharp solos and towering vocals. Forged in the noble tradition of classic Heavy Metal and contemporary Groove.
+          The raw power and intensity of three guitars.
         </p>
 
         <!-- CTAs Hero -->
@@ -888,52 +956,6 @@
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Full Genesis Album Showcase -->
-        <div class="album-full-showcase">
-          <div class="showcase-header">
-            <div class="album-badge" data-i18n="album_badge">DEBUT STUDIO ALBUM</div>
-            <h3 data-i18n="album_full_title">GENESIS (2023) — FULL TRACKLIST</h3>
-            <p data-i18n="album_full_desc">13 tracks forged with sheer power, apocalyptic lyricism and meticulous production.</p>
-          </div>
-          
-          <div class="tracklist-cards-grid">
-            <div class="track-card"><span class="t-idx">01</span><span class="t-name">Iced Hell</span></div>
-            <div class="track-card"><span class="t-idx">02</span><span class="t-name">Oh Lord!</span></div>
-            <div class="track-card"><span class="t-idx">03</span><span class="t-name">A Waste of Time</span></div>
-            <div class="track-card"><span class="t-idx">04</span><span class="t-name">My Curse</span></div>
-            <div class="track-card"><span class="t-idx">05</span><span class="t-name">King of Kings</span></div>
-            <div class="track-card"><span class="t-idx">06</span><span class="t-name">The Flail of God</span></div>
-            <div class="track-card"><span class="t-idx">07</span><span class="t-name">Down from the Sky</span></div>
-            <div class="track-card"><span class="t-idx">08</span><span class="t-name">The Countdown</span></div>
-            <div class="track-card"><span class="t-idx">09</span><span class="t-name">The White Rider</span></div>
-            <div class="track-card"><span class="t-idx">10</span><span class="t-name">The Red Horse</span></div>
-            <div class="track-card"><span class="t-idx">11</span><span class="t-name">Famine</span></div>
-            <div class="track-card"><span class="t-idx">12</span><span class="t-name">Death</span></div>
-            <div class="track-card"><span class="t-idx">13</span><span class="t-name">The Last Horseman</span></div>
-          </div>
-        </div>
-
-        <!-- Upcoming Sophomore Album Showcase -->
-        <div class="album-full-showcase upcoming-album-showcase" style="margin-top: 32px; border-color: rgba(229, 9, 20, 0.4); background: linear-gradient(135deg, rgba(20, 20, 22, 0.96), rgba(35, 12, 14, 0.92));">
-          <div class="showcase-header">
-            <div class="album-badge" style="background: linear-gradient(135deg, #e50914, #ff3b30); color: #fff; box-shadow: 0 0 15px rgba(229, 9, 20, 0.5);" data-i18n="album2_badge">IN PRODUCTION • 2026+</div>
-            <h3 data-i18n="album2_title">SECOND STUDIO ALBUM (UPCOMING)</h3>
-            <p data-i18n="album2_desc">Fronted by new lead vocalist <strong>Luis Carlos</strong> with Persevera's triple-guitar onslaught. 12 tracks currently in studio tracking and production.</p>
-          </div>
-          
-          <div class="tracklist-cards-grid">
-            <div class="track-card" style="border-left-color: #e50914;"><span class="t-idx" style="color: #e50914;"><i class="fa-solid fa-fire"></i></span><span class="t-name">War is Hell <small style="color: #e50914; font-size: 0.75rem; font-weight: 700; margin-left: 6px;" data-i18n="album2_single_tag">[NEW SINGLE]</small></span></div>
-            <div class="track-card"><span class="t-idx">02</span><span class="t-name">Master</span></div>
-            <div class="track-card"><span class="t-idx">03</span><span class="t-name">Broken World <small style="color: #ffaa00; font-size: 0.75rem; font-weight: 600; margin-left: 6px;" data-i18n="album2_clip_tag">[OFFICIAL VIDEO]</small></span></div>
-            <div class="track-card"><span class="t-idx">04</span><span class="t-name">To the Unknown <small style="color: #ffaa00; font-size: 0.75rem; font-weight: 600; margin-left: 6px;" data-i18n="album2_clip_tag">[OFFICIAL VIDEO]</small></span></div>
-            <div class="track-card"><span class="t-idx">05</span><span class="t-name">The Chosen Son</span></div>
-            <div class="track-card"><span class="t-idx">06</span><span class="t-name">Selling My Soul <small style="color: #aaa; font-size: 0.75rem; margin-left: 6px;" data-i18n="album2_tribute_tag">[BLACK SABBATH TRIBUTE]</small></span></div>
-            <div class="track-card"><span class="t-idx">07</span><span class="t-name">Sad But True <small style="color: #aaa; font-size: 0.75rem; margin-left: 6px;" data-i18n="album2_metallica_tag">[METALLICA TRIBUTE]</small></span></div>
-            <div class="track-card"><span class="t-idx">08</span><span class="t-name">In Ancient Times</span></div>
-            <div class="track-card" style="border-left-color: #ffaa00;"><span class="t-idx" style="color: #ffaa00;"><i class="fa-solid fa-compact-disc"></i></span><span class="t-name" data-i18n="album2_tba_tracks">+ 4 New Tracks in Studio</span></div>
           </div>
         </div>
 
@@ -2176,8 +2198,8 @@
   </button>
 
   <!-- Scripts -->
-  <script src="assets/js/translations.js?v=6.9"></script>
-  <script src="assets/js/lyrics-data.js?v=6.9"></script>
-  <script src="assets/js/main.js?v=6.9"></script>
+  <script src="assets/js/translations.js?v=7.0"></script>
+  <script src="assets/js/lyrics-data.js?v=7.0"></script>
+  <script src="assets/js/main.js?v=7.0"></script>
 </body>
 </html>
