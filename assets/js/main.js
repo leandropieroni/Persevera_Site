@@ -310,6 +310,12 @@ document.addEventListener('DOMContentLoaded', () => {
     { title: 'Famine', album: 'Genesis (2023)', src: 'assets/audio/11-famine.mp3?v=4.4', cover: 'assets/images/tracks/11-famine.jpg' },
     { title: 'Death', album: 'Genesis (2023)', src: 'assets/audio/12-death.mp3?v=4.4', cover: 'assets/images/tracks/12-death.png' },
     { title: 'The Last Horseman', album: 'Genesis (2023)', src: 'assets/audio/13-the-last-horseman.mp3?v=4.4', cover: 'assets/images/tracks/13-the-last-horseman.jpg' },
+    // Singles (2nd Album - 5 Tracks)
+    { title: 'Broken World', album: '2º Álbum • 2026+', src: 'assets/audio/singles/01-broken-world.mp3?v=7.8', cover: 'assets/images/singles/01-broken-world.jpg' },
+    { title: 'To the Unknown', album: '2º Álbum • 2026+', src: 'assets/audio/singles/02-to-the-unknown.mp3?v=7.8', cover: 'assets/images/singles/02-to-the-unknown.jpg' },
+    { title: 'For the Ancient One', album: '2º Álbum • 2026+', src: 'assets/audio/singles/03-for-the-ancient-one.mp3?v=7.8', cover: 'assets/images/singles/03-for-the-ancient-one.jpg' },
+    { title: 'The Chosen Son', album: '2º Álbum • 2026+', src: 'assets/audio/singles/04-the-chosen-son.mp3?v=7.8', cover: 'assets/images/singles/04-the-chosen-son.jpg' },
+    { title: 'For the Greater Good', album: '2º Álbum • 2026+', src: 'assets/audio/singles/05-for-the-greater-good.mp3?v=7.8', cover: 'assets/images/singles/05-for-the-greater-good.jpg' },
     // Official Covers & Tributes
     { title: 'Sad But True', album: 'Tributo Oficial', src: 'assets/audio/sad-but-true.mp3?v=4.4', cover: 'assets/images/tracks/sad-but-true.jpg' },
     { title: 'Selling My Soul', album: 'Tributo Oficial', src: 'assets/audio/selling-my-soul.mp3?v=4.4', cover: 'assets/images/tracks/selling-my-soul.jpg' }
@@ -371,17 +377,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateCardPlayButtons() {
     const activeTrack = tracks[currentTrackIndex];
+    const tDict = (typeof translations !== 'undefined' ? translations : (typeof window !== 'undefined' ? window.translations : null));
+    const playLabel = (tDict && tDict[currentLang] && tDict[currentLang].btn_play_track) ? tDict[currentLang].btn_play_track : 'Play Track';
+    const pauseLabel = (tDict && tDict[currentLang] && tDict[currentLang].btn_pause_track) ? tDict[currentLang].btn_pause_track : 'Pause';
     document.querySelectorAll('.btn-play-track').forEach(btn => {
       const btnTitle = btn.getAttribute('data-title');
       const icon = btn.querySelector('i');
       const label = btn.querySelector('span');
       if (activeTrack && btnTitle && btnTitle.toLowerCase() === activeTrack.title.toLowerCase()) {
         if (icon) icon.className = isPlaying ? 'fa-solid fa-pause' : 'fa-solid fa-play';
-        if (label) label.textContent = isPlaying ? 'Pausar' : 'Ouvir Faixa';
+        if (label) label.textContent = isPlaying ? pauseLabel : playLabel;
         btn.closest('.geomind-card')?.classList.toggle('playing', isPlaying);
       } else {
         if (icon) icon.className = 'fa-solid fa-play';
-        if (label) label.textContent = 'Ouvir Faixa';
+        if (label) label.textContent = playLabel;
         btn.closest('.geomind-card')?.classList.remove('playing');
       }
     });
