@@ -5683,4 +5683,104 @@ body {
     font-size: 1.65rem !important;
     background: transparent !important;
   }
+
+  /* 5. Music Section on Mobile: Join Track Card & Spinning Disc Player Card + Hide Track Description */
+  .geomind-desc {
+    display: none !important;
+  }
+
+  .geomind-carousel-wrapper {
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .geomind-viewport {
+    padding: 0 !important;
+    border-radius: 16px 16px 0 0 !important;
+  }
+
+  .geomind-card {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    border-radius: 16px 16px 0 0 !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+  }
+
+  .geomind-card:hover {
+    transform: none !important;
+  }
+
+  .geomind-card-art {
+    height: 225px !important;
+  }
+
+  .geomind-arrow {
+    top: 112px !important;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1rem !important;
+  }
+
+  .geomind-arrow.prev {
+    left: 10px !important;
+  }
+
+  .geomind-arrow.next {
+    right: 10px !important;
+  }
+
+  .geomind-card-body {
+    padding: 0.7rem 1rem 0.5rem !important;
+    flex: 0 0 auto !important;
+    gap: 0.35rem !important;
+  }
+
+  .geomind-card-action {
+    padding: 0 1rem 0.75rem !important;
+  }
+
+  .geomind-card-btn {
+    padding: 0.62rem 1rem !important;
+    font-size: 0.84rem !important;
+  }
+
+  .geomind-indicator-wrap {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 0.35rem 1rem 0.55rem !important;
+    background: #0d0f15 !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .unified-audio-player-card {
+    margin-top: 0 !important;
+    margin-bottom: 1.5rem !important;
+    border-radius: 0 0 16px 16px !important;
+    border-top: 1px solid rgba(0, 212, 255, 0.22) !important;
+    padding: 0.85rem 1rem 1rem !important;
+    gap: 0.65rem !important;
+    background: linear-gradient(180deg, #0d0f15 0%, #131822 100%) !important;
+  }
+
+  .player-bar-left {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 0.45rem !important;
+  }
+
+  .disc-vinyl-wrapper {
+    width: 84px !important;
+    height: 84px !important;
+  }
+
+  .player-bar-title {
+    font-size: 1.05rem !important;
+  }
+
+  .player-bar-center {
+    gap: 0.45rem !important;
+  }
 }

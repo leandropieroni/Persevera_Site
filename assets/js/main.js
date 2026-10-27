@@ -514,7 +514,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
 
     function getVisibleCards() {
-      if (window.innerWidth <= 640) return 1;
+      if (window.innerWidth <= 768) return 1;
       if (window.innerWidth <= 992) return 2;
       return 3;
     }
