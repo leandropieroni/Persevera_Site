@@ -12,7 +12,7 @@ const translations = {
     "nav_videos": "Videos",
     "nav_band": "The Band",
     "nav_shows": "Tour",
-    "nav_gallery": "Behind the Scenes",
+    "nav_gallery": "Inside the Forge",
     "nav_merch": "Merch",
     "nav_contact": "Contact",
 
@@ -295,8 +295,8 @@ const translations = {
     "booking_banner_btn": "Email Production",
 
     // Behind the Scenes
-    "gallery_subtitle": "STUDIO & BACKSTAGE ARCHIVES",
-    "gallery_title": "BEHIND THE SCENES",
+    "gallery_subtitle": "BEHIND THE SCENES & STUDIO ARCHIVES",
+    "gallery_title": "INSIDE THE FORGE",
     "gallery_desc": "Unfiltered black-and-white footage from studio tracking, rehearsals, arrangements and the creative forge of Persevera.",
     "bts_playing_badge": "STUDIO ARCHIVE",
     "btstab_all": "ALL ARCHIVES",
@@ -816,8 +816,8 @@ const translations = {
     "booking_banner_btn": "Enviar E-mail para a Produção",
 
     // Behind the Scenes
-    "gallery_subtitle": "ARQUIVOS DE ESTÚDIO & BASTIDORES",
-    "gallery_title": "BEHIND THE SCENES",
+    "gallery_subtitle": "BASTIDORES & ARQUIVOS DE ESTÚDIO",
+    "gallery_title": "INSIDE THE FORGE",
     "gallery_desc": "Registros exclusivos em preto e branco das sessões de gravação em estúdio, criação de arranjos, solos e bastidores da Persevera.",
     "bts_playing_badge": "ARQUIVO DE ESTÚDIO",
     "btstab_all": "TODOS OS REGISTROS",
@@ -1337,8 +1337,8 @@ const translations = {
     "booking_banner_btn": "Enviar Email a Producción",
 
     // Behind the Scenes
-    "gallery_subtitle": "ARCHIVOS DE ESTUDIO Y BACKSTAGE",
-    "gallery_title": "BEHIND THE SCENES",
+    "gallery_subtitle": "DETRÁS DE ESCENA Y ARCHIVOS DE ESTUDIO",
+    "gallery_title": "INSIDE THE FORGE",
     "gallery_desc": "Registros exclusivos en blanco y negro de las sesiones de grabación en estudio, arreglos, solos y el detrás de escena de Persevera.",
     "bts_playing_badge": "ARCHIVO DE ESTUDIO",
     "btstab_all": "TODOS LOS ARCHIVOS",
