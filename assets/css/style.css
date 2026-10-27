@@ -5649,7 +5649,7 @@ body {
     flex-shrink: 0 !important;
   }
 
-  /* 4. Official Channels (Contact Section): Clean Icon-Only Row on Mobile */
+  /* 4. Official Channels (Contact Section): Clean Grayscale Icon-Only Row on Mobile */
   .official-channels-grid {
     display: grid !important;
     grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
@@ -5666,16 +5666,15 @@ body {
     align-items: center !important;
     padding: 0.65rem 0.25rem !important;
     height: 58px !important;
-    border-radius: 10px !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid var(--border-metal) !important;
+    border-radius: 8px !important;
     box-sizing: border-box !important;
+    box-shadow: none !important;
   }
 
   .channel-card::before {
-    top: auto !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 3px !important;
+    display: none !important;
   }
 
   .channel-text,
@@ -5683,11 +5682,31 @@ body {
     display: none !important;
   }
 
-  .channel-icon {
+  .channel-card .channel-icon,
+  .channel-card.channel-spotify .channel-icon,
+  .channel-card.channel-youtube .channel-icon,
+  .channel-card.channel-instagram .channel-icon,
+  .channel-card.channel-facebook .channel-icon {
     width: 42px !important;
     height: 42px !important;
     font-size: 1.65rem !important;
+    color: var(--text-muted) !important;
     background: transparent !important;
+  }
+
+  .channel-card:hover,
+  .channel-card:active {
+    border-color: var(--primary-blue) !important;
+    box-shadow: 0 0 15px var(--primary-blue-glow) !important;
+  }
+
+  .channel-card:hover .channel-icon,
+  .channel-card:active .channel-icon {
+    color: var(--primary-blue) !important;
+  }
+
+  .contact-card-footer-meta {
+    display: none !important;
   }
 
   /* 5. Music Section on Mobile: Join Track Card & Spinning Disc Player Card + Hide Track Description */
@@ -5821,6 +5840,7 @@ body {
 
   .contact-secondary-email {
     padding: 0.75rem 0.8rem !important;
+    margin-bottom: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
