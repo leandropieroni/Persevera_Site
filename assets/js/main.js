@@ -1616,4 +1616,31 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Press Carousel
   initPressCarousel();
 
+  // ==========================================
+  // MOBILE RETRACTABLE HISTORY TIMELINE
+  // ==========================================
+  const btnTimelineToggle = document.getElementById('btn-timeline-toggle');
+  const btnTimelineToggleText = document.getElementById('btn-timeline-toggle-text');
+  const historyTimeline = document.getElementById('history-timeline');
+
+  function updateTimelineToggleLabel(expanded) {
+    if (!btnTimelineToggleText) return;
+    const key = expanded ? 'btn_timeline_collapse' : 'btn_timeline_expand';
+    btnTimelineToggleText.setAttribute('data-i18n', key);
+    const tDict = (typeof translations !== 'undefined' ? translations : window.translations);
+    if (tDict && tDict[currentLang] && tDict[currentLang][key]) {
+      btnTimelineToggleText.textContent = tDict[currentLang][key];
+    }
+  }
+
+  if (btnTimelineToggle && historyTimeline) {
+    btnTimelineToggle.addEventListener('click', () => {
+      const isExpanded = historyTimeline.classList.toggle('mobile-expanded');
+      btnTimelineToggle.classList.toggle('active', isExpanded);
+      btnTimelineToggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+      updateTimelineToggleLabel(isExpanded);
+    });
+  }
+
+
 });

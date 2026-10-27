@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=8.1">
+  <link rel="stylesheet" href="assets/css/style.css?v=8.2">
 </head>
 <body>
 
@@ -1320,8 +1320,20 @@
             <cite data-i18n="quote_author">— <strong>Danilo Bredda</strong>, in press interviews</cite>
           </div>
 
+          <!-- Mobile Retractable Timeline Toggle Button (Hidden on Desktop/Notebook) -->
+          <div class="timeline-mobile-toggle-wrap">
+            <button type="button" class="btn-timeline-toggle" id="btn-timeline-toggle" aria-expanded="false">
+              <span class="tl-toggle-left">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span id="btn-timeline-toggle-text" data-i18n="btn_timeline_expand">Ver Cronologia da História (2020 – 2026+)</span>
+              </span>
+              <span class="tl-toggle-years-preview">2020 &bull; 2021 &bull; 2023 &bull; 2024 &bull; 2026+</span>
+              <i class="fa-solid fa-chevron-down tl-toggle-chevron" id="tl-toggle-chevron"></i>
+            </button>
+          </div>
+
           <!-- Historical Timeline -->
-          <div class="history-timeline">
+          <div class="history-timeline" id="history-timeline">
             
             <!-- Step 1 -->
             <div class="timeline-step">
@@ -2618,8 +2630,8 @@
   </button>
 
   <!-- Scripts -->
-  <script src="assets/js/translations.js?v=8.1"></script>
-  <script src="assets/js/lyrics-data.js?v=8.1"></script>
-  <script src="assets/js/main.js?v=8.1"></script>
+  <script src="assets/js/translations.js?v=8.2"></script>
+  <script src="assets/js/lyrics-data.js?v=8.2"></script>
+  <script src="assets/js/main.js?v=8.2"></script>
 </body>
 </html>

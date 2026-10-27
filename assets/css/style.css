@@ -5268,3 +5268,250 @@ body:has(.metal-news-ticker.is-minimized) .floating-mini-player {
     align-items: center;
   }
 }
+
+
+/* ==========================================================================
+   MOBILE-ONLY SPECIFIC REFINEMENTS (<= 768px)
+   1. Top-right menu button & full language switcher without clipping
+   2. Uncropped full-width Hero cover photo (band-hero.jpg)
+   3. Retractable Band History Timeline on mobile
+   4. Streaming Hub header vertical alignment on mobile
+   ========================================================================== */
+
+/* Hide mobile timeline toggle button on Desktop & Notebook (> 768px) */
+.timeline-mobile-toggle-wrap {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* 1. Navbar: Logo + 3 Language Flags (EN/PT/ES) + Top-Right Menu Button (No clipping) */
+  .nav-container {
+    padding: 0.45rem 0.65rem !important;
+    gap: 0.35rem !important;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .nav-brand {
+    padding-right: 0 !important;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .nav-brand .brand-logo {
+    height: 27px !important;
+    max-width: 112px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* Hide top-bar Spotify button on mobile so Language Flags + Menu Button fit 100% comfortably */
+  .nav-actions .btn-spotify {
+    display: none !important;
+  }
+
+  .nav-actions {
+    gap: 0.35rem !important;
+    margin-left: auto;
+    flex-shrink: 0;
+    align-items: center;
+  }
+
+  .lang-switch-top {
+    padding: 0.14rem 0.26rem !important;
+    gap: 0.1rem !important;
+    margin-left: 0 !important;
+    border-radius: 16px;
+  }
+
+  .lang-switch-top .lang-label {
+    display: none !important;
+  }
+
+  .lang-btn {
+    padding: 0.16rem 0.3rem !important;
+    font-size: 0.66rem !important;
+    gap: 0.16rem !important;
+    border-radius: 12px;
+  }
+
+  .lang-btn .flag-icon {
+    width: 14px !important;
+    height: 10px !important;
+  }
+
+  /* Prominent Top-Right Corner Menu Button */
+  .nav-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    flex-shrink: 0;
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.55);
+    color: var(--primary-blue);
+    border-radius: 6px;
+    font-size: 1.15rem;
+    box-shadow: 0 0 12px rgba(0, 212, 255, 0.25);
+  }
+
+  .nav-menu {
+    top: 52px !important;
+    max-height: calc(100dvh - 52px) !important;
+    padding: 1.25rem 1.5rem !important;
+  }
+
+  /* 2. Hero Cover Photo: Show full 6-member photo across 100% width without side cropping */
+  .hero-section {
+    min-height: auto !important;
+    padding: 0.65rem 1rem 2.6rem !important;
+    background-size: 100% auto !important;
+    background-position: center 42px !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(7, 8, 10, 0.88) 0px,
+        rgba(7, 8, 10, 0.22) 42px,
+        transparent 80px,
+        transparent calc(42px + 38vw),
+        rgba(7, 8, 10, 0.88) calc(42px + 52vw),
+        var(--bg-dark) calc(42px + 58vw)
+      ) !important;
+  }
+
+  .hero-top-badge-wrapper {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .hero-tagline-badge {
+    font-size: 0.7rem !important;
+    padding: 0.28rem 0.85rem !important;
+    letter-spacing: 1.4px !important;
+  }
+
+  /* Space reserved for the uncropped 16:9 band photo + logo before the title text begins */
+  .hero-brand-space {
+    height: 55vw !important;
+    min-height: 195px !important;
+    max-height: 290px !important;
+  }
+
+  .hero-title {
+    font-size: 1.12rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  .hero-description {
+    font-size: 0.92rem !important;
+    letter-spacing: 1.5px !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .hero-cta-group {
+    gap: 0.75rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* 3. Retractable Band History Timeline on Mobile */
+  .timeline-mobile-toggle-wrap {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-timeline-toggle {
+    width: 100%;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.12), rgba(15, 19, 28, 0.95));
+    border: 1px solid rgba(0, 212, 255, 0.45);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.15rem;
+    color: #fff;
+    font-family: var(--font-metal);
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 212, 255, 0.15);
+    transition: all 0.25s ease;
+    position: relative;
+  }
+
+  .btn-timeline-toggle .tl-toggle-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: #fff;
+  }
+
+  .btn-timeline-toggle .tl-toggle-left i {
+    color: var(--primary-blue);
+    font-size: 1.05rem;
+  }
+
+  .btn-timeline-toggle .tl-toggle-years-preview {
+    font-family: var(--font-sub);
+    font-size: 0.76rem;
+    color: var(--primary-blue);
+    letter-spacing: 1.2px;
+    font-weight: 700;
+  }
+
+  .btn-timeline-toggle .tl-toggle-chevron {
+    color: var(--primary-blue);
+    font-size: 0.9rem;
+    margin-top: 2px;
+    transition: transform 0.3s ease;
+  }
+
+  .btn-timeline-toggle.active {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.22), rgba(15, 19, 28, 0.98));
+    border-color: var(--primary-blue);
+  }
+
+  .btn-timeline-toggle.active .tl-toggle-chevron {
+    transform: rotate(180deg);
+  }
+
+  .history-timeline {
+    display: none !important;
+    margin-top: 1.2rem;
+    margin-bottom: 2.8rem;
+  }
+
+  .history-timeline.mobile-expanded {
+    display: flex !important;
+    animation: fadeInTimeline 0.35s ease;
+  }
+
+  @keyframes fadeInTimeline {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* 4. Streaming Hub Header: Stack vertically on mobile instead of squishing in 3 columns */
+  .hub-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.55rem !important;
+    text-align: left;
+  }
+}

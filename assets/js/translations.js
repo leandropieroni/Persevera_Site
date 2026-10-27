@@ -218,6 +218,12 @@ const translations = {
     "quote_danilo": "\"I wanted a name that wasn't a metal cliché, something that evoked <strong>perseverance</strong> — the resilience to never surrender in the face of adversity and the determination to forge an enduring musical body of work capable of standing the test of time.\"",
     "quote_author": "— <strong>Danilo Bredda</strong>, in press interviews",
     
+    "btn_timeline_expand": "Explore Band Timeline (2020 – 2026+)",
+    "btn_timeline_collapse": "Hide Band Timeline",
+    "btn_timeline_expand": "Ver Cronologia da História (2020 – 2026+)",
+    "btn_timeline_collapse": "Recolher Cronologia da História",
+    "btn_timeline_expand": "Ver Cronología de la Historia (2020 – 2026+)",
+    "btn_timeline_collapse": "Ocultar Cronología de la Historia",
     "tl_step1_year": "2020",
     "tl_step1_title": "The Solitary Genesis & 25 Tracks on the Loop Station",
     "tl_step1_desc": "Persevera's story began far from the spotlight through pure passion for Heavy Metal. Guitarist <strong>Danilo Bredda</strong> spent years crafting riffs, melodies and full arrangements using only his guitar connected to <em>loop station</em> pedals. Upon completing the 25th instrumental track, he decided this body of work needed a professional studio recording.",
