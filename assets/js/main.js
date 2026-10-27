@@ -773,74 +773,79 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Initialize default cover video (Broken World) seamlessly on both file:// and https://
-  const initialActiveVideoCard = document.querySelector('.video-card.active') || document.querySelector('.video-card');
+  const initialActiveVideoCard = document.querySelector('#videos .video-card.active') || document.querySelector('#videos .video-card');
   if (initialActiveVideoCard && isLocalFileProtocol) {
     loadVideoInTheater(initialActiveVideoCard, false);
   }
-  const videoCards = document.querySelectorAll('.video-card');
-  const videoTabBtns = document.querySelectorAll('.video-tab-btn');
+  const videoCards = document.querySelectorAll('#videos .video-card');
+  const videoTabBtns = document.querySelectorAll('#videos .video-tab-btn');
 
-  // Video Carousel Navigation Arrows & Drag/Scroll Engine
-  const vViewport = document.getElementById('vcarousel-viewport');
-  const vPrevBtn = document.getElementById('vcarousel-prev');
-  const vNextBtn = document.getElementById('vcarousel-next');
+  // Helper to wire up any horizontal video carousel viewport + arrows + drag
+  function setupHorizontalVideoCarousel(viewportId, prevBtnId, nextBtnId) {
+    const vp = document.getElementById(viewportId);
+    const prev = document.getElementById(prevBtnId);
+    const next = document.getElementById(nextBtnId);
 
-  function updateVideoArrows() {
-    if (!vViewport || !vPrevBtn || !vNextBtn) return;
-    const maxScroll = vViewport.scrollWidth - vViewport.clientWidth - 2;
-    vPrevBtn.disabled = vViewport.scrollLeft <= 5;
-    vNextBtn.disabled = vViewport.scrollLeft >= maxScroll;
+    function updateArrows() {
+      if (!vp || !prev || !next) return;
+      const maxScroll = vp.scrollWidth - vp.clientWidth - 2;
+      prev.disabled = vp.scrollLeft <= 5;
+      next.disabled = vp.scrollLeft >= maxScroll;
+    }
+
+    if (vp && prev && next) {
+      prev.addEventListener('click', (e) => {
+        e.preventDefault();
+        const scrollAmt = Math.max(220, vp.clientWidth * 0.75);
+        vp.scrollBy({ left: -scrollAmt, behavior: 'smooth' });
+      });
+
+      next.addEventListener('click', (e) => {
+        e.preventDefault();
+        const scrollAmt = Math.max(220, vp.clientWidth * 0.75);
+        vp.scrollBy({ left: scrollAmt, behavior: 'smooth' });
+      });
+
+      vp.addEventListener('scroll', updateArrows, { passive: true });
+      window.addEventListener('resize', updateArrows);
+      setTimeout(updateArrows, 200);
+
+      let isDown = false;
+      let startX = 0;
+      let scrollStart = 0;
+
+      vp.addEventListener('mousedown', (e) => {
+        isDown = true;
+        vp.classList.add('is-dragging');
+        startX = e.pageX - vp.offsetLeft;
+        scrollStart = vp.scrollLeft;
+      });
+
+      vp.addEventListener('mouseleave', () => {
+        isDown = false;
+        vp.classList.remove('is-dragging');
+      });
+
+      vp.addEventListener('mouseup', () => {
+        isDown = false;
+        setTimeout(() => vp.classList.remove('is-dragging'), 50);
+      });
+
+      vp.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - vp.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        vp.scrollLeft = scrollStart - walk;
+      });
+    }
+
+    return { vp, updateArrows };
   }
 
-  if (vViewport && vPrevBtn && vNextBtn) {
-    vPrevBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const scrollAmt = Math.max(220, vViewport.clientWidth * 0.75);
-      vViewport.scrollBy({ left: -scrollAmt, behavior: 'smooth' });
-    });
+  // 3A. Official Music Videos Carousel (#videos)
+  const mainVideoCarousel = setupHorizontalVideoCarousel('vcarousel-viewport', 'vcarousel-prev', 'vcarousel-next');
 
-    vNextBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const scrollAmt = Math.max(220, vViewport.clientWidth * 0.75);
-      vViewport.scrollBy({ left: scrollAmt, behavior: 'smooth' });
-    });
-
-    vViewport.addEventListener('scroll', updateVideoArrows, { passive: true });
-    window.addEventListener('resize', updateVideoArrows);
-    setTimeout(updateVideoArrows, 200);
-
-    // Mouse drag-to-scroll support for desktop
-    let isDown = false;
-    let startX = 0;
-    let scrollStart = 0;
-
-    vViewport.addEventListener('mousedown', (e) => {
-      isDown = true;
-      vViewport.classList.add('is-dragging');
-      startX = e.pageX - vViewport.offsetLeft;
-      scrollStart = vViewport.scrollLeft;
-    });
-
-    vViewport.addEventListener('mouseleave', () => {
-      isDown = false;
-      vViewport.classList.remove('is-dragging');
-    });
-
-    vViewport.addEventListener('mouseup', () => {
-      isDown = false;
-      setTimeout(() => vViewport.classList.remove('is-dragging'), 50);
-    });
-
-    vViewport.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - vViewport.offsetLeft;
-      const walk = (x - startX) * 1.5;
-      vViewport.scrollLeft = scrollStart - walk;
-    });
-  }
-
-  // Category Filter Tabs
   videoTabBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -848,7 +853,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
       const filter = btn.getAttribute('data-filter');
 
-      document.querySelectorAll('.video-card').forEach(card => {
+      videoCards.forEach(card => {
         const cat = card.getAttribute('data-category') || '';
         const cats = cat.split(/\s+/);
         if (filter === 'all' || cats.includes(filter)) {
@@ -858,27 +863,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // Reset carousel scroll position to beginning and update arrows
-      if (vViewport) {
-        vViewport.scrollTo({ left: 0, behavior: 'smooth' });
-        setTimeout(updateVideoArrows, 250);
+      if (mainVideoCarousel.vp) {
+        mainVideoCarousel.vp.scrollTo({ left: 0, behavior: 'smooth' });
+        setTimeout(mainVideoCarousel.updateArrows, 250);
       }
     });
   });
 
-  // Video card click listener
   videoCards.forEach((card) => {
     card.addEventListener('click', () => {
-      const videoId = card.getAttribute('data-videoid');
       const title = card.getAttribute('data-title') || card.querySelector('h4')?.textContent;
       const descKey = card.getAttribute('data-desc-key');
       const titleKey = card.getAttribute('data-title-key');
       const desc = card.getAttribute('data-desc');
 
-      // Update video theater source (handles both YouTube oEmbed and local/Drive fallback)
       loadVideoInTheater(card, true);
 
-      // Update text
       if (videoCurrentTitle) {
         if (titleKey) videoCurrentTitle.setAttribute('data-i18n', titleKey);
         if (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang][titleKey]) {
@@ -897,16 +897,89 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      // Update active class
-      document.querySelectorAll('.video-card').forEach(c => c.classList.remove('active'));
+      videoCards.forEach(c => c.classList.remove('active'));
       card.classList.add('active');
 
-      // Ensure clicked card is comfortably visible in the single row
       card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
 
-      // Scroll smoothly to video theater if on small screens
       if (window.innerWidth < 768) {
-        const theater = document.querySelector('.video-theater-container');
+        const theater = document.querySelector('#videos .video-theater-container');
+        if (theater) theater.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // ==========================================
+  // 3B. BEHIND THE SCENES VIDEO THEATER & CAROUSEL (#galeria)
+  // ==========================================
+  const btsIframe = document.getElementById('bts-video-iframe');
+  const btsCurrentTitle = document.getElementById('bts-current-title');
+  const btsCurrentDesc = document.getElementById('bts-current-desc');
+  const btsCards = document.querySelectorAll('#galeria .bts-card');
+  const btsTabBtns = document.querySelectorAll('#galeria .bts-tab-btn');
+  const btsCarousel = setupHorizontalVideoCarousel('btscarousel-viewport', 'btscarousel-prev', 'btscarousel-next');
+
+  btsTabBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      btsTabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+
+      btsCards.forEach(card => {
+        const cat = card.getAttribute('data-category') || '';
+        const cats = cat.split(/\s+/);
+        if (filter === 'all' || cats.includes(filter)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (btsCarousel.vp) {
+        btsCarousel.vp.scrollTo({ left: 0, behavior: 'smooth' });
+        setTimeout(btsCarousel.updateArrows, 250);
+      }
+    });
+  });
+
+  btsCards.forEach((card) => {
+    card.addEventListener('click', () => {
+      const embedUrl = card.getAttribute('data-embed-url');
+      const title = card.getAttribute('data-title') || card.querySelector('h4')?.textContent;
+      const descKey = card.getAttribute('data-desc-key');
+      const titleKey = card.getAttribute('data-title-key');
+      const desc = card.getAttribute('data-desc');
+
+      if (btsIframe && embedUrl) {
+        btsIframe.src = embedUrl;
+      }
+
+      if (btsCurrentTitle) {
+        if (titleKey) btsCurrentTitle.setAttribute('data-i18n', titleKey);
+        if (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang][titleKey]) {
+          btsCurrentTitle.textContent = translations[currentLang][titleKey];
+        } else {
+          btsCurrentTitle.textContent = title;
+        }
+      }
+
+      if (btsCurrentDesc) {
+        if (descKey) btsCurrentDesc.setAttribute('data-i18n', descKey);
+        if (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang][descKey]) {
+          btsCurrentDesc.textContent = translations[currentLang][descKey];
+        } else {
+          btsCurrentDesc.textContent = desc || '';
+        }
+      }
+
+      btsCards.forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+
+      if (window.innerWidth < 768) {
+        const theater = document.getElementById('bts-theater-container');
         if (theater) theater.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
@@ -965,7 +1038,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const videoTitle = document.getElementById('video-current-title');
       const videoSection = document.getElementById('videos');
       
-      const targetCard = document.querySelector(`.video-card[data-videoid="${videoId}"]`);
+      const targetCard = document.querySelector(`#videos .video-card[data-videoid="${videoId}"]`);
       if (targetCard) {
         loadVideoInTheater(targetCard, true);
       } else if (mainIframe) {
@@ -980,15 +1053,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Reset filter tabs so the matching video is visible
-      const allFilterBtn = document.querySelector('.video-tab-btn[data-filter="all"]');
+      const allFilterBtn = document.querySelector('#videos .video-tab-btn[data-filter="all"]');
       if (allFilterBtn) {
-        document.querySelectorAll('.video-tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('#videos .video-tab-btn').forEach(b => b.classList.remove('active'));
         allFilterBtn.classList.add('active');
-        document.querySelectorAll('.video-card').forEach(c => c.classList.remove('hidden'));
+        document.querySelectorAll('#videos .video-card').forEach(c => c.classList.remove('hidden'));
       }
 
       // Activate matching card in theater and update description
-      document.querySelectorAll('.video-card').forEach(card => {
+      document.querySelectorAll('#videos .video-card').forEach(card => {
         if (card.getAttribute('data-videoid') === videoId) {
           card.classList.add('active');
           const titleKey = card.getAttribute('data-title-key');
