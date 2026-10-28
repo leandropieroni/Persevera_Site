@@ -867,13 +867,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (vp && prev && next) {
       prev.addEventListener('click', (e) => {
         e.preventDefault();
-        const scrollAmt = Math.max(220, vp.clientWidth * 0.75);
+        const scrollAmt = window.innerWidth <= 768 ? vp.clientWidth : Math.max(220, vp.clientWidth * 0.75);
         vp.scrollBy({ left: -scrollAmt, behavior: 'smooth' });
       });
 
       next.addEventListener('click', (e) => {
         e.preventDefault();
-        const scrollAmt = Math.max(220, vp.clientWidth * 0.75);
+        const scrollAmt = window.innerWidth <= 768 ? vp.clientWidth : Math.max(220, vp.clientWidth * 0.75);
         vp.scrollBy({ left: scrollAmt, behavior: 'smooth' });
       });
 
