@@ -1785,5 +1785,156 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ==========================================
+  // COOKIE CONSENT & PRIVACY POLICY (LGPD)
+  // ==========================================
+  const cookieBanner = document.getElementById('cookie-consent-banner');
+  const btnCookieAccept = document.getElementById('btn-cookie-accept');
+  const btnCookieNecessary = document.getElementById('btn-cookie-necessary');
+  const cookieBannerPolicyLink = document.getElementById('cookie-banner-policy-link');
+
+  const privacyModal = document.getElementById('privacy-modal');
+  const privacyBackdrop = document.getElementById('privacy-backdrop');
+  const privacyClose = document.getElementById('privacy-close');
+  const btnPrivacyCloseFooter = document.getElementById('btn-privacy-close-footer');
+  const footerPrivacyBtn = document.getElementById('footer-privacy-btn');
+  const contactPrivacyLink = document.getElementById('contact-privacy-link');
+
+  function updateCookieStatusBadge() {
+    const badge = document.getElementById('privacy-current-status-badge');
+    if (!badge) return;
+    let consent = null;
+    try {
+      consent = localStorage.getItem('cookie_consent');
+    } catch (e) {}
+
+    const tDict = (typeof translations !== 'undefined' ? translations : (typeof window !== 'undefined' ? window.translations : null));
+    let label = 'Apenas Necessários';
+    if (consent === 'all') {
+      label = (tDict && tDict[currentLang] && tDict[currentLang].cookie_status_accepted) || 'Todos Aceitos';
+      badge.style.color = '#00d4ff';
+      badge.style.borderColor = 'rgba(0, 212, 255, 0.4)';
+      badge.style.background = 'rgba(0, 212, 255, 0.15)';
+    } else if (consent === 'necessary') {
+      label = (tDict && tDict[currentLang] && tDict[currentLang].cookie_status_necessary) || 'Apenas Necessários';
+      badge.style.color = '#e2e8f0';
+      badge.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+      badge.style.background = 'rgba(255, 255, 255, 0.08)';
+    } else {
+      label = (tDict && tDict[currentLang] && tDict[currentLang].cookie_status_unset) || 'Não configurado';
+      badge.style.color = '#fbbf24';
+      badge.style.borderColor = 'rgba(251, 191, 36, 0.4)';
+      badge.style.background = 'rgba(251, 191, 36, 0.1)';
+    }
+    badge.textContent = label;
+  }
+
+  function applyConsentChoice(choice) {
+    try {
+      localStorage.setItem('cookie_consent', choice);
+    } catch (e) {}
+
+    if (typeof gtag === 'function') {
+      if (choice === 'all') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'analytics_storage': 'granted'
+        });
+      } else {
+        gtag('consent', 'update', {
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'analytics_storage': 'denied'
+        });
+      }
+    }
+
+    if (cookieBanner) {
+      cookieBanner.classList.add('hidden');
+    }
+    updateCookieStatusBadge();
+  }
+
+  function openPrivacyModal() {
+    if (!privacyModal) return;
+    privacyModal.classList.add('active');
+    privacyModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    updateCookieStatusBadge();
+  }
+
+  function closePrivacyModal() {
+    if (!privacyModal) return;
+    privacyModal.classList.remove('active');
+    privacyModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  // Check initial consent state
+  try {
+    const storedConsent = localStorage.getItem('cookie_consent');
+    if (!storedConsent && cookieBanner) {
+      setTimeout(() => {
+        cookieBanner.classList.remove('hidden');
+      }, 700);
+    }
+  } catch (e) {}
+
+  if (btnCookieAccept) {
+    btnCookieAccept.addEventListener('click', () => applyConsentChoice('all'));
+  }
+  if (btnCookieNecessary) {
+    btnCookieNecessary.addEventListener('click', () => applyConsentChoice('necessary'));
+  }
+
+  // Open modal triggers
+  if (cookieBannerPolicyLink) {
+    cookieBannerPolicyLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      openPrivacyModal();
+    });
+  }
+  if (footerPrivacyBtn) {
+    footerPrivacyBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openPrivacyModal();
+    });
+  }
+  if (contactPrivacyLink) {
+    contactPrivacyLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      openPrivacyModal();
+    });
+  }
+
+  // Delegated click for links inside dynamic text
+  document.addEventListener('click', (e) => {
+    if (e.target && (e.target.id === 'cookie-banner-policy-link' || e.target.id === 'contact-privacy-link')) {
+      e.preventDefault();
+      openPrivacyModal();
+    }
+    if (e.target && (e.target.id === 'privacy-btn-accept-all' || e.target.closest('#privacy-btn-accept-all'))) {
+      e.preventDefault();
+      applyConsentChoice('all');
+    }
+    if (e.target && (e.target.id === 'privacy-btn-necessary-only' || e.target.closest('#privacy-btn-necessary-only'))) {
+      e.preventDefault();
+      applyConsentChoice('necessary');
+    }
+  });
+
+  // Close modal triggers
+  if (privacyClose) privacyClose.addEventListener('click', closePrivacyModal);
+  if (btnPrivacyCloseFooter) btnPrivacyCloseFooter.addEventListener('click', closePrivacyModal);
+  if (privacyBackdrop) privacyBackdrop.addEventListener('click', closePrivacyModal);
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && privacyModal && privacyModal.classList.contains('active')) {
+      closePrivacyModal();
+    }
+  });
+
 
 });

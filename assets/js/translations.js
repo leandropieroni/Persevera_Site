@@ -529,6 +529,74 @@ const translations = {
     "btn_pause_track": "Pause",
     "btn_play_video_track": "Play Track (Video)",
     "btn_coming_soon": "Coming Soon (Studio)",
+
+    // Cookie Consent & Privacy (LGPD)
+    "cookie_banner_title": "Privacy & Cookies Control",
+    "cookie_banner_desc": "We use essential cookies to keep our music player and site running smoothly, and optional analytics to understand fan engagement. Read our <a href=\"#\" id=\"cookie-banner-policy-link\" class=\"cookie-policy-inline-link\">Privacy Policy</a>.",
+    "cookie_btn_necessary": "Only Necessary",
+    "cookie_btn_accept": "Accept All",
+    "cookie_status_accepted": "All Cookies Accepted (Analytics & Preferences Enabled)",
+    "cookie_status_necessary": "Only Necessary Cookies (Strictly Essential)",
+    "cookie_status_unset": "Not Configured Yet",
+    "footer_privacy_link": "Privacy Policy",
+    "form_consent_text": "I agree to the processing of my contact information solely for responding to this inquiry, under the <a href=\"#\" id=\"contact-privacy-link\" class=\"contact-policy-link\">Privacy Policy</a>.",
+    "privacy_modal_badge": "LGPD & PRIVACY",
+    "privacy_modal_title": "Privacy Policy & Data Protection",
+    "privacy_modal_subtitle": "Last updated: October 2026 • Compliant with LGPD (Law 13.709/2018) & Global Privacy Standards",
+    "privacy_close_btn": "Understood / Close",
+    "privacy_body_html": `<div class="privacy-section">
+  <h4><i class="fa-solid fa-book-open"></i> 1. Introduction & Commitment</h4>
+  <p><strong>Persevera Heavy Metal Band</strong> values your privacy, transparency, and data security across all digital channels. This Privacy Policy is structured under the Brazilian General Data Protection Law (<strong>LGPD - Law 13.709/2018</strong>) and outlines how we collect, store, and safeguard your data when you visit our official portal <strong>perseverametalband.com.br</strong>.</p>
+</div>
+
+<div class="privacy-section">
+  <h4><i class="fa-solid fa-database"></i> 2. Data Collected & Purpose</h4>
+  <p>We only collect the minimum information required to deliver an authentic, secure, and fast rock/metal experience:</p>
+  <ul>
+    <li><strong>Booking & Contact Inquiries:</strong> When reaching out via our contact form, we collect your name, email, phone number, subject, and message exclusively to reply to concert booking, festival invitations, press inquiries, or fan messages. Your details are never sold or used for spam.</li>
+    <li><strong>Local Device Storage:</strong> We store non-personally identifiable site preferences locally on your browser: your selected language (EN, PT, ES), audio player preferences (volume and last track), and your cookie consent status.</li>
+  </ul>
+</div>
+
+<div class="privacy-section">
+  <h4><i class="fa-solid fa-cookie-bite"></i> 3. Cookie Management & Consent</h4>
+  <p>Cookies are small files that help maintain smooth operation and analyze site visits. You have full control:</p>
+  <ul>
+    <li><strong>Strictly Necessary Cookies:</strong> Essential for HTTPS security, language selection, and audio playback. They cannot be turned off without disrupting core features.</li>
+    <li><strong>Analytics & Metrics Cookies (Google Analytics):</strong> When approved, these collect anonymous, aggregated traffic statistics (popular tracks, visit duration, visitor country) which guide our tour planning and release schedules without identifying individual visitors.</li>
+  </ul>
+  <div class="privacy-cookie-status-box">
+    <p><strong>Current Consent Status:</strong> <span id="privacy-current-status-badge" class="cookie-status-pill">Checking...</span></p>
+    <div class="privacy-cookie-actions">
+      <button type="button" class="btn-cookie-change" id="privacy-btn-accept-all"><i class="fa-solid fa-check"></i> Accept All</button>
+      <button type="button" class="btn-cookie-change secondary" id="privacy-btn-necessary-only"><i class="fa-solid fa-shield"></i> Only Necessary</button>
+    </div>
+  </div>
+</div>
+
+<div class="privacy-section">
+  <h4><i class="fa-solid fa-film"></i> 4. Embedded Third-Party Services</h4>
+  <p>Our website connects to third-party streaming services for multimedia content:</p>
+  <ul>
+    <li><strong>YouTube:</strong> Used for official music videos and behind-the-scenes footage. Google's privacy policies apply to embedded YouTube playback. Our site includes automatic mutual exclusion to pause audio playback whenever a video is started.</li>
+    <li><strong>Google Drive & CDN:</strong> Utilized for high-bitrate audio streaming directly to the browser.</li>
+  </ul>
+</div>
+
+<div class="privacy-section">
+  <h4><i class="fa-solid fa-lock"></i> 5. Information Security</h4>
+  <p>All communication with <strong>perseverametalband.com.br</strong> is encrypted end-to-end with modern <strong>HTTPS (SSL/TLS)</strong> certificates, preventing interception, tampering, or eavesdropping.</p>
+</div>
+
+<div class="privacy-section">
+  <h4><i class="fa-solid fa-scale-balanced"></i> 6. Your Rights (LGPD Art. 18)</h4>
+  <p>You may request confirmation of data processing, request access, correct incomplete information, or request full deletion of any message sent through our contact channels at any time.</p>
+</div>
+
+<div class="privacy-section">
+  <h4><i class="fa-solid fa-envelope"></i> 7. Contact & Band Production</h4>
+  <p>For questions regarding this policy or personal data requests, reach out via our contact form or directly through our official email: <a href="mailto:contato@perseverametalband.com.br" class="privacy-email-link">contato@perseverametalband.com.br</a>.</p>
+</div>`,
   },
 
   pt: {
@@ -1050,6 +1118,74 @@ const translations = {
     "btn_pause_track": "Pausar",
     "btn_play_video_track": "Ouvir Faixa (Clipe)",
     "btn_coming_soon": "Em Breve (Estúdio)",
+
+    // Cookie Consent & Privacy (LGPD)
+    "cookie_banner_title": "Privacidade & Cookies",
+    "cookie_banner_desc": "Utilizamos cookies essenciais para o funcionamento do site e player de áudio, e cookies opcionais de análise para entender o engajamento da nossa música. Saiba mais em nossa <a href=\"#\" id=\"cookie-banner-policy-link\" class=\"cookie-policy-inline-link\">Política de Privacidade</a>.",
+    "cookie_btn_necessary": "Apenas Necessários",
+    "cookie_btn_accept": "Aceitar Todos",
+    "cookie_status_accepted": "Todos os Cookies Aceitos (Métricas e Preferências Ativas)",
+    "cookie_status_necessary": "Apenas Cookies Necessários (Essenciais)",
+    "cookie_status_unset": "Ainda Não Configurado",
+    "footer_privacy_link": "Política de Privacidade",
+    "form_consent_text": "Concordo com o tratamento dos dados informados para fins de retorno deste contato, conforme a <a href=\"#\" id=\"contact-privacy-link\" class=\"contact-policy-link\">Política de Privacidade</a>.",
+    "privacy_modal_badge": "LGPD & PRIVACIDADE",
+    "privacy_modal_title": "Política de Privacidade e Proteção de Dados",
+    "privacy_modal_subtitle": "Última atualização: Outubro de 2026 • Em conformidade com a LGPD (Lei nº 13.709/2018)",
+    "privacy_close_btn": "Entendido / Fechar",
+    "privacy_body_html": `<div class="privacy-section">
+  <h4><i class="fa-solid fa-book-open"></i> 1. Introdução e Compromisso</h4>
+  <p>A <strong>Persevera Heavy Metal Band</strong> valoriza a sua privacidade, a transparência e a segurança de dados em todos os canais digitais. Esta Política de Privacidade foi elaborada em estrita conformidade com a <strong>Lei Geral de Proteção de Dados Pessoais (LGPD - Lei nº 13.709/2018)</strong> e estabelece como coletamos, utilizamos e protegemos seus dados ao acessar o site oficial <strong>perseverametalband.com.br</strong>.</p>
+</div>
+
+<div class="privacy-section">
+  <h4><i class="fa-solid fa-database"></i> 2. Dados Coletados e Finalidade</h4>
+  <p>Coletamos apenas o estritamente necessário para prestar uma experiência rápida, segura e interativa:</p>
+  <ul>
+    <li><strong>Formulário de Contato e Shows:</strong> Coletamos nome, e-mail, telefone, assunto e mensagem exclusivamente para responder solicitações de shows, festivais, imprensa ou dúvidas dos fãs. Não utilizamos esses dados para spam nem os transferimos a terceiros.</li>
+    <li><strong>Preferências Locais (Armazenamento no Navegador):</strong> Salvamos localmente no seu dispositivo itens como o idioma selecionado (EN, PT, ES), preferências do player de áudio (volume e última faixa ouvida) e sua escolha de consentimento de cookies. Essas informações não contêm dados pessoais identificáveis.</li>
+  </ul>
+</div>
+
+<div class="privacy-section">
+  <h4><i class="fa-solid fa-cookie-bite"></i> 3. Gestão e Controle de Cookies</h4>
+  <p>Cookies são pequenos arquivos que aprimoram a sua navegação. No site da Persevera, você tem total controle sobre eles:</p>
+  <ul>
+    <li><strong>Cookies Estritamente Necessários:</strong> Garantem a estabilidade técnica do site, segurança HTTPS, memorização do idioma e reprodução de áudio. Não podem ser desativados sem comprometer a navegação.</li>
+    <li><strong>Cookies de Análise e Métricas (Google Analytics):</strong> Quando autorizados, coletam métricas anônimas de audiência (páginas acessadas, tempo de permanência, país de acesso), fundamentais para o planejamento de lançamentos e turnês da banda, sem identificar o usuário individualmente.</li>
+  </ul>
+  <div class="privacy-cookie-status-box">
+    <p><strong>Status atual do seu consentimento:</strong> <span id="privacy-current-status-badge" class="cookie-status-pill">Carregando...</span></p>
+    <div class="privacy-cookie-actions">
+      <button type="button" class="btn-cookie-change" id="privacy-btn-accept-all"><i class="fa-solid fa-check"></i> Aceitar Todos</button>
+      <button type="button" class="btn-cookie-change secondary" id="privacy-btn-necessary-only"><i class="fa-solid fa-shield"></i> Apenas Necessários</button>
+    </div>
+  </div>
+</div>
+
+<div class="privacy-section">
+  <h4><i class="fa-solid fa-film"></i> 4. Reprodutores e Conteúdos de Terceiros</h4>
+  <p>Nosso site incorpora mídias de plataformas externas para streaming oficial de músicas e clipes:</p>
+  <ul>
+    <li><strong>YouTube:</strong> Para a reprodução de clipes e bastidores, o player oficial do YouTube pode aplicar cookies de acordo com as políticas do Google. O site possui blindagem mútua para pausar o áudio nativo quando um clipe é iniciado.</li>
+    <li><strong>Google Drive / Servidores de Mídia:</strong> Utilizados exclusivamente para transmissão de áudio em alta fidelidade.</li>
+  </ul>
+</div>
+
+<div class="privacy-section">
+  <h4><i class="fa-solid fa-lock"></i> 5. Segurança da Informação</h4>
+  <p>Toda a comunicação com <strong>perseverametalband.com.br</strong> é protegida por criptografia de ponta a ponta via protocolo <strong>HTTPS (SSL/TLS)</strong>, garantindo que suas interações e mensagens trafeguem com máxima integridade e sigilo.</p>
+</div>
+
+<div class="privacy-section">
+  <h4><i class="fa-solid fa-scale-balanced"></i> 6. Seus Direitos como Titular (LGPD Art. 18)</h4>
+  <p>Você possui o direito de confirmar a existência de tratamento de dados, solicitar acesso, correção de dados incompletos ou a exclusão definitiva de mensagens enviadas por você. Para exercer qualquer um desses direitos, basta entrar em contato conosco.</p>
+</div>
+
+<div class="privacy-section">
+  <h4><i class="fa-solid fa-envelope"></i> 7. Contato e Encarregado</h4>
+  <p>Para dúvidas sobre esta política ou sobre seus dados pessoais, entre em contato diretamente com a equipe da banda pelo formulário deste site ou pelo e-mail oficial: <a href="mailto:contato@perseverametalband.com.br" class="privacy-email-link">contato@perseverametalband.com.br</a>.</p>
+</div>`,
   },
 
   es: {
@@ -1570,7 +1706,75 @@ const translations = {
     "btn_play_track": "Escuchar Pista",
     "btn_pause_track": "Pausar",
     "btn_play_video_track": "Escuchar Pista (Video)",
-    "btn_coming_soon": "Próximamente (Estudio)"
+    "btn_coming_soon": "Próximamente (Estudio)",
+
+    // Cookie Consent & Privacy (LGPD)
+    "cookie_banner_title": "Privacidad y Cookies",
+    "cookie_banner_desc": "Utilizamos cookies esenciales para el funcionamiento del sitio y reproductor de audio, y cookies opcionales de análisis para mejorar la experiencia de los fanáticos. Consulta nuestra <a href=\"#\" id=\"cookie-banner-policy-link\" class=\"cookie-policy-inline-link\">Política de Privacidad</a>.",
+    "cookie_btn_necessary": "Solo Necesarias",
+    "cookie_btn_accept": "Aceptar Todo",
+    "cookie_status_accepted": "Todas las Cookies Aceptadas (Métricas y Preferencias Activas)",
+    "cookie_status_necessary": "Solo Cookies Necesarias (Esenciales)",
+    "cookie_status_unset": "Aún No Configurado",
+    "footer_privacy_link": "Política de Privacidad",
+    "form_consent_text": "Acepto el tratamiento de mis datos de contacto para responder a este mensaje, según la <a href=\"#\" id=\"contact-privacy-link\" class=\"contact-policy-link\">Política de Privacidad</a>.",
+    "privacy_modal_badge": "LGPD Y PRIVACIDAD",
+    "privacy_modal_title": "Política de Privacidad y Protección de Datos",
+    "privacy_modal_subtitle": "Última actualización: Octubre de 2026 • En conformidad con la LGPD (Ley 13.709/2018)",
+    "privacy_close_btn": "Entendido / Cerrar",
+    "privacy_body_html": `<div class="privacy-section">
+  <h4><i class="fa-solid fa-book-open"></i> 1. Introducción y Compromiso</h4>
+  <p><strong>Persevera Heavy Metal Band</strong> valora tu privacidad, la transparencia y la seguridad de datos en todos los canales digitales. Esta Política de Privacidad fue elaborada en conformidad con la <strong>LGPD (Ley 13.709/2018)</strong> y directivas globales de privacidad, estableciendo cómo recopilamos y protegemos tus datos en el portal oficial <strong>perseverametalband.com.br</strong>.</p>
+</div>
+
+<div class="privacy-section">
+  <h4><i class="fa-solid fa-database"></i> 2. Datos Recopilados y Finalidad</h4>
+  <p>Solo recopilamos lo estrictamente necesario para brindar una experiencia de rock/metal rápida y segura:</p>
+  <ul>
+    <li><strong>Formulario de Contacto y Conciertos:</strong> Recopilamos nombre, correo, teléfono, asunto y mensaje exclusivamente para responder a propuestas de shows, prensa o dudas de seguidores. Nunca comercializamos tus datos ni enviamos spam.</li>
+    <li><strong>Almacenamiento Local en el Navegador:</strong> Guardamos localmente en tu dispositivo preferencias no identificables: idioma seleccionado (EN, PT, ES), preferencias del reproductor de audio (volumen y pista) y tu estado de consentimiento de cookies.</li>
+  </ul>
+</div>
+
+<div class="privacy-section">
+  <h4><i class="fa-solid fa-cookie-bite"></i> 3. Gestión y Control de Cookies</h4>
+  <p>Las cookies ayudan a optimizar tu navegación. Tienes el control total:</p>
+  <ul>
+    <li><strong>Cookies Estrictamente Necesarias:</strong> Esenciales para la seguridad HTTPS, selección de idioma y reproducción de audio. No pueden desactivarse sin alterar funciones esenciales.</li>
+    <li><strong>Cookies de Análisis y Métricas (Google Analytics):</strong> Al autorizarlas, recopilan métricas anónimas de audiencia (páginas visitadas, tiempo en el sitio, país de acceso) para apoyar la planificación de conciertos y lanzamientos.</li>
+  </ul>
+  <div class="privacy-cookie-status-box">
+    <p><strong>Estado actual de tu consentimiento:</strong> <span id="privacy-current-status-badge" class="cookie-status-pill">Comprobando...</span></p>
+    <div class="privacy-cookie-actions">
+      <button type="button" class="btn-cookie-change" id="privacy-btn-accept-all"><i class="fa-solid fa-check"></i> Aceptar Todo</button>
+      <button type="button" class="btn-cookie-change secondary" id="privacy-btn-necessary-only"><i class="fa-solid fa-shield"></i> Solo Necesarias</button>
+    </div>
+  </div>
+</div>
+
+<div class="privacy-section">
+  <h4><i class="fa-solid fa-film"></i> 4. Servicios de Terceros Integrados</h4>
+  <p>El sitio web integra plataformas externas para la difusión oficial de música y videos:</p>
+  <ul>
+    <li><strong>YouTube:</strong> Para videos oficiales y detrás de cámaras. Se aplican las políticas de Google en la reproducción. El sitio pausa automáticamente el reproductor de audio nativo al iniciar un video.</li>
+    <li><strong>Google Drive / Servidores de Medios:</strong> Utilizados para streaming de audio de alta fidelidad.</li>
+  </ul>
+</div>
+
+<div class="privacy-section">
+  <h4><i class="fa-solid fa-lock"></i> 5. Seguridad de la Información</h4>
+  <p>Toda comunicación con <strong>perseverametalband.com.br</strong> está cifrada de extremo a extremo mediante el protocolo <strong>HTTPS (SSL/TLS)</strong>, evitando intercepciones no autorizadas.</p>
+</div>
+
+<div class="privacy-section">
+  <h4><i class="fa-solid fa-scale-balanced"></i> 6. Tus Derechos (LGPD Art. 18)</h4>
+  <p>Tienes derecho a confirmar el tratamiento de datos, solicitar acceso, rectificar datos incompletos o solicitar la eliminación total de tus mensajes en cualquier momento.</p>
+</div>
+
+<div class="privacy-section">
+  <h4><i class="fa-solid fa-envelope"></i> 7. Contacto y Producción</h4>
+  <p>Para consultas sobre privacidad o datos personales, contáctanos a través del formulario o al correo electrónico oficial: <a href="mailto:contato@perseverametalband.com.br" class="privacy-email-link">contato@perseverametalband.com.br</a>.</p>
+</div>`,
   }
 };
 

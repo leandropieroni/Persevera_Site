@@ -9,6 +9,44 @@
   <meta name="keywords" content="Persevera, Persevera Metal Band, Heavy Metal, Three Guitars, Sumaré, Brazilian Metal, Genesis, Groove Metal, Iron Maiden, Heavy Metal Band">
   <meta name="theme-color" content="#07080a">
 
+  <!-- GOOGLE CONSENT MODE V2 DEFAULT (LGPD / PRIVACY COMPLIANT) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function() {
+      try {
+        var consent = localStorage.getItem('cookie_consent');
+        if (consent === 'all') {
+          gtag('consent', 'default', {
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'analytics_storage': 'granted',
+            'functionality_storage': 'granted',
+            'personalization_storage': 'granted',
+            'security_storage': 'granted'
+          });
+        } else {
+          gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied',
+            'functionality_storage': 'granted',
+            'personalization_storage': 'denied',
+            'security_storage': 'granted'
+          });
+        }
+      } catch (e) {
+        gtag('consent', 'default', {
+          'ad_storage': 'denied',
+          'analytics_storage': 'denied',
+          'security_storage': 'granted'
+        });
+      }
+    })();
+  </script>
+
   <!-- Open Graph / Meta Sharing -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://perseverametalband.com.br/">
@@ -28,7 +66,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=9.2">
+  <link rel="stylesheet" href="assets/css/style.css?v=9.3">
 </head>
 <body>
 
@@ -2448,6 +2486,13 @@
                 <textarea id="message" name="message" rows="4" required placeholder="Proposed dates, city, venue or message..." data-i18n-placeholder="form_ph_message"></textarea>
               </div>
 
+              <div class="form-group form-consent-group">
+                <label class="form-consent-label" for="contact-consent">
+                  <input type="checkbox" id="contact-consent" name="consent" required checked>
+                  <span class="consent-text" data-i18n="form_consent_text">Concordo com o tratamento dos dados informados para fins de retorno deste contato, conforme a <a href="#" id="contact-privacy-link" class="contact-policy-link">Política de Privacidade</a>.</span>
+                </label>
+              </div>
+
               <button type="submit" id="contact-submit-btn" class="btn btn-primary btn-block">
                 <i class="fa-solid fa-paper-plane"></i> <span data-i18n="btn_send_message">Send Message</span>
               </button>
@@ -2490,7 +2535,35 @@
     </div>
   </div>
 
-  <div class="lightbox-modal" id="lightbox-modal">
+  <!-- OFFICIAL PRIVACY POLICY & LGPD MODAL -->
+  <div class="privacy-modal" id="privacy-modal" aria-hidden="true" role="dialog" aria-labelledby="privacy-modal-title">
+    <div class="privacy-modal-backdrop" id="privacy-backdrop"></div>
+    <div class="privacy-modal-dialog">
+      <div class="privacy-modal-header">
+        <div class="privacy-badge-box">
+          <span class="privacy-badge"><i class="fa-solid fa-shield-halved"></i> <span data-i18n="privacy_modal_badge">LGPD & PRIVACIDADE</span></span>
+          <span class="privacy-domain">perseverametalband.com.br</span>
+        </div>
+        <button class="privacy-modal-close" id="privacy-close" aria-label="Fechar Política de Privacidade">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="privacy-modal-info">
+        <h3 class="privacy-title" id="privacy-modal-title" data-i18n="privacy_modal_title">Política de Privacidade e Proteção de Dados</h3>
+        <p class="privacy-subtitle" data-i18n="privacy_modal_subtitle">Última atualização: Outubro de 2026 • Em conformidade com a LGPD (Lei nº 13.709/2018)</p>
+      </div>
+      <div class="privacy-modal-body" id="privacy-modal-body" data-i18n="privacy_body_html">
+        <!-- Rendered by translations -->
+      </div>
+      <div class="privacy-modal-footer">
+        <button type="button" class="btn-privacy-close-footer" id="btn-privacy-close-footer">
+          <i class="fa-solid fa-check"></i> <span data-i18n="privacy_close_btn">Entendido / Fechar</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="lightbox-modal"  id="lightbox-modal">
     <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
     <div class="lightbox-content">
       <button class="lightbox-close" id="lightbox-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
@@ -2580,6 +2653,11 @@
     <div class="footer-bottom">
       <div class="container bottom-content">
         <p data-i18n="footer_rights">&copy; 2026 PERSEVERA METAL BAND. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <button type="button" class="footer-privacy-btn" id="footer-privacy-btn">
+            <i class="fa-solid fa-shield-halved"></i> <span data-i18n="footer_privacy_link">Política de Privacidade</span>
+          </button>
+        </div>
         <p class="credits" data-i18n="footer_credits">Crafted with metal pride for <strong>perseverametalband.com.br</strong> 🤘</p>
       </div>
     </div>
@@ -2630,9 +2708,32 @@
     <span data-i18n="ticker_pill_label">Notícias de Metal</span>
   </button>
 
+  <!-- COOKIE CONSENT BANNER (LGPD / PRIVACY COMPLIANCE) -->
+  <aside class="cookie-consent-banner hidden" id="cookie-consent-banner" role="dialog" aria-live="polite" aria-label="Consentimento de Cookies">
+    <div class="cookie-banner-container">
+      <div class="cookie-banner-text">
+        <div class="cookie-banner-title">
+          <i class="fa-solid fa-cookie-bite cookie-icon"></i>
+          <span data-i18n="cookie_banner_title">Privacidade & Cookies</span>
+        </div>
+        <p data-i18n="cookie_banner_desc">
+          Utilizamos cookies essenciais para o funcionamento do site e player de áudio, e cookies opcionais de análise para entender o engajamento da nossa música. Saiba mais em nossa <a href="#" id="cookie-banner-policy-link" class="cookie-policy-inline-link">Política de Privacidade</a>.
+        </p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button type="button" class="btn-cookie-action btn-cookie-necessary" id="btn-cookie-necessary" data-i18n="cookie_btn_necessary">
+          Apenas Necessários
+        </button>
+        <button type="button" class="btn-cookie-action btn-cookie-accept" id="btn-cookie-accept">
+          <i class="fa-solid fa-check"></i> <span data-i18n="cookie_btn_accept">Aceitar Todos</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
   <!-- Scripts -->
-  <script src="assets/js/translations.js?v=9.2"></script>
-  <script src="assets/js/lyrics-data.js?v=9.2"></script>
-  <script src="assets/js/main.js?v=9.2"></script>
+  <script src="assets/js/translations.js?v=9.3"></script>
+  <script src="assets/js/lyrics-data.js?v=9.3"></script>
+  <script src="assets/js/main.js?v=9.3"></script>
 </body>
 </html>
