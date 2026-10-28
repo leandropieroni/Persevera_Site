@@ -5215,11 +5215,15 @@ body:has(.metal-news-ticker.is-minimized) .floating-mini-player {
   }
 
   .section {
-    padding: 4.2rem 0;
+    padding: 2.5rem 0 !important;
   }
 
   .section-header {
-    margin-bottom: 2.2rem;
+    margin-bottom: 1.6rem !important;
+  }
+
+  .section-divider {
+    margin: 0.65rem auto 0.85rem !important;
   }
 
   .section-title {
@@ -5834,14 +5838,22 @@ body {
     border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
   }
 
+  #musicas {
+    padding-bottom: 0.8rem !important;
+  }
+
   .unified-audio-player-card {
     margin-top: 0 !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 0 !important;
     border-radius: 0 0 16px 16px !important;
     border-top: 1px solid rgba(0, 212, 255, 0.22) !important;
     padding: 0.85rem 1rem 1rem !important;
     gap: 0.65rem !important;
     background: linear-gradient(180deg, #0d0f15 0%, #131822 100%) !important;
+  }
+
+  #videos {
+    padding-top: 1.4rem !important;
   }
 
   .player-bar-left {
