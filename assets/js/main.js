@@ -321,6 +321,59 @@ document.addEventListener('DOMContentLoaded', () => {
     { title: 'Selling My Soul', album: 'Tributo Oficial', src: 'assets/audio/selling-my-soul.mp3?v=4.4', cover: 'assets/images/tracks/selling-my-soul.jpg' }
   ];
 
+  function getOptimalImageSrc(srcPath) {
+    if (!srcPath || window.innerWidth > 768) return srcPath;
+    if (srcPath.includes('assets/images/mobile/')) return srcPath;
+    const idx = srcPath.indexOf('assets/images/');
+    if (idx === -1) return srcPath;
+    const rel = srcPath.slice(idx + 'assets/images/'.length).split('?')[0];
+    const dotIdx = rel.lastIndexOf('.');
+    const base = dotIdx !== -1 ? rel.slice(0, dotIdx) : rel;
+    return 'assets/images/mobile/' + base + '.jpg';
+  }
+
+  let isMainVideoActive = false;
+  let isBtsVideoActive = false;
+  let lastFocusedIframe = null;
+
+  function stripAutoplayUrl(url) {
+    if (!url) return url;
+    return url
+      .replace(/([?&])autoplay=1(&?)/g, (m, p1, p2) => (p1 === '?' && p2 === '&' ? '?' : (p2 ? p1 : '')))
+      .replace(/[?&]$/, '');
+  }
+
+  function stopMainVideo() {
+    const mNative = document.getElementById('main-video-native');
+    const mIframe = document.getElementById('main-video-iframe');
+    if (mNative && !mNative.paused) {
+      try { mNative.pause(); } catch (e) {}
+    }
+    if (mIframe && mIframe.src && mIframe.src !== 'about:blank') {
+      if (mIframe.src.includes('youtube.com/embed/')) {
+        try {
+          mIframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        } catch (e) {}
+        if (mIframe.src.includes('autoplay=1')) {
+          mIframe.src = stripAutoplayUrl(mIframe.src);
+        }
+      } else if (isMainVideoActive) {
+        mIframe.src = stripAutoplayUrl(mIframe.src);
+      }
+    }
+    isMainVideoActive = false;
+    if (lastFocusedIframe === mIframe) lastFocusedIframe = null;
+  }
+
+  function stopBtsVideo() {
+    const bIframe = document.getElementById('bts-video-iframe');
+    if (bIframe && isBtsVideoActive && bIframe.src && bIframe.src !== 'about:blank') {
+      bIframe.src = stripAutoplayUrl(bIframe.src);
+    }
+    isBtsVideoActive = false;
+    if (lastFocusedIframe === bIframe) lastFocusedIframe = null;
+  }
+
   function loadTrack(index) {
     if (!tracks.length) return;
     if (index < 0) index = tracks.length - 1;
@@ -333,7 +386,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (currentTrackTitle) currentTrackTitle.textContent = track.title;
     if (currentTrackArtist) currentTrackArtist.textContent = 'Persevera • ' + track.album;
-    if (playerCover && track.cover) playerCover.src = track.cover;
+    if (playerCover && track.cover) {
+      playerCover.removeAttribute('srcset');
+      playerCover.src = getOptimalImageSrc(track.cover);
+    }
     if (miniTitle) miniTitle.textContent = track.title;
     if (miniSub) miniSub.textContent = 'Persevera • ' + track.album;
     updateCardPlayButtons();
@@ -349,6 +405,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function playTrack() {
     if (!audio) return;
+    stopMainVideo();
+    stopBtsVideo();
+    if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
+      try {
+        document.activeElement.blur();
+        window.focus();
+      } catch (e) {}
+    }
+    lastFocusedIframe = null;
     audio.play().then(() => {
       isPlaying = true;
       updatePlayIcons(true);
@@ -734,6 +799,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const localVideo = card.getAttribute('data-local-video');
     const thumbImg = card.querySelector('img')?.getAttribute('src') || '';
 
+    if (autoplay) {
+      pauseTrack();
+      stopBtsVideo();
+      isMainVideoActive = true;
+    }
+
     // Always pause native player before switching
     if (mainVideoNative) {
       try { mainVideoNative.pause(); } catch (e) {}
@@ -767,7 +838,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mainVideoIframe.src = driveUrl;
       } else if (videoId) {
         const autoParam = autoplay ? 'autoplay=1&' : '';
-        mainVideoIframe.src = `https://www.youtube.com/embed/${videoId}?${autoParam}feature=oembed`;
+        mainVideoIframe.src = `https://www.youtube.com/embed/${videoId}?${autoParam}enablejsapi=1&feature=oembed`;
       }
     }
   }
@@ -951,6 +1022,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const titleKey = card.getAttribute('data-title-key');
       const desc = card.getAttribute('data-desc');
 
+      pauseTrack();
+      stopMainVideo();
+      isBtsVideoActive = true;
+
       if (btsIframe && embedUrl) {
         btsIframe.src = embedUrl;
       }
@@ -984,6 +1059,71 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // ==========================================
+  // 3C. MEDIA MUTUAL EXCLUSION GUARD (PREVENT AUDIO + VIDEO OVERLAP)
+  // ==========================================
+  if (mainVideoNative) {
+    mainVideoNative.addEventListener('play', () => {
+      pauseTrack();
+      stopBtsVideo();
+      isMainVideoActive = true;
+    });
+  }
+
+  // Subscribe to YouTube iframe state changes when mainVideoIframe loads
+  if (mainVideoIframe) {
+    const bindYouTubeListening = () => {
+      try {
+        if (mainVideoIframe.src && mainVideoIframe.src.includes('youtube.com/embed/')) {
+          mainVideoIframe.contentWindow.postMessage('{"event":"listening","id":1}', '*');
+        }
+      } catch (e) {}
+    };
+    mainVideoIframe.addEventListener('load', bindYouTubeListening);
+    setTimeout(bindYouTubeListening, 1000);
+  }
+
+  // Listen for YouTube onStateChange (state 1 = playing)
+  window.addEventListener('message', (e) => {
+    if (!e.data || typeof e.data !== 'string') return;
+    try {
+      const data = JSON.parse(e.data);
+      const state = (data && data.event === 'onStateChange') ? data.info : (data && data.info && typeof data.info.playerState === 'number' ? data.info.playerState : null);
+      if (state === 1) {
+        pauseTrack();
+        stopBtsVideo();
+        isMainVideoActive = true;
+      }
+    } catch (err) {}
+  });
+
+  // Detect direct user tap/click inside cross-origin video iframes (#main-video-iframe / #bts-video-iframe)
+  function checkIframeFocusOverlap() {
+    const activeEl = document.activeElement;
+    if (activeEl === mainVideoIframe) {
+      if (lastFocusedIframe !== mainVideoIframe) {
+        lastFocusedIframe = mainVideoIframe;
+        isMainVideoActive = true;
+        if (isPlaying) pauseTrack();
+        stopBtsVideo();
+      }
+    } else if (activeEl === btsIframe) {
+      if (lastFocusedIframe !== btsIframe) {
+        lastFocusedIframe = btsIframe;
+        isBtsVideoActive = true;
+        if (isPlaying) pauseTrack();
+        stopMainVideo();
+      }
+    } else {
+      lastFocusedIframe = null;
+    }
+  }
+
+  window.addEventListener('blur', () => {
+    setTimeout(checkIframeFocusOverlap, 60);
+  });
+  setInterval(checkIframeFocusOverlap, 350);
 
   // ==========================================
   // 4. PHOTO GALLERY & LIGHTBOX MODAL
@@ -1042,10 +1182,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (targetCard) {
         loadVideoInTheater(targetCard, true);
       } else if (mainIframe) {
+        pauseTrack();
+        stopBtsVideo();
+        isMainVideoActive = true;
         if (embedUrl) {
           mainIframe.src = embedUrl;
         } else if (videoId) {
-          mainIframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&feature=oembed';
+          mainIframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&enablejsapi=1&feature=oembed';
         }
       }
       if (videoTitle && title) {
