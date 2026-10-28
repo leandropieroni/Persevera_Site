@@ -5367,10 +5367,10 @@ body:has(.metal-news-ticker.is-minimized) .floating-mini-player {
   /* 2. Hero Cover Photo: Show full 6-member photo across 100% width without side cropping */
   .hero-section {
     min-height: auto !important;
-    padding: 0.65rem 1rem 2.6rem !important;
+    padding: 0.85rem 1rem 1.8rem !important;
     background-image: url('../images/mobile/band-hero.jpg') !important;
     background-size: 100% auto !important;
-    background-position: center 42px !important;
+    background-position: center 56px !important;
     background-repeat: no-repeat !important;
   }
 
@@ -5378,31 +5378,32 @@ body:has(.metal-news-ticker.is-minimized) .floating-mini-player {
     background:
       linear-gradient(
         180deg,
-        rgba(7, 8, 10, 0.88) 0px,
-        rgba(7, 8, 10, 0.22) 42px,
-        transparent 80px,
-        transparent calc(42px + 38vw),
-        rgba(7, 8, 10, 0.88) calc(42px + 52vw),
-        var(--bg-dark) calc(42px + 58vw)
+        rgba(7, 8, 10, 0.92) 0px,
+        rgba(7, 8, 10, 0.15) 56px,
+        transparent 96px,
+        transparent calc(56px + 38vw),
+        rgba(7, 8, 10, 0.85) calc(56px + 52vw),
+        var(--bg-dark) calc(56px + 58vw)
       ) !important;
   }
 
   .hero-top-badge-wrapper {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+    margin-top: 0.2rem !important;
+    margin-bottom: 0.4rem !important;
   }
 
   .hero-tagline-badge {
-    font-size: 0.7rem !important;
-    padding: 0.28rem 0.85rem !important;
-    letter-spacing: 1.4px !important;
+    font-size: 0.88rem !important;
+    padding: 0.38rem 1.15rem !important;
+    letter-spacing: 2px !important;
+    font-weight: 700 !important;
   }
 
-  /* Space reserved for the uncropped 16:9 band photo + logo before the title text begins */
+  /* Space reserved for the uncropped 16:9 band photo + logo before the buttons begin */
   .hero-brand-space {
-    height: 55vw !important;
-    min-height: 195px !important;
-    max-height: 290px !important;
+    height: calc(56vw + 28px) !important;
+    min-height: 235px !important;
+    max-height: 330px !important;
   }
 
   .hero-title,
@@ -5413,7 +5414,12 @@ body:has(.metal-news-ticker.is-minimized) .floating-mini-player {
   .hero-cta-group {
     gap: 0.75rem !important;
     margin-top: 0.85rem !important;
-    margin-bottom: 2rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .hero-highlights,
+  .hero-scroll-indicator {
+    display: none !important;
   }
 
   /* 3. Retractable Band History Timeline on Mobile */
