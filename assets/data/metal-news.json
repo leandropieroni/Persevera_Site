@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-28T11:43:57.250950+00:00",
+  "last_updated": "2026-10-31T11:17:32.998612+00:00",
   "update_frequency_days": 3,
   "total": 24,
   "sources": [
@@ -18,9 +18,72 @@
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "CDs do Bruce Dickinson, Motörhead e Malevolent Creation ganham novas edições no Brasil",
-      "link": "https://www.wikimetal.com.br/cds-bruce-dickinson-motorhead-malevolent-creation/",
-      "pubDate": "Tue, 27 Oct 2026 19:48:06 +0000"
+      "title": "Promoção Opeth: Valendo 01 par de ingressos para show em São Paulo",
+      "link": "https://www.wikimetal.com.br/promocao-opeth-par-de-ingressos-show/",
+      "pubDate": "Fri, 30 Oct 2026 20:39:30 +0000"
+    },
+    {
+      "source": "Road to Metal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#f59e0b",
+      "title": "Roy Khan transforma noite esvaziada pelas eleições em celebração histórica no Opinião",
+      "link": "https://www.roadtometal.com.br/2026/10/roy-khan-transforma-noite-esvaziada.html",
+      "pubDate": "Wed, 28 Oct 2026 18:03:10 +0000"
+    },
+    {
+      "source": "Blabbermouth",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#a855f7",
+      "title": "LAMB OF GOD's 'Headbangers Boat' To Sail From U.K. For First Time In 2028",
+      "link": "https://blabbermouth.net/news/lamb-of-gods-headbangers-boat-to-sail-from-u-k-for-first-time-in-2028",
+      "pubDate": "Fri, 30 Oct 2026 23:04:43 +0000"
+    },
+    {
+      "source": "Loudwire",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#10b981",
+      "title": "Triumph Cancel Upcoming 2026 Tour Dates",
+      "link": "https://loudwire.com/triumph-cancels-2026-tour-dates/",
+      "pubDate": "Fri, 30 Oct 2026 20:45:55 GMT"
+    },
+    {
+      "source": "Metal Injection",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#ec4899",
+      "title": "Currents Drop \"Retributioner,\" Announce New Record 'Our Fates Lie In Tandem'",
+      "link": "https://metalinjection.net/new-music/currents-drop-retributioner-announce-new-record-our-fates-lie-in-tandem",
+      "pubDate": "Fri, 30 Oct 2026 18:41:31 +0000"
+    },
+    {
+      "source": "Mundo Metal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#00d4ff",
+      "title": "Eaten By Sharks transforma horror marítimo em Death Metal técnico no álbum “The Undertow of Hate”",
+      "link": "https://www.mundometalbr.com/eaten-by-sharks-transforma-horror-maritimo-em-death-metal-tecnico-no-album-the-undertow-of-hate/",
+      "pubDate": "Fri, 30 Oct 2026 20:45:00 +0000"
+    },
+    {
+      "source": "Metal na Lata",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#ef4444",
+      "title": "Serpent: lançado o videoclipe de “Season of the Witch”, single que antecede seu primeiro álbum completo",
+      "link": "https://metalnalata.com.br/serpent-lancado-o-videoclipe-de-season-of-the-witch-single-que-antecede-seu-primeiro-album-completo/",
+      "pubDate": "Sat, 31 Oct 2026 03:43:52 +0000"
+    },
+    {
+      "source": "Wikimetal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#00d4ff",
+      "title": "Tom Morello presta homenagem a Patrick Stewart: “Obrigado Capitão”",
+      "link": "https://www.wikimetal.com.br/tom-morello-homenagem-patrick-stewart/",
+      "pubDate": "Fri, 30 Oct 2026 18:31:37 +0000"
     },
     {
       "source": "Road to Metal",
@@ -36,54 +99,54 @@
       "lang": "en",
       "region": "GLOBAL",
       "color": "#a855f7",
-      "title": "THE HU Celebrates Living Heritage, Dialogue And Peace At Special UNESCO Event",
-      "link": "https://blabbermouth.net/news/the-hu-celebrates-living-heritage-dialogue-and-peace-at-special-unesco-event",
-      "pubDate": "Wed, 28 Oct 2026 11:15:26 +0000"
+      "title": "TONY IOMMI Says It's 'Unfair' To Compare JORN LANDE To RONNIE JAMES DIO: 'That's The Sort Of Voice I Wanted' For 'From The Dark' Album",
+      "link": "https://blabbermouth.net/news/tony-iommi-says-its-unfair-to-compare-jorn-lande-to-ronnie-james-dio-thats-the-sort-of-voice-i-wanted-for-from-the-dark-album",
+      "pubDate": "Fri, 30 Oct 2026 21:01:57 +0000"
     },
     {
       "source": "Loudwire",
       "lang": "en",
       "region": "GLOBAL",
       "color": "#10b981",
-      "title": "Billy Corgan Calls Age-Gap Marriage With Wife an 'Advantage'",
-      "link": "https://loudwire.com/billy-corgan-age-gap-marriage-advantage/",
-      "pubDate": "Tue, 27 Oct 2026 17:37:05 GMT"
+      "title": "Alice in Chains’ Jerry Cantrell Posts Photo of New Haircut",
+      "link": "https://loudwire.com/alice-in-chains-jerry-cantrell-haircut-2026/",
+      "pubDate": "Fri, 30 Oct 2026 19:59:56 GMT"
     },
     {
       "source": "Metal Injection",
       "lang": "en",
       "region": "GLOBAL",
       "color": "#ec4899",
-      "title": "Watch Metallica’s Kirk Hammett Read Edgar Allan Poe’s ‘The Raven,’ Because Why Not?",
-      "link": "https://metalinjection.net/news/watch-metallicas-kirk-hammett-read-edgar-allan-poes-the-raven-because-why-not",
-      "pubDate": "Tue, 27 Oct 2026 20:02:36 +0000"
+      "title": "Wardruna Give “Helvegen” New Life 14 Years Later With “Helvegen II”",
+      "link": "https://metalinjection.net/news/wardruna-give-helvegen-new-life-14-years-later-with-helvegen-ii",
+      "pubDate": "Fri, 30 Oct 2026 17:07:35 +0000"
     },
     {
       "source": "Mundo Metal",
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "Bazar Beneficente celebrará legado de Vinicius Neves e Airton Diniz",
-      "link": "https://www.mundometalbr.com/bazar-beneficente-celebrara-legado-de-vinicius-neves-e-airton-diniz/",
-      "pubDate": "Wed, 28 Oct 2026 11:00:00 +0000"
+      "title": "Bone Reaper apresenta Thrash Metal agressivo e temáticas sombrias em álbum de estreia “Obsessed with Death/Driven to Kill”",
+      "link": "https://www.mundometalbr.com/bone-reaper-apresenta-thrash-metal-agressivo-e-tematicas-sombrias-em-album-de-estreia-obsessed-with-death-driven-to-kill/",
+      "pubDate": "Fri, 30 Oct 2026 20:25:00 +0000"
     },
     {
       "source": "Metal na Lata",
       "lang": "pt",
       "region": "BR",
       "color": "#ef4444",
-      "title": "Floor Jansen diz que clipe lançado logo após saída do Nightwish foi proposital",
-      "link": "https://metalnalata.com.br/floor-jansen-diz-que-clipe-lancado-logo-apos-saida-do-nightwish-foi-proposital/",
-      "pubDate": "Wed, 28 Oct 2026 02:08:30 +0000"
+      "title": "Dark Dimensions Fest 2027 celebra 27 anos da produtora e anuncia primeiras atrações para dois dias de festival",
+      "link": "https://metalnalata.com.br/dark-dimensions-fest-2027/",
+      "pubDate": "Fri, 30 Oct 2026 20:56:52 +0000"
     },
     {
       "source": "Wikimetal",
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "Iron Maiden deveria ter abaixado tom das músicas para Blaze Bayley, diz Nicko",
-      "link": "https://www.wikimetal.com.br/iron-maiden-abaixado-tom-musicas-blaze-bayley/",
-      "pubDate": "Tue, 27 Oct 2026 17:26:13 +0000"
+      "title": "Social Distortion adia turnê no Brasil para fevereiro de 2027",
+      "link": "https://www.wikimetal.com.br/social-distortion-adia-turne-brasil/",
+      "pubDate": "Fri, 30 Oct 2026 17:34:54 +0000"
     },
     {
       "source": "Road to Metal",
@@ -99,54 +162,54 @@
       "lang": "en",
       "region": "GLOBAL",
       "color": "#a855f7",
-      "title": "HAKEN Announces March/April 2027 North American Tour",
-      "link": "https://blabbermouth.net/news/haken-announces-march-april-2027-north-american-tour",
-      "pubDate": "Wed, 28 Oct 2026 06:43:11 +0000"
+      "title": "TRIUMPH Cancels Leg Two Of 2026 'Rock & Roll Machine Reloaded' U.S. Tour 'Due To Sudden And Unexpected Medical Circumstances'",
+      "link": "https://blabbermouth.net/news/triumph-cancels-leg-two-of-2026-rock-roll-machine-reloaded-u-s-tour-due-to-sudden-and-unexpected-medical-circumstances",
+      "pubDate": "Fri, 30 Oct 2026 20:51:55 +0000"
     },
     {
       "source": "Loudwire",
       "lang": "en",
       "region": "GLOBAL",
       "color": "#10b981",
-      "title": "'The Voice' Competitors Battle It Out to Evanescence Classic",
-      "link": "https://loudwire.com/the-voice-dakota-cohen-destinee-monroe-evanescence-bring-me-to-life-2026/",
-      "pubDate": "Tue, 27 Oct 2026 16:42:22 GMT"
+      "title": "The 31 Scariest Metal Album Covers of All Time",
+      "link": "https://loudwire.com/scariest-metal-album-covers/",
+      "pubDate": "Fri, 30 Oct 2026 19:20:18 GMT"
     },
     {
       "source": "Metal Injection",
       "lang": "en",
       "region": "GLOBAL",
       "color": "#ec4899",
-      "title": "System of a Down's Daron Malakian: \"Red Or Blue, Your Government Doesn't Give a **** About You\"",
-      "link": "https://metalinjection.net/news/system-of-a-downs-daron-malakian-red-or-blue-your-government-doesnt-give-a-about-you",
-      "pubDate": "Tue, 27 Oct 2026 19:24:18 +0000"
+      "title": "200 Stab Wounds, Rev3rent, Darkest Hour & More Added to Metal Injection's Top Tracks of the Week",
+      "link": "https://metalinjection.net/playlist/top-tracks-of-the-week-playlist/200-stab-wounds-rev3rent-darkest-hour-more-added-to-metal-injections-top-tracks-of-the-week",
+      "pubDate": "Fri, 30 Oct 2026 16:15:42 +0000"
     },
     {
       "source": "Mundo Metal",
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "Scott Ian revela atitude de Ronnie James Dio que jamais esqueceu: “Você conseguiu!”",
-      "link": "https://www.mundometalbr.com/scott-ian-revela-atitude-de-ronnie-james-dio-que-jamais-esqueceu-voce-conseguiu/",
-      "pubDate": "Tue, 27 Oct 2026 21:10:00 +0000"
+      "title": "Nicko McBrain acredita que Iron Maiden continuará até que algum integrante não tenha mais condições de tocar",
+      "link": "https://www.mundometalbr.com/nicko-mcbrain-acredita-que-iron-maiden-continuara-ate-que-algum-integrante-nao-tenha-mais-condicoes-de-tocar/",
+      "pubDate": "Fri, 30 Oct 2026 20:05:00 +0000"
     },
     {
       "source": "Metal na Lata",
       "lang": "pt",
       "region": "BR",
       "color": "#ef4444",
-      "title": "Motionless in White anuncia show único no Brasil",
-      "link": "https://metalnalata.com.br/motionless-in-white-anuncia-show-unico-no-brasil/",
-      "pubDate": "Wed, 28 Oct 2026 01:36:42 +0000"
+      "title": "Naimaculada leva psicodelia e experimentação ao Sesc Belenzinho em show de lançamento do EP “Acromatopsia”",
+      "link": "https://metalnalata.com.br/naimaculada-leva-psicodelia-e-experimentacao-ao-sesc-belenzinho-em-show-de-lancamento-do-ep-acromatopsia/",
+      "pubDate": "Fri, 30 Oct 2026 11:14:04 +0000"
     },
     {
       "source": "Wikimetal",
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "KISS anuncia documentário com bastidores de sua turnê de despedida",
-      "link": "https://www.wikimetal.com.br/kiss-documentario-bastidores-turne-despedida/",
-      "pubDate": "Tue, 27 Oct 2026 16:38:53 +0000"
+      "title": "Nickelback lança ‘Everything Under The Sun’, novo álbum com hinos de rock e novas perspectivas",
+      "link": "https://www.wikimetal.com.br/nickelback-lanca-everything-under-the-sun-novo-album/",
+      "pubDate": "Fri, 30 Oct 2026 16:22:46 +0000"
     },
     {
       "source": "Road to Metal",
@@ -162,72 +225,9 @@
       "lang": "en",
       "region": "GLOBAL",
       "color": "#a855f7",
-      "title": "METALLICA's 'Kill 'Em All' Assistant Engineer ANDREW WROBLEWSKI Shares Stories And Rare Photos In 'Bass Solo - Take One' Memoir",
-      "link": "https://blabbermouth.net/news/metallicas-kill-em-all-assistant-engineer-andrew-wroblewski-shares-stories-and-rare-photos-in-bass-solo-take-one-memoir",
-      "pubDate": "Tue, 27 Oct 2026 20:26:08 +0000"
-    },
-    {
-      "source": "Loudwire",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#10b981",
-      "title": "Neil Young Files $10M Lawsuit Against Donald Trump Campaign",
-      "link": "https://loudwire.com/neil-young-lawsuit-donald-trump/",
-      "pubDate": "Tue, 27 Oct 2026 14:52:48 GMT"
-    },
-    {
-      "source": "Metal Injection",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#ec4899",
-      "title": "UK Hardcore Upstarts Crowquill Go Straight for the Vein with “Cannula”",
-      "link": "https://metalinjection.net/new-music/uk-hardcore-upstarts-crowquill-go-straight-for-the-vein-with-cannula",
-      "pubDate": "Tue, 27 Oct 2026 18:56:09 +0000"
-    },
-    {
-      "source": "Mundo Metal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#00d4ff",
-      "title": "Nikki Sixx defende Vince Neil das críticas sobre sua voz: “Ele queria provar que ainda era capaz”",
-      "link": "https://www.mundometalbr.com/nikki-sixx-defende-vince-neil-das-criticas-sobre-sua-voz-ele-queria-provar-que-ainda-era-capaz/",
-      "pubDate": "Tue, 27 Oct 2026 20:50:00 +0000"
-    },
-    {
-      "source": "Metal na Lata",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#ef4444",
-      "title": "Masterplan e Rhapsody Of Fire atualizam datas da turnê no Brasil",
-      "link": "https://metalnalata.com.br/masterplan-rhapsody-of-fire-turne-brasil-2027/",
-      "pubDate": "Tue, 27 Oct 2026 15:31:51 +0000"
-    },
-    {
-      "source": "Wikimetal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#00d4ff",
-      "title": "Alex Meister se inspira no hard rock dos anos 80 em novo single “Blame It on Love”",
-      "link": "https://www.wikimetal.com.br/alex-meister-hard-rock-anos-80-novo-single-blame-it-on-love/",
-      "pubDate": "Tue, 27 Oct 2026 15:54:40 +0000"
-    },
-    {
-      "source": "Road to Metal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#f59e0b",
-      "title": "Cobertura de Show: Amorphis – 18/10/2026 – Carioca Club/SP",
-      "link": "https://www.roadtometal.com.br/2026/10/cobertura-de-show-amorphis-18102026.html",
-      "pubDate": "Sat, 24 Oct 2026 13:31:19 +0000"
-    },
-    {
-      "source": "Blabbermouth",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#a855f7",
-      "title": "THE WHO's PETE TOWNSHEND Says He 'Never Really Got Into LED ZEPPELIN': 'The Only Heavy Metal I Really Listened To Was AC/DC'",
-      "link": "https://blabbermouth.net/news/the-whos-pete-townshend-says-he-never-really-got-into-led-zeppelin-the-only-heavy-metal-i-really-listened-to-was-ac-dc",
-      "pubDate": "Tue, 27 Oct 2026 19:46:12 +0000"
+      "title": "KILLSWITCH ENGAGE's JESSE LEACH Is Open To Releasing A New 'EP Or A Couple Of Songs' Instead Of Focusing On Making A Full-Length Album",
+      "link": "https://blabbermouth.net/news/killswitch-engages-jesse-leach-is-open-to-releasing-a-new-ep-or-a-couple-of-songs-instead-of-focusing-on-making-a-full-length-album",
+      "pubDate": "Fri, 30 Oct 2026 19:26:17 +0000"
     }
   ]
 }
