@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-01T12:08:18.515695+00:00",
+  "last_updated": "2026-11-04T13:21:17.877745+00:00",
   "update_frequency_days": 3,
   "total": 24,
   "sources": [
@@ -18,9 +18,135 @@
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "The Rasmus adia show em São Paulo após vocalista Lauri Ylönen adoecer",
-      "link": "https://www.wikimetal.com.br/the-rasmus-adia-show-sao-paulo/",
-      "pubDate": "Sat, 31 Oct 2026 19:13:01 +0000"
+      "title": "Chuck Billy fala da tentativa frustrada de ser vocalista do Sepultura",
+      "link": "https://www.wikimetal.com.br/chuck-billy-revela-frustrada-audicao-sepultura/",
+      "pubDate": "Wed, 04 Nov 2026 12:44:57 +0000"
+    },
+    {
+      "source": "Road to Metal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#f59e0b",
+      "title": "Cobertura de Show: Iron Maiden – 27/10/2026 – Nubank Parque/SP",
+      "link": "https://www.roadtometal.com.br/2026/11/cobertura-de-show-iron-maiden-27102026.html",
+      "pubDate": "Wed, 04 Nov 2026 02:27:31 +0000"
+    },
+    {
+      "source": "Blabbermouth",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#a855f7",
+      "title": "METALLICA's JAMES HETFIELD Helps EMG Celebrate 50th Anniversary With Limited-Edition Signature Set Release",
+      "link": "https://blabbermouth.net/news/metallicas-james-hetfield-helps-emg-celebrate-50th-anniversary-with-limited-edition-signature-set-release",
+      "pubDate": "Wed, 04 Nov 2026 13:07:18 +0000"
+    },
+    {
+      "source": "Loudwire",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#10b981",
+      "title": "Ninth Key's Ekoh + Lo Spirit Open Up About New Music + More",
+      "link": "https://loudwire.com/ninth-key-ekoh-lo-spirit-interview/",
+      "pubDate": "Wed, 04 Nov 2026 07:54:38 GMT"
+    },
+    {
+      "source": "Metal Injection",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#ec4899",
+      "title": "Mastodon Moves to Dismiss Key Claims in Brent Hinds Estate Lawsuit",
+      "link": "https://metalinjection.net/news/mastodon-moves-to-dismiss-key-claims-in-brent-hinds-estate-lawsuit",
+      "pubDate": "Tue, 03 Nov 2026 22:02:07 +0000"
+    },
+    {
+      "source": "Mundo Metal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#00d4ff",
+      "title": "As I Lay Dying lança “The Cost To Stay” e detalha novo álbum autointitulado",
+      "link": "https://www.mundometalbr.com/as-i-lay-dying-lanca-the-cost-to-stay-e-detalha-novo-album-autointitulado/",
+      "pubDate": "Tue, 03 Nov 2026 23:13:48 +0000"
+    },
+    {
+      "source": "Metal na Lata",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#ef4444",
+      "title": "Marty Friedman toca “Scenes” na íntegra e revisita clássicos do Megadeth em show no Manifesto Bar na próxima semana",
+      "link": "https://metalnalata.com.br/marty-friedman-toca-scenes-na-integra-e-revisita-classicos-do-megadeth-em-show-no-manifesto-bar-na-proxima-semana/",
+      "pubDate": "Wed, 04 Nov 2026 13:19:43 +0000"
+    },
+    {
+      "source": "Wikimetal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#00d4ff",
+      "title": "Matanza Ritual anuncia festival com Nervosa e Gangrena Vodu",
+      "link": "https://www.wikimetal.com.br/matanza-ritual-anuncia-festival-nervosa-gangrena-vodu/",
+      "pubDate": "Wed, 04 Nov 2026 12:03:34 +0000"
+    },
+    {
+      "source": "Road to Metal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#f59e0b",
+      "title": "Archon Angel: Muito Além do Savatage (Also In English)",
+      "link": "https://www.roadtometal.com.br/2026/11/archon-angel-muito-alem-do-savatage.html",
+      "pubDate": "Tue, 03 Nov 2026 16:54:09 +0000"
+    },
+    {
+      "source": "Blabbermouth",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#a855f7",
+      "title": "MOTÖRHEAD Shares Mini-Documentary On Making Of 40th-Anniversary Edition Of 'Orgasmatron' Album",
+      "link": "https://blabbermouth.net/news/motorhead-shares-mini-documentary-on-making-of-40th-anniversary-edition-of-orgasmatron-album",
+      "pubDate": "Wed, 04 Nov 2026 12:43:14 +0000"
+    },
+    {
+      "source": "Loudwire",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#10b981",
+      "title": "The Song That Sharon Osbourne Would Want Played at Her Funeral",
+      "link": "https://loudwire.com/sharon-osbourne-funeral-songs/",
+      "pubDate": "Tue, 03 Nov 2026 20:18:58 GMT"
+    },
+    {
+      "source": "Metal Injection",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#ec4899",
+      "title": "Rock For People Adds Evanescence, Parkway Drive, The Devil Wears Prada and More to Lineup",
+      "link": "https://metalinjection.net/tour-dates/festivals/rock-for-people-adds-evanescence-parkway-drive-the-devil-wears-prada-and-more-to-lineup",
+      "pubDate": "Tue, 03 Nov 2026 21:11:58 +0000"
+    },
+    {
+      "source": "Mundo Metal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#00d4ff",
+      "title": "Scott Ian aponta AC/DC da era Bon Scott como sua banda favorita de todos os tempos",
+      "link": "https://www.mundometalbr.com/scott-ian-aponta-ac-dc-da-era-bon-scott-como-sua-banda-favorita-de-todos-os-tempos/",
+      "pubDate": "Tue, 03 Nov 2026 22:56:02 +0000"
+    },
+    {
+      "source": "Metal na Lata",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#ef4444",
+      "title": "Green Carnation – “A Dark Poem, Part III: The Messiah Complex” (2026)",
+      "link": "https://metalnalata.com.br/green-carnation-a-dark-poem-part-iii-the-messiah-complex-2026/",
+      "pubDate": "Wed, 04 Nov 2026 13:16:35 +0000"
+    },
+    {
+      "source": "Wikimetal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#00d4ff",
+      "title": "Hatebreed anuncia show único no Brasil em setembro de 2027",
+      "link": "https://www.wikimetal.com.br/hatebreed-anuncia-show-unico-bras/",
+      "pubDate": "Tue, 03 Nov 2026 20:10:25 +0000"
     },
     {
       "source": "Road to Metal",
@@ -36,54 +162,54 @@
       "lang": "en",
       "region": "GLOBAL",
       "color": "#a855f7",
-      "title": "BIOHAZARD's EVAN SEINFELD On His New Project SHED MY SKIN: 'There Are Elements In It That I Would Call Trap Metal'",
-      "link": "https://blabbermouth.net/news/biohazards-evan-seinfeld-on-his-new-project-shed-my-skin-there-are-elements-in-it-that-i-would-call-trap-metal",
-      "pubDate": "Sat, 31 Oct 2026 21:37:50 +0000"
+      "title": "SLASH FEATURING MYLES KENNEDY & THE CONSPIRATORS Release Official Lyric Video For 'Flying Blind' Title Track",
+      "link": "https://blabbermouth.net/news/slash-featuring-myles-kennedy-the-conspirators-release-official-lyric-video-for-flying-blind-title-track",
+      "pubDate": "Wed, 04 Nov 2026 12:20:43 +0000"
     },
     {
       "source": "Loudwire",
       "lang": "en",
       "region": "GLOBAL",
       "color": "#10b981",
-      "title": "11 Songs to Scare Off Trick-or-Treaters",
-      "link": "https://loudwire.com/songs-to-scare-off-trick-or-treaters/",
-      "pubDate": "Sat, 31 Oct 2026 13:00:35 GMT"
+      "title": "Ozzfest Just Launched a Countdown Clock - It's Real Now",
+      "link": "https://loudwire.com/ozzfest-launch-countdown-clock/",
+      "pubDate": "Tue, 03 Nov 2026 17:36:57 GMT"
     },
     {
       "source": "Metal Injection",
       "lang": "en",
       "region": "GLOBAL",
       "color": "#ec4899",
-      "title": "James Hetfield: Turnstile Turned Down Touring With Metallica",
-      "link": "https://metalinjection.net/news/james-hetfield-turnstile-turned-down-touring-with-metallica",
-      "pubDate": "Sat, 31 Oct 2026 16:13:07 +0000"
+      "title": "Photos: Knocked Loose and Denzel Curry Turn Petco Park Into a Halloween Eve Riot",
+      "link": "https://metalinjection.net/photos/photos-knocked-loose-and-denzel-curry-turn-petco-park-into-a-halloween-eve-riot",
+      "pubDate": "Tue, 03 Nov 2026 21:09:54 +0000"
     },
     {
       "source": "Mundo Metal",
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "Cro-Mags está perto de concluir novo álbum, revela Harley Flanagan",
-      "link": "https://www.mundometalbr.com/cro-mags-esta-perto-de-concluir-novo-album-revela-harley-flanagan/",
-      "pubDate": "Sat, 31 Oct 2026 21:27:57 +0000"
+      "title": "Stu Block rebate comentário de Jon Schaffer sobre sua autenticidade: “Você não pode definir a autenticidade de outra pessoa”",
+      "link": "https://www.mundometalbr.com/stu-block-rebate-comentario-de-jon-schaffer-sobre-sua-autenticidade-voce-nao-pode-definir-a-autenticidade-de-outra-pessoa/",
+      "pubDate": "Tue, 03 Nov 2026 22:43:50 +0000"
     },
     {
       "source": "Metal na Lata",
       "lang": "pt",
       "region": "BR",
       "color": "#ef4444",
-      "title": "KAT – “Death is not Enough” (2026)",
-      "link": "https://metalnalata.com.br/kat-death-is-not-enough-2026/",
-      "pubDate": "Sun, 01 Nov 2026 11:21:08 +0000"
+      "title": "Green Carnation – “A Dark Poem, Part II: Sanguis” (2026)",
+      "link": "https://metalnalata.com.br/green-carnation-a-dark-poem-part-ii-sanguis-2026/",
+      "pubDate": "Wed, 04 Nov 2026 12:48:33 +0000"
     },
     {
       "source": "Wikimetal",
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "Deep Purple cancela shows após Ian Gillan ser hospitalizado",
-      "link": "https://www.wikimetal.com.br/deep-purple-cancela-show-emergencia-medica-ian-gillan/",
-      "pubDate": "Sat, 31 Oct 2026 16:00:58 +0000"
+      "title": "Greta Van Fleet traz som evoluído e amadurecimento em ‘Palace for the People’",
+      "link": "https://www.wikimetal.com.br/greta-van-fleet-palace-for-the-people/",
+      "pubDate": "Tue, 03 Nov 2026 19:22:58 +0000"
     },
     {
       "source": "Road to Metal",
@@ -99,135 +225,9 @@
       "lang": "en",
       "region": "GLOBAL",
       "color": "#a855f7",
-      "title": "CRO-MAGS Are 'Almost Done' With New Album: We Have 'Nine Songs Tracked And Six More Songs' Written",
-      "link": "https://blabbermouth.net/news/cro-mags-are-almost-done-with-new-album-we-have-nine-songs-tracked-and-six-more-songs-written",
-      "pubDate": "Sat, 31 Oct 2026 20:18:46 +0000"
-    },
-    {
-      "source": "Loudwire",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#10b981",
-      "title": "Triumph Cancel Upcoming 2026 Tour Dates",
-      "link": "https://loudwire.com/triumph-cancels-2026-tour-dates/",
-      "pubDate": "Fri, 30 Oct 2026 20:45:55 GMT"
-    },
-    {
-      "source": "Metal Injection",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#ec4899",
-      "title": "When Ozzy Osbourne Played an Anti-Heavy Metal Preacher in 'Trick or Treat'",
-      "link": "https://metalinjection.net/news/when-ozzy-osbourne-played-an-anti-heavy-metal-preacher-in-trick-or-treat",
-      "pubDate": "Sat, 31 Oct 2026 15:11:39 +0000"
-    },
-    {
-      "source": "Mundo Metal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#00d4ff",
-      "title": "Deathwards estreia com álbum inspirado no Inferno de Dante",
-      "link": "https://www.mundometalbr.com/deathwards-estreia-com-album-inspirado-no-inferno-de-dante/",
-      "pubDate": "Sat, 31 Oct 2026 20:40:15 +0000"
-    },
-    {
-      "source": "Metal na Lata",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#ef4444",
-      "title": "Trick or Treat: Ozzy Osbourne interpretou pregador anti-Heavy Metal em atuação cinematográfica",
-      "link": "https://metalnalata.com.br/trick-or-treat-ozzy-osbourne-interpretou-pregador-anti-heavy-metal-em-atuacao-cinematografica/",
-      "pubDate": "Sun, 01 Nov 2026 07:12:42 +0000"
-    },
-    {
-      "source": "Wikimetal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#00d4ff",
-      "title": "Halloween: 10 músicas de rock usadas em filmes de terror",
-      "link": "https://www.wikimetal.com.br/halloween-10-musicas-usadas-filmes-terror/",
-      "pubDate": "Sat, 31 Oct 2026 12:04:47 +0000"
-    },
-    {
-      "source": "Road to Metal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#f59e0b",
-      "title": "Temperance: Uma Jornada musical Pelas Cartas do Tarot (Also In English)",
-      "link": "https://www.roadtometal.com.br/2026/10/temperance-uma-jornada-musical-pelas.html",
-      "pubDate": "Mon, 26 Oct 2026 23:17:13 +0000"
-    },
-    {
-      "source": "Blabbermouth",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#a855f7",
-      "title": "Watch: VINNY APPICE's SABBATH KNIGHTS Performs BLACK SABBATH And DIO Classics In Roseville, California",
-      "link": "https://blabbermouth.net/news/watch-vinny-appices-sabbath-knights-performs-black-sabbath-and-dio-classics-in-roseville-california",
-      "pubDate": "Sat, 31 Oct 2026 17:20:42 +0000"
-    },
-    {
-      "source": "Loudwire",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#10b981",
-      "title": "Alice in Chains’ Jerry Cantrell Posts Photo of New Haircut",
-      "link": "https://loudwire.com/alice-in-chains-jerry-cantrell-haircut-2026/",
-      "pubDate": "Fri, 30 Oct 2026 19:59:56 GMT"
-    },
-    {
-      "source": "Metal Injection",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#ec4899",
-      "title": "Watch: Smash Mouth Covers Slipknot's \"Duality\"",
-      "link": "https://metalinjection.net/news/watch-smash-mouth-covers-slipknots-duality",
-      "pubDate": "Sat, 31 Oct 2026 14:26:03 +0000"
-    },
-    {
-      "source": "Mundo Metal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#00d4ff",
-      "title": "Invultation lança quarto álbum com atmosfera soturna de Black/Death",
-      "link": "https://www.mundometalbr.com/invultation-lanca-quarto-album-com-atmosfera-soturna-de-black-death/",
-      "pubDate": "Sat, 31 Oct 2026 20:16:52 +0000"
-    },
-    {
-      "source": "Metal na Lata",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#ef4444",
-      "title": "Skid Row revela novo vocalista e anuncia primeiros shows de 2027",
-      "link": "https://metalnalata.com.br/skid-row-revela-novo-vocalista-e-anuncia-primeiros-shows-de-2027/",
-      "pubDate": "Sun, 01 Nov 2026 06:41:51 +0000"
-    },
-    {
-      "source": "Wikimetal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#00d4ff",
-      "title": "Promoção Opeth: Valendo 01 par de ingressos para show em São Paulo",
-      "link": "https://www.wikimetal.com.br/promocao-opeth-par-de-ingressos-show/",
-      "pubDate": "Fri, 30 Oct 2026 20:39:30 +0000"
-    },
-    {
-      "source": "Road to Metal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#f59e0b",
-      "title": "Entrevista – Chaos Synopsis celebra 20 anos de história, lança novo single e prepara próximos passos na estrada",
-      "link": "https://www.roadtometal.com.br/2026/10/entrevista-chaos-synopsis-celebra-20.html",
-      "pubDate": "Sat, 24 Oct 2026 15:10:13 +0000"
-    },
-    {
-      "source": "Blabbermouth",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#a855f7",
-      "title": "NONPOINT's ELIAS SORIANO Says 'The Last Word' Album Was In The Works 'For About Two Years'",
-      "link": "https://blabbermouth.net/news/nonpoints-elias-soriano-says-the-last-word-album-was-in-the-works-for-about-two-years",
-      "pubDate": "Sat, 31 Oct 2026 16:03:40 +0000"
+      "title": "KATATONIA Announces Spring 2027 European Tour",
+      "link": "https://blabbermouth.net/news/katatonia-announces-spring-2027-european-tour",
+      "pubDate": "Wed, 04 Nov 2026 12:04:40 +0000"
     }
   ]
 }
