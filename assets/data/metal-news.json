@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-19T14:45:51.724812+00:00",
+  "last_updated": "2026-11-22T13:40:11.159490+00:00",
   "update_frequency_days": 3,
   "total": 24,
   "sources": [
@@ -18,9 +18,72 @@
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "‘GTA VI’: Confira lista com músicas de rock e metal presentes no jogo",
-      "link": "https://www.wikimetal.com.br/gta-vi-lista-musicas-rock-e-metal-jogo/",
-      "pubDate": "Thu, 19 Nov 2026 14:15:44 +0000"
+      "title": "Roger Daltrey ignora idade e exibe voz intacta no Best of Blues and Rock 2026",
+      "link": "https://www.wikimetal.com.br/roger-daltrey-best-of-blues-and-rock-2026/",
+      "pubDate": "Sun, 22 Nov 2026 12:31:07 +0000"
+    },
+    {
+      "source": "Road to Metal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#f59e0b",
+      "title": "Cobertura de Show: Benediction – 31/10/2026 – Burning House/SP",
+      "link": "https://www.roadtometal.com.br/2026/11/cobertura-de-show-benediction-31102026.html",
+      "pubDate": "Fri, 20 Nov 2026 22:31:23 +0000"
+    },
+    {
+      "source": "Blabbermouth",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#a855f7",
+      "title": "See Pro-Shot Video Of LZZY HALE, GEEZER BUTLER, NUNO BETTENCOURT And MATT SORUM Performing 'Neon Knights' At 2026 'Sound & Vision Awards'",
+      "link": "https://blabbermouth.net/news/see-pro-shot-video-of-lzzy-hale-geezer-butler-nuno-bettencourt-and-matt-sorum-performing-neon-knights-at-2026-sound-vision-awards",
+      "pubDate": "Sun, 22 Nov 2026 12:59:29 +0000"
+    },
+    {
+      "source": "Loudwire",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#10b981",
+      "title": "Two Metal Vocalists Just Cut Their Hair - See Their New Looks",
+      "link": "https://loudwire.com/lorna-shore-will-ramos-motionless-in-white-chris-motionless-2026-haircuts/",
+      "pubDate": "Fri, 20 Nov 2026 22:22:34 GMT"
+    },
+    {
+      "source": "Metal Injection",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#ec4899",
+      "title": "Slayer's Tom Araya Allegedly Peed on Venom's Cronos in 1985, and Nobody Could Agree on What Happened Next",
+      "link": "https://metalinjection.net/editorials/tom-araya-cronos-slayer-venom-1985-tour-story",
+      "pubDate": "Sat, 21 Nov 2026 16:37:38 +0000"
+    },
+    {
+      "source": "Mundo Metal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#00d4ff",
+      "title": "Indicado ao Grammy, Anthrax anuncia grande turnê ao lado do Megadeth para 2027",
+      "link": "https://www.mundometalbr.com/indicado-ao-grammy-anthrax-anuncia-grande-turne-ao-lado-do-megadeth-para-2027/",
+      "pubDate": "Thu, 19 Nov 2026 20:30:00 +0000"
+    },
+    {
+      "source": "Metal na Lata",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#ef4444",
+      "title": "Marty Friedman – Manifesto Bar, São Paulo/SP (11/11/2026)",
+      "link": "https://metalnalata.com.br/marty-friedman-manifesto-bar-sao-paulo-2026/",
+      "pubDate": "Sat, 21 Nov 2026 13:55:31 +0000"
+    },
+    {
+      "source": "Wikimetal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#00d4ff",
+      "title": "Eddie Vedder corta excessos do rock em show no Best of Blues and Rock 2026",
+      "link": "https://www.wikimetal.com.br/eddie-vedder-best-of-blues-and-rock-2026/",
+      "pubDate": "Sat, 21 Nov 2026 12:15:25 +0000"
     },
     {
       "source": "Road to Metal",
@@ -36,54 +99,54 @@
       "lang": "en",
       "region": "GLOBAL",
       "color": "#a855f7",
-      "title": "Watch: Former MEGADETH Guitarist JEFF YOUNG Teams Up With Singer KAYLA DIXON And Director MICHAEL SARNA For 'Mirror In The Sky' Music Video",
-      "link": "https://blabbermouth.net/news/watch-former-megadeth-guitarist-jeff-young-teams-up-with-singer-kayla-dixon-and-director-michael-sarna-for-mirror-in-the-sky-music-video",
-      "pubDate": "Thu, 19 Nov 2026 14:36:25 +0000"
+      "title": "Watch: Ex-ACCEPT Singer DAVID REECE Performs With The Band For The First Time In 37 Years",
+      "link": "https://blabbermouth.net/news/watch-ex-accept-singer-david-reece-performs-with-the-band-for-the-first-time-in-37-years",
+      "pubDate": "Sun, 22 Nov 2026 12:43:06 +0000"
     },
     {
       "source": "Loudwire",
       "lang": "en",
       "region": "GLOBAL",
       "color": "#10b981",
-      "title": "Here Are All the Rock + Metal Songs in 'Grand Theft Auto 6'",
-      "link": "https://loudwire.com/rock-metal-soundtrack-songs-grand-theft-auto-6/",
-      "pubDate": "Wed, 18 Nov 2026 19:23:33 GMT"
+      "title": "Wrestler Breaks Leg at Metalcore Band's 25th Anniversary Show",
+      "link": "https://loudwire.com/it-dies-today-wrestler-injury/",
+      "pubDate": "Fri, 20 Nov 2026 21:27:58 GMT"
     },
     {
       "source": "Metal Injection",
       "lang": "en",
       "region": "GLOBAL",
       "color": "#ec4899",
-      "title": "The Chamber Is Loaded: Every Metal Song Confirmed So Far in 'Grand Theft Auto VI'",
-      "link": "https://metalinjection.net/news/gta-6-metal-radio-station-the-chamber-songs",
-      "pubDate": "Thu, 19 Nov 2026 13:44:27 +0000"
+      "title": "Megadeth's Massive 2027 Tour, GTA VI Goes Heavy & More Top Stories",
+      "link": "https://metalinjection.net/injection-reflection/megadeths-massive-2027-tour-gta-vi-goes-heavy-more-top-stories",
+      "pubDate": "Sat, 21 Nov 2026 15:59:00 +0000"
     },
     {
       "source": "Mundo Metal",
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "Resenha: Tesla – “Homage” (2026)",
-      "link": "https://www.mundometalbr.com/resenha-tesla-homage-2026/",
-      "pubDate": "Wed, 18 Nov 2026 18:43:15 +0000"
+      "title": "Floor Jansen revela o drama de saúde que quase a impediu de entrar no Nightwish",
+      "link": "https://www.mundometalbr.com/floor-jansen-revela-o-drama-de-saude-que-quase-a-impediu-de-entrar-no-nightwish/",
+      "pubDate": "Thu, 19 Nov 2026 20:05:00 +0000"
     },
     {
       "source": "Metal na Lata",
       "lang": "pt",
       "region": "BR",
       "color": "#ef4444",
-      "title": "Europe lança “This Time of Year”, single inspirado nas emoções do fim de ano",
-      "link": "https://metalnalata.com.br/europe-lanca-this-time-of-year-single-inspirado-nas-emocoes-do-fim-de-ano/",
-      "pubDate": "Thu, 19 Nov 2026 04:20:54 +0000"
+      "title": "IAMX – Madame Underground Club, São Paulo (14/11/2026)",
+      "link": "https://metalnalata.com.br/iamx-madame-underground-club-sao-paulo-14-11-2026/",
+      "pubDate": "Sat, 21 Nov 2026 12:18:53 +0000"
     },
     {
       "source": "Wikimetal",
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "Viúva de Frankie Banali rebate Dee Snider sobre futuro do Quiet Riot",
-      "link": "https://www.wikimetal.com.br/viuva-frankie-banali-rebate-dee-snider-futuro-quiet-riot/",
-      "pubDate": "Thu, 19 Nov 2026 13:23:37 +0000"
+      "title": "Lançamentos de rock e metal da semana: Bruce Dickinson, Eminence, Within Temptation, Cyberpunch e mais",
+      "link": "https://www.wikimetal.com.br/lancamentos-rock-metal-semana-bruce-dickinson-eminence/",
+      "pubDate": "Fri, 20 Nov 2026 13:23:34 +0000"
     },
     {
       "source": "Road to Metal",
@@ -99,54 +162,54 @@
       "lang": "en",
       "region": "GLOBAL",
       "color": "#a855f7",
-      "title": "METALLICA's ROBERT TRUJILLO On Performing At The Sphere: 'We're Pretty Fortunate To Be One Of The Bands And Artists To Have This Experience'",
-      "link": "https://blabbermouth.net/news/metallicas-robert-trujillo-on-performing-at-the-sphere-were-pretty-fortunate-to-be-one-of-the-bands-and-artists-to-have-this-experience",
-      "pubDate": "Thu, 19 Nov 2026 14:22:48 +0000"
+      "title": "JOHN DOLMAYAN Says 'Big Things Are Coming For SYSTEM OF A DOWN'",
+      "link": "https://blabbermouth.net/news/john-dolmayan-says-big-things-are-coming-for-system-of-a-down",
+      "pubDate": "Sat, 21 Nov 2026 22:21:10 +0000"
     },
     {
       "source": "Loudwire",
       "lang": "en",
       "region": "GLOBAL",
       "color": "#10b981",
-      "title": "Tony Iommi Exclusive Interview - New Album, Back to the Start",
-      "link": "https://loudwire.com/tony-iommi-exclusive-interview-2026/",
-      "pubDate": "Wed, 18 Nov 2026 17:58:35 GMT"
+      "title": "Stone Sour's Jim Root Returns to Complete Previously Unheard Song",
+      "link": "https://loudwire.com/stone-sour-jim-root-full-of-empty/",
+      "pubDate": "Fri, 20 Nov 2026 21:20:27 GMT"
     },
     {
       "source": "Metal Injection",
       "lang": "en",
       "region": "GLOBAL",
       "color": "#ec4899",
-      "title": "Guilt Trip Drops 10th Anniversary Version of Self-Titled Single",
-      "link": "https://metalinjection.net/news/guilt-trip-drops-10th-anniversary-version-of-self-titled-single",
-      "pubDate": "Wed, 18 Nov 2026 21:09:47 +0000"
+      "title": "Lamb of God Earns First Platinum Single",
+      "link": "https://metalinjection.net/news/lamb-of-god-earns-first-platinum-single",
+      "pubDate": "Sat, 21 Nov 2026 15:20:53 +0000"
     },
     {
       "source": "Mundo Metal",
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "Mastodon celebra indicação ao Grammy com vídeo ao vivo de “Your Ghost Again”",
-      "link": "https://www.mundometalbr.com/mastodon-celebra-indicacao-ao-grammy-com-video-ao-vivo-de-your-ghost-again/",
-      "pubDate": "Wed, 18 Nov 2026 18:24:27 +0000"
+      "title": "Paul Stanley promete avatares do Kiss muito diferentes dos exibidos no último show da banda",
+      "link": "https://www.mundometalbr.com/paul-stanley-promete-avatares-do-kiss-muito-diferentes-dos-exibidos-no-ultimo-show-da-banda/",
+      "pubDate": "Thu, 19 Nov 2026 19:37:28 +0000"
     },
     {
       "source": "Metal na Lata",
       "lang": "pt",
       "region": "BR",
       "color": "#ef4444",
-      "title": "Queen lança nova versão de canção natalina que nunca convenceu Brian May e Roger Taylor",
-      "link": "https://metalnalata.com.br/queen-lanca-nova-versao-de-cancao-natalina-que-nunca-convenceu-brian-may-e-roger-taylor/",
-      "pubDate": "Thu, 19 Nov 2026 03:58:44 +0000"
+      "title": "Litosth – “Dreaming” (2026)",
+      "link": "https://metalnalata.com.br/litosth-dreaming-2026/",
+      "pubDate": "Fri, 20 Nov 2026 01:25:47 +0000"
     },
     {
       "source": "Wikimetal",
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "Dave Mustaine, do Megadeth, divulga 1° trailer do reality show ‘House of Mustaine’",
-      "link": "https://www.wikimetal.com.br/dave-mustaine-megadeth-divulga-trailer-reality-show-house-of-mustaine/",
-      "pubDate": "Thu, 19 Nov 2026 12:47:51 +0000"
+      "title": "Eminence lança “Faceless”, single mais pesado do próximo EP ‘Silent March’",
+      "link": "https://www.wikimetal.com.br/eminence-lanca-faceless-single-mais-pesado-ep-silent-march/",
+      "pubDate": "Fri, 20 Nov 2026 10:00:00 +0000"
     },
     {
       "source": "Road to Metal",
@@ -162,72 +225,9 @@
       "lang": "en",
       "region": "GLOBAL",
       "color": "#a855f7",
-      "title": "MANRAZE/Ex-GIRL Member SIMON LAFFY Announces Debut Solo Album 'Encoda'",
-      "link": "https://blabbermouth.net/news/manraze-ex-girl-member-simon-laffy-announces-debut-solo-album-encoda",
-      "pubDate": "Thu, 19 Nov 2026 13:20:45 +0000"
-    },
-    {
-      "source": "Loudwire",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#10b981",
-      "title": "Jack Black’s Simple Tip for Falling Back in Love With Bands",
-      "link": "https://loudwire.com/jack-black-hack-love-bands-again/",
-      "pubDate": "Wed, 18 Nov 2026 17:50:36 GMT"
-    },
-    {
-      "source": "Metal Injection",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#ec4899",
-      "title": "Sevendust Announces 30th Anniversary Tour For Self-Titled Debut Album",
-      "link": "https://metalinjection.net/tour-dates/sevendust-announces-30th-anniversary-tour-for-self-titled-debut-album",
-      "pubDate": "Wed, 18 Nov 2026 18:57:06 +0000"
-    },
-    {
-      "source": "Mundo Metal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#00d4ff",
-      "title": "Amanda Somerville cria campanha de arrecadação para custear tratamento de tumor cerebral",
-      "link": "https://www.mundometalbr.com/amanda-somerville-cria-campanha-de-arrecadacao-para-custear-tratamento-de-tumor-cerebral/",
-      "pubDate": "Wed, 18 Nov 2026 18:10:39 +0000"
-    },
-    {
-      "source": "Metal na Lata",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#ef4444",
-      "title": "Connecting Pieces lança novo álbum “Vitruvian” nas plataformas digitais e em CD físico pela Valhall Music",
-      "link": "https://metalnalata.com.br/connecting-pieces-lanca-novo-album-vitruvian-nas-plataformas-digitais-e-em-cd-fisico-pela-valhall-music/",
-      "pubDate": "Wed, 18 Nov 2026 16:50:38 +0000"
-    },
-    {
-      "source": "Wikimetal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#00d4ff",
-      "title": "Por que Bruce Dickinson convidou Derrick Green, do Sepultura, para seu novo álbum",
-      "link": "https://www.wikimetal.com.br/por-que-bruce-dickinson-convidou-derrick-green-sepultura-novo-album/",
-      "pubDate": "Wed, 18 Nov 2026 20:11:20 +0000"
-    },
-    {
-      "source": "Road to Metal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#f59e0b",
-      "title": "Drive, She Said: Sob a Mesma Chama (Also In English)",
-      "link": "https://www.roadtometal.com.br/2026/11/drive-she-said-sob-mesma-chama-also-in.html",
-      "pubDate": "Sat, 14 Nov 2026 14:36:45 +0000"
-    },
-    {
-      "source": "Blabbermouth",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#a855f7",
-      "title": "JUDAS PRIEST's ROB HALFORD Praises IRON MAIDEN: 'What They Offer Is Something Truly Spectacular, Unusual And Different'",
-      "link": "https://blabbermouth.net/news/judas-priests-halford-praises-iron-maiden-what-they-offer-is-something-truly-spectacular-unusual-and-different",
-      "pubDate": "Thu, 19 Nov 2026 13:00:59 +0000"
+      "title": "METALLICA's 'All Within My Hands' Foundation Donates $100,000 To Support Children Affected By Domestic Violence",
+      "link": "https://blabbermouth.net/news/metallicas-all-within-my-hands-foundation-donates-100000-to-support-children-affected-by-domestic-violence",
+      "pubDate": "Sat, 21 Nov 2026 21:40:01 +0000"
     }
   ]
 }
