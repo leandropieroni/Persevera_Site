@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-25T16:16:09.091956+00:00",
+  "last_updated": "2026-11-28T14:37:51.322531+00:00",
   "update_frequency_days": 3,
   "total": 24,
   "sources": [
@@ -14,13 +14,94 @@
   ],
   "news": [
     {
+      "source": "Roadie Crew",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#e50914",
+      "title": "VIPER lança “Soldiers of Sunrise”, primeiro single do novo álbum ao vivo",
+      "link": "https://roadiecrew.com/viper-lanca-soldiers-of-sunrise-primeiro-single-do-novo-album-ao-vivo/",
+      "pubDate": "Sat, 28 Nov 2026 00:59:39 +0000"
+    },
+    {
       "source": "Wikimetal",
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "Deep Purple anuncia nova data em São Paulo para abril de 2027",
-      "link": "https://www.wikimetal.com.br/deep-purple-anuncia-nova-data-sao-paulo/",
-      "pubDate": "Wed, 25 Nov 2026 15:31:39 +0000"
+      "title": "Rock, Metal e muito mais: 3 meses grátis no Amazon Music Unlimited",
+      "link": "https://www.wikimetal.com.br/rock-metal-e-muito-mais-3-meses-gratis-no-amazon-music-unlimited/",
+      "pubDate": "Fri, 27 Nov 2026 17:15:54 +0000"
+    },
+    {
+      "source": "Road to Metal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#f59e0b",
+      "title": "Dorsal Atlântica: Visões Estéticas, Filosóficas e Fina Ironia em Novo Single e Vídeo.",
+      "link": "https://www.roadtometal.com.br/2026/11/dorsal-atlantica-visoes-esteticas.html",
+      "pubDate": "Fri, 27 Nov 2026 19:44:56 +0000"
+    },
+    {
+      "source": "Blabbermouth",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#a855f7",
+      "title": "Guitarist CHRIS GARZA Officially Quits SUICIDE SILENCE",
+      "link": "https://blabbermouth.net/news/guitarist-chris-garza-officially-quits-suicide-silence",
+      "pubDate": "Sat, 28 Nov 2026 14:30:11 +0000"
+    },
+    {
+      "source": "Loudwire",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#10b981",
+      "title": "9 New Rock + Metal Tours Announced This Past Week",
+      "link": "https://loudwire.com/new-rock-metal-tours-announced-nov-20-26-2026/",
+      "pubDate": "Fri, 27 Nov 2026 13:37:45 GMT"
+    },
+    {
+      "source": "Metal Injection",
+      "lang": "en",
+      "region": "GLOBAL",
+      "color": "#ec4899",
+      "title": "Chris Garza Quits Suicide Silence: \"The Book Closes With a Sad Ending\"",
+      "link": "https://metalinjection.net/news/chris-garza-quits-suicide-silence",
+      "pubDate": "Sat, 28 Nov 2026 13:18:10 +0000"
+    },
+    {
+      "source": "Mundo Metal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#00d4ff",
+      "title": "Gene Hoglan relembra nascimento do Thrash Metal e destaca transformação da cena ao longo de quatro décadas",
+      "link": "https://www.mundometalbr.com/gene-hoglan-relembra-nascimento-do-thrash-metal-e-destaca-transformacao-da-cena-ao-longo-de-quatro-decadas/",
+      "pubDate": "Fri, 27 Nov 2026 17:56:24 +0000"
+    },
+    {
+      "source": "Metal na Lata",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#ef4444",
+      "title": "Chakal – “So Good to See You Die!” (2026)",
+      "link": "https://metalnalata.com.br/chakal-so-good-to-see-you-die-2026/",
+      "pubDate": "Sat, 28 Nov 2026 02:11:31 +0000"
+    },
+    {
+      "source": "Roadie Crew",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#e50914",
+      "title": "PETER GABRIEL lança “o\\i” – a sequência de seu aclamado álbum de 2023, “i/o”",
+      "link": "https://roadiecrew.com/peter-gabriel-lanca-oi-a-sequencia-de-seu-aclamado-album-de-2023-i-o/",
+      "pubDate": "Fri, 27 Nov 2026 21:11:08 +0000"
+    },
+    {
+      "source": "Wikimetal",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#00d4ff",
+      "title": "Lançamentos de rock e metal da semana: The Rolling Stones, VIPER, Floor Jansen e mais",
+      "link": "https://www.wikimetal.com.br/lancamentos-rock-metal-semana-the-rolling-stones/",
+      "pubDate": "Fri, 27 Nov 2026 17:07:24 +0000"
     },
     {
       "source": "Road to Metal",
@@ -36,54 +117,63 @@
       "lang": "en",
       "region": "GLOBAL",
       "color": "#a855f7",
-      "title": "ANTHRAX Announces March/April 2027 European Tour With KERRY KING And SACRED REICH",
-      "link": "https://blabbermouth.net/news/anthrax-announces-march-april-2027-european-tour-with-kerry-king-and-sacred-reich",
-      "pubDate": "Wed, 25 Nov 2026 15:34:40 +0000"
+      "title": "MY DYING BRIDE's ANDREW CRAIGHAN Opens Up About 'Excruciating' Split With AARON STAINTHORPE And Decision To Rebuild The Band With MIKKO KOTAMÄKI",
+      "link": "https://blabbermouth.net/news/my-dying-brides-andrew-craighan-opens-up-about-excruciating-split-with-aaron-stainthorpe-and-decision-to-rebuild-the-band-with-mikko-kotamaki",
+      "pubDate": "Sat, 28 Nov 2026 13:46:27 +0000"
     },
     {
       "source": "Loudwire",
       "lang": "en",
       "region": "GLOBAL",
       "color": "#10b981",
-      "title": "5 Curated Gift Bundles for Rock + Metal Fans - Metallica + More",
-      "link": "https://loudwire.com/gift-bundles-rock-metal-fans-metallica-90s/",
-      "pubDate": "Wed, 25 Nov 2026 15:42:51 GMT"
+      "title": "What Metal Subgenre Are You Based on Your Zodiac Sign?",
+      "link": "https://loudwire.com/metal-subgenre-match-zodiac-sign/",
+      "pubDate": "Fri, 27 Nov 2026 13:30:39 GMT"
     },
     {
       "source": "Metal Injection",
       "lang": "en",
       "region": "GLOBAL",
       "color": "#ec4899",
-      "title": "The Black Dahlia Murder Welcomes Back Guitarist Brandon Ellis",
-      "link": "https://metalinjection.net/news/the-black-dahlia-murder-welcomes-back-guitarist-brandon-ellis",
-      "pubDate": "Wed, 25 Nov 2026 14:16:24 +0000"
+      "title": "10 Metal Songs That Got Banned for Going Too Far",
+      "link": "https://metalinjection.net/lists/banned-metal-songs",
+      "pubDate": "Fri, 27 Nov 2026 16:36:17 +0000"
     },
     {
       "source": "Mundo Metal",
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "Metallica: Robert Trujillo revela que banda está perto de começar a trabalhar em novo álbum",
-      "link": "https://www.mundometalbr.com/metallica-robert-trujillo-revela-que-banda-esta-perto-de-comecar-a-trabalhar-em-novo-album/",
-      "pubDate": "Wed, 25 Nov 2026 16:12:32 +0000"
+      "title": "I Am Morbid resgata clássicos do Morbid Angel em apresentação na Bélgica",
+      "link": "https://www.mundometalbr.com/i-am-morbid-resgata-classicos-do-morbid-angel-em-apresentacao-na-belgica/",
+      "pubDate": "Fri, 27 Nov 2026 17:36:47 +0000"
     },
     {
       "source": "Metal na Lata",
       "lang": "pt",
       "region": "BR",
       "color": "#ef4444",
-      "title": "Critical Fear – “Dark Fate” (2026)",
-      "link": "https://metalnalata.com.br/critical-fear-dark-fate-2026/",
-      "pubDate": "Wed, 25 Nov 2026 15:56:37 +0000"
+      "title": "Entrevista: Piotr Luczyk, guitarrista do KAT, banda polonesa de Thrash Metal",
+      "link": "https://metalnalata.com.br/entrevista-piotr-luczyk-guitarrista-do-kat-banda-polonesa-de-thrash-metal/",
+      "pubDate": "Fri, 27 Nov 2026 23:26:19 +0000"
+    },
+    {
+      "source": "Roadie Crew",
+      "lang": "pt",
+      "region": "BR",
+      "color": "#e50914",
+      "title": "WITHIN TEMPTATION anuncia shows no Brasil em 2027 com a turnê mundial “Through Fire & Ashes”",
+      "link": "https://roadiecrew.com/within-temptation-anuncia-shows-no-brasil-em-2027-com-a-turne-mundial-through-fire-ashes/",
+      "pubDate": "Fri, 27 Nov 2026 20:02:38 +0000"
     },
     {
       "source": "Wikimetal",
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "Palco Tarantino encerra circuito com show gratuito de bandas independentes paulistanas",
-      "link": "https://www.wikimetal.com.br/palco-tarantino-encerra-show-bandas-independente-paulistana/",
-      "pubDate": "Wed, 25 Nov 2026 15:04:34 +0000"
+      "title": "Gene Hoglan diz que esteve no início do thrash metal: “Sou raiz”",
+      "link": "https://www.wikimetal.com.br/gene-hoglan-inicio-thrash-metal/",
+      "pubDate": "Fri, 27 Nov 2026 17:05:30 +0000"
     },
     {
       "source": "Road to Metal",
@@ -99,135 +189,45 @@
       "lang": "en",
       "region": "GLOBAL",
       "color": "#a855f7",
-      "title": "HATEBREED's JAMEY JASTA 'Would Love To Re-Record' Band's Debut Album, 'Satisfaction Is The Death Of Desire'",
-      "link": "https://blabbermouth.net/news/hatebreeds-jamey-jasta-would-love-to-re-record-bands-debut-album-satisfaction-is-the-death-of-desire",
-      "pubDate": "Wed, 25 Nov 2026 15:22:23 +0000"
+      "title": "DIMMU BORGIR's SILENOZ Says Black Metal 'Has To Be Atmospheric' But 'Doesn't Have To Necessarily Be Satanic'",
+      "link": "https://blabbermouth.net/news/dimmu-borgirs-silenoz-says-black-metal-has-to-be-atmospheric-but-doesnt-have-to-necessarily-be-satanic",
+      "pubDate": "Fri, 27 Nov 2026 20:45:25 +0000"
     },
     {
       "source": "Loudwire",
       "lang": "en",
       "region": "GLOBAL",
       "color": "#10b981",
-      "title": "The Black Dahlia Murder Welcome Back Familiar Face",
-      "link": "https://loudwire.com/black-dahlia-murder-welcome-back-brandon-ellis/",
-      "pubDate": "Wed, 25 Nov 2026 15:07:31 GMT"
+      "title": "11 Rarest Rock + Metal Albums Out Record Store Day: Black Friday",
+      "link": "https://loudwire.com/rock-metal-albums-least-most-likely-find-record-store-day-black-friday/",
+      "pubDate": "Fri, 27 Nov 2026 12:00:22 GMT"
     },
     {
       "source": "Metal Injection",
       "lang": "en",
       "region": "GLOBAL",
       "color": "#ec4899",
-      "title": "How Is There No Florida Death Metal on the 'Grand Theft Auto VI' Soundtrack?",
-      "link": "https://metalinjection.net/editorials/heavy-takes/gta-6-florida-death-metal",
-      "pubDate": "Tue, 24 Nov 2026 20:39:37 +0000"
+      "title": "\"A Journey Between Hope And Despair\": Evergrey's 'In Search of Truth' Turns 25",
+      "link": "https://metalinjection.net/anniversary/evergrey-in-search-of-truth-25th-anniversary",
+      "pubDate": "Fri, 27 Nov 2026 16:09:54 +0000"
     },
     {
       "source": "Mundo Metal",
       "lang": "pt",
       "region": "BR",
       "color": "#00d4ff",
-      "title": "Live Review: Mundo Metal Fest 2026 — Stress, Paradise In Flames, Stormsorrow, Deathgeist e Exkil",
-      "link": "https://www.mundometalbr.com/live-review-mundo-metal-fest-2026-stress-paradise-in-flames-stormsorrow-deathgeist-e-exkil/",
-      "pubDate": "Tue, 24 Nov 2026 19:28:11 +0000"
+      "title": "Holy Moses lança versão de clássico do Venom em homenagem a Cronos",
+      "link": "https://www.mundometalbr.com/holy-moses-lanca-versao-de-classico-do-venom-em-homenagem-a-cronos/",
+      "pubDate": "Fri, 27 Nov 2026 17:18:43 +0000"
     },
     {
       "source": "Metal na Lata",
       "lang": "pt",
       "region": "BR",
       "color": "#ef4444",
-      "title": "Guns N’Roses faz dois bis extras com homenagem a Ozzy Osbourne na Indonésia",
-      "link": "https://metalnalata.com.br/guns-nroses-faz-dois-bis-extras-com-homenagem-a-ozzy-osbourne-na-indonesia/",
-      "pubDate": "Tue, 24 Nov 2026 17:48:43 +0000"
-    },
-    {
-      "source": "Wikimetal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#00d4ff",
-      "title": "O disco que rendeu a melhor experiência de Nicko McBrain no Iron Maiden",
-      "link": "https://www.wikimetal.com.br/disco-melhor-experiencia-nicko-mcbrain-iron-maiden/",
-      "pubDate": "Wed, 25 Nov 2026 14:39:25 +0000"
-    },
-    {
-      "source": "Road to Metal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#f59e0b",
-      "title": "Cobertura de Show: Benediction – 31/10/2026 – Burning House/SP",
-      "link": "https://www.roadtometal.com.br/2026/11/cobertura-de-show-benediction-31102026.html",
-      "pubDate": "Fri, 20 Nov 2026 22:31:23 +0000"
-    },
-    {
-      "source": "Blabbermouth",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#a855f7",
-      "title": "KATON W. DE PENA Explains His Abrupt Exit From NEFARIOUS: 'It Just Wasn't Gonna Work The Way It Was'",
-      "link": "https://blabbermouth.net/news/katon-w-de-pena-explains-his-abrupt-exit-from-nefarious-it-just-wasnt-gonna-work-the-way-it-was",
-      "pubDate": "Wed, 25 Nov 2026 14:20:56 +0000"
-    },
-    {
-      "source": "Loudwire",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#10b981",
-      "title": "Dropkick Murphys' Ken Casey Once Almost Ran Over Henry Rollins",
-      "link": "https://loudwire.com/dropkick-murphs-ken-casey-henry-rollins-car/",
-      "pubDate": "Tue, 24 Nov 2026 21:35:55 GMT"
-    },
-    {
-      "source": "Metal Injection",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#ec4899",
-      "title": "Mgła Surprise Releases New Album ‘Traitors to the Human Cause’",
-      "link": "https://metalinjection.net/new-music/mgla-surprise-releases-new-album-traitors-to-the-human-cause",
-      "pubDate": "Tue, 24 Nov 2026 20:13:36 +0000"
-    },
-    {
-      "source": "Mundo Metal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#00d4ff",
-      "title": "Anthrax registra show sem barricadas em Nova York no videoclipe explosivo de “NYC 93”",
-      "link": "https://www.mundometalbr.com/anthrax-registra-show-sem-barricadas-em-nova-york-no-videoclipe-explosivo-de-nyc-93/",
-      "pubDate": "Tue, 24 Nov 2026 17:55:00 +0000"
-    },
-    {
-      "source": "Metal na Lata",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#ef4444",
-      "title": "Arch Enemy volta ao Brasil para cinco shows em 2027",
-      "link": "https://metalnalata.com.br/arch-enemy-volta-ao-brasil-para-cinco-shows-em-2027/",
-      "pubDate": "Tue, 24 Nov 2026 17:36:16 +0000"
-    },
-    {
-      "source": "Wikimetal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#00d4ff",
-      "title": "Como Myles Kennedy se tornou vocalista da banda de Slash: “Química muito boa”",
-      "link": "https://www.wikimetal.com.br/como-myles-kennedy-tornou-vocalista-banda-slash/",
-      "pubDate": "Wed, 25 Nov 2026 14:05:32 +0000"
-    },
-    {
-      "source": "Road to Metal",
-      "lang": "pt",
-      "region": "BR",
-      "color": "#f59e0b",
-      "title": "Mystic Prophecy: Heavy Metal Sem Concessões, Mas Também Sem Grandes Surpresas (Also In English)",
-      "link": "https://www.roadtometal.com.br/2026/11/mystic-prophecy-heavy-metal-sem.html",
-      "pubDate": "Thu, 19 Nov 2026 10:03:06 +0000"
-    },
-    {
-      "source": "Blabbermouth",
-      "lang": "en",
-      "region": "GLOBAL",
-      "color": "#a855f7",
-      "title": "SAMAEL Releases New Standalone Single 'Europa'",
-      "link": "https://blabbermouth.net/news/samael-releases-new-standalone-single-europa",
-      "pubDate": "Wed, 25 Nov 2026 13:33:28 +0000"
+      "title": "Hirax, pioneiro do thrash metal, anuncia turnê completa no Brasil",
+      "link": "https://metalnalata.com.br/hirax-pioneiro-do-thrash-metal-anuncia-turne-completa-no-brasil/",
+      "pubDate": "Fri, 27 Nov 2026 19:19:02 +0000"
     }
   ]
 }
